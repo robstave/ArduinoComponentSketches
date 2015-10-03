@@ -4,33 +4,34 @@
 
 /**
  * ATTiny84  Simple Oscillator chip.
+ *
  * Not exactly meant for production, mostly a workbench helper
  * to provide 40106-like signals without all the capacitors
  * and such.  Just drop it into a 5v circuit and away you no.
- * Nothing is configurable...however feel free to tweek code as needed.
+ * Nothing is configurable in real time...however feel free to tweek code as needed.
  *
  * External pin 2 = high Freq 0
  * External pin 3 = high freq 1
  * External pin 5 = high freq 2
- * External pin 6 = high freq 2
- * External pin 7 = sequence of frequences
+ * External pin 6 = high freq 3
+ * External pin 7 = sequence of frequencies
  * External pin 8 = Kinda a ramp/sweep
  * External pin 9 = Another sweep
- * External pin 10 = LFO 4
- * External pin 11 = LFO 3
- * External pin 12 = LFO 2
- * External pin 13 = LFO 1
+ * External pin 10 = LFO 3
+ * External pin 11 = LFO 2
+ * External pin 12 = LFO 1
+ * External pin 13 = LFO 0
  *
- * Explaination.
+ * Explanation.
  * This is built around timer0 interrupts.  There are many ways to do this.
- * I find that counting up and comparing (CTC) gives me a little more flexability.
+ * I find that counting up and comparing (CTC) gives me a little more flexibility.
  *
  * The prescaler is set to 64  (CS00 and CS001)
  * see http://www.atmel.com/Images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
  * or google ATTINY85 data sheet and look for that table.
  *
  * assuming 8Mhz/(64*(OCR0A +1)) = 8mhz/(64*10) = 12500
- * So we are interupting at 12.5kKhz
+ * So we are interrupting at 12.5kKhz
  *
  * I have a note counter set at 32
  * toggling every 32 counts is 390 flips of the pin
@@ -51,12 +52,13 @@
  * If you want higher resolution, you can drop OCRoA a bit and use
  * bigger count numbers, however, its hard to tell if your interrupt is
  * flowing into your next interrupt. Yo Dawg.  There is a few ways to 
- * tell without serial logs.  Things get distorteded or you get a vibrato.
+ * tell without serial logs.  Things get distorted or you get a vibrato.
  * Also..you can comment sections of code and see if your frequencies change.
  * This is very observable if you change the prescaler to 8.  Removing
  * chunks of interrupt code will actually affect your freq, because the interrupt
  * overrflows into the next timer slice.
  *
+ * Rob Stave (Rob the fiddler) 2015
  */
 
 

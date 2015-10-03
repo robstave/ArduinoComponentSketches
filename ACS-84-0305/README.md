@@ -20,6 +20,10 @@ The equivalent circuit would look something like this
 
 PB0 is only going to xor the first 2 bits and PB1 adds the next one.
 PB2 is the xor of all the inputs.  For this, you can pretty much hook into any input pin.
+Port A is set as pull up so this is reflected in the diagram
+
+## Examples:
+todo
 
 ## Strategy:
 In this case, all the logic is in the loop. We are just reading the values and outputting them.  No interrupts or anything like that.
