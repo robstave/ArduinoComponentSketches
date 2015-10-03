@@ -10,8 +10,9 @@ The second is A, B and C.
 The last is ALL the pins.
 
 ## Pinout:
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84-0305/images/acs-84-0305.svg)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/ACS-84-0305/images/acs-84-0305.svg)] (https://github.com/robstave/ArduinoComponentSketches/ACS-84-0305/images)
 
+ 
 ## Equivalent:
 
 ## Strategy:
