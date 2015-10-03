@@ -1,4 +1,4 @@
-# ACS-84-0305  Xors
+# ACS-84-0305
 Collection of Xors
 ==============
 
@@ -12,8 +12,8 @@ The last is ALL the pins.
 ## Pinout:
 [![Pinout](https://github.com/robstave/ArduinoComponentSketches/ACS-84-0305/images/acs-84-0305.svg)] (https://github.com/robstave/ArduinoComponentSketches/ACS-84-0305/images)
 
- 
 ## Equivalent:
+The equivalent circuit would look something like this
 
 ## Strategy:
 In this case, all the logic is in the loop. We are just reading the values and outputting them.  No interrupts or anything like that.
