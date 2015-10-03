@@ -10,7 +10,7 @@ The second is A, B and C.
 The last is ALL the pins.
 
 ## Pinout:
-![Pinout](/images/acs-84-0305.svg)
+![Pinout](images/acs-84-0305.svg)
 
 ## Equivalent:
 
