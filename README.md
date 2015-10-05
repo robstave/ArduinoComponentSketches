@@ -93,7 +93,8 @@ ACS-84-2104 as the 16Mhz Attiny 84 port
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
 [ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | Ready| Fixed VCO with High and Low Frequencies and a Ramp
- 
+[ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Ready| Analog selector. Translate Analog to either 3 bits or single channel
+  
 
 
 
@@ -103,6 +104,7 @@ Number    | Title   | Status   | Description
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-[ACS-84-0001]((https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0001) | Simple VCO | Ready | Fixed VCO with High and Low Frequencies and a Ramp and Triangle
+[ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0001) | Simple VCO | Ready | Fixed VCO with High and Low Frequencies and a Ramp and Triangle
+[ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0305) | Gates | Ready |  Xor Array
 
 
