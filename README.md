@@ -84,12 +84,7 @@ ACS-84-2104 as the 16Mhz Attiny 84 port
 
 
 
-That being said....
-
-:white_check_mark: Ready
-
-:white_circle: Proposed
-
+ 
 
 ### ATTiny85
 
@@ -97,9 +92,8 @@ That being said....
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | :white_check_mark:  Proposed | Fixed VCO with High and Low Frequencies and a Ramp
-ACS-85-0104 | PsychoLfo | Proposed | Ken Stones Psycho LFO with width, freq and glide
-
+[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | Ready| Fixed VCO with High and Low Frequencies and a Ramp
+ 
 
 
 
@@ -109,6 +103,6 @@ ACS-85-0104 | PsychoLfo | Proposed | Ken Stones Psycho LFO with width, freq and 
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-ACS-84-0001 | Simple VCO | :white_check_mark: Proposed | Fixed VCO with High and Low Frequencies and a Ramp and Triangle
+[ACS-84-0001]((https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0001) | Simple VCO | Ready | Fixed VCO with High and Low Frequencies and a Ramp and Triangle
 
 
