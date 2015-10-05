@@ -97,7 +97,7 @@ That being said....
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-ACS-85-0001 | Simple VCO | :white_check_mark:  Proposed | Fixed VCO with High and Low Frequencies and a Ramp
+[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | :white_check_mark:  Proposed | Fixed VCO with High and Low Frequencies and a Ramp
 ACS-85-0104 | PsychoLfo | Proposed | Ken Stones Psycho LFO with width, freq and glide
 
 

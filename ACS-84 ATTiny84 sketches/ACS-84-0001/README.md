@@ -8,7 +8,7 @@ The frequencies are fixed, so if you want some control over the sound, this is n
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84-0001/images/acs-84-0001.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-84-0001/images/acs-84-0001.png)] (https://github.com/robstave/ArduinoComponentSketches)
 
 ## Equivalent:
 
@@ -16,4 +16,4 @@ Mostly used to replace a 40106 oscillator for a quick audio check.
 
 
 ## Examples:
-
+ 
