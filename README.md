@@ -93,7 +93,7 @@ ACS-84-2104 as the 16Mhz Attiny 84 port
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
 [ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | Ready| Fixed VCO with High and Low Frequencies and a Ramp
-[ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Ready| Analog selector. Translate Analog to either 3 bits or single channel
+[ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Ready| Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
   
 
 
