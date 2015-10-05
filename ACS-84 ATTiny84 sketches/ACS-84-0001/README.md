@@ -1,5 +1,5 @@
 # ACS-84-0001
-Simple Oscillator
+Simple Squarewave Oscillator
 ==============
 
 ## Overview:

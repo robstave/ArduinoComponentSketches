@@ -84,27 +84,25 @@ ACS-84-2104 as the 16Mhz Attiny 84 port
 
 
 
- 
-
-### ATTiny85
+### ATTiny85 sketches
 
 
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Simple VCO | Ready| Fixed VCO with High and Low Frequencies and a Ramp
+[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Oscillator | Ready| Fixed squarewave oscillator with High and Low Frequencies and a Ramp
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Ready| Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
   
 
 
 
-### ATTiny84
-
+### ATTiny84 sketches
 
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-[ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0001) | Simple VCO | Ready | Fixed VCO with High and Low Frequencies and a Ramp and Triangle
-[ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny85%20sketches/ACS-84-0305) | Gates | Ready |  Xor Array
+[ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0001) | Oscillator | Ready | Fixed squarewave oscillator with High and Low Frequencies and a Ramp and Triangle
+[ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Ready | Fixed squarewave oscillator with a grand assortment of beeps. 
+[ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305) | Gates | Ready |  Xor Array
 
 

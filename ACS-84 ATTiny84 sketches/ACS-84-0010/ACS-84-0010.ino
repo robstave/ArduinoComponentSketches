@@ -3,7 +3,7 @@
 #include            <avr/interrupt.h>
 
 /**
- * ATTiny84  Simple Oscillator chip.
+ * ATTiny84  Simple Oscillator chip - Beeps.
  * Not exactly meant for production, mostly a workbench helper
  * to provide 40106-like signals without all the capacitors
  * and such.  Just drop it into a 5v circuit and away you no.
@@ -35,7 +35,7 @@
  *
  * V 1.0  -  First Version
  *
- * Rob Stave - Rob the fiddler - 2015
+ * Rob Stave - Rob the fiddler - ccby 2015
  *
  */
 
