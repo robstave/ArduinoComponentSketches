@@ -25,7 +25,17 @@
  *
  * assuming 8Mhz/(64*(OCR0A +1)) = 8mhz/(64*6) = 20833
  * So we are interupting at 20.8Khz
- *
+ *  
+ *  If your numbers are off:  
+ *    by 8 - did you burn the bootloader? By default it is 1mhz internal
+ *    none: again..extern clock?  Burn bootloader for 8mhz internal. 
+ *  
+ *  Counter values will flip the bit, so really divide that by 2 as well
+ *  
+ *  23:  452
+ *  24:  434
+ *  25:  416
+ *  
  * I have a note counter set at 24
  * toggling every 24 counts is 868 flips of the pin
  * which gives us a frequency of 434.  Close enough to an A.
@@ -34,7 +44,8 @@
  * 
  * checking with my voltmeter..its a few hz off...but again,its not a tuner.
  * If you need precision, add the xtal.
- *
+ * or change the prescaler to just 8 to give you a better resolution.
+ * 
  *
  * V 1.0  -  First Version
  *
@@ -42,7 +53,9 @@
  * Had to use TIMER0_COMPA_vect vs TIM0_COMPA_vect
  * PORTB = 00011111 did not really work.  It worked, but my signal would
  * go away like it was being sucked or drained.  Using setPin I think enables
- * pull down/up properly.
+ * pull down/up properly. DDRB might work better as well
+ * 
+ * Rob Stave (Rob the Fiddler) CCBY 2015
  *
  */
 
@@ -51,7 +64,7 @@
 //                           +-\/-+
 //                   Reset  1|    |8  VCC
 //         (pin3) PB4 HF_0  2|    |7  LFO_1 PB2 (pin2)
-//         (pin0) PB3 HF_1  3|    |6  LFO_2 PB1 (pin1)
+//         (pin4) PB3 HF_1  3|    |6  LFO_2 PB1 (pin1)
 //                     GND  4|    |5  HF Ramp PB0 (pin0)
 
 
@@ -86,13 +99,15 @@ int hf2MaxCounter = HF_RANGE_LO;
 // the setup function runs once when you press reset or power the board
 void setup() {
 
-  //DDRB = 0x3F;  could use this too
-  pinMode(0, OUTPUT);
+  DDRB = B00011111;  //Set port B output bits
+  /*
+   * 
+   pinMode(0, OUTPUT);
   pinMode(1, OUTPUT);
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
-
+*/
   // initialize timer0
   noInterrupts();           // disable all interrupts
 
@@ -100,17 +115,22 @@ void setup() {
   TCCR0B = 0;
 
   TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
-  TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
+  
   OCR0A = 5; //CTC Compare value
 
   TCCR0B |= (1 << CS00) | (1 << CS01); // Prescaler =64 Table 11.6
 
+ // TCCR0A |=(1<<COM0A1); //Timer0 in toggle mode Table 11.2
+  TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
   interrupts();             // enable all interrupts
 
 }
 
 ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 {
+
+ // PORTB ^= (_BV(PB4));
+  
 
   //Each interrupt..check the counter.  If there is a match,
   //reset and toggle the bit.
@@ -139,8 +159,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
     PORTB ^= (_BV(PB3));
   }
   hf1Counter++;
-
-
+ 
   //Sweep is several nested loops
   if (hf2Counter > hf2MaxCounter) {
     hf2Counter = 0;
@@ -156,13 +175,8 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
     PORTB ^= (_BV(PB0));
   }
   hf2Counter++;
-  
-
-
+ 
 }
-
-
-
 
 void loop() {
   //Do nothing
