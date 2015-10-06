@@ -12,11 +12,11 @@ The last is ALL the pins.
 Prob not an exact match if your looking for super high frequencies, but a decent way to explore the sounds of xor modulation if you can not get a hold of one. 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-84-0305/images/acs-84-0305.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305/images/acs-84-0305.png)] (https://github.com/robstave/ArduinoComponentSketches)
 
 ## Equivalent:
 The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-84-0305/images/ACS-84-0305-xor.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305/images/ACS-84-0305-xor.png)] (https://github.com/robstave/ArduinoComponentSketches)
 
 PB0 is only going to xor the first 2 bits and PB1 adds the next one.
 PB2 is the xor of all the inputs.  For this, you can pretty much hook into any input pin.
