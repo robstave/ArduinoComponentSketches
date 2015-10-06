@@ -2,13 +2,26 @@
 or/and
 ==============
 
-
 ## Overview:
-An or and an and
- 
+An OR and an AND
+Can be used to hear how they modulate/filter squarewave audio.  In general, your fundemental frequencies are not going to change.
+Using and/or for audio will not really change that, but it will change the width of some of the waves.
 
- A    |  B   |  C   | Out1  |   Out 2
+To play with a single wave, tie one of the gates low or high.
+For example, to experiment with just the or gate, set C to high, and output 1 is just an or of A and B.
+To play with the And, set either A or B to  Low.  The value of the other bit will just pass on through  to the AND gate.
+
+
+A  |  B  |  C  |  Out1  |   Out 2
 --- | --- | --- | --- | ---
+0 | 0 | 0 | 0 | 0
+0 | 1 | 0 | 1 | 0
+1 | 0 | 0 | 1 | 0
+1 | 1 | 0 | 1 | 0
+0 | 0 | 1 | 0 | 0  
+0 | 1 | 1 | 1 | 1
+1 | 0 | 1 | 1 | 1
+1 | 1 | 1 | 1 | 1 
  
 ## Pinout:
 [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307images/acs-85-0307.png)] (https://github.com/robstave/ArduinoComponentSketches)
@@ -16,7 +29,7 @@ An or and an and
 
 ## Equivalent:
 The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0307-orand.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/ACS-85-0307-andor.png)] (https://github.com/robstave/ArduinoComponentSketches)
  
 
 ## Examples:
