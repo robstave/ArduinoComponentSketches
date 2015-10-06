@@ -1,22 +1,22 @@
-# ACS-85-0305
-Collection of Xors
+# ACS-85-0307
+or/and
 ==============
 
 
 ## Overview:
-two Xors  
-outputs are either A ^ B or A ^ B ^ C
-Should work fine fot audio frequencies.
-
+An or and an and
+ 
+ a b c  out1 out2
+ A    |  B   |  C   | Out1  |   Out 2
+--- | --- | --- | --- | ---
  
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/acs-85-0305.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307images/acs-85-0307.png)] (https://github.com/robstave/ArduinoComponentSketches)
+
 
 ## Equivalent:
 The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-0305-xor.png)] (https://github.com/robstave/ArduinoComponentSketches)
-
-PB0 is only going to xor the first 2 bits and PB1 adds the next one.
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0307-orand.png)] (https://github.com/robstave/ArduinoComponentSketches)
  
 
 ## Examples:
