@@ -26,7 +26,7 @@ outputs are either !(A & B) or !(!(A & B) & C)
 
 ## Equivalent:
 The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0305-nand.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0305-nands.png)] (https://github.com/robstave/ArduinoComponentSketches)
  
 
 ## Examples:

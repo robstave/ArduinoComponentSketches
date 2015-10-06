@@ -6,7 +6,7 @@ or/and
 ## Overview:
 An or and an and
  
- a b c  out1 out2
+
  A    |  B   |  C   | Out1  |   Out 2
 --- | --- | --- | --- | ---
  
