@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="acs-84-0305.svg">
+   sodipodi:docname="acs-84-0305.svg"
+   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-84 ATTiny84 sketches\ACS-84-0305\images\acs-84-0305.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="177.18609"
+     inkscape:cx="27.68609"
      inkscape:cy="245.31863"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -239,7 +242,7 @@
          sodipodi:role="line"
          id="tspan4264"
          x="102"
-         y="726.36218">ACS-84-xxxx</tspan></text>
+         y="726.36218">ACS-84-0305</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.87476009;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -470,7 +473,7 @@
            height="54"
            x="91.5"
            y="267.5" /></flowRegion><flowPara
-         id="flowPara4547"></flowPara></flowRoot>    <text
+         id="flowPara4547" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="308.35431"
@@ -704,7 +707,7 @@
            height="169"
            x="48.5"
            y="75.5" /></flowRegion><flowPara
-         id="flowPara4789"></flowPara></flowRoot>    <text
+         id="flowPara4789" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="340.4256"
@@ -789,10 +792,24 @@
          sodipodi:role="line"
          id="tspan4863"
          x="75"
-         y="914.36218"></tspan><tspan
+         y="914.36218" /><tspan
          sodipodi:role="line"
          x="75"
          y="964.36218"
          id="tspan4865" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="154.24414"
+       y="756.9032"
+       id="text4262-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4264-8"
+         x="154.24414"
+         y="756.9032"
+         style="font-size:30px">Xor Array</tspan></text>
   </g>
 </svg>

@@ -28,6 +28,7 @@ but a quick visual could be these
 
  [![ArpUp](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010/images/arpRampUp.png)] (https://github.com/robstave/ArduinoComponentSketches)
  [![ArpDown](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010/images/arpRampDown.png)] (https://github.com/robstave/ArduinoComponentSketches)
+ [![Swell](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010/images/swell.png)] (https://github.com/robstave/ArduinoComponentSketches)
 
 
 ## Pinout:
