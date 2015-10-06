@@ -4,10 +4,15 @@ or/and
 
 ## Overview:
 An OR and an AND
-Can be used to hear how they modulate/filter squarewave audio.  In general, your fundemental frequencies are not going to change.
+Can be used to hear how they modulate/filter squarewave audio.  In general, your fundamental frequencies are not going to change.
+
 Using and/or for audio will not really change that, but it will change the width of some of the waves.
 
-To play with a single wave, tie one of the gates low or high.
+Combining squarewaves with logic gates is a pretty standard concept seen in Lunettas. Many chips however come with 4 gates, so if you want a full compliment of 
+options, you end up wasting a lot of gates.  Perhaps this could reduce your footprint?
+
+
+To play with a single gate, tie one of the gates low or high.
 For example, to experiment with just the or gate, set C to high, and output 1 is just an or of A and B.
 To play with the And, set either A or B to  Low.  The value of the other bit will just pass on through  to the AND gate.
 
@@ -24,7 +29,7 @@ A  |  B  |  C  |  Out1  |   Out 2
 1 | 1 | 1 | 1 | 1 
  
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307images/acs-85-0307.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/acs-85-0307.png)] (https://github.com/robstave/ArduinoComponentSketches)
 
 
 ## Equivalent:
