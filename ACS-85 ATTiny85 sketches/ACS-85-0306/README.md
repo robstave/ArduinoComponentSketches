@@ -4,12 +4,12 @@ Collection of Nands
 
 
 ## Overview:
-two Nands
+Two Nand gates.
 outputs are either !(A & B) or !(!(A & B) & C)
 
  
- a b c  out1 out2
- A    |  B   |  C   | Out1  |   Out 2
+
+A  |  B   |  C   | Out1  |   Out 2
 --- | --- | --- | --- | ---
 0  | 0  | 0  | 1 |   1
 0  | 1  | 0  | 1 |   1
@@ -26,7 +26,7 @@ outputs are either !(A & B) or !(!(A & B) & C)
 
 ## Equivalent:
 The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0305-nands.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0306-nands.png)] (https://github.com/robstave/ArduinoComponentSketches)
  
 
 ## Examples:
