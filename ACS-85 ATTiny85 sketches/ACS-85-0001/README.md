@@ -14,6 +14,8 @@ The frequencies are fixed, so if you want some control over the sound, this is n
 
 Mostly used to replace a 40106 oscillator for a quick audio check.
 
+[![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001/images/ACS-85-0001-overview.png)] (https://github.com/robstave/ArduinoComponentSketches)
+
 
 ## Examples:
  
