@@ -1,7 +1,7 @@
 
 /**
  * ACS-85-0520
- * ATTiny85  LFSR Clocked
+ * ATTiny85  16 bit  LFSR Clocked
  *
  * Can be used to produce random numbers and noise.
  * The LFSR actually clocks 4x for each clock as we
@@ -27,7 +27,7 @@
  *
  * V 1.0  -  First Version
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
 

@@ -25,7 +25,7 @@
  *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) ccby 2015
  */
 
 

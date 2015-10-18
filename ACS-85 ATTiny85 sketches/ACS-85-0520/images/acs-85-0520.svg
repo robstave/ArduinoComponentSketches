@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="acs-85-0003.svg"
-   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0003\images\ACS-85-0003.png"
+   sodipodi:docname="acs-85-0520.svg"
+   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0520\images\ACS-85-0520.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,17 +29,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="145.25901"
-     inkscape:cy="302.79902"
+     inkscape:cx="219.54886"
+     inkscape:cy="193.06373"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1680"
-     inkscape:window-height="1028"
-     inkscape:window-x="1592"
-     inkscape:window-y="60"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1457"
+     inkscape:window-height="867"
+     inkscape:window-x="1693"
+     inkscape:window-y="116"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -170,7 +170,7 @@
          sodipodi:role="line"
          id="tspan4264"
          x="92"
-         y="728.36218">ACS-85-0003</tspan></text>
+         y="728.36218">ACS-85-0520</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.87476009;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -242,13 +242,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="112.45044"
+       x="112.54205"
        y="959.31506"
        id="text4146-7-22-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8"
-         x="112.45044"
+         x="112.54205"
          y="959.31506"
          style="font-size:15px">GND</tspan></text>
     <text
@@ -268,7 +268,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="103.58984"
+       x="104.34625"
        y="859.81506"
        id="text4146-7-22-4-9-0"
        sodipodi:linespacing="125%"
@@ -276,26 +276,28 @@
        inkscape:transform-center-y="35.499999"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-8"
-         x="103.58984"
+         x="104.34625"
          y="859.81506"
          style="font-size:15px">Reset</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6e0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="309.08984"
        y="922.81506"
        id="text4146-7-22-4-9-2"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="-216"
-       inkscape:transform-center-y="35.499999"><tspan
+       inkscape:transform-center-y="35.499999"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2"
          x="309.08984"
          y="922.81506"
-         style="font-size:11.25px;fill:#800000;fill-opacity:1">PB1  Out 1 (weird)</tspan></text>
+         style="font-size:11.25px;fill:#6e0000;fill-opacity:1;">PB1  LFSR1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#820000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="308.49445"
        y="956.9491"
        id="text4146-7-22-4-9-2-4"
@@ -306,10 +308,10 @@
          id="tspan4148-4-3-8-0-2-5"
          x="308.49445"
          y="956.9491"
-         style="font-size:11.25px;fill:#800000;fill-opacity:1">PB0  Out 0</tspan></text>
+         style="font-size:11.25px;fill:#820000;fill-opacity:1">PB0  LFSR0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#03006d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="308.72241"
        y="890.46558"
        id="text4146-7-22-4-9-2-7"
@@ -320,12 +322,12 @@
          id="tspan4148-4-3-8-0-2-2"
          x="308.72241"
          y="890.46558"
-         style="font-size:11.25px;fill:#03006d;fill-opacity:1;">PB2  Analog Speed</tspan></text>
+         style="font-size:11.25px;fill:#000000;fill-opacity:1;">PB2  Clock</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00007d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="69.988953"
-       y="924.03699"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#820000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="84.488953"
+       y="924.53699"
        id="text4146-7-22-4-9-2-7-7"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="-216"
@@ -334,9 +336,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3"
-         x="69.988953"
-         y="924.03699"
-         style="font-size:11.25px;fill:#00007d;fill-opacity:1;">Analog 1 PB4</tspan></text>
+         x="84.488953"
+         y="924.53699"
+         style="font-size:11.25px;fill:#820000;fill-opacity:1">LFSR3 PB4</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4541"
@@ -349,18 +351,18 @@
            y="267.5" /></flowRegion><flowPara
          id="flowPara4547" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000068;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="70.854309"
-       y="890.4436"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#820000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="84.291077"
+       y="890.9436"
        id="text4146-7-22-4-9-2-7-7-0-2"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="-216"
        inkscape:transform-center-y="35.499999"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3-8-3"
-         x="70.854309"
-         y="890.4436"
-         style="font-size:11.25px;fill:#000068;fill-opacity:1;">Analog 0 PB3</tspan></text>
+         x="84.291077"
+         y="890.9436"
+         style="font-size:11.25px;fill:#820000;fill-opacity:1">LFSR2 PB3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#910000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -428,6 +430,6 @@
          id="tspan4264-0"
          x="125.95703"
          y="774.9032"
-         style="font-size:30px">Two Tone  VCO</tspan></text>
+         style="font-size:30px">16 Bit LFSR</tspan></text>
   </g>
 </svg>
