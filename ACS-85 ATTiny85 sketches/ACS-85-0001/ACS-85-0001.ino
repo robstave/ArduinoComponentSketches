@@ -100,14 +100,7 @@ int hf2MaxCounter = HF_RANGE_LO;
 void setup() {
 
   DDRB = B00011111;  //Set port B output bits
-  /*
-   * 
-   pinMode(0, OUTPUT);
-  pinMode(1, OUTPUT);
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-*/
+
   // initialize timer0
   noInterrupts();           // disable all interrupts
 
