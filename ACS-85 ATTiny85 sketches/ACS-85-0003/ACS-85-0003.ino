@@ -65,9 +65,9 @@ boolean oscState = false;
 // the setup function runs once when you press reset or power the board
 void setup() {
 
-  DDRB = B00000011;  //could use this
+  DDRB = B00000011;  
 
-  // initialize timer0
+  // initialize timer1
   noInterrupts();           // disable all interrupts
 
   TCCR1 = 0;                  //stop the timer
