@@ -18,4 +18,5 @@ Mostly used to replace a 40106 oscillator for a quick audio check.
 
 
 ## Examples:
+[Sample](https://soundcloud.com/user-692410397/85-0001a) Not really stellar.  Its just a square wave.  But at the end is the ramp.
  
