@@ -52,7 +52,7 @@
  *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
 
@@ -86,7 +86,7 @@ void setup() {
 
   DDRB = B00000111;  //could use this
 
-  // initialize timer0
+  // initialize timer1
   noInterrupts();           // disable all interrupts
 
   TCCR1 = 0;                  //stop the timer
