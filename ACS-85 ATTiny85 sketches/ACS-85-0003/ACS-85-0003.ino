@@ -40,12 +40,14 @@
 
 //Ranges for the pot.  Technically a small nuumber means a
 //shorter timer so low or high...whatever you want to call it.
-#define VCO1LOW 7
-#define VCO1HIGH 108
-#define VCO2LOW 7
-#define VCO2HIGH 108
-#define VCO3LOW 1200
-#define VCO3HIGH 7000
+#define VCO1HIGH 7
+#define VCO1LOW 108
+
+#define VCO2HIGH 7
+#define VCO2LOW 108
+
+#define VCO3HIGH 1200
+#define VCO3LOW 7000
 
 
 //counters for the frequencies
@@ -126,11 +128,10 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 void loop() {
 
   int osc1_t = analogRead(A3);
-  oscFreq1 = map(osc1_t, 0, 1023, VCO1LOW,  VCO1HIGH);
+  oscFreq1 = map(osc1_t, 0, 1023,  VCO1HIGH, VCO1LOW);
   osc1_t = analogRead(A2);
-  oscFreq2 = map(osc1_t, 0, 1023, VCO2LOW,  VCO2HIGH);
-
+  oscFreq2 = map(osc1_t, 0, 1023,  VCO2HIGH, VCO2LOW);
   osc1_t = analogRead(A1);
-  oscFreq3 = map(osc1_t, 0, 1023, VCO3LOW,  VCO3HIGH);
+  oscFreq3 = map(osc1_t, 0, 1023,  VCO3HIGH, VCO3LOW);
 
 }

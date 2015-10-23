@@ -23,15 +23,15 @@
  * Observations.
  *
  * I could not reach 4k freq with a long counter. I think the interrupt code was too
- * much.  There might be a few things I can do to tweak this.   Instead, I just used a scalar bool 
+ * much.  There might be a few things I can do to tweak this.   Instead, I just used a scalar bool
  * isLFO and really copied the code.  Yes, copied.  There is plenty of room on the chip for this
  * code, so just unwind the code and duplicate it rather than add clock cycles to make it
  * look tighter.
- * 
+ *
  * so if you add code to your interrupt, get out a frequncy counter and make sure
  * that its hitting what you think it is.  If not, your interrupt is attempting to interrupt your interrupt.
  * since it can not do that..it just gives you a lower frequncy.
- * 
+ *
  * If you absolutly have to have above 4k, look into using the timers directly to pwm
  *
  * Rob Stave (Rob the fiddler) ccby 2015
@@ -61,32 +61,32 @@
 // 6 -> 4khz
 // 80 -> 40000/80/2 =  250hz
 
-#define VCO1_H1_LOW 5
-#define VCO1_H1_HIGH 80
-#define VCO2_H1_LOW 5
-#define VCO2_H1_HIGH 80
+#define VCO1_H1_HIGH 5
+#define VCO1_H1_LOW 80
+#define VCO2_H1_HIGH 5
+#define VCO2_H1_LOW 80
 
 
 // 30 -> 666 hz
 // 120 - > 166 hz
-#define VCO1_H2_LOW 30
-#define VCO1_H2_HIGH 120
-#define VCO2_H2_LOW 30
-#define VCO2_H2_HIGH 120
+#define VCO1_H2_HIGH 30
+#define VCO1_H2_LOW 120
+#define VCO2_H2_HIGH 30
+#define VCO2_H2_LOW 120
 
 // 90 -> 222hz
 // 320 -> 62.5
-#define VCO1_M1_LOW 90
-#define VCO1_M1_HIGH 320
-#define VCO2_M1_LOW 90
-#define VCO2_M1_HIGH 320
+#define VCO1_M1_HIGH 90
+#define VCO1_M1_LOW 320
+#define VCO2_M1_HIGH 90
+#define VCO2_M1_LOW 320
 
 // 150 -> 133
 // 520 - > 38.5
-#define VCO1_M2_LOW 150
-#define VCO1_M2_HIGH 520
-#define VCO2_M2_LOW 150
-#define VCO2_M2_HIGH 520
+#define VCO1_M2_HIGH 150
+#define VCO1_M2_LOW 520
+#define VCO2_M2_HIGH 150
+#define VCO2_M2_LOW 520
 
 
 /**
@@ -96,21 +96,21 @@
  * so
  * 8mhz/2/100/50 = 800hz Interrupt freq
  */
- 
+
 //25 -> 800/2 = 16
 // 400  -> 1
-#define VCO1_L1_LOW 25
-#define VCO1_L1_HIGH 400
-#define VCO2_L1_LOW 25
-#define VCO2_L1_HIGH 400
+#define VCO1_L1_HIGH 25
+#define VCO1_L1_LOW 400
+#define VCO2_L1_HIGH 25
+#define VCO2_L1_LOW 400
 
- 
+
 //100 -> 4
 //2000 -> .2
-#define VCO1_L2_LOW 100
-#define VCO1_L2_HIGH 2000
-#define VCO2_L2_LOW 100
-#define VCO2_L2_HIGH 2000
+#define VCO1_L2_HIGH 100
+#define VCO1_L2_LOW 2000
+#define VCO2_L2_HIGH 100
+#define VCO2_L2_LOW 2000
 
 
 
@@ -196,7 +196,7 @@ void loop() {
   if (loopCount > 20) {
     loopCount = 0;
     int   range_t = analogRead(A1);
-    range = map(range_t, 0, 1023, 0,  5);
+    range = map(range_t, 0, 1023, 0,  60);
   }
   loopCount++;
 
@@ -204,50 +204,47 @@ void loop() {
   int osc1_t = analogRead(A3);
   int osc2_t = analogRead(A2);
 
-  switch (range) {
-    case 0:
-      isLFO = false;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_H1_LOW,  VCO1_H1_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_H1_LOW,  VCO2_H1_HIGH);
-      break;
+  if (range < 10) {
 
-    case 1:
-      isLFO = false;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_H2_LOW,  VCO1_H2_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_H2_LOW,  VCO2_H2_HIGH);
-      break;
-
-    case 2:
-      isLFO = false;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_M1_LOW,  VCO1_M1_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_M1_LOW,  VCO2_M1_HIGH);
-      break;
-
-    case 3:
-      isLFO = false;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_M2_LOW,  VCO1_M2_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_M2_LOW,  VCO2_M2_HIGH);
-      break;
-
-    case 4:
-      isLFO = true;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_L1_LOW,  VCO2_L1_HIGH);
-      break;
-
-    case 5:
-      isLFO = true;
-      oscFreq1 = map(osc1_t, 0, 1023, VCO1_L2_LOW,  VCO1_L2_HIGH);
-      oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW,  VCO2_L2_HIGH);
-      break;
-
-    default:
-      //huh...well..skip it
-      break;
+    isLFO = true;
+    oscFreq1 = map(osc1_t, 0, 1023, VCO1_L2_LOW,  VCO1_L2_HIGH);
+    oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW,  VCO2_L2_HIGH);
+    return;
   }
 
+  if (range < 20) {
+    isLFO = true;
+    oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
+    oscFreq2 = map(osc2_t, 0, 1023, VCO2_L1_LOW,  VCO2_L1_HIGH);
+    return;
+  }
 
+  if (range < 30) {
+    isLFO = false;
+    oscFreq1 = map(osc1_t, 0, 1023, VCO1_M2_LOW,  VCO1_M2_HIGH);
+    oscFreq2 = map(osc2_t, 0, 1023, VCO2_M2_LOW,  VCO2_M2_HIGH);
+    return;
 
+  }
+
+  if (range < 40) {
+    isLFO = false;
+    oscFreq1 = map(osc1_t, 0, 1023, VCO1_M1_LOW,  VCO1_M1_HIGH);
+    oscFreq2 = map(osc2_t, 0, 1023, VCO2_M1_LOW,  VCO2_M1_HIGH);
+    return;
+  }
+
+  if (range < 50) {
+    isLFO = false;
+    oscFreq1 = map(osc1_t, 0, 1023, VCO1_H2_LOW,  VCO1_H2_HIGH);
+    oscFreq2 = map(osc2_t, 0, 1023, VCO2_H2_LOW,  VCO2_H2_HIGH);
+    return;
+  }
+
+  isLFO = false;
+  oscFreq1 = map(osc1_t, 0, 1023, VCO1_H1_LOW,  VCO1_H1_HIGH);
+  oscFreq2 = map(osc2_t, 0, 1023, VCO2_H1_LOW,  VCO2_H1_HIGH);
+  return;
 
 
 }
