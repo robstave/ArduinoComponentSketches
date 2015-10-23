@@ -1,7 +1,7 @@
 
 /**
  * ACS-85-0308
- * ATTiny85 Pic a gate
+ * ATTiny85 Pick a gate
  *
  * Select and/or/nand/xor
  * 2 inputs and 1 outputs.

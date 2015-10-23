@@ -32,16 +32,16 @@
  * 
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) ccby 2015
  */
 
 
 //  ATTiny overview
 //                           +-\/-+
 //                   Reset  1|    |8  VCC
-//         (pin3) PB4 HF_0  2|    |7  LFO_1 PB2 (pin2)
-//         (pin4) PB3 HF_1  3|    |6  LFO_2 PB1 (pin1)
-//                     GND  4|    |5  HF Ramp PB0 (pin0)
+//    (pin3)     A|B   PB4  2|    |7  PB2 in C (pin2)
+//    (pin4) ((A|B)&C) PB3  3|    |6  PB1 in B (pin1)
+//                     GND  4|    |5  PB0 in A (pin0)
 
 void setup() {
   DDRB = B00011000; // set PORTB outputs

@@ -18,16 +18,16 @@
  *
  * V 1.0  -  First Version
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
 
 //  ATTiny overview
 //                           +-\/-+
 //                   Reset  1|    |8  VCC
-//         (pin3) PB4 HF_0  2|    |7  LFO_1 PB2 (pin2)
-//         (pin4) PB3 HF_1  3|    |6  LFO_2 PB1 (pin1)
-//                     GND  4|    |5  HF Ramp PB0 (pin0)
+//        (pin3) A^B   PB4  2|    |7  IN C PB2 (pin2)
+//        (pin4) A^B^C PB3  3|    |6  IN B PB1 (pin1)
+//                     GND  4|    |5  IN A PB0 (pin0)
 
 void setup() {
   DDRB = B00011000; // set PORTB outputs

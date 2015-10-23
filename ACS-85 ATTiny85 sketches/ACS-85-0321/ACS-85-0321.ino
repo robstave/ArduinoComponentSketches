@@ -33,7 +33,7 @@
  * see here for a good overview of that
  * http://thewanderingengineer.com/2014/08/11/pin-change-interrupts-on-attiny85/
  * 
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
 
