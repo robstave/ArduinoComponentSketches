@@ -41,7 +41,7 @@
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) A1 Speed
+//      (pin3) skew A3  PB3 2|    |7  PB2 (pin2) A1 Speed
 //      (pin4) doSkew   PB4 3|    |6  PB1 (pin1) doStagger
 //                      GND 4|    |5  PB0 (pin0) out 0
 //                           ------
@@ -50,18 +50,18 @@
 //shorter timer so low or high...whatever you want to call it.
 
 //High low and middle freq
-#define FREQ_LOW 7
-#define FREQ_HIGH 155
+#define FREQ_HIGH 7
+#define FREQ_LOW  155
 #define FREQ_START 88
 
 //Step speed
-#define SPEED_LOW 700
-#define SPEED_HIGH 4000
+#define SPEED_HIGH 500
+#define SPEED_LOW 4000
 
-//Skew line.
-#define SKEW_BOTTOM 0
-#define SKEW_TOP 49
-#define SKEW_MID 25
+//Compare bottom 7 bits to Center to determine up or down
+//Add skew to..well...skew
+#define SKEW_BOTTOM -30
+#define SKEW_TOP 30
 #define CENTER 64
 
 
@@ -79,7 +79,7 @@ int stepSpeed = 1000;
 int stepCounter = 0;
 
 //Counter for doSkew and doStagger
-//Set to above 1000 to force a read
+//Set to above 1000 to force an intial read
 #define SETUP_LOOP_READ 301
 int setupCounter = SETUP_LOOP_READ + 10;
 
@@ -150,7 +150,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 
     //if we are skewing the number...add it
     if (doSkew == HIGH) {
-      compare = CENTER + skew - SKEW_MID;
+      compare = CENTER + skew;
     }
 
     if (doStagger == HIGH) {
@@ -175,16 +175,19 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 
 
     if (doSkew == HIGH) {
-      if (oscFreq1 > FREQ_HIGH) {
-        oscFreq1 = FREQ_LOW + 1;
+      if (oscFreq1 < FREQ_HIGH) {
+        oscFreq1 = FREQ_LOW - 1;
+        oscCounter1 = 0;
       }
 
-      if (oscFreq1 < FREQ_LOW) {
-        oscFreq1 = FREQ_HIGH - 1;
+      if (oscFreq1 > FREQ_LOW) {
+        oscFreq1 = FREQ_HIGH + 1;
+        oscCounter1 = 0;
       }
     } else {
-      if ((oscFreq1 >= FREQ_HIGH) || (oscFreq1 <= FREQ_LOW)) {
+      if ((oscFreq1 <= FREQ_HIGH) || (oscFreq1 >= FREQ_LOW)) {
         oscFreq1 = FREQ_START;
+        oscCounter1 = 0;
       }
     }
 
@@ -238,7 +241,7 @@ void loop() {
   if (readSpeedCount > 20) {
     readSpeedCount = 0;
     int speed_t = analogRead(A3);
-    stepSpeed = map(speed_t, 0, 1023, SPEED_LOW,  SPEED_HIGH);
+    stepSpeed = map(speed_t, 0, 1023, SPEED_HIGH,  SPEED_LOW);
   }
   readSpeedCount++;
 
