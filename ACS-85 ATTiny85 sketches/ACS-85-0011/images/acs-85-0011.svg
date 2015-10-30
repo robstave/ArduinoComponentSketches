@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="acs-85-0001.svg">
+   sodipodi:docname="acs-85-0011.svg"
+   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0011\images\acs-85-0011.png"
+   inkscape:export-xdpi="89.699997"
+   inkscape:export-ydpi="89.699997">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="163.07353"
-     inkscape:cy="187.83824"
+     inkscape:cx="120.14288"
+     inkscape:cy="173.90359"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -167,7 +170,7 @@
          sodipodi:role="line"
          id="tspan4264"
          x="92"
-         y="728.36218">ACS-85-0001</tspan></text>
+         y="728.36218">ACS-85-0011</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.87476009;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -289,7 +292,7 @@
          id="tspan4148-4-3-8-0-2"
          x="310.08984"
          y="922.81506"
-         style="font-size:11.25px">PB1</tspan></text>
+         style="font-size:11.25px;fill:#6e0000;fill-opacity:1">PB1 Square out</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -303,7 +306,7 @@
          id="tspan4148-4-3-8-0-2-5"
          x="308.49445"
          y="956.9491"
-         style="font-size:11.25px">PB0</tspan></text>
+         style="font-size:11.25px;fill:#006800;fill-opacity:1">PB0 PWM LFO out</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -317,21 +320,21 @@
          id="tspan4148-4-3-8-0-2-2"
          x="308.72241"
          y="890.46558"
-         style="font-size:11.25px">PB2</tspan></text>
+         style="font-size:11.25px">PB2 NC</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="125.98895"
-       y="925.53699"
+       x="103.48895"
+       y="924.53699"
        id="text4146-7-22-4-9-2-7-7"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="-216"
        inkscape:transform-center-y="35.499999"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3"
-         x="125.98895"
-         y="925.53699"
-         style="font-size:11.25px">PB4</tspan></text>
+         x="103.48895"
+         y="924.53699"
+         style="font-size:11.25px">NC PB4</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4541"
@@ -344,18 +347,18 @@
            y="267.5" /></flowRegion><flowPara
          id="flowPara4547" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="123.35431"
-       y="894.9436"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000069;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="86.354309"
+       y="890.4436"
        id="text4146-7-22-4-9-2-7-7-0-2"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="-216"
        inkscape:transform-center-y="35.499999"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3-8-3"
-         x="123.35431"
-         y="894.9436"
-         style="font-size:11.25px">PB3</tspan></text>
+         x="86.354309"
+         y="890.4436"
+         style="font-size:11.25px;fill:#000069;fill-opacity:1;">Speed PB3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#910000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -423,6 +426,6 @@
          id="tspan4264-0"
          x="100.95703"
          y="773.9032"
-         style="font-size:30px">Simple Oscillator</tspan></text>
+         style="font-size:30px">Random LFO PWM</tspan></text>
   </g>
 </svg>
