@@ -1,22 +1,27 @@
-# ACS-85-0001
-Simple Squarewave Oscillator
+# ACS-85-0010
+Simple LFO
 ==============
 
 ## Overview:
-This is a down and dirty oscillator that you can use to test other circuits. 
-The frequencies are fixed, so if you want some control over the sound, this is not the droid you are looking for.
+PWM lfo outputs.
+Has a triangle, ramp up, ramp down and sine.
+
+The mode is selected with an analog pot.  A linear pot is best, but if you have a log pot you can change the code to handle that range
+
+Set this value to 0 for non-linear
+
+    #define MAP_VALUES_AS_LINEAR 1
+
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001/images/acs-85-0001.png)] (https://github.com/robstave/ArduinoComponentSketches)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0010/images/acs-85-0010.png)] 
 
 ## Equivalent:
 
-Mostly used to replace a 40106 oscillator for a quick audio check.
-
-[![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001/images/ACS-85-0001-overview.png)] (https://github.com/robstave/ArduinoComponentSketches)
-
+ 
+ 
 
 ## Examples:
-[Sample](https://soundcloud.com/user-692410397/85-0001a) Not really stellar.  Its just a square wave.  But at the end is the ramp.
+
  
