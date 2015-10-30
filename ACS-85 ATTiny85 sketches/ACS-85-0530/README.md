@@ -49,3 +49,11 @@ translated to a frequency via the r2r->vco part.
 [![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0530/images/ACS-85-0530_overview.png)]  
 
 ## Examples:
+
+
+[Sample 1 - Drunk Walk](https://soundcloud.com/user-692410397/drunk-1) Standard walk.  Only vary the speed of the register
+
+[Sample 2 - Drunk Stagger](https://soundcloud.com/user-692410397/drunk-stagger) Walk with stagger turned on.  This varies the increment size.
+
+[Sample 3 - Skew](https://soundcloud.com/user-692410397/drunkskew) Adds the skew. This alters the probability so that it generally goes up or down.
+
