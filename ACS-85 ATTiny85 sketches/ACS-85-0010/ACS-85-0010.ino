@@ -121,20 +121,14 @@ int oscCounter1 = 0;
 void setup() {
 
   DDRB = B00000111;  //set output bits
+  
 
   // initialize timer0
   noInterrupts();           // disable all interrupts
 
-  // Clear OC0A on match
-  TCCR0A |= _BV(COM0A1);
-
-  // Set timer to count with F_CPU / 64
-  //TCCR0B |= _BV(CS10); // F_CPU
-  //TCCR0B |= _BV(CS01) | _BV(CS00);  // /64 prescale
-
-  // Use Fast PWM, OCRA TOP
-  TCCR0A |= _BV(WGM00);
-  TCCR0A |= _BV(WGM01);
+    // Timer 0, A side
+  TCCR0A = _BV (WGM00) | _BV (WGM01) | _BV (COM0A1); // fast PWM, clear OC0A on compare
+  TCCR0B = _BV (CS00);           // fast PWM, top at 0xFF, no prescaler
 
   // Initial value for our pulse width is 0
   OCR0A = 0x00;
