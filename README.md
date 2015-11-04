@@ -7,15 +7,19 @@ Arduino Component Sketches
 
 
 ## Objective:
-Create a library of Arduino Sketches that can be loaded on ATTiny AVR microcontrollers to use in lo-fi synth/noise circuits.   Either replacing a block of logic or creating a new type of circuit block altogether.  The intent is not to create a synth on a chip, but to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
+Create a library of Arduino Sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.   Either replacing a block of logic or creating a new type of circuit block altogether.  The intent is not to create a synth on a chip, but to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
 
-Of course, these are really arduino chips with the limitations that they have.  I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown products.
+Of course, these are really arduino chips with the limitations that come with that such as speed, quantization and code quirks.  I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown products.
 
-The closest thing I have found is the Rad-fi System from Bleep Labs.
+The closest thing I have found to this is the Rad-fi System from Bleep Labs.
 
 http://bleeplabs.com/store/the-rad-fi-system/
 
-A collection of ATTiny micros with these sketches would be completely compatable with this system.
+A collection of ATTiny micros with these sketches would be completely compatible with this system.
+
+See also perhaps the lfo from Electric Druid
+http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/
+
 
 
 ## Background:
@@ -76,8 +80,8 @@ Number    | Title   | Status   | Description
 
 Number    | Title   | Status   | Description  
 --- | --- | --- | ---
-[ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0001) | Oscillator | Ready | Fixed squarewave oscillator with High and Low Frequencies and a Ramp and Triangle
-[ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Ready | Fixed squarewave oscillator with a grand assortment of beeps. 
+[ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0001) | Oscillator | Ready | Fixed square wave oscillator with High and Low Frequencies and a Ramp and Triangle
+[ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Ready | Fixed square wave oscillator with a grand assortment of beeps. 
 [ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305) | Gates | Ready |  Xor Array
 
 
