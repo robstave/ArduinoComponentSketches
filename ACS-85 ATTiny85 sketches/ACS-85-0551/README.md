@@ -12,13 +12,14 @@ AND/OR/XOR them or or just sum them using resistors
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551/images/ACS-85-0551.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550)] )
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551/images/ACS-85-0551.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551)
 
 ## Equivalent:
 This is not like the 4017/4051 Melody Generator
 
 ## Examples:
 This is a sample of all 3 pins summed up and playing at the same time.
+
 https://soundcloud.com/user-692410397/85-0551a
 
 
