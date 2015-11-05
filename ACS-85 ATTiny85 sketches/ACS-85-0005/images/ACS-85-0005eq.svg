@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -37,15 +37,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1371"
-     inkscape:window-height="740"
+     inkscape:window-width="1453"
+     inkscape:window-height="909"
      id="namedview418"
      showgrid="false"
      inkscape:zoom="2"
-     inkscape:cx="74"
-     inkscape:cy="481.46976"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="-0.75"
+     inkscape:cy="321.46976"
+     inkscape:window-x="1652"
+     inkscape:window-y="102"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <defs
@@ -125,12 +125,7 @@
        font-weight="bold"
        font-size="10px"
        id="g26"
-       style="font-weight:bold;font-size:10px;font-family:Arial, Helvetica;text-anchor:middle;fill:#000000">
-      <text
-         x="227.75"
-         y="224.55"
-         id="text28">U4</text>
-    </g>
+       style="font-weight:bold;font-size:10px;font-family:Arial, Helvetica;text-anchor:middle;fill:#000000" />
     <rect
        x="207.2"
        y="239.2"
@@ -1646,15 +1641,17 @@
        style="fill:none;stroke:#000000;stroke-width:1.60000002;stroke-miterlimit:10" />
   </g>
   <path
-     style="fill:none;fill-rule:evenodd;stroke:#b40000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0"
-     d="M 94.5,22.5 39,50 37,179.5 92.5,153 37,179 l -3,190.5 55,-23 0,0"
+     style="fill:none;fill-rule:evenodd;stroke:#b40000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 94.5,22.5 39,50 37,179.5 92.5,153 37,181.5 l -3,188 55,-23 0,0"
      id="path4548"
      inkscape:connector-curvature="0"
      inkscape:export-xdpi="90"
-     inkscape:export-ydpi="90" />
+     inkscape:export-ydpi="90"
+     sodipodi:nodetypes="cccccccc" />
   <path
-     style="fill:none;fill-rule:evenodd;stroke:#0000c4;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:6,2;stroke-dashoffset:0"
-     d="m 98.5,205.5 -85,44.5 -2,187 78.5,-43.5 -78.5,42.5 0,51 79.5,-40 0,0 0,0.5"
+     style="fill:none;fill-rule:evenodd;stroke:#0000c4;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 2;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 98.5,205.5 -85,44.5 -2,187 78.5,-43.5 -78.5,47.5 0,46 79.5,-40 0,0 0,0.5"
      id="path4550"
-     inkscape:connector-curvature="0" />
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccc" />
 </svg>

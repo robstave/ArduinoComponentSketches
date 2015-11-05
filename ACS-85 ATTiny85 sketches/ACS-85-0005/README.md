@@ -14,7 +14,7 @@ PB2 is the freq - 2*detune
 [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-0005.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004/images)
 
 ## Equivalent:
- [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-0005eq.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004/images)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-0005eq.png)
 
   Imagine 3 40106 squarewave generators.  All 3 driven by a 3 gang pot.
   Then, the second and third have another 3 gang pot with two of the deals in the third oscillator so that you have detune * 2.
