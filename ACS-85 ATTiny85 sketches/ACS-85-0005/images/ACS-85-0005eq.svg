@@ -12,7 +12,10 @@
    height="556"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="ACS-85-0005eq.svg">
+   sodipodi:docname="ACS-85-0005eq.svg"
+   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0005\images\ACS-85-0005eq.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata420">
     <rdf:RDF>
@@ -40,7 +43,7 @@
      showgrid="false"
      inkscape:zoom="2"
      inkscape:cx="74"
-     inkscape:cy="481.21976"
+     inkscape:cy="481.46976"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -1646,7 +1649,9 @@
      style="fill:none;fill-rule:evenodd;stroke:#b40000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0"
      d="M 94.5,22.5 39,50 37,179.5 92.5,153 37,179 l -3,190.5 55,-23 0,0"
      id="path4548"
-     inkscape:connector-curvature="0" />
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
   <path
      style="fill:none;fill-rule:evenodd;stroke:#0000c4;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:6,2;stroke-dashoffset:0"
      d="m 98.5,205.5 -85,44.5 -2,187 78.5,-43.5 -78.5,42.5 0,51 79.5,-40 0,0 0,0.5"
