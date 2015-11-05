@@ -25,7 +25,7 @@ Here is an example of the xor being driven by two squarewaves. In this case, the
  
 https://soundcloud.com/user-692410397/85-0305xor-0004 
  
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-0305-0004.png)]
+[![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-0305-0004.png)]
 
  
  

@@ -30,6 +30,12 @@ The equivalent circuit would look something like this
  
 
 ## Examples:
+ Here is an example of the ACS-85-0004 driving the NAND gates
+ 
+ https://soundcloud.com/user-692410397/85-0306nand-0004 
+ 
+ [![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306/images/ACS-85-0306-0004.png)]
+
  
 
 ## Strategy:
