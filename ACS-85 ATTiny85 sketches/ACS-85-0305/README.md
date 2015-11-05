@@ -21,6 +21,15 @@ PB0 is only going to xor the first 2 bits and PB1 adds the next one.
 
 ## Examples:
  
+Here is an example of the xor being driven by two squarewaves. In this case, the ACS-85-0004
+ 
+https://soundcloud.com/user-692410397/85-0305xor-0004 
+ 
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-0305-0004.png)]
+
+ 
+ 
+ 
 
 ## Strategy:
 In this case, all the logic is in the loop. We are just reading the values and outputting them.  No interrupts or anything like that.

@@ -3,7 +3,7 @@
  * ACS-85-0004
  * ATTiny85  Dual VCO Selectable Range
  *
- * Dual frequncy vco
+ * Two vco
  * With an analog control to do ranges from LFO to High frequency
  *
  * 6 ranges HF1,HF2, MF1, MF2, LF1, LF2
