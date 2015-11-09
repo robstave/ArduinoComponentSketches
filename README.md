@@ -48,6 +48,9 @@ Number    | Title   | Status   | Description
 [ACS-85-0003](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0003) | VCO | Ready| Two Tone VCO with speed
 [ACS-85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004) | VCO | Ready| Two Freq VCO with Range (lfo to hf)
 [ACS-85-0005](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005) | VCO | Ready| Three Freq VCO detuned
+[ACS-85-0006](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0006) | VCO | Ready| VCO with random period
+[ACS-85-0007](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0007) | VCO | Ready| VCO with ramping period
+[ACS-85-0008](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0008) | VCO | Ready| VCO with adjustable period/vibrato
 [ACS-85-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0010) | LFO PWM | Ready| Sine, tri, ramp up, ramp down
 [ACS-85-0011](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011) | LFO PWM | Ready| Random values (like psycho)
 [ACS-85-0012](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012) | LFO PWM | Ready| Random values 2 (like psycho)
