@@ -1,16 +1,28 @@
 
 /**
  * ACS-85-0006
- * ATTiny85  Squarewave with PWM period
+ * ATTiny85  Squarewave with variable frequncy.
+ * The period changes in this case using counters.
+ * Each time the pin flips, the period is reduced or increased.
+ * The side of the increase is masked by 3,4 or 5 bits. Since the
+ * period increases, the frequncy decreases.  Its much more of ramp sound
+ * for PB2
+ *
+ *
+ * so for
+ * PB0, the period is n + (x mod 7)
+ * PB1, the period is n + (x mod 15)
+ * PB2, the period is n + (x mod 32)
+ *
  *
  *
  * External pin 1       = Reset (not used)
  * External pin 2 (PB3) = input 0 freq 1
  * External pin 3 (PB4) = none
  * External pin 4       = GND
- * External pin 5 (PB0) = output 0 output pure square
- * External pin 6 (PB1) = Output 1 output random period
- * External pin 7 (PB2) = Output 2 output additive period
+ * External pin 5 (PB0) = output 0 smaller variance
+ * External pin 6 (PB1) = Output 1
+ * External pin 7 (PB2) = Output 2 larger variance
  * External pin 8       = Vcc
  *
 
@@ -59,10 +71,10 @@ volatile byte  oscCounter3 = 0;
 volatile byte nextClock3 = 200;
 
 
-volatile byte counter1= 1; 
-volatile byte counter2= 1;
-volatile byte counter3= 1;
- 
+volatile byte counter1 = 1;
+volatile byte counter2 = 1;
+volatile byte counter3 = 1;
+
 
 
 // the setup function runs once when you press reset or power the board
@@ -93,16 +105,16 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   //Count up and toggle portB bits
   if (oscCounter1 > nextClock1) {
     oscCounter1 = 0;
-     counter1++;
-     nextClock1 = oscFreq1 + ( counter1 & B00000111);
-     
+    counter1++;
+    nextClock1 = oscFreq1 + ( counter1 & B00000111);
+
     PORTB ^= (_BV(PB0));
   }
   oscCounter1++;
 
   if (oscCounter2 > nextClock2) {
     oscCounter2 = 0;
-    
+
     counter2++;
 
     nextClock2 = oscFreq1 + ( counter2 & B00001111);
@@ -127,6 +139,6 @@ void loop() {
   //Read freq
   int osc1_t = analogRead(A3);
   oscFreq1 = map(osc1_t, 0, 1023, VCO1_LOW,  VCO1_HIGH);
- 
+
 
 }

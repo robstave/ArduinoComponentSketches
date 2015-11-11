@@ -1,10 +1,9 @@
 # ACS-85-0008
-Squarewave with Tremolo
-==============
+ ATTiny85 Squarewave with Vibrato
 
 ## Overview:
 
- Two inputs.  One for Freq and the other for Tremolo width.
+ Two inputs.  One for Freq and the other for Vibrato width.
  The outputs are
  PB0 - Frequency ramps down
  PB1 - Frequency Ramps Up

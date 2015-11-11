@@ -1,5 +1,5 @@
 # ACS-85-0006
-Squarewave with randomness as pwm
+Square wave VCO with randomness as pwm
 ==============
 
 ## Overview:

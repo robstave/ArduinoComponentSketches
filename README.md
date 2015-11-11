@@ -54,6 +54,7 @@ Number    | Title   | Status   | Description
 [ACS-85-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0010) | LFO PWM | Ready| Sine, tri, ramp up, ramp down
 [ACS-85-0011](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011) | LFO PWM | Ready| Random values (like psycho)
 [ACS-85-0012](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012) | LFO PWM | Ready| Random values 2 (like psycho)
+[ACS-85-0020](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0020) | LFO | Ready| Adjustable Squarewave
 [ACS-85-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305) | Gates | Ready| Xor Gates (2)
 [ACS-85-0306](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306) | Gates | Ready| Nand Gates (2)
 [ACS-85-0307](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307) | Gates | Ready| Or/And gate
@@ -72,6 +73,7 @@ Number    | Title   | Status   | Description
 [ACS-85-0550](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550) | Component | Ready| Melody Maker Upper 1
 [ACS-85-0551](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551) | Component | Ready| Melody Maker Upper 2
 [ACS-85-0552](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0552) | Component | Ready| Melody Maker Upper 3
+[ACS-85-0600](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0600) | LFO - Sequencer | Ready| Sequencer programmable LFO
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Ready| Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Ready| Two pin Tap Tempo
 [ACS-85-0710](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710) | Controller | Ready| Button Select 3 pin
