@@ -37,7 +37,7 @@
 
 
 #define SPEED_LOW  1200
-#define SPEED_HIGH 80
+#define SPEED_HIGH 40
 
 const int int0 = 0;  // interrupt 0
 
@@ -51,6 +51,13 @@ volatile int  oscCounter2 = 0;
 unsigned long counter = 0;
 unsigned long lastCounter = 0;
 unsigned long diff = 0;
+
+
+
+int loopSpeed = 20;
+int detune_value = 20;
+
+
 
 
 //Byte used as the LFSR
@@ -90,8 +97,7 @@ void setup()
 void clockCounter()      // called by interrupt
 {
 
-  unsigned long delta  = counter - lastCounter;
-  diff =  delta;
+  diff =  (diff + (counter - lastCounter)) >> 1;
   lastCounter = counter;
   clockLfsr ();
 
@@ -122,10 +128,6 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 }
 
- 
-int loopCounter = 0;
-int loopSpeed = 20;
-int detune_value = 20;
 
 
 /**
@@ -167,14 +169,12 @@ void loop()
 
   //No need to always sample.
   //If the width or speed seems less responsive, drop this number
-  if (loopCounter > 10 ) {
-    loopCounter = 0;
-    int sample = analogRead(A3);
-    detune_value = map(sample, 0, 1023, 0 ,  100);
-    sample = analogRead(A2);
-    loopSpeed = map(sample, 0, 1023, SPEED_HIGH,  SPEED_LOW);
-  }
-  loopCounter++;
+
+  int sample = analogRead(A3);
+  detune_value = map(sample, 0, 1023, 0 ,  100);
+  sample = analogRead(A2);
+  loopSpeed = map(sample, 0, 1023, SPEED_HIGH,  SPEED_LOW);
+
 
 
   delay(loopSpeed);

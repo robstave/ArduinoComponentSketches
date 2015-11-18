@@ -1,5 +1,3 @@
-
-
 /**
  * ACS-85-0352
  * ATTiny85 sample and vibrato ramps
@@ -97,11 +95,8 @@ TCCR1 = _BV(CTC1) | _BV(CS10); // Start timer, ctc mode, prescaler clk/1
 
 void clockCounter()      // called by interrupt
 {
-
-  unsigned long delta  = counter - lastCounter;
-  diff =  delta;
+  diff =  (diff+(counter - lastCounter))>>1;
   lastCounter = counter;
-
 }
 
 

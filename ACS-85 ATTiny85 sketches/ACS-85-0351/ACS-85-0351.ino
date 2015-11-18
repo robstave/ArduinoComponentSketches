@@ -90,12 +90,17 @@ void setup()
 
 
 
-
+/**
+ * Get the difference save the previous count
+ * 
+ * Does a bit of a rolling average.  you could just do
+ * diff = counter - lastCounter too
+ */
 void clockCounter()      // called by interrupt
 {
 
-  unsigned long delta  = counter - lastCounter;
-  diff =  delta;
+ 
+  diff =  (diff +  (counter - lastCounter))>>1;
   lastCounter = counter;
 
 }

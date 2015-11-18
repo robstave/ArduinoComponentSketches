@@ -92,8 +92,8 @@ unsigned long diff = 0;
 void clockCounter()      // called by interrupt
 {
 
-  unsigned long delta  = counter - lastCounter;
-  diff =  delta;
+ 
+  diff =  (diff + (counter - lastCounter))/2;
   lastCounter = counter;
 }
 
