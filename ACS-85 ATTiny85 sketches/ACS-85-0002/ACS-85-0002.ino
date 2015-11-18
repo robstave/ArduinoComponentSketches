@@ -49,6 +49,7 @@
  *  
  * 
  * V 1.0  -  First Version
+ * TODO, add Hysteresis 
  *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
  *

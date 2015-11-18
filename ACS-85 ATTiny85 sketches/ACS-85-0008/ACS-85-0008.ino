@@ -1,6 +1,6 @@
 
 /**
- * ACS-85-0006
+ * ACS-85-0008
  * ATTiny85  Squarewave with Vibrato
  *
  *
@@ -8,9 +8,9 @@
  * External pin 2 (PB3) = input 0 freq 1
  * External pin 3 (PB4) = none
  * External pin 4       = GND
- * External pin 5 (PB0) = output 0 output pure square
- * External pin 6 (PB1) = Output 1 output random period
- * External pin 7 (PB2) = Output 2 output additive period
+ * External pin 5 (PB0) = output 0 output ramps down
+ * External pin 6 (PB1) = Output 1 output ramps up
+ * External pin 7 (PB2) = Output 2 output ramps up and down
  * External pin 8       = Vcc
  *
 
@@ -110,7 +110,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   if (oscCounter2 > nextClock2) {
     oscCounter2 = 0;
 
-    counter2++;A
+    counter2++;
 
     if (counter2 > maxTrem) {
       counter2 = 0;
@@ -121,9 +121,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   oscCounter2++;
 
-
-
-bvw N
+ 
   if (oscCounter3 > nextClock3) {
     oscCounter3 = 0;
 
