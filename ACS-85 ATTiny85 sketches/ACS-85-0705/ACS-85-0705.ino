@@ -1,7 +1,9 @@
 
 /**
  * ACS-85-0705
- * ATTiny85
+ * ATTiny85 Two Tap LFO
+ * 
+ * Tap the button and the output will reflect the speed with a 50% duty cycle
  *
  *
  * Notes:
@@ -172,21 +174,7 @@ void loop() {
 
   }
 
-
-
 }
 
 
-/*
- *
- * Hey kids...if you forget which timer its one...just add this code and compile
- * it will fail...but also will tell you the timer
-#if TIMER_TO_USE_FOR_MILLIS == 0
-    #error TIMER_TO_USE_FOR_MILLIS is 0
-#endif
-
-#if TIMER_TO_USE_FOR_MILLIS == 1
-    #error TIMER_TO_USE_FOR_MILLIS is 1
-#endif
-*/
-
+ 
