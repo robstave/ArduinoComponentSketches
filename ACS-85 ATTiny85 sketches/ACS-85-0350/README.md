@@ -14,7 +14,7 @@ Ways around this involve a Phase locked loop to boost the carrier up in frequenc
 
 
 
-(https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0350_notes.png)
+![Harmonizer](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0350_notes.png)
 
 
 ### Minor 3rd

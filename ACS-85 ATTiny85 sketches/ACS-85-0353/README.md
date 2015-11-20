@@ -9,7 +9,7 @@ Kinda like the frequency was modulated by a square wave source.
 The Width determines the size of the mask to add to the sampled frequency.
 Speed is the duration of each step.
 
-[![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0353_notes.png)]
+![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0353_notes.png)
 
 
 
@@ -40,7 +40,7 @@ so the offset is taken from other bits in the LFSR or just clocking the lfsr bet
 
  
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/acs-85-0353.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images)
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/ACS-85-0353.png)] (https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images)
 
 
 ## Equivalent:
