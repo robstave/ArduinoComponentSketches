@@ -12,6 +12,11 @@ Ways around this involve a Phase locked loop to boost the carrier up in frequenc
 
 
 
+
+
+[![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0350_notes.png)]
+
+
 ### Minor 3rd
 A major third in just intonation corresponds to a pitch ratio of 6:5.  
 
