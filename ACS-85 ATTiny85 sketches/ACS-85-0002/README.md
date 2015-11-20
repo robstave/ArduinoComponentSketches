@@ -18,7 +18,6 @@ ACS-85-0003 allows you to play with the alternating frequencies more.
 
 Two 40106 oscillators and a pin that is a mix
 
-
 ## Examples:
 
 [[Sample 1](https://soundcloud.com/user-692410397/85-0002-q2)] Changing knob value for one of the VCOs
