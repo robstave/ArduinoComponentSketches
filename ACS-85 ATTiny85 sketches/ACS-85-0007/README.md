@@ -4,7 +4,7 @@ Square VCO with freq ramping
 
 ## Overview:
 ATTiny85  Square wave with variable frequency.
-The period changes in this case using counters. Each time the pin flips, the period is increased. The size of the increase is masked by 3,4 or 5 bits. Since the period increases, the frequncy decreases.  
+The period changes in this case using counters. Each time the pin flips, the period is increased. The size of the increase is masked by 3,4 or 5 bits. Since the period increases, the frequency decreases.  
 
 Its much more of a dramatic ramp sound for PB2
  

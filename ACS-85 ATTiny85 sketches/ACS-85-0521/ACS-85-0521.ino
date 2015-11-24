@@ -1,7 +1,7 @@
 
 /**
  * ACS-85-0521
- * ATTiny85  LFSR Varable Unclocked High Frequency
+ * ATTiny85  LFSR Variable Unclocked High Frequency
  * 
  * Note.  This is in the high frequency ranges.
  * To get a lower frequency, swap lines in the setup. 
