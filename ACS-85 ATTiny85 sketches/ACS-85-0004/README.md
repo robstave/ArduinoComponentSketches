@@ -16,7 +16,7 @@ MF2  |  38.5 Hz  |  133 Hz
 LF1  |  1 Hz  | 16 Hz
 LF2  |  .2 Hz  | 4 Hz
 
-You can change the values, but keep in mind the HF and MF counter is an INT.
+You can change the values, but keep in mind the HF and MF counter is an Integer.
 For the low frequencies, the code was placed in another loop.  Changing the int to a long did not work well and I could not get above 1.5Khz.  I think this is because the work in the interrupt handler for longs takes way more clock cycles.
 I also ended up copying the counter code for the LFO branch rather than add complexity (and clock cycles) making a handler that looks tight.
 

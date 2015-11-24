@@ -1,5 +1,5 @@
 # ACS-85-0003
-Two Tone with Speed VCO
+Two Tone VCO with Speed 
 ==============
 
 ## Overview:

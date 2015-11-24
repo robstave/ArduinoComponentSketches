@@ -1,17 +1,17 @@
 
 /**
  * ACS-85-0006
- * ATTiny85  Squarewave with variable frequncy.
+ * ATTiny85  Square wave with variable frequency.
  * The period changes in this case using counters.
  * Each time the pin flips, the period is reduced or increased.
  * The side of the increase is masked by 3,4 or 5 bits. Since the
- * period increases, the frequncy decreases.  Its much more of ramp sound
+ * period increases, the frequency decreases.  Its much more of ramp sound
  * for PB2
  *
  *
  * so for
- * PB0, the period is n + (x mod 7)
- * PB1, the period is n + (x mod 15)
+ * PB0, the period is n + (x mod 8)
+ * PB1, the period is n + (x mod 16)
  * PB2, the period is n + (x mod 32)
  *
  *
@@ -25,15 +25,11 @@
  * External pin 7 (PB2) = Output 2 larger variance
  * External pin 8       = Vcc
  *
-
- *
  *
  * V 1.0  -  First Version
  *
- *
- *
- * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * Observations.
+ * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno.
+ *   It might work, but you prob need to change Pins/ports
  *
  * Rob Stave (Rob the fiddler) ccby 2015
  */
@@ -44,7 +40,7 @@
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
 //      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
-//      (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+//      (pin4)    none  PB4 3|    |6  PB1 (pin1) out 1
 //                      GND 4|    |5  PB0 (pin0) out 0
 //                           ------
 
