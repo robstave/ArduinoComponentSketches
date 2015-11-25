@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="3in"
-   height="2in"
-   viewBox="0 0 269.99999 179.99999"
+   height="1.75in"
+   viewBox="0 0 269.99999 157.49999"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="150.93317"
+     inkscape:cx="65.68317"
      inkscape:cy="157.5"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -56,7 +56,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-872.36222)">
+     transform="translate(0,-894.86222)">
     <rect
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.79829907;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3344"
@@ -163,15 +163,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="20.610397"
-       y="901.79486"
+       x="47.110397"
+       y="921.29486"
        id="text4262"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4264"
-         x="20.610397"
-         y="901.79486"
-         style="font-size:35px">ACS-85-0521</tspan></text>
+         x="47.110397"
+         y="921.29486"
+         style="font-size:27.5px">ACS-85-0521</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -357,15 +357,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="27.567429"
-       y="927.33588"
+       x="27.067429"
+       y="938.83588"
        id="text4262-7"
        sodipodi:linespacing="125%"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
-         x="27.567429"
-         y="927.33588"
+         x="27.067429"
+         y="938.83588"
          style="font-size:20px"
          id="tspan4192">16 Bit LFSR High Freq</tspan></text>
     <g

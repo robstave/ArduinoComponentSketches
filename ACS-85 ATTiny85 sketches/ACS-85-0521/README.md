@@ -1,5 +1,5 @@
 # ACS-85-0521
-16 Bit LFSR
+16 Bit LFSR internal clock audio frequency
 ==============
 
 ## Overview:
@@ -21,6 +21,8 @@ The result is four pins that all sound similar as noise, but are different.  The
 This is the same LFSR as is described in the wikipedia. https://en.wikipedia.org/wiki/Linear_feedback_shift_register
 
 
+See also https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
+
 
 ## Pinout:
 [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0521/images/ACS-85-0521.png)] (https://github.com/robstave/ArduinoComponentSketches)
@@ -31,9 +33,9 @@ This is the same LFSR as is described in the wikipedia. https://en.wikipedia.org
 
 
 ## Similar Circuits
-85-0520 is external clocked lfsr
-85-0521 is internal clocked (variable controlled) VCO - audio frequency
-85-0521 is internal clocked (variable controlled) LFO - low Frequency
+*85-0520 is external clocked lfsr
+*85-0521 is internal clocked (variable controlled) VCO - audio frequency
+*85-0521 is internal clocked (variable controlled) LFO - low Frequency
 
 ## Examples:
  

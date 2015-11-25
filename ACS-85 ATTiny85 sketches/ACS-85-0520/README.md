@@ -27,6 +27,8 @@ You still hear the ramp...its just fuzzy.  Very 8bit sounding.
 
 This is the same LFSR as is described in the wikipedia. https://en.wikipedia.org/wiki/Linear_feedback_shift_register
 
+See also https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
+
 
 
 ## Pinout:
@@ -48,9 +50,9 @@ A second audio example is the 85-0003 driving the LFSR in the same manner
 https://soundcloud.com/user-692410397/85-0003-0520mix
 
 ## Similar Circuits
-85-0520 is external clocked lfsr
-85-0521 is internal clocked (variable controlled) VCO - audio frequency
-85-0521 is internal clocked (variable controlled) LFO - low Frequency
+*85-0520 is external clocked lfsr
+*85-0521 is internal clocked (variable controlled) VCO - audio frequency
+*85-0521 is internal clocked (variable controlled) LFO - low Frequency
 
 
 
