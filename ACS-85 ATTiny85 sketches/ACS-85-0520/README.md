@@ -38,5 +38,15 @@ This is the same LFSR as is described in the wikipedia. https://en.wikipedia.org
 
 
 ## Examples:
+Here is an example circuit that demonstrates how it sounds when we drive the LFSR with a signal in the audio range.
  [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520/images/ACS-85-circuit-0002-0520.png)] 
+
+An audio example is here https://soundcloud.com/user-692410397/85-0001-0520mix
+
+A second audio example is the 85-0003 driving the LFSR in the same manner
+
+https://soundcloud.com/user-692410397/85-0003-0520mix
+
+
+
 
