@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="3in"
-   height="2in"
-   viewBox="0 0 269.99999 179.99999"
+   height="1.75in"
+   viewBox="0 0 269.99999 157.49999"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="223.08119"
-     inkscape:cy="176.5"
+     inkscape:cx="118.05903"
+     inkscape:cy="181.19875"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -56,7 +56,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-872.36222)">
+     transform="translate(0,-894.86222)">
     <rect
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.79829907;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3344"
@@ -163,15 +163,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="12.5"
-       y="901.86218"
+       x="29.5"
+       y="925.36218"
        id="text4262"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4264"
-         x="12.5"
-         y="901.86218"
-         style="font-size:35px">ACS-85-0522</tspan></text>
+         x="29.5"
+         y="925.36218"
+         style="font-size:27.5px">ACS-85-0522</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -282,7 +282,7 @@
          style="font-size:11.25px">Reset</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="184.95367"
        y="1008.9518"
        id="text4146-7-22-4-9-2"
@@ -295,10 +295,10 @@
          id="tspan4148-4-3-8-0-2"
          x="184.95367"
          y="1008.9518"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1;">LFSR1</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">LFSR1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="184.50714"
        y="1034.5524"
        id="text4146-7-22-4-9-2-4"
@@ -309,10 +309,10 @@
          id="tspan4148-4-3-8-0-2-5"
          x="184.50714"
          y="1034.5524"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1;">LFSR0</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">LFSR0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="184.6781"
        y="984.6897"
        id="text4146-7-22-4-9-2-7"
@@ -323,10 +323,10 @@
          id="tspan4148-4-3-8-0-2-2"
          x="184.6781"
          y="984.6897"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1;">Speed</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">Speed</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="33.378021"
        y="1009.4933"
        id="text4146-7-22-4-9-2-7-7"
@@ -339,7 +339,7 @@
          id="tspan4148-4-3-8-0-2-2-3"
          x="33.378021"
          y="1009.4933"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1;">LFSR3</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">LFSR3</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4541"
@@ -352,7 +352,7 @@
            y="267.5" /></flowRegion><flowPara
          id="flowPara4547" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="36.229614"
        y="985.42322"
        id="text4146-7-22-4-9-2-7-7-0-2"
@@ -363,32 +363,32 @@
          id="tspan4148-4-3-8-0-2-2-3-8-3"
          x="36.229614"
          y="985.42322"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1;">LFSR2</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">LFSR2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="19.457031"
-       y="927.4032"
+       x="17.957031"
+       y="943.4032"
        id="text4262-7"
        sodipodi:linespacing="125%"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
-         x="19.457031"
-         y="927.4032"
+         x="17.957031"
+         y="943.4032"
          style="font-size:20px"
          id="tspan4192">16 Bit LFSR Low Freq</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4284"
-       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion4286"><rect
            id="rect4288"
            width="154.5"
            height="55"
            x="54.5"
            y="-10" /></flowRegion><flowPara
-         id="flowPara4290"></flowPara></flowRoot>    <g
+         id="flowPara4290" /></flowRoot>    <g
        id="g4290-5-8"
        transform="matrix(-1,0,0,1,455.63858,16.728881)">
       <path

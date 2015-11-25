@@ -32,7 +32,7 @@ See also https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
 ## Equivalent:
 
-[![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0522/images/ACS-85-0522_ex.png)] 
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0522/images/ACS-85-0522_ex.png) 
 
 
 ## Similar Circuits
