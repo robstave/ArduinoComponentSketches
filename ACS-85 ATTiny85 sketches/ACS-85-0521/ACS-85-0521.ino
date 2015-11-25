@@ -24,7 +24,7 @@
  * External pin 4 = GND
  * External pin 5 = LFSR bit 0
  * External pin 6 = LFSR bit 1
- * External pin 7 = Analog input
+ * External pin 7 = Analog input freq
  * External pin 8 = VCC
  *
  * V 1.0  -  First Version
@@ -37,7 +37,7 @@
 //  ATTiny overview
 //                               +-\/-+
 //                       Reset  1|    |8  VCC
-//          LFSR 2 (pin3) PB3   2|    |7   PB2 (pin2) Analog
+//          LFSR 2 (pin3) PB3   2|    |7   PB2 (pin2) Frequency (A1)
 //          LFSR 3 (pin4) PB4   3|    |6   PB1 (pin1) LFSR 1
 //                         GND  4|    |5   PB0 (pin0) LFSR 0
 
