@@ -21,7 +21,7 @@
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
 //     (pin3) Speed A3  PB3 2|    |7  PB2 (pin2) nc
-//      (pin4) Glide A2  PB4 3|    |6  PB1 (pin1) Digital Square out
+//     (pin4) Glide A2  PB4 3|    |6  PB1 (pin1) Digital Square out
 //                      GND 4|    |5  PB0 (pin0) PWM LFO out
 //                           ------
 

@@ -1,20 +1,22 @@
 # ACS-85-0011
-Random LFO PWM out
+Random LFO PWM out w Glide
 ==============
 
 ## Overview:
-PWM lfo Output.
+PWM lfo Output  With glide
 
 Similar output to Psycho LFO
 
+The Glide is achieved by averaging previous values 
 Output is PWM so a Low pass filter is needed.
 
 The random value is determined from a LFSR
 https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
 
+
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-0011.png)] 
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012/images/ACS-85-0012.png)] 
 
 ## Equivalent:
 
