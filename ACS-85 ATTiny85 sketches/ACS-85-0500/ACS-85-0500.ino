@@ -35,7 +35,7 @@
  *   maybe there is a conflict w timer 0.
   
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) ccby 2015
  */
 
 
