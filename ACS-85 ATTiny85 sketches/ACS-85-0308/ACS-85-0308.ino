@@ -8,15 +8,15 @@
  * (and two selection bits)
  *
  * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = select bit1
- * External pin 3 (PB4) = select bit2
+ * External pin 2 (PB3) = select bit0
+ * External pin 3 (PB4) = select bit1
  * External pin 4       = GND
- * External pin 5 (PB0) = output 
- * External pin 6 (PB1) = input a
- * External pin 7 (PB2) = input b
+ * External pin 5 (PB0) = input a  
+ * External pin 6 (PB1) = input b
+ * External pin 7 (PB2) = output
  * External pin 8       = Vcc
  * 
- * s1 s2  A B  out 
+ * s0 s1  A B  out 
  * 0  0   0 0  0   AND
  * 0  0   0 1  0
  * 0  0   1 0  0
@@ -49,8 +49,8 @@
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
-//      (pin3) select1  PB3 2|    |7  PB2 (pin2) OUT
-//      (pin4) select2  PB4 3|    |6  PB1 (pin1) IN A
+//      (pin3) select0  PB3 2|    |7  PB2 (pin2) OUT
+//      (pin4) select1  PB4 3|    |6  PB1 (pin1) IN A
 //                      GND 4|    |5  PB0 (pin0) In B
 
 void setup() {
