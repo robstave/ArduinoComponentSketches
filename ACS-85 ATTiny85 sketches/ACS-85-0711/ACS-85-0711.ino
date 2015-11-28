@@ -11,9 +11,9 @@
  *
  * External pin 2 = up
  * External pin 3 = down
- * External pin 5 = Bit2
+ * External pin 5 = Bit0
  * External pin 6 = Bit1
- * External pin 7 = Bit0
+ * External pin 7 = Bit2
  *
  * Rob Stave (Rob the Fiddler) CCBY 2015
  *
