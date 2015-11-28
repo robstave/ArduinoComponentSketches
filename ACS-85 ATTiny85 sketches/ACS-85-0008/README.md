@@ -17,3 +17,8 @@
 ## Examples:
 
  https://soundcloud.com/user-692410397/85-0008a
+ 
+ 
+## Improvements
+Its all pretty in your face and could be a little more nuanced.
+85-0009 is reserved for sin when I get around to fine tuning this a little better.  Or, Im open for submits
