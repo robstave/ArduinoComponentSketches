@@ -30,7 +30,7 @@
 //                      GND 4|    |5  PB0 (pin0) out 0
 //                           ------
 
-//Ranges for the pot.  Technically a small nuumber means a
+//Ranges for the pot.  Technically a small number means a
 //shorter timer so low or high...whatever you want to call it.
 
   
