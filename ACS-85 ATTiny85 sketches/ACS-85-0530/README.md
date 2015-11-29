@@ -4,7 +4,7 @@ Drunk Walk
 
 ## Overview:
 A simulation of the drunk walk as an audio output.
-Start at a set frequency
+Start at a set frequency and randomly take a step up or down.
 
 Uses the LFSR to determine a random number that we compare against. If we are above or below that number, increment or decrement the frequency respectively.
 You do get a very wondering effect. Although the responsiveness of the parameters leave a little to be desired.  You can tell that you have the skew set or 
@@ -46,7 +46,7 @@ A kinda equivalent circuit would be something like this.  The buttons represent 
 This counts the circuit up or down until it reaches the top or bottom (carry or borow).  That forces the reload (aka set back to the middle).  The state is 
 translated to a frequency via the r2r->vco part.
 
-[![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0530/images/ACS-85-0530_overview.png)]  
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0530/images/ACS-85-0530_overview.png)
 
 ## Examples:
 
