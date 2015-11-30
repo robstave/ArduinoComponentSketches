@@ -12,6 +12,8 @@ Like a counter. But counts odd divisors
 
 ## Equivalent:
 
+See Ken Stones pulse divider.
+http://www.cgs.synth.net/modules/cgs36_pulse_divider.html
 
 ## Examples:
  
