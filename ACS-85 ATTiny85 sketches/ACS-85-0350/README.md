@@ -3,11 +3,13 @@ Harmonizer
 ==============
 
 ## Overview:
-Takes a medium to High frequnecy on pin 7 and outputs harmonic notes such as maj and min 3rd, 5th and 4th.
-These are producable with just cmos counters, but you end up with intervals that are above notes that are 2 octaves below the carrier.
+Takes a medium to High frequency on pin 7 and outputs harmonic notes such as maj and min 3rd, 5th and 4th.
 
+These are producible with just cmos counters, but you end up with intervals that are above notes that are 2 octaves below the carrier.
 By dividing a note by two, you get an octave below.  Dividing by 3 ends up with a perfect fifth above two octaves below the carrier.
-Ways around this involve a Phase locked loop to boost the carrier up in frequency before you divide it.
+This works, but puts everything an octave below to start with. Ways around this involve a Phase locked loop to boost the carrier up in frequency before you divide it.
+
+In this case, we sample the frequency and start off with that. Simply using math on the interrupt counts gives better resolution and higher available frequencies.  Even ones higher than the clock.
 
 
 

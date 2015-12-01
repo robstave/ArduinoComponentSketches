@@ -1,5 +1,5 @@
 # ACS-85-0353
-Sample and modultate with LFSR
+Sample and modulate with LFSR
 ==============
 
 ## Overview:
@@ -9,7 +9,7 @@ Kinda like the frequency was modulated by a square wave source.
 The Width determines the size of the mask to add to the sampled frequency.
 Speed is the duration of each step.
 
-![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/acs-85-0353_notes.png)
+![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/acs-85-0353_notes.png)
 
 
 
@@ -47,7 +47,7 @@ so the offset is taken from other bits in the LFSR or just clocking the lfsr bet
 
 
 ## Examples:
- https://soundcloud.com/user-692410397/85-0352-1a
+ https://soundcloud.com/user-692410397/85-0353-1a
 
 ## Strategy:
  
