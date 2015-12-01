@@ -5,6 +5,7 @@
  * 
  * Tap the button and the output will reflect the speed with a 50% duty cycle
  *
+ * Trigger is just there for debugging
  *
  * Notes:
  * For the longest time, I could never get my timer code to work

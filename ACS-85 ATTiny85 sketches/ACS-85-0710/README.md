@@ -1,5 +1,5 @@
 # ACS-85-0710
-Button Select - Single pin
+Button Select - Single value state
 ==============
 
 ## Overview:

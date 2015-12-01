@@ -14,7 +14,7 @@ The value on the analog pin is converted to 3 bits.
 Use to load values into a shift register or counter. A great way to use a pot to control a CD4051 and select an analog channel.
 
 
-![Binary](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode1.png)] 
+![Binary](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode2.png)
 
 
 
@@ -23,7 +23,7 @@ The value converts to one of three values.
 {001, 010, 100}
 Can be used to select things as well.
 This can be used to convert a pot to control channels, gates or whatever. An example below uses the sketch and nands to make a signal selector.
-![Single](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode2.png)] 
+![Single](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode1.png)
 
 
 ## Pinout:
