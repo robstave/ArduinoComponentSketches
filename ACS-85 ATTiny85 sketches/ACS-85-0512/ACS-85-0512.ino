@@ -3,19 +3,16 @@
  * ACS-85-0512
  * ATTiny85  Shift Register
  *
- * Short Shift register
+ * Long Shift register
  * These are used in lunettas outputed to r2r ladders sometimes.
  * One bit delay perhaps.
- *
- * This version is just a simple register using a long
- * and outputing the 0, 4 and 8th bits.
  *
  * ACS-85-0512 does this with a much larger register
  *
  *
  * V 1.0  -  First Version
  *
- * Rob Stave (Rob the fiddler) 2015
+ * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
 
