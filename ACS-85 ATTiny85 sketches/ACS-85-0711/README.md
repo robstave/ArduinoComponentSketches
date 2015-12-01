@@ -23,6 +23,15 @@ up    | down   | State |  notes
  0  |  1  |  1 0 0  |  press down
  
  
+ 
+ 
+Wrap can be configured with the following line of code
+ 
+    boolean doWrap = LOW;
+	
+	
+	
+	
 ## Pinout:
 [![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0711/images/acs-85-0711.png)]  
 

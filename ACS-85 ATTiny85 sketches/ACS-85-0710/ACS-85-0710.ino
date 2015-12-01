@@ -150,13 +150,7 @@ void loop() {
       bitWrite(output, 2, HIGH);
     }
 
-
-
     PORTB = output;
-
-
-
-
 
   }
 
