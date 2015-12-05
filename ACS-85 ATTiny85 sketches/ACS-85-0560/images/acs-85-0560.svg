@@ -171,7 +171,7 @@
          id="tspan4264"
          x="36.5"
          y="918.36218"
-         style="font-size:27.5px">ACS-85-0605</tspan></text>
+         style="font-size:27.5px">ACS-85-0560</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -523,7 +523,7 @@
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8414827px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(25.169539,41.88452)"
+       transform="matrix(-1,0,0,1,442.40946,41.88452)"
        id="g4917-7-2">
       <path
          inkscape:connector-curvature="0"
@@ -537,7 +537,7 @@
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8414827px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(26.88004,16.835482)"
+       transform="matrix(-1,0,0,1,444.11996,16.835482)"
        id="g4917-7-2-1">
       <path
          inkscape:connector-curvature="0"
