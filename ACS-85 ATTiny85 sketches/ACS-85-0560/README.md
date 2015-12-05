@@ -17,7 +17,7 @@ down the whole cycle.  Using the reset pin is an option as well.
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0560/images/acs-85-0560.png)] 
+[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0560/images/ACS-85-0560.png)] 
 
 ## Equivalent:
  
