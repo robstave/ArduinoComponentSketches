@@ -10,13 +10,13 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="3in"
-   height="2in"
-   viewBox="0 0 269.99999 179.99999"
+   height="1.75in"
+   viewBox="0 0 269.99999 157.49999"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="acs-85-0004.svg"
-   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0004\images\ACS-85-0004.png"
+   sodipodi:docname="acs-85-0015.svg"
+   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0015\images\ACS-85-0015.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="228.56641"
+     inkscape:cx="143.31641"
      inkscape:cy="88.140853"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -56,7 +56,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-872.36222)">
+     transform="translate(0,-894.86222)">
     <rect
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.79829907;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3344"
@@ -163,17 +163,17 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="17.5"
-       y="906.36218"
+       x="13.5"
+       y="924.36218"
        id="text4262"
        sodipodi:linespacing="125%"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4264"
-         x="17.5"
-         y="906.36218"
-         style="font-size:35px">ACS-85-0004</tspan></text>
+         x="13.5"
+         y="924.36218"
+         style="font-size:35px">ACS-85-0015</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -295,7 +295,7 @@
          id="tspan4148-4-3-8-0-2"
          x="192.53354"
          y="1009.4518"
-         style="font-size:8.4375px;fill:#070000;fill-opacity:1">PB1 Out 1 </tspan></text>
+         style="font-size:8.4375px;fill:#070000;fill-opacity:1">Out 1 </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -309,7 +309,7 @@
          id="tspan4148-4-3-8-0-2-5"
          x="192.08698"
          y="1035.0524"
-         style="font-size:8.4375px;fill:#010000;fill-opacity:1">PB0 Out 0</tspan></text>
+         style="font-size:8.4375px;fill:#010000;fill-opacity:1">Out 0</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#030004;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -323,11 +323,11 @@
          id="tspan4148-4-3-8-0-2-2"
          x="192.25797"
          y="985.1897"
-         style="font-size:8.4375px;fill:#030004;fill-opacity:1">PB2 Range</tspan></text>
+         style="font-size:8.4375px;fill:#030004;fill-opacity:1">None</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="44.707863"
+       x="62.707863"
        y="1009.8683"
        id="text4146-7-22-4-9-2-7-7"
        sodipodi:linespacing="125%"
@@ -337,9 +337,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3"
-         x="44.707863"
+         x="62.707863"
          y="1009.8683"
-         style="font-size:8.4375px;fill:#000000;fill-opacity:1">f1 PB4</tspan></text>
+         style="font-size:8.4375px;fill:#000000;fill-opacity:1">f1</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4541"
@@ -353,7 +353,7 @@
          id="flowPara4547" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000004;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="44.934456"
+       x="62.934456"
        y="985.67322"
        id="text4146-7-22-4-9-2-7-7-0-2"
        sodipodi:linespacing="125%"
@@ -361,24 +361,24 @@
        inkscape:transform-center-y="26.624969"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3-8-3"
-         x="44.934456"
+         x="62.934456"
          y="985.67322"
-         style="font-size:8.4375px;fill:#000004;fill-opacity:1">f0 PB3</tspan></text>
+         style="font-size:8.4375px;fill:#000004;fill-opacity:1">f0</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="34.957031"
-       y="923.9032"
+       x="40.457031"
+       y="940.9032"
        id="text4262-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="34.957031"
-         y="923.9032"
+         x="40.457031"
+         y="940.9032"
          style="font-size:15px"
-         id="tspan4192">Two VCO Selectable Range</tspan></text>
+         id="tspan4192">Two Utility Square LFOs</tspan></text>
     <g
        id="g4290-5"
-       transform="translate(-202.27233,42.661101)">
+       transform="translate(-184.27233,42.661101)">
       <path
          inkscape:connector-curvature="0"
          id="path4204-0-1-1"
@@ -410,7 +410,7 @@
     </g>
     <g
        id="g4290-5-8"
-       transform="translate(-201.00482,16.796661)">
+       transform="translate(-181.00482,16.796661)">
       <path
          inkscape:connector-curvature="0"
          id="path4204-0-1-1-7"
@@ -441,7 +441,7 @@
          r="2.125" />
     </g>
     <g
-       transform="translate(25.396447,66.566293)"
+       transform="translate(5.396447,66.566293)"
        id="g4206-2">
       <path
          inkscape:connector-curvature="0"
@@ -455,7 +455,7 @@
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(27.896447,40.566293)"
+       transform="translate(7.896447,40.566293)"
        id="g4206-2-1">
       <path
          inkscape:connector-curvature="0"
@@ -468,37 +468,72 @@
          d="m 230,972.36221 0,-10 5,5 z"
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
-    <g
-       id="g4290"
-       transform="matrix(-1,0,0,1,480.1561,17.430733)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4204-0-1"
-         d="m 233.31131,968.4131 0,-6.10178 5.36237,3.05089 z"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.80895102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="222.35355"
-         y="963.61218"
-         id="text4250"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan4252"
-           x="222.35355"
-           y="963.61218"
-           style="font-size:10px">v</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 236.10355,965.36221 -12.75,-0.25"
-         id="path4276"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.63599998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path4284"
-         cx="221.22855"
-         cy="964.98718"
-         r="2.125" />
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000004;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="94.404419"
+       y="986.52423"
+       id="text4146-7-22-4-9-2-7-7-0-2-2"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="-162"
+       inkscape:transform-center-y="26.624969"><tspan
+         sodipodi:role="line"
+         id="tspan4148-4-3-8-0-2-2-3-8-3-6"
+         x="94.404419"
+         y="986.52423"
+         style="font-size:8.4375px;fill:#000004;fill-opacity:1">A3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000004;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="94.697723"
+       y="1010.4294"
+       id="text4146-7-22-4-9-2-7-7-0-2-2-8"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="-162"
+       inkscape:transform-center-y="26.624969"><tspan
+         sodipodi:role="line"
+         id="tspan4148-4-3-8-0-2-2-3-8-3-6-3"
+         x="94.697723"
+         y="1010.4294"
+         style="font-size:8.4375px;fill:#000004;fill-opacity:1">A2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#070000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="145.65643"
+       y="1009.4294"
+       id="text4146-7-22-4-9-2-3"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="-162.00001"
+       inkscape:transform-center-y="26.624999"><tspan
+         sodipodi:role="line"
+         id="tspan4148-4-3-8-0-2-0"
+         x="145.65643"
+         y="1009.4294"
+         style="font-size:8.4375px;fill:#070000;fill-opacity:1">PB1</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4262"
+       style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,872.36221)"><flowRegion
+         id="flowRegion4264"><rect
+           id="rect4267"
+           width="45"
+           height="58"
+           x="229.5"
+           y="117" /></flowRegion><flowPara
+         id="flowPara4269"></flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#070000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="147.41681"
+       y="1034.4398"
+       id="text4146-7-22-4-9-2-3-4"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-x="-162.00001"
+       inkscape:transform-center-y="26.624999"><tspan
+         sodipodi:role="line"
+         id="tspan4148-4-3-8-0-2-0-6"
+         x="147.41681"
+         y="1034.4398"
+         style="font-size:8.4375px;fill:#070000;fill-opacity:1">PB0</tspan></text>
   </g>
 </svg>

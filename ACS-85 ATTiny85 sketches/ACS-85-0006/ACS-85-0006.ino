@@ -13,8 +13,13 @@
  * External pin 7 (PB2) = Output 2 output additive period
  * External pin 8       = Vcc
  *
-
- *
+ * Generates a squarewave with a bit of a fuzzy sound because the 
+ * period has some randomness to it.  PB1 is the star of this show.
+ * PB0 is just a squarewave reference and PB2 is kinda something I just
+ * whipped up.
+ * 
+ * Go for PB1.  Its more than just the duty cycle that is varied, the
+ * period/2 is random, so there is a much more nebulous frequency.
  *
  * V 1.0  -  First Version
  *
