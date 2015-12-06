@@ -54,10 +54,10 @@ const int int0 = 0;  // interrupt 0
 #define DIVD 5
 
 //Counters for divide by n
-int qACount = 0;
-int qBCount = 0;
-int qCCount = 0;
-int qDCount = 0;
+byte qACount = 0;
+byte qBCount = 0;
+byte qCCount = 0;
+byte qDCount = 0;
 
 void setup()
 {
