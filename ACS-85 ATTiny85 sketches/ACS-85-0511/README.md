@@ -14,4 +14,10 @@ Shift Register - Variable position shift register
 
 
 ## Examples:
+
+## Other:
+
+Here is a fun tutorial on using Shift Registers to get patterns and such. You should be able to use this sketch in a very similar manner.
+http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/
+
  

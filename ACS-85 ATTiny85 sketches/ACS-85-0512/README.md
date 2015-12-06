@@ -19,4 +19,11 @@ There are taps at bits 63, 95 and 127
 
 
 ## Examples:
+
+
+## Other:
+
+Here is a fun tutorial on using Shift Registers to get patterns and such. You should be able to use this sketch in a very similar manner.
+http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/
+
  

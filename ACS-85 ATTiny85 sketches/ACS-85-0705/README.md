@@ -20,3 +20,7 @@ everything after that until it is done and we find a different state 10 ms later
 
 Check out http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/ for a PIC version that he sells to build guitar pedals and such. You can use this sketch as a starting point to get something like that, or just save the time and buy his from the site or  small bear electronics.
 
+Here is a tremolo that uses an ardruino for a tap tempo.  He stuffed the whole nano in the box
+http://www.diystompboxes.com/smfforum/index.php?topic=95586.0
+
+
