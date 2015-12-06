@@ -16,8 +16,8 @@ Equivalent circuit is
 
 
 ## Examples:
-
-
+Here is an example of the Nand Synth
+https://soundcloud.com/user-692410397/85-0505-1a
 
 ## Other:
 

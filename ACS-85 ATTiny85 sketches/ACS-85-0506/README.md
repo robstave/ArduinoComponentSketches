@@ -12,23 +12,27 @@ The button scrolls through all the configurations
 
 Equivalent circuits are:
 
-![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506-1.png)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506-1.png)
 
-![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506-2.png)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506-2.png)
 
-![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506-3.png)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506-3.png)
 
-![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506-4.png)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506-4.png)
 
-![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506-5.png)
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506-5.png)
  
 ## Pinout:
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505/images/ACS-85-0506.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506/images/ACS-85-0506.png)
 
 
 ## Examples:
 
+Here is an example of the Nand DX cycling though the scenes
+https://soundcloud.com/user-692410397/85-0506-1a
 
+Here is the same sketch driving the 85-0321.  Its a little fuzzier.
+https://soundcloud.com/user-692410397/85-0506-0321a
 
 ## Other:
 
