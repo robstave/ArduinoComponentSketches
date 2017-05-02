@@ -1,9 +1,9 @@
 
 /**
  * ACS-85-0002
- * ATTiny85  simple vco
+ * ATTiny85  simple vcos
  *
- * 2 inputs and 2 outputs.
+ * 2 inputs and 3 outputs.
  *
  * External pin 1       = Reset (not used)
  * External pin 2 (PB3) = input 0
@@ -15,9 +15,14 @@
  * External pin 8       = Vcc
  *
  * Timer 1 is used in this case.
- * the prescaler is c11  /2 and the ocr1 is 100
+ * the prescaler is ck1  /2 and the ocr1 is 100
  * so a osc value of 50 should be about 400 hz.  This is
  * what I get on a scope.
+ * 
+ * see   // see http://www.atmel.com/Images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+ *
+ * See table 13-5
+ * CS13, CS12, CS11, CS10 = [ 0, 0, 1, 0] is prescaler/2
  * 
  * The other pin (7) is just a fun mix between the two.
  * 
@@ -49,6 +54,8 @@
  *  
  * 
  * V 1.0  -  First Version
+ * V 1.1  -  Comments
+ * 
  * TODO, add Hysteresis 
  *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
@@ -76,6 +83,9 @@
 #define VCO2HIGH 7
 #define VCO2LOW 108
 
+// Make bigger for longer alt sounds on PB2
+#define MIX_LFO 2000  
+
 //counters for the frequencies
 int oscFreq1 = 0;
 int oscCounter1 = 0;
@@ -95,12 +105,15 @@ void setup() {
 
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
+
   OCR1A = 100;                //set the compare value
-  OCR1C = 100;
+  OCR1C = 100;                //set the compare value
+
   TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
+  
   TCCR1 = _BV(CTC1) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
+  
 
   interrupts();             // enable all interrupts
 
@@ -114,7 +127,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     oscCounter1 = 0;
     PORTB ^= (_BV(PB0));
 
-    //do alternate freq too
+    //Bonus: toggle pin 2 also if state is true
     if (oscState == true) {
       PORTB ^= (_BV(PB2));
     }
@@ -125,7 +138,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     oscCounter2 = 0;
     PORTB ^= (_BV(PB1));
 
-    //do alternate freq too
+    //Bonus: toggle pin 2 also if state is true
     if (oscState == true) {
       PORTB ^= (_BV(PB2));
     }
@@ -134,7 +147,9 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
   oscCounter2++;
 
   //toggle alternating frequency
-  if (oscCounter3 > 2000) {
+  // So basically, we are setting a flag for on off.
+  // If the state is on, the counters will sum together giving a ring effect.
+  if (oscCounter3 > MIX_LFO) {
     oscCounter3 = 0;
     oscState = !oscState;
   }

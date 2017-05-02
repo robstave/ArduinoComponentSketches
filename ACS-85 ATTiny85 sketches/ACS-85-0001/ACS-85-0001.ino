@@ -1,6 +1,5 @@
 
 
-
 /**
  * ACS-85-0001 ATTiny85  Simple Oscillator chip.
  * 
@@ -15,18 +14,32 @@
  * External pin 6 = LFO about 1hz
  * External pin 7 = LFO about 1.4 hz
  *
- * Explaination.
+ * Description:
  * This is built around timer0 interrupts.  There are many ways to do this.
  * I find that counting up and comparing (CTC) gives me a little more flexability.
  *
- * The prescaler is set to 64  (CS00 and CS001)
+ * The prescaler is set to 64  (CS00=1 and CS01=1)
  * see http://www.atmel.com/Images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
  * or google ATTINY85 data sheet and look for that table.
+ * 
+ * cs02 cs01 cs00
+ *  0    0    1   Clk/1
+ *  0    1    0   Clk/8
+ *  0    1    1   Clk/64  
  *
- * assuming 8Mhz/(64*(OCR0A +1)) = 8mhz/(64*6) = 20833
+ * So if we set OCR0A = 5
+ * 
+ * 8Mhz/(64*(OCR0A +1)) = 8mhz/(64*6) = 20833
  * So we are interupting at 20.8Khz
+ * 
+ * From there, you can just add a counter and tick off the number of 
+ * times you hit your counter.
+ * 
+ * so say every interrupt you incr your counter and flip after  you hit 10 times
+ * 
+ * that would be  20800/10 = 2080 per flip or 1040 hz.
  *  
- *  If your numbers are off:  
+ *  If your numbers are off by a lot:  
  *    by 8 - did you burn the bootloader? By default it is 1mhz internal
  *    none: again..extern clock?  Burn bootloader for 8mhz internal. 
  *  
@@ -43,13 +56,14 @@
  * a count of 30 is about 347 hz
  * 
  * checking with my voltmeter..its a few hz off...but again,its not a tuner.
- * If you need precision, add the xtal.
+ * If you need precision, add the xtal, but you will need more pins and thats something else.
  * or change the prescaler to just 8 to give you a better resolution.
  * 
  *
  * V 1.0  -  First Version
+ * V 1.1  -  Comments and deleting misleading cruft.  Deleting is debugging.
  *
- * Observations.
+ * Observations:
  * Had to use TIMER0_COMPA_vect vs TIM0_COMPA_vect
  * PORTB = 00011111 did not really work.  It worked, but my signal would
  * go away like it was being sucked or drained.  Using setPin I think enables
@@ -68,27 +82,31 @@
 //                     GND  4|    |5  HF Ramp PB0 (pin0)
 
 
-
-
-//Counters in the interrupt to toggle pins.
+// Counters in the interrupt to toggle pins.
 // Increasing the number reduces the frequency.
-#define HIGH_FREQ_0 30
-#define HIGH_FREQ_1 24
-#define LOW_FREQ_0 10416
-#define LOW_FREQ_1  7440
+
+#define HIGH_FREQ_0 30  
+#define HIGH_FREQ_1 24 //upper freq limit for f1
+
+
+#define LOW_FREQ_0 10416  //lower req limit for f0 - Increase for lower range 
+#define LOW_FREQ_1  7440  //lower req limit for f0
+
 
 //counters for the frequencies
 int hf0Counter = 0;
 int hf1Counter = 0;
+
 int lfo1Counter = 0;
 int lfo0Counter = 0;
 
 
-//We play with this counters a little more
-//for the sweep pin.
+//We play with the counters a little more for the sweep pin.  Its more of an FM thing maybe
 
 int hf2Counter = 0;
 int hf2FreqCounter = 0;
+
+
 #define HIGH_FREQ_2_INCREMENT 20
 #define HF_RANGE_LO 40
 #define HF_RANGE_HI 8
@@ -109,11 +127,10 @@ void setup() {
 
   TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
   
-  OCR0A = 5; //CTC Compare value
+  OCR0A = 5; //CTC Compare value...this is fairly arbitrary and you can change, but have to adjust math.
 
   TCCR0B |= (1 << CS00) | (1 << CS01); // Prescaler =64 Table 11.6
 
- // TCCR0A |=(1<<COM0A1); //Timer0 in toggle mode Table 11.2
   TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
   interrupts();             // enable all interrupts
 
@@ -121,9 +138,6 @@ void setup() {
 
 ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 {
-
- // PORTB ^= (_BV(PB4));
-  
 
   //Each interrupt..check the counter.  If there is a match,
   //reset and toggle the bit.
