@@ -18,10 +18,9 @@
  * External pin 7 (PB2) = input 2 Speed
  * External pin 8       = Vcc
  *
-  
- *
  *
  * V 1.0  -  First Version
+ * V 1.1  -  comments
  *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
  *
@@ -88,7 +87,10 @@ void setup() {
 ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 {
    
-  
+  //toggle alternating frequency
+  // if osc state is true/false we calc the freq based 
+  // on checking oscFreq1 or oscFreq2
+
   if (oscState == true) {
     //Count up and toggle portB bits
     if (oscCounter1 > oscFreq1) {
@@ -105,8 +107,8 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     }
     oscCounter2++;
   }
-  //toggle alternating frequency
-  
+
+  // also, each period based on osc freq, calc a freq based on other values. Maybe like a mod.
   if (oscCounter3 > oscFreq3) {
     oscCounter3 = 0;
     oscState = !oscState;
