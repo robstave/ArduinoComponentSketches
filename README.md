@@ -11,14 +11,12 @@ Create a library of Arduino Sketches that can be loaded on ATTiny AVR micro cont
 
 Of course, these are really arduino chips with the limitations that come with that such as speed, quantization and code quirks.  I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown products.
 
-The closest thing I have found to this is the Rad-fi System from Bleep Labs.
+There are a few things out there with similar concepts it would appear.
 
-http://bleeplabs.com/store/the-rad-fi-system/
+[Rad-fi System from Bleep Labs](http://bleeplabs.com/store/the-rad-fi-system/) Uses Arduinos as building blocks for Synths on a breadboard. A collection of ATTiny micros with these sketches would be completely compatible with this system.
+[Bastl Kastle](http://www.bastl-instruments.com/instruments/kastle/kastle-synth/) uses 2 ATTiny85s that can be programmed with other features.
 
-A collection of ATTiny micros with these sketches would be completely compatible with this system.
-
-See also perhaps the lfo from Electric Druid
-http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/
+[Electric Druid](http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/) has some AVRs and others as building blocks.  For example, an LFO.
 
 
 
