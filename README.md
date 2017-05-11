@@ -11,7 +11,12 @@ Create a library of Arduino Sketches that can be loaded on ATTiny AVR micro cont
 
 Of course, these are really arduino chips with the limitations that come with that such as speed, quantization and code quirks.  I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown products.
 
-There are a few things out there with similar concepts it would appear.
+There are a few things out there with similar concepts.
+
+[MiniMoSynth](http://minimosynth.com/) A Formfactor and open source/open hardware design to make ATTiny Blocks.  Certainly
+the closest to what I have here.  I do not really have a
+consistant strategy nor a consistant input like these little
+blocks.  Check em out.
 
 [Rad-fi System from Bleep Labs](http://bleeplabs.com/store/the-rad-fi-system/) Uses Arduinos as building blocks for Synths on a breadboard. A collection of ATTiny micros with these sketches would be completely compatible with this system.
 [Bastl Kastle](http://www.bastl-instruments.com/instruments/kastle/kastle-synth/) uses 2 ATTiny85s that can be programmed with other features.

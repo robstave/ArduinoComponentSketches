@@ -32,6 +32,3 @@ Two 40106 oscillators and a pin that is a mix
 Here is the weird sound.
 [[Sample](https://soundcloud.com/user-692410397/85-0003-w)]
 
-Here is the sketch driving the clock to a [[LFSR](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520)]
-[[Sample](https://soundcloud.com/user-692410397/85-0003-0520mix)]
-[![Mix](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520/images/ACS-85-circuit-0002-0520.png)]
