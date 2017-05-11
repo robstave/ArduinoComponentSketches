@@ -19,6 +19,8 @@ Easier to just hear it.
 ## Equivalent:
 ![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0003/images/ACS-85-0003-overview.png)
 
+Ok..there is a bug in the picture above, but I cant find the SVG to fix it.  It should say PB0 not PB1.
+
 [images](https://github.com/robstave/ArduinoComponentSketches)
 
 Two 40106 oscillators and a pin that is a mix

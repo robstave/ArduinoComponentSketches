@@ -7,7 +7,7 @@ Two buttons provide tap tempo capabilities for two lfo outputs.
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001/images/acs-85-0705.png)] (https://github.com/robstave/ArduinoComponentSketches)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705/images/acs-85-0705.png)
 
 ## Strategy:
 The loop is read every 10ms.  This allows us set up a two state type machine that we can use to debounce the switch.  Really we are reading the switch and once its high, we take the reading and ignore
