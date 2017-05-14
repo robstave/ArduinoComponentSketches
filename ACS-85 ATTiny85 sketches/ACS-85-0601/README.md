@@ -15,15 +15,16 @@ The patterns are programmed with 3 bit values in an array indicating which pin /
 | PB2 |   |   |   |   | x |   |   |   |
 
 
+```
     #define PATTERN_0_SIZE 16
     byte  pattern_0[PATTERN_0_SIZE] = {3, 0, 1, 0, 7, 0, 1, 0, 3, 0, 1, 0, 7, 0, 1, 0};
-
+```
 
 The voltage on A3 sets the clock speed and the voltage on A2 selects which pattern to play.
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601/images/ACS-85-0601.png)] 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601/images/ACS-85-0601.png)
 
 ## Equivalent:
 
@@ -32,7 +33,8 @@ Kinda like a bank of baby 10s?
  
 ## Examples:
 Configure the circuit like this.
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601/images/ACS-85-0601-ex.png)] 
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601/images/ACS-85-0601-ex.png)
 
 
 

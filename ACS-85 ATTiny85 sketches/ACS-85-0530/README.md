@@ -39,7 +39,7 @@ Making this number larger will make it more exaggerated.
 
 
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0530/images/acs-85-0530.png)] (https://github.com/robstave/ArduinoComponentSketches)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0530/images/ACS-85-0530.png)
 
 ## Equivalent:
 A kinda equivalent circuit would be something like this.  The buttons represent the random up and down triggers...where every they may come from.
