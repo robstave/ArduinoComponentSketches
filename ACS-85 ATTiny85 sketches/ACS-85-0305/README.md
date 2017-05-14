@@ -4,9 +4,12 @@ Collection of Xors
 
 
 ## Overview:
-two Xors  
-outputs are either A ^ B or A ^ B ^ C
-Should work fine fot audio frequencies.
+Two Xors. Used to simulate an XOR in your signal path.  Rather than have to have pile of chips,
+just program the ones you want!
+
+Outputs are either `A ^ B` or `A ^ B ^ C`
+
+Should work fine for audio frequencies but I would not use this an as real cmos logic chip.
 
  
 ## Pinout:
