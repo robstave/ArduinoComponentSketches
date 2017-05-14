@@ -46,18 +46,22 @@ void clockShiftRegisters () {
 
   boolean inbit = false;
 
+  //Shift reg4 and push in last bit from reg 3
   shiftRegister4 = shiftRegister4 << 1;
   inbit = bitRead(shiftRegister3, 31);
   shiftRegister4 |= inbit;
 
+  //Shift reg3 and push in last bit from reg 2
   shiftRegister3 = shiftRegister3 << 1;
   inbit = bitRead(shiftRegister2, 31);
   shiftRegister3 |= inbit;
 
+  //Shift reg2 and push in last bit from reg 1
   shiftRegister2 = shiftRegister2 << 1;
   inbit = bitRead(shiftRegister1, 31);
   shiftRegister2 |= inbit;
 
+   //Shift reg1 and push in input bit
   shiftRegister1 = shiftRegister1 << 1;
   boolean inputBit = digitalRead(inputPin) ;
   shiftRegister1 |= inputBit;
@@ -66,6 +70,8 @@ void clockShiftRegisters () {
 }
 
 void loop() {
+
+  //Adjust reads as needed for shift register taps
 
   byte output = B00000000;
   bitWrite(output, 0,  bitRead(shiftRegister2, 31));
