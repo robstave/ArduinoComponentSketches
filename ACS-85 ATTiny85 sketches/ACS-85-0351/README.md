@@ -3,7 +3,7 @@ Detune
 ==============
 
 ## Overview:
-Takes a medium to High frequnecy on pin 7 and outputs a detuned frequnecy above or below the note on two pins.
+Takes a medium to high audio range clock signal on pin 7 and outputs a detuned frequnecy above or below the note on two pins.
  
 ## Pinout:
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0351/images/ACS-85-0351.png) 

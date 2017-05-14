@@ -3,7 +3,7 @@ Sample and Vibrato (ramps)
 ==============
 
 ## Overview:
-Takes a medium to High frequnecy on pin 7 and outputs a squarewave with variable frequency and width.
+Takes a medium to high audio range clock signal on pin 7 and outputs a squarewave with variable frequency and width.
 
 Vibrato is when you modulate the frequency of the signal (as opposed to tremolo where you modulate the amplitude)
 
