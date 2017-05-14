@@ -1,9 +1,10 @@
 # ACS-85-0307
-or/and
+AND / OR
 ==============
 
 ## Overview:
-An OR and an AND
+An AND and an OR
+
 Can be used to hear how they modulate/filter squarewave audio.  In general, your fundamental frequencies are not going to change.
 
 Using and/or for audio will not really change that, but it will change the width of some of the waves.
@@ -29,12 +30,13 @@ A  |  B  |  C  |  Out1  |   Out 2
 1 | 1 | 1 | 1 | 1 
  
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/acs-85-0307.png)] (https://github.com/robstave/ArduinoComponentSketches)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/acs-85-0307.png)
 
 
 ## Equivalent:
-The equivalent circuit would look something like this
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/ACS-85-0307-andor.png)] (https://github.com/robstave/ArduinoComponentSketches)
+The equivalent circuit would look something like this:
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/ACS-85-0307-andor.png)] 
  
 
 ## Examples:
@@ -46,6 +48,7 @@ So this should be used as a non-time critical modulation.  There is no guarantee
 
 ## Improvements:
 The highest frequencies that you can handle are going to depend on how fast the loop executes.  
+
  - Wrap the loop code into a while loop.   That would shave a few cycles off as loop would only be called once.  
  - Accumulate the bits and just mask off the last bit rather than all this ^ business.
  - Maybe save the value of port a and break if nothing changed?
