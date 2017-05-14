@@ -47,7 +47,7 @@ https://soundcloud.com/user-692410397/85-0510-0006-0015a
 
 ## Other:
 
-Here is a fun tutorial on using Shift Registers to get patterns and such. You should be able to use this sketch in a very similar manner.
-http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/
+[Here is a fun tutorial](http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/) on using shift registers to get patterns and such. You should be able to use this sketch in a very similar manner.
+
 
  
