@@ -36,10 +36,10 @@ In select mode, its l
 ## Examples:
  
  Sketch in Binary mode so that a pot can be used to address channels in a 8 channel analog mux/demux.
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/ACS-85-0700-example1.png)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/ACS-85-0700-example1.png)
 
 Sketch in Single mode to control ANDs to gate separate signals
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/ACS-85-0700-example2.png)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/ACS-85-0700-example2.png)
 
 
 ( 
