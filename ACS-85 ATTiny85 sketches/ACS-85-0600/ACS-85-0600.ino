@@ -3,16 +3,16 @@
  * ACS-85-0600
  * ATTiny85  Simple One pin Sequencer
  *
- * Is it an LFO or a sequencer?
+ * Is it an LFO or a hard coded 1 bit sequencer?
+
  * Patterns are programmed as arrays in the code and an analog pot can be used to
  * select scenes.  The included scenes are not super interesting, just a starting point.
  *
  * The patterns can be programmed by
  * changing the values in the arrays.
  *
- *
  * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = input 0 freq
+ * External pin 2 (PB3) = input 0 LFO freq
  * External pin 3 (PB4) = input 1 scene select
  * External pin 4       = GND
  * External pin 5 (PB0) = output 0 output
@@ -25,7 +25,6 @@
  *
  * Rob Stave (Rob the fiddler) ccby 2015
  */
-
 
 
 //  ATTiny overview

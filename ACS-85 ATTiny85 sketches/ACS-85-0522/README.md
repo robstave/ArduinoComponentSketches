@@ -8,7 +8,7 @@ Low frequency, internal clocked.
 
 Pretty much four taps of an LFSR so four pins that blink on and off randomly, but the same frequency.
 
-See ACS-85-0521.
+See [ACS-85-0521](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0521)
 
 
 16 bit shift register that is externally clocked.  The values at certain taps are xor'ed together and feed back into the shift register.

@@ -7,7 +7,7 @@ One control for speed
 Notes are played on three pins with each pin updating in a round robin fashion.
 There are rests in this case and the notes go up and down.  Its a bit more melodic, but not too much more.
 
-Similar to ACS-85-0550
+Similar to [ACS-85-0550](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550)
 
 AND/OR/XOR them or or just sum them using resistors
 
@@ -23,8 +23,11 @@ This is a sample of all 3 pins summed up and playing at the same time.
 
 https://soundcloud.com/user-692410397/85-0552a
 
-One way to do this is similar to acs-85-0550
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550/images/ACS-85-0550-example.png)] 
+One way to do this is similar to [ACS-85-0550](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550)
+
+## Pinout: 
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550/images/ACS-85-0550-example.png)
 
 
 
