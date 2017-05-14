@@ -15,7 +15,7 @@ There are taps at bits 63, 95 and 127
  
  
 ## Pinout:
-[![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0512/images/ACS-85-0512.png)]  
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0512/images/ACS-85-0512.png)
 
 
 ## Examples:
@@ -23,7 +23,7 @@ There are taps at bits 63, 95 and 127
 
 ## Other:
 
-Here is a fun tutorial on using Shift Registers to get patterns and such. You should be able to use this sketch in a very similar manner.
-http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/
+[Here is a fun tutorial](http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/) on using Shift Registers to get patterns and such. You should be able to use this sketch in a very similar manner.
+
 
  
