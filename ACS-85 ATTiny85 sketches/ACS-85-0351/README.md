@@ -20,8 +20,14 @@ We have a timer going to output notes like most of these sketches.  Flipping a p
 Within that timer interrupt, we also just peg a counter.  I suppose you could use the counter value directly as well if you wished.
 
 
-The base signal is sent to pin 7 where it has a pin change interrupt.  when the pin changes, we read the counter and take a difference from 
-the previous value.  You get more consistency (and less of a quantization sound) if you do a rolling average, but its not needed.
+The clock signal is sent to pin 7 where it has a pin change interrupt.  
+When the pin changes, we read the counter and take a difference from  the previous value.  
+We are in effect, sampling the output counter at the input clock speed.  That will give us 
+the timer count that we need to output a signal at the same frequency as the input.
+
+Once we know that, we can tweek that to make any relative frequency.
+
+You get more consistency (and less of a quantization sound) if you do a rolling average, but its not needed.
 
 That value is then used in the loop to figure out the next output frequency.  We read the pots to get a difference and just apply it to the counter
 

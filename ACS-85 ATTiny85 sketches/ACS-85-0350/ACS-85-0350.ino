@@ -26,6 +26,9 @@
  * it starts to crackle...and turn it back up a bit.  Since internal
  * clocks are different, you would do this on a chip per chip basis.
  * This would give you a little more resolution.
+ *
+ * Or get better resolution with ATTiny84 so you have pins for the Xtal
+ * and up your speed.
  * 
  *
  * Rob Stave (Rob the fiddler) CCBY 2015
@@ -44,13 +47,13 @@
 const int int0 = 0;  // interrupt 0
 
 
-volatile int oscFreq1 = 200;
-volatile int  oscCounter1 = 0;
-volatile int oscFreq2 = 200;
-volatile int  oscCounter2 = 0;
-volatile int  oscCounter3 = 0;
-volatile int oscFreq3 = 200;
-volatile int  oscCounter4 = 0;
+volatile int oscFreq1    = 200;
+volatile int oscCounter1 = 0;
+volatile int oscFreq2    = 200;
+volatile int oscCounter2 = 0;
+volatile int oscCounter3 = 0;
+volatile int oscFreq3    = 200;
+volatile int oscCounter4 = 0;
 
 void setup()
 {
@@ -86,7 +89,7 @@ unsigned long lastCounter = 0;
 unsigned long diff = 0;
 
 /**
- * Interrupt.
+ * Clock pin Interrupt.
  * Sample the counter and determine the elapsed time.
  */
 void clockCounter()      // called by interrupt
@@ -105,6 +108,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   //Timer interrupt counter
   counter++;
 
+  //OUTPUT -> 
   //Count up and toggle portB bits
   if (oscCounter1 > oscFreq1) {
     oscCounter1 = 0;
@@ -114,7 +118,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   oscCounter1++;
 
-
+  //OUTPUT -> 
   //Count up and toggle portB bits
   if (oscCounter2 > oscFreq2) {
     oscCounter2 = 0;
@@ -124,7 +128,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   oscCounter2++;
 
-
+  //OUTPUT -> 
   //4th
   if (oscCounter3 > oscFreq3) {
     oscCounter3 = 0;
@@ -134,13 +138,15 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   oscCounter3++;
 
-
+  //OUTPUT -> 
   if (oscCounter4 > oscFreq2) {
     oscCounter4 = 0;
 
     //Toggle PB4
     PORTB ^= (_BV(PB4));
   }
+
+
   //Note Im using an existing oscFreq2 but incrementing by 2, effectively
   //going an octave up
   oscCounter4 = oscCounter4 + 2;
@@ -153,6 +159,8 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 void loop()
 {
   // loop d loop
+
+  //Consider faster operations. Shifting for 2,4.  Is x+x+x faster that 3*x ?
 
   //A minor third, in just intonation, corresponds to a pitch ratio of 6:5
   //flip the ratio as a higher freq is achieved by decreasing the counter
