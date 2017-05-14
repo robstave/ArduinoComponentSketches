@@ -51,7 +51,7 @@ https://soundcloud.com/user-692410397/85-0003-0520mix
 
 ## Similar Circuits
 
-* [ACS-85-0520](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520) is external clocked lfsr
+
 * [ACS-85-0521](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0521) is internal clocked (variable controlled) VCO - audio frequency
 * [ACS-85-0522](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0522) is internal clocked (variable controlled) LFO - low Frequency
 

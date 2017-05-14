@@ -36,9 +36,10 @@ See also https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
 
 ## Similar Circuits
-*85-0520 is external clocked lfsr
-*85-0521 is internal clocked (variable controlled) VCO - audio frequency
-*85-0521 is internal clocked (variable controlled) LFO - low Frequency
+
+* [ACS-85-0520](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520) is external clocked lfsr
+* [ACS-85-0521](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0521) is internal clocked (variable controlled) VCO - audio frequency
+ 
 
 ## Examples:
  
