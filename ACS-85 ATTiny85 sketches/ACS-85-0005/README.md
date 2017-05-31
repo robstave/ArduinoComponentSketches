@@ -10,6 +10,7 @@ One frequency control and one detuned.  To hear the drones you still need to sum
 - **PB2** is the (freq - 2*detune)
 
 
+
 ## Pinout:
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-0005.png)
 
@@ -27,8 +28,8 @@ The outputs for each pin is just a square wave. You need to sum with resistors t
 
  Hereis an example of the xor being driven by some drones (ACS-85-0005).
 
- ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-circuit-0005-1.png)
+ ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-circuit-0005-1.png)
 
 
- 
+
  

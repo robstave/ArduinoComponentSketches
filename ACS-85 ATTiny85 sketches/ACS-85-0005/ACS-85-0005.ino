@@ -15,7 +15,7 @@
  *
  *
  * Took several iterations to find the sweet spot.
- * The timer is no prescaled, so the interrupt is
+ * The timer is not prescaled, so the interrupt is
  * really about as long as the value you set for OCR0A.
  * 
  * By this point, you can see that I get my frequencies with counters.
@@ -26,8 +26,6 @@
  * 
  * with int counters, I could not get above 750hz.  But I swapped the ints for bytes
  * and it saved several clocks
- * 
- * 
  * 
  * 
  * V 1.0  -  First Version
@@ -122,7 +120,8 @@ void loop() {
   int osc1_t = analogRead(A3);
   oscFreq1 = map(osc1_t, 0, 1023, VCO1_LOW,  VCO1_HIGH);
 
-  //Read detune.  No need to check as often
+  //Read detune.  No need to check as often. I would rather
+  //the freq be checked more often.
   if (detuneCount > 5) {
     detuneCount = 0;
     int osc2_t = analogRead(A2);
