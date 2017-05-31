@@ -32,6 +32,11 @@ https://soundcloud.com/user-692410397/85-0305xor-0004
 
  
 
+ Hereis an example of the xor being driven by some drones (ACS-85-0005).
+
+ ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305/images/ACS-85-circuit-0005-1.png)
+
+
 ## Strategy:
 
 In this case, all the logic is in the loop. We are just reading the values and outputting them.  No interrupts or anything like that.
