@@ -31,4 +31,16 @@ Kinda sorta.
 
 ## Examples:
 
+
+Here is an example of the VCO being driven by the LFO (ACS-85-0011).
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-1.png)
+
+
+Here is another example of the VCO being driven by the LFO (ACS-85-0011). In this case we are
+also inverting the the PWM to give an alternate 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
+
+
+
  

@@ -5,7 +5,7 @@ Three VCOs detuned
 ## Overview:
 One frequency control and one detuned.  To hear the drones you still need to sum them with resistors. But thats not a whole lotta work.
 
-- 8*PB0** is the frequency
+- **PB0** is the frequency
 - **PB1** is the (frequency - detune)
 - **PB2** is the (freq - 2*detune)
 
@@ -26,9 +26,15 @@ The outputs for each pin is just a square wave. You need to sum with resistors t
 ## Examples:
 
 
- Hereis an example of the xor being driven by some drones (ACS-85-0005).
+Here is an example of the xor being driven by some drones (ACS-85-0305).
 
- ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-circuit-0005-1.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-circuit-0005-1.png)
+
+
+
+
+
+
 
 
 
