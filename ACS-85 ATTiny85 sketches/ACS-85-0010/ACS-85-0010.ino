@@ -1,40 +1,43 @@
 
 /**
- * ACS-85-0010
- * ATTiny85  Selectable waveform LFO
- * Select between triangle, ramp up ramp down and sine
- *
- * The square wave is just checking that OC0a is greater or less than 127.
- *
- * The remaining pin kinda shows an odd/even of the state. Useful for debugging.
- *
- * The values are being set in loop, so you can not assume that its working super
- * precise.  Generally, I would sample things like the wave shape maybe once a second
- * or so, but if we did that in this case, we might see staggers in the output.
- *
- * Notes:
- * 
- * Im not getting fastpwm  the pwm is still 500hz?
- * 
- * 
- * When using an arduino analog pin as a select input, you should use a linear pot.
- * That way, if you are selecting between 4 states, like here, the range is evenly
- * distributed.  Sometimes, you do not have that available.  
- * 
- * Not a problem.
- * 
- * I find that mapping the analog to a small range like 0-3 does not work too well.
- * First off, I map it to a bigger range and use if statements. So like 0-40 and check
- * on divisors of 10.
- *
- * if you have a linear pot though, you need to tweek the values. MAP_VALUES_AS_LINEAR
- * lets us define a different mapping.  Much better for this case.
- *
- *
- *
- *
- * Rob Stave (Rob the fiddler) ccby 2015
- */
+   ACS-85-0010
+   ATTiny85  Selectable waveform LFO
+   Select between triangle, ramp up ramp down and sine
+
+   The square wave is just checking that OC0a is greater or less than 127.
+
+   The remaining pin kinda shows an odd/even of the state. Useful for debugging.
+
+   The values are being set in loop, so you can not assume that its working super
+   precise.  Generally, I would sample things like the wave shape maybe once a second
+   or so, but if we did that in this case, we might see staggers in the output.
+
+   Notes:
+
+   Im not getting fastpwm  the pwm is still 500hz?
+
+
+   When using an arduino analog pin as a select input, you should use a linear pot.
+   That way, if you are selecting between 4 states, like here, the range is evenly
+   distributed.  Sometimes, you do not have that available.
+
+   Not a problem.
+
+   I find that mapping the analog to a small range like 0-3 does not work too well.
+   First off, I map it to a bigger range and use if statements. So like 0-40 and check
+   on divisors of 10.
+
+   if you have a linear pot though, you need to tweek the values. MAP_VALUES_AS_LINEAR
+   lets us define a different mapping.  Much better for this case.
+
+
+   v 1.0 initial
+   v 1.1 Added an average to the speed input.  Its not really too noticable when you
+         are driving the pin with a pot...but with another analog input it has a little
+         bit of a sample hold feel to it.
+
+   Rob Stave (Rob the fiddler) ccby 2015
+*/
 
 
 
@@ -46,7 +49,8 @@
 //                      GND 4|    |5  PB0 (pin0) PWM LFO out
 //                           ------
 
-uint8_t  sine_wave[256] = {
+ 
+ uint8_t  sine_wave[256] = {
   0x80, 0x83, 0x86, 0x89, 0x8C, 0x90, 0x93, 0x96,
   0x99, 0x9C, 0x9F, 0xA2, 0xA5, 0xA8, 0xAB, 0xAE,
   0xB1, 0xB3, 0xB6, 0xB9, 0xBC, 0xBF, 0xC1, 0xC4,
@@ -82,34 +86,33 @@ uint8_t  sine_wave[256] = {
 };
 
 
-
 int state = 0;
 
 
 /**
- * Set 1 for a linear pot and something else for other.
- * Audio pots are a little different, so dividing the
- * numbers have problems
- */
+   Set 1 for a linear pot and something else for other.
+   Audio pots are a little different, so dividing the
+   numbers have problems
+*/
 #define MAP_VALUES_AS_LINEAR 1
 
 #if MAP_VALUES_AS_LINEAR == 1
-  #define STATE1 10
-  #define STATE2 20
-  #define STATE3 30
-  #define STATE4 40
+#define STATE1 10
+#define STATE2 20
+#define STATE3 30
+#define STATE4 40
 #else
-  #define STATE1 5
-  #define STATE2 10
-  #define STATE3 20
-  #define STATE4 40
+#define STATE1 5
+#define STATE2 10
+#define STATE3 20
+#define STATE4 40
 #endif
 
-#define LFO_LOW 200
-#define LFO_HIGH 12
+#define LFO_LOW 230
+#define LFO_HIGH 20
 
 //used for the squarewave
-int loopCount = 255;
+byte loopCount = 255;
 
 //speed
 int oscFreq1 = 50;
@@ -121,33 +124,28 @@ int oscCounter1 = 0;
 void setup() {
 
   DDRB = B00000111;  //set output bits
-  
+
 
   // initialize timer0
   noInterrupts();           // disable all interrupts
 
-    // Timer 0, A side
+  // Timer 0, A side
   TCCR0A = _BV (WGM00) | _BV (WGM01) | _BV (COM0A1); // fast PWM, clear OC0A on compare
   TCCR0B = _BV (CS00);           // fast PWM, top at 0xFF, no prescaler
 
   // Initial value for our pulse width is 0
   OCR0A = 0x00;
 
-
-
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
   OCR1A = 100;                //set the compare value
   OCR1C = 100;
 
   TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
-  //TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
   TCCR1 = _BV(CTC1) | _BV(CS10) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
 
   interrupts();             // enable all interrupts
-
 }
 
 
@@ -167,7 +165,7 @@ void doTriangle () {
 
 void rampUp () {
   OCR0A += 1;
-  if (OCR0A >= 255  ) {
+  if (OCR0A >= 256  ) {
     OCR0A = 0;
   }
 }
@@ -206,7 +204,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
     //Figure out what the state is and display the
     //LFO output
-    
+
     if (state <= STATE1) {
       doTriangle();
     } else if (state <= STATE2) {
@@ -217,15 +215,15 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
       doSine();
     }
   }
-  
+
   oscCounter1++;
 
 }
 
 
 /**
- * not super useful..just show an odd/even bit on PB2
- */
+   not super useful..just show an odd/even bit on PB2
+*/
 void showState () {
   if (state <= STATE1) {
     PORTB |= B00000100;
@@ -238,13 +236,25 @@ void showState () {
   }
 }
 
+//We are going to average the value here so its a tad smoother
+int f1Sample[4] = {0, 0, 0, 0};
+byte counter = 0;
+
 void loop() {
 
-  int speed_read = analogRead(A3);
+  //Average the samples.
+  f1Sample[counter]= analogRead(A3);
+  int speed_read =(f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
   oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 
   int shape_read = analogRead(A2);
   state = map(shape_read, 0, 1023, 0,  40);
+
+  //Increment speed sample pointer
+  counter++;
+  if (counter > 3) {
+    counter = 0;
+  }
 
   showState();
 

@@ -1,18 +1,15 @@
-
 /**
- * ACS-85-0011
- * ATTiny85  Random Value LFO
- *
- * LFO that outputs a value randomly.
- * Kinda like psycho lfo...but simpler
- *
- *
- *
- *
- * Rob Stave (Rob the fiddler) ccby 2015
- */
+   ACS-85-0011
+   ATTiny85  Random Value LFO
 
+   LFO that outputs a value randomly.
+   Kinda like psycho lfo...but simpler
 
+   Uses LFSR for values. Clock it in the loop and when we are ready, mask out
+   lower bits into OCR0A.
+
+   Rob Stave (Rob the fiddler) ccby 2015
+*/
 
 //  ATTiny overview
 //                           +-\/-+
@@ -23,9 +20,9 @@
 //                           ------
 
 
-
 unsigned int lfsr  = 1;
 
+//Larger numbers mean larger counters and lower frequencies
 #define LFO_LOW 100
 #define LFO_HIGH 12
 
@@ -35,8 +32,6 @@ int loopCount = 255;
 //speed
 int oscFreq1 = 50;
 int oscCounter1 = 0;
-
-
 
 void clockLfsr () {
 
@@ -52,18 +47,17 @@ void setup() {
 
   DDRB = B00000111;  //set output bits
 
- 
   noInterrupts();           // disable all interrupts
 
- // initialize timer0
-   // Timer 0, A side
+  // initialize timer0
+  // Timer 0, A side
   TCCR0A = _BV (WGM00) | _BV (WGM01) | _BV (COM0A1); // fast PWM, clear OC0A on compare
   TCCR0B = _BV (CS00);           // fast PWM, top at 0xFF, no prescaler
 
   // Initial value for our pulse width is 0
   OCR0A = 0x00;
 
- // initialize timer1
+  // initialize timer1
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
   //GTCCR = _BV(PSR1);          //reset the prescaler
@@ -79,13 +73,12 @@ void setup() {
 
 }
 
-
-
 ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 {
 
   //Count up and toggle portB bits
   if (oscCounter1 > oscFreq1) {
+
     oscCounter1 = 0;
 
     clockLfsr();
@@ -105,25 +98,20 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     if (loopCount == 0) {
       setRandomValue();
     }
-
-
   }
   oscCounter1++;
 
-
 }
 
-
+/**
+   Set the OCR0A value with the lower bits of the LFSR.
+*/
 void setRandomValue() {
   byte reg = lfsr & B11111111;
   OCR0A = reg;
 }
 
-
 void loop() {
   int speed_read = analogRead(A3);
   oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 }
-
-
-

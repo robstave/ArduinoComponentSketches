@@ -13,26 +13,25 @@ Of course, these are really arduino chips with the limitations that come with th
 
 There are a few things out there with similar concepts.
 
-[MiniMoSynth](http://minimosynth.com/) A Formfactor and open source/open hardware design to make ATTiny Blocks.  Certainly
-the closest to what I have here.  I do not really have a
+[MiniMoSynth](http://minimosynth.com/) A Formfactor and open source/open hardware design to make ATTiny Blocks.  Certainly the closest to what I have here.  I do not really have a
 consistant strategy nor a consistant input like these little
 blocks.  Check em out.
 
 [Rad-fi System from Bleep Labs](http://bleeplabs.com/store/the-rad-fi-system/) Uses Arduinos as building blocks for Synths on a breadboard. A collection of ATTiny micros with these sketches would be completely compatible with this system.
+
 [Bastl Kastle](http://www.bastl-instruments.com/instruments/kastle/kastle-synth/) uses 2 ATTiny85s that can be programmed with other features.
 
 [Electric Druid](http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/) has some AVRs and others as building blocks.  For example, an LFO.
-
 
 
 ## Background:
 
 [Background](https://github.com/robstave/ArduinoComponentSketches/wiki/Background)
 
-
-
 ## Requirements:
-Ability to program ATTiny chips.  This only requires an arduino uno and a breadboard.
+
+Ability to program ATTiny chips.  This only requires an arduino uno, a breadboard and a handful of ATTiny85s to get started.
+
 [Requirements](https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup)
 
 ## System:
@@ -102,10 +101,12 @@ Ability to program ATTiny chips.  This only requires an arduino uno and a breadb
 ### ATTiny84 sketches
 
 
-Number    | Title   | Status   | Description  
---- | --- | --- | ---
+| Number    | Title   | Status   | Description  |
+| --- | --- | --- | --- |
+| **000-199 - Oscillators, Vco, LFO** |||
 [ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0001) | Oscillator | Ready | Fixed square wave oscillator with High and Low Frequencies and a Ramp and Triangle
 [ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Ready | Fixed square wave oscillator with a grand assortment of beeps. 
+| **300-499 	Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** |||
 [ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305) | Gates | Ready |  Xor Array
 
 
