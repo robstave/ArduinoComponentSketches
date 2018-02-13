@@ -1,13 +1,12 @@
 # ArduinoComponentSketches
-Collection of sketches for ATTiny to replace logic blocks in lunetta like circuits
-
+Collection of sketches for ATTiny to replace logic blocks. These can be used in lunetta like circuits.
 
 Arduino Component Sketches
 ==============
 
 
 ## Objective:
-Create a library of Arduino Sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.   Either replacing a block of logic or creating a new type of circuit block altogether.  The intent is not to create a synth on a chip, but to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
+Create a library of Arduino sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.   Either by replacing a block of logic or creating a new type of circuit block altogether.  The intent is not to create a synth on a chip, but rather to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
 
 Of course, these are really arduino chips with the limitations that come with that such as speed, quantization and code quirks.  I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown products.
 
@@ -22,7 +21,6 @@ blocks.  Check em out.
 [Bastl Kastle](http://www.bastl-instruments.com/instruments/kastle/kastle-synth/) uses 2 ATTiny85s that can be programmed with other features.
 
 [Electric Druid](http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/) has some AVRs and others as building blocks.  For example, an LFO.
-
 
 ## Background:
 
@@ -40,13 +38,12 @@ Ability to program ATTiny chips.  This only requires an arduino uno, a breadboar
 
 
 ### ATTiny85 sketches
-
  
 
 | Number    | Title   | Status   | Description  |
 | --- | --- | --- | --- |
 | **000-199 - Oscillators, Vco, LFO** |||
-[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Oscillator | Ready| Fixed squarewave oscillator with High and Low Frequencies and a Ramp
+[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Oscillator | Ready | Fixed squarewave oscillator with High and Low Frequencies and a Ramp
 [ACS-85-0002](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0002) | VCO | Ready| Two square wave vcos and a two tone out pin
 [ACS-85-0003](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0003) | VCO | Ready| Two Tone VCO with speed
 [ACS-85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004) | VCO | Ready| Two Freq VCO with Range (lfo to hf)
