@@ -1,12 +1,12 @@
 
 
 /**
- * ACS-85-0001 ATTiny85  Simple Oscillator chip.
+ * ACS-85-0001 ATTiny85  Simple oscillator chip.
  * 
  * Not exactly meant for production, mostly a workbench helper
  * to provide 40106-like signals without all the capacitors
  * and such.  Just drop it into a 5v breadboard and away you go.
- * Nothing is configurable...however feel free to tweek code as needed.
+ * Nothing is configurable externally, however feel free to tweek code as needed.
  *
  * External pin 2 = high Freq 0 - about 434 hz
  * External pin 3 = high freq 1 - about 347 hz
@@ -75,18 +75,17 @@
 
 
 //  ATTiny overview
-//                           +-\/-+
-//                   Reset  1|    |8  VCC
-//         (pin3) PB4 HF_0  2|    |7  LFO_1 PB2 (pin2)
-//         (pin4) PB3 HF_1  3|    |6  LFO_2 PB1 (pin1)
-//                     GND  4|    |5  HF Ramp PB0 (pin0)
-
+//                   +-\/-+
+//           Reset  1|    |8  VCC
+// (pin3) PB4 HF_0  2|    |7  LFO_1 PB2   (pin2)
+// (pin4) PB3 HF_1  3|    |6  LFO_2 PB1   (pin1)
+//             GND  4|    |5  HF Ramp PB0 (pin0)
 
 // Counters in the interrupt to toggle pins.
 // Increasing the number reduces the frequency.
 
 #define HIGH_FREQ_0 30  
-#define HIGH_FREQ_1 24 //upper freq limit for f1
+#define HIGH_FREQ_1 24 
 
 
 #define LOW_FREQ_0 10416  //lower req limit for f0 - Increase for lower range 
@@ -111,8 +110,6 @@ int hf2FreqCounter = 0;
 #define HF_RANGE_LO 40
 #define HF_RANGE_HI 8
 int hf2MaxCounter = HF_RANGE_LO;
-
-
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -187,5 +184,4 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 
 void loop() {
   //Do nothing
-
 }

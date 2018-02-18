@@ -1,7 +1,7 @@
 
 /**
    ACS-85-0002
-   ATTiny85  simple vcos
+   ATTiny85 simple vcos
 
    2 inputs and 3 outputs.
 
@@ -17,7 +17,6 @@
    Timer 1 is used in this case.
    the prescaler is ck1  /2 and the ocr1 is 60
 
-
    see   // see http://www.atmel.com/Images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
 
    See table 13-5
@@ -29,39 +28,34 @@
    resolution.
    in this case the range is 7 - 180
 
-  
+   notice that the space between freqs gets bigger as
+   the freq gets higher.  Such a wide range can cause problems.
+   Of course, speeding the clock increases the resolution, but the
+   faster the interrupt, the less you can do as well.
 
-    notice that the space between freqs gets bigger as
-    the freq gets higher.  Such a wide range can cause problems.
-    Of course, speeding the clock increases the resolution, but the
-    faster the interrupt, the less you can do as well.
-
-    Consider using PWM and outputing the timer directly out.
-    (that is another sketch)
-
+   Consider using PWM and outputing the timer directly out.
+   (that is another sketch)
 
    V 1.0  -  First Version
    V 1.1  -  Comments
    v 1.2  -  Added average and tweeked number
+   v 1.3  -  Small refactor
 
    Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
 
    Rob Stave (Rob the fiddler) CCBY 2015
 */
 
-
-
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out mixed
-//      (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
+//                      +-\/-+
+//               Reset 1|    |8  VCC
+// (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out mixed
+// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+//                 GND 4|    |5  PB0 (pin0) out 0
+//                      ------
 
-//Ranges for the pot.  Technically a small nuumber means a
+//Ranges for the pot.  Technically a small number means a
 //shorter timer so low or high...whatever you want to call it.
-
 
 #define VCO1HIGH 5
 #define VCO1LOW 108
@@ -69,18 +63,21 @@
 #define VCO2HIGH 5
 #define VCO2LOW 108
 
-// Make bigger for longer alt sounds on PB2
-#define MIX_LFO 3000
-//TODo...loop that!!
+#define MIX_LFO 3000 // Make larger for longer alt sounds on PB2
 
 //counters for the frequencies
 byte oscFreq1 = 0;
 byte oscCounter1 = 0;
-byte  oscFreq2 = 0;
+byte oscFreq2 = 0;
 byte oscCounter2 = 0;
 
 boolean oscState = false;
 int oscCounter3 = 0;
+
+// Used for sample averaging
+int f1Sample[4] = {0, 0, 0, 0};
+int f2Sample[4] = {0, 0, 0, 0};
+byte counter = 0;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -140,28 +137,29 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 }
 
-int f1Sample[4] = {0, 0, 0, 0};
-int f2Sample[4] = {0, 0, 0, 0};
-byte counter = 0;
-
-void loop() {
-
+void readVco1freq () {
   int osc1_t = 0;
-
   f1Sample[counter] = analogRead(A3);
   osc1_t = (f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
   oscFreq1 = map(osc1_t, 0, 1023, VCO1LOW ,  VCO1HIGH);
+}
 
+void readVco2freq () {
+  int osc1_t = 0;
   f2Sample[counter] = analogRead(A2);
   osc1_t = (f2Sample[0] + f2Sample[1] + f2Sample[2] + f2Sample[3]) >> 2;
-
   oscFreq2 = map(osc1_t, 0, 1023, VCO2LOW,  VCO2HIGH);
+}
 
+void tickCounter() {
   counter++;
-
   if (counter > 3) {
     counter = 0;
   }
+}
 
-
+void loop() {
+  readVco1freq();
+  readVco2freq();
+  tickCounter();
 }
