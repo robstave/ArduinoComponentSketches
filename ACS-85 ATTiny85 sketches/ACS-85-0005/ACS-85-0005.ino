@@ -38,16 +38,13 @@
  * Rob Stave (Rob the fiddler) ccby 2015
  */
 
-
-
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
-//      (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
-
+//                      +-\/-+
+//               Reset 1|    |8  VCC
+// (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
+// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+//                 GND 4|    |5  PB0 (pin0) out 0
+//                      ------
 
 
 // 30 -> 666 hz
@@ -56,15 +53,13 @@
 #define VCO1_LOW 200
  
 
-
-
 //counters for the frequencies
- byte oscFreq1 = 200;
- byte  oscCounter1 = 0;
- byte  oscFreq2 = 200;
- byte  oscCounter2 = 0;
- byte  oscFreq3 = 200;
- byte  oscCounter3 = 0;
+ volatile uint8_t oscFreq1 = 200;
+ volatile uint8_t oscCounter1 = 0;
+ volatile uint8_t oscFreq2 = 200;
+ volatile uint8_t oscCounter2 = 0;
+ volatile uint8_t oscFreq3 = 200;
+ volatile uint8_t oscCounter3 = 0;
  
 // the setup function runs once when you press reset or power the board
 void setup() {
