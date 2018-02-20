@@ -17,8 +17,10 @@ LF1  |  1 Hz  | 16 Hz
 LF2  |  .2 Hz  | 4 Hz
 
 You can change the values, but keep in mind the HF and MF counter is an Integer.
-For the low frequencies, the code was placed in another loop.  Changing the int to a long did not work well and I could not get above 1.5Khz.  I think this is because the work in the interrupt handler for longs takes way more clock cycles.
-I also ended up copying the counter code for the LFO branch rather than add complexity (and clock cycles) making a handler that looks tight.
+For the low frequencies, the code was placed in another loop.  Changing the int to a long did not work well and I could not get above 1.5Khz.  I think this is because the work in the interrupt handler for longs takes way more clock cycles. Its an 8 bit machine so there is a lot more overhead jumping into and out of an interrupt with longs.
+
+
+I also ended up copying the counter code for the LFO branch rather than add complexity (and clock cycles) making a handler that looks tight.  It was faster to just nest in another loop.
 
 
 ## Pinout
@@ -34,3 +36,10 @@ Two 40106 oscillators with selectable RC constants
 
 
 ## Examples
+
+## Improvements
+
+In retrospect, what the Range control should do is just set values in OCR1A
+
+That would kill a loop and make the code actually pretty simple.
+

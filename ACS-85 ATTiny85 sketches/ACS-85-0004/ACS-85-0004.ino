@@ -169,7 +169,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     return;
   }
 
-  //Count up and toggle portB bits
+  //Count and toggle portB bits
   if (oscCounter1 == 0) {
     oscCounter1 = oscFreq1;
     PORTB ^= (_BV(PB0));
