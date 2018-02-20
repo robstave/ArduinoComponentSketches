@@ -19,18 +19,12 @@
  *
  * V 1.0  -  First Version
  *
- * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * Observations.
+ * Note: This sketch has been written specifically for ATTINY85 but you should be able to
+ * adapt it pretty easily.
  *
  * I could not reach 4k freq with a long counter. I think the interrupt code was too
  * much.  There might be a few things I can do to tweak this.   Instead, I just used a scalar bool
- * isLFO and really copied the code.  Yes, copied.  There is plenty of room on the chip for this
- * code, so just unwind the code and duplicate it rather than add clock cycles to make it
- * look tighter.
- *
- * so if you add code to your interrupt, get out a frequncy counter and make sure
- * that its hitting what you think it is.  If not, your interrupt is attempting to interrupt your interrupt.
- * since it can not do that..it just gives you a lower frequncy.
+ * isLFO and really copied the code.  
  *
  * If you absolutly have to have above 4k, look into using the timers directly to pwm
  *
@@ -40,12 +34,12 @@
 
 
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) A1 Range
-//      (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
+//                      +-\/-+
+//               Reset 1|    |8  VCC
+// (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) A1 Range
+// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+//                 GND 4|    |5  PB0 (pin0) out 0
+//                      ------
 
 //Ranges for the pot.  Technically a small nuumber means a
 //shorter timer so low or high...whatever you want to call it.
@@ -115,16 +109,16 @@
 
 
 //counters for the frequencies
-int oscFreq1 = 0;
-int oscCounter1 = 0;
-int oscFreq2 = 0;
-int oscCounter2 = 0;
+volatile uint16_t oscFreq1 = 0;
+volatile uint16_t oscCounter1 = 0;
+volatile uint16_t oscFreq2 = 0;
+volatile uint16_t oscCounter2 = 0;
 
-boolean isLFO = false;
-int lfoCounter = 0;
+volatile boolean isLFO = false;
+volatile uint16_t lfoCounter = 0;
 
-int range = 0;  //from 0 to 5
-int loopCount = 0;
+volatile uint16_t range = 0;  //from 0 to 5
+volatile uint16_t loopCount = 0;
 
 
 // the setup function runs once when you press reset or power the board
