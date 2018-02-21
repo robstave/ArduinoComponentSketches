@@ -1,7 +1,7 @@
 
 
 /**
- * ACS-85-0320
+ * ACS-85-0321
  * ATTiny85 Divide by 2,3,4,5
  *
  * Divide the clock signal by 2,3,4,5 across the 4 output pins.
@@ -38,12 +38,12 @@
 
 
 //  ATTiny overview
-//                        +-\/-+
-//                 Reset 1|    |8  VCC
-//      (pin3) DIVC  PB3 2|    |7  PB2 (pin2/int0) CLOCK
-//      (pin4) DIVD  PB4 3|    |6  PB1 (pin1) DIVA
-//                   GND 4|    |5  PB0 (pin0) DIVB
-//                        ------
+//                   +-\/-+
+//            Reset 1|    |8  VCC
+// (pin3) DIVC  PB3 2|    |7  PB2 (pin2/int0) CLOCK
+// (pin4) DIVD  PB4 3|    |6  PB1 (pin1) DIVA
+//              GND 4|    |5  PB0 (pin0) DIVB
+//                   ------
 
 
 const int int0 = 0;  // interrupt 0
@@ -54,10 +54,10 @@ const int int0 = 0;  // interrupt 0
 #define DIVD 5
 
 //Counters for divide by n
-byte qACount = 0;
-byte qBCount = 0;
-byte qCCount = 0;
-byte qDCount = 0;
+volatile uint8_t qACount = 0;
+volatile uint8_t qBCount = 0;
+volatile uint8_t qCCount = 0;
+volatile uint8_t qDCount = 0;
 
 void setup()
 {
@@ -111,6 +111,4 @@ void divByD() {
 void loop()
 {
 // loop d loop
-
-
 }
