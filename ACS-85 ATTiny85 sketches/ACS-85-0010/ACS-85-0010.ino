@@ -42,15 +42,15 @@
 
 
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//     (pin3) Speed A3  PB3 2|    |7  PB2 (pin2) indicator
-//    (pin4) Select A2  PB4 3|    |6  PB1 (pin1) Digital Square out
-//                      GND 4|    |5  PB0 (pin0) PWM LFO out
-//                           ------
+//                        +-\/-+
+//                 Reset 1|    |8  VCC
+//  (pin3) Speed A3  PB3 2|    |7  PB2 (pin2) indicator
+// (pin4) Select A2  PB4 3|    |6  PB1 (pin1) Digital Square out
+//                   GND 4|    |5  PB0 (pin0) PWM LFO out
+//                        ------
 
- 
- uint8_t  sine_wave[256] = {
+
+uint8_t  sine_wave[256] = {
   0x80, 0x83, 0x86, 0x89, 0x8C, 0x90, 0x93, 0x96,
   0x99, 0x9C, 0x9F, 0xA2, 0xA5, 0xA8, 0xAB, 0xAE,
   0xB1, 0xB3, 0xB6, 0xB9, 0xBC, 0xBF, 0xC1, 0xC4,
@@ -85,9 +85,7 @@
   0x67, 0x6A, 0x6D, 0x70, 0x74, 0x77, 0x7A, 0x7D
 };
 
-
 int state = 0;
-
 
 /**
    Set 1 for a linear pot and something else for other.
@@ -111,20 +109,17 @@ int state = 0;
 #define LFO_LOW 230
 #define LFO_HIGH 20
 
-//used for the squarewave
-byte loopCount = 255;
+//wavetable pointer
+volatile uint8_t loopCount = 255;
 
 //speed
-int oscFreq1 = 50;
-int oscCounter1 = 0;
-
-
+volatile int oscFreq1 = 50;
+volatile int oscCounter1 = 0;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
 
   DDRB = B00000111;  //set output bits
-
 
   // initialize timer0
   noInterrupts();           // disable all interrupts
@@ -143,7 +138,7 @@ void setup() {
 
   TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
 
-  TCCR1 = _BV(CTC1) | _BV(CS10) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
+  TCCR1 = _BV(CTC1) | _BV(CS10) | _BV(CS11); // Start timer, ctc mode, prescaler clk/4
 
   interrupts();             // enable all interrupts
 }
@@ -236,27 +231,30 @@ void showState () {
   }
 }
 
-//We are going to average the value here so its a tad smoother
-int f1Sample[4] = {0, 0, 0, 0};
-byte counter = 0;
+
 
 void loop() {
 
-  //Average the samples.
-  f1Sample[counter]= analogRead(A3);
-  int speed_read =(f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
-  oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
+  //We are going to average the value here so its a tad smoother
+  int f1Sample[4] = {0, 0, 0, 0};
+  byte counter = 0;
+  while (true) {
+    //Average the samples.
+    f1Sample[counter] = analogRead(A3);
+    int speed_read = (f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
+    oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 
-  int shape_read = analogRead(A2);
-  state = map(shape_read, 0, 1023, 0,  40);
+    int shape_read = analogRead(A2);
+    state = map(shape_read, 0, 1023, 0,  40);
 
-  //Increment speed sample pointer
-  counter++;
-  if (counter > 3) {
-    counter = 0;
+    //Increment speed sample pointer
+    counter++;
+    if (counter > 3) {
+      counter = 0;
+    }
+
+    showState();
   }
-
-  showState();
 
 }
 

@@ -1,8 +1,9 @@
-# ACS-85-0010
-Simple LFO
+# ACS-85-0010 Simple LFO
+
 ==============
 
-## Overview:
+## Overview
+
 PWM lfo outputs.
 Has a triangle, ramp up, ramp down and sine.
 
@@ -18,14 +19,17 @@ Set this value to 0 for non-linear log case:
 A smoothing capacitor is still needed on the output.  But you can always use
 somethign like a LED and LDR too to make an variable resistor.
 
-## Pinout:
+There is an extra pin that I used for debugging...its not particularly useful.  Delete that part of the code if you want.
+
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0010/images/acs-85-0010.png)
 
-## Equivalent:
+## Equivalent
 
  Basically an LFO, but with a pot to select the waveform.
  
-## Examples:
+## Examples
 
 Here is the LFO driving a VCO.
 
