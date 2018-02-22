@@ -1,40 +1,38 @@
 
 /**
- * ACS-85-0012
- * ATTiny85  Random Value LFO 2
- *
- * Not super amazing...but fun to play with for a bit.
- * On the random LFO, there is generally a slew/glide.
- * This is done by changing the value of a LP filter and
- * making the voltage work its way to the new state.  The glide
- * rate is determined by the rc constant.
- *
- * In this case, we are averaging our way to the next value over the
- * course of several steps.
- *
- * Rob Stave (Rob the fiddler) ccby 2015
- */
+   ACS-85-0012
+   ATTiny85  Random Value LFO 2
+
+   Not super amazing...but fun to play with for a bit.
+   On the random LFO, there is generally a slew/glide.
+   This is done by changing the value of a LP filter and
+   making the voltage work its way to the new state.  The glide
+   rate is determined by the rc constant.
+
+   In this case, we are averaging our way to the next value over the
+   course of several steps.
+
+   Rob Stave (Rob the fiddler) ccby 2015
+*/
 
 
 
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//     (pin3) Speed A3  PB3 2|    |7  PB2 (pin2) nc
-//     (pin4) Glide A2  PB4 3|    |6  PB1 (pin1) Digital Square out
-//                      GND 4|    |5  PB0 (pin0) PWM LFO out
-//                           ------
+//                       +-\/-+
+//                Reset 1|    |8  VCC
+// (pin3) Speed A3  PB3 2|    |7  PB2 (pin2) nc
+// (pin4) Glide A2  PB4 3|    |6  PB1 (pin1) Digital Square out
+//                  GND 4|    |5  PB0 (pin0) PWM LFO out
+//                       ------
 
-
-
-unsigned int lfsr  = 1;
+volatile unsigned int lfsr  = 1;
 
 #define LFO_LOW 100
 #define LFO_HIGH 3
 
 
-int lastValue = 0;
-int newValue = 0;
+volatile int lastValue = 0;
+volatile int newValue = 0;
 
 int glideCount = 0;
 int glide = 1;
@@ -142,27 +140,28 @@ void setRandomValue() {
 
 
 
-int readCount = 1;
 
 void loop() {
-  //Read the Speed
-  int speed_read = analogRead(A3);
-  oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 
+  byte readCount = 1;
 
-  //Rather spend more time reading the speed than that glides
-  if (readCount > 20) {
-    readCount = 0;
+  while (true) {
 
-    //read the glide
-    int glide_read = analogRead(A2);
-    glide = map(glide_read, 0, 1023, 2,  13);
+    //Read the Speed
+    int speed_read = analogRead(A3);
+    oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 
+    //spend less time reading the glide than the speed
+    if (readCount > 20) {
+      readCount = 0;
+
+      //read the glide
+      int glide_read = analogRead(A2);
+      glide = map(glide_read, 0, 1023, 2,  13);
+
+    }
+    readCount++;
   }
-  readCount++;
-
-
 }
-
 
 

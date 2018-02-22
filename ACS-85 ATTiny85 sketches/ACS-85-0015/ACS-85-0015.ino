@@ -55,20 +55,13 @@
 #define VCO2_L2_HIGH 100
 #define VCO2_L2_LOW 2000
 
-
-
 //counters for the frequencies
-int oscFreq1 = 0;
-int oscCounter1 = 0;
-int oscFreq2 = 0;
-int oscCounter2 = 0;
+volatile int16_t oscFreq1 = 0;
+volatile int16_t oscCounter1 = 0;
+volatile int16_t oscFreq2 = 0;
+volatile int16_t oscCounter2 = 0;
 
-
-int lfoCounter = 0;
-
- 
-int loopCount = 0;
-
+volatile int16_t lfoCounter = 0;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -94,7 +87,6 @@ void setup() {
 ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 {
 
-
   //Count up and toggle portB bits
   if (lfoCounter > 50) {
     lfoCounter = 0;
@@ -118,11 +110,9 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 }
 
 void loop() {
-
   int osc1_t = analogRead(A3);
   oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
   
   int osc2_t = analogRead(A2);
   oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW,  VCO2_L2_HIGH);
-
 }
