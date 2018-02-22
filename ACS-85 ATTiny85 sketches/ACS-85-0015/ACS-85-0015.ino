@@ -19,26 +19,22 @@
  *
  * V 1.0  -  First Version
  *
- * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * Observations.
+ * Note: This sketch has been written specifically for ATTINY85 but it prob will
+ * work on an arduino uno with a little tweek or two.
  *
- * Its a copy/paste job..so there certainly can be improving to be had.
+ * Its a copy/paste job..so there certainly can be improvements.
  * Rob Stave (Rob the fiddler) ccby 2015
  * 
  * TODO..ditch the nested loops and just scale the counter.
  */
 
-
-
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) none
-//      (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
-
-
+//                       +-\/-+
+//                Reset 1|    |8  VCC
+//  (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) none
+//  (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+//                  GND 4|    |5  PB0 (pin0) out 0
+//                       ------
 
 /**
  * Note in the switch, we change it up with an extra
@@ -124,9 +120,9 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 void loop() {
 
   int osc1_t = analogRead(A3);
-  int osc2_t = analogRead(A2);
-
   oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
+  
+  int osc2_t = analogRead(A2);
   oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW,  VCO2_L2_HIGH);
 
 }

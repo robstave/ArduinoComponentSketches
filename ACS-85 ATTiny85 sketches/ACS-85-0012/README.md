@@ -1,8 +1,9 @@
 # ACS-85-0012
-Random LFO PWM out with glide
-==============
 
-## Overview:
+Random LFO PWM out with glide
+ 
+## Overview
+
 PWM LFO Output with glide.
 
 Similar output to Psycho LFO.
@@ -15,16 +16,17 @@ Consider in your design if you want to try this glide or build the glide into th
 The random value is determined from a LFSR [Linear Feedback Shift Register](https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR)
 
 
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012/images/acs-85-0012.png)
 
-## Equivalent:
+## Equivalent
 
 Its a basic equivalent to the [Ken Stone Psycho LFO](http://www.cgs.synth.net/modules/psycho_lfo.html).
 
 Kinda sorta.
 
-## Strategy:
+## Strategy
 
 - Use the LFSR to get a random number.
 - Use timer 0 to do fast PWM 

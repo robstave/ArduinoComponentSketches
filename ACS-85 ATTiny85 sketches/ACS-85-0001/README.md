@@ -1,6 +1,6 @@
-# ACS-85-0001 - Simple Squarewave Oscillator
+# ACS-85-0001
 
-==============
+Simple Squarewave Oscillator
 
 ## Overview
 
@@ -10,7 +10,7 @@ This is a down and dirty oscillator that you can use to test other circuits. No 
 
 The frequencies are fixed, so if you want some control over the sound, this is not what you are looking for.  However, it is a good indicator if your cpu fuses are where they are supposed to be.
 
-They should be in the 
+They should be in the 430-440 range.
 
 - Two High Frequency square waves
 - Two LFO and a ramping frequency
