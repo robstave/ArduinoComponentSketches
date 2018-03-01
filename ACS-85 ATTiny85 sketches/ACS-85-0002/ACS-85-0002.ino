@@ -58,10 +58,10 @@
 //shorter timer so low or high...whatever you want to call it.
 
 #define VCO1HIGH 5
-#define VCO1LOW 108
+#define VCO1LOW 118
 
 #define VCO2HIGH 5
-#define VCO2LOW 108
+#define VCO2LOW 118
 
 #define MIX_LFO 3000 // Make larger for longer alt sounds on PB2
 
