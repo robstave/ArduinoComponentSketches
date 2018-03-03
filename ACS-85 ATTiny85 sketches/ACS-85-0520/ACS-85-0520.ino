@@ -32,14 +32,14 @@
 
 
 //  ATTiny overview
-//                               +-\/-+
-//                       Reset  1|    |8  VCC
-//          LFSR 2 (pin3) PB3   2|    |7   PB2 (pin2) Clock
-//          LFSR 3 (pin4) PB4   3|    |6   PB1 (pin1) LFSR 1
-//                         GND  4|    |5   PB0 (pin0) LFSR 0
+//                      +-\/-+
+//              Reset  1|    |8  VCC
+// LFSR 2 (pin3) PB3   2|    |7   PB2 (pin2) Clock
+// LFSR 3 (pin4) PB4   3|    |6   PB1 (pin1) LFSR 1
+//                GND  4|    |5   PB0 (pin0) LFSR 0
 
 //Byte used as the LFSR
-unsigned int lfsr  = 1;
+volatile unsigned int lfsr  = 1;
 const int clockInt = 0;  // digital pin 2 is now interrupt 0
 
 
