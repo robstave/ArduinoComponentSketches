@@ -69,7 +69,7 @@ Ability to program ATTiny chips.  This only requires an arduino uno, a breadboar
 [ACS-85-0351](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0351) | Modulation | Ready | Detune
 [ACS-85-0352](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0352) | Modulation | Ready | Vibrato (ramp)
 [ACS-85-0353](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353) | Modulation | Ready | Modulate LFSR
-[ACS-85-0360](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0360) | Modulation | In Progress | Selectable Counter/Divider
+[ACS-85-0360](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0360) | Modulation | In Progress | Selectable Counter-Divider
 | **500-699 	Shift, Delay, Melody Makers, Atari Punk Console** |||
 [ACS-85-0500](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0500) | Component | Ready| Atari Punk Console
 [ACS-85-0505](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505) | Component | Ready| Nand synth
