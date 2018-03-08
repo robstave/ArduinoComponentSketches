@@ -1,30 +1,31 @@
 
 
 /**
- * ACS-85-0353
- * ATTiny85 sample and modulate by LFSR
- *
- * Samples the squarewave on pin 7 and output
- * a squarewave that is a little higher and lower in frequency
- *
- *
- * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = freq
- * External pin 3 (PB4) = width
- * External pin 4       = GND
- * External pin 5 (PB0) = freq - LFSR
- * External pin 6 (PB1) = freq + LFSR
- * External pin 7 (PB2) = Clock
- * External pin 8       = Vcc
+   ACS-85-0353
+   ATTiny85 sample and modulate by LFSR
 
- *
- * V 1.0  -  First Version
- *
- * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * You can prob adapt pretty easy though
- *
- * Rob Stave (Rob the fiddler) CCBY 2015
- */
+   Samples the squarewave on pin 7 and output
+   a squarewave that is a little higher and lower in frequency
+
+
+   External pin 1       = Reset (not used)
+   External pin 2 (PB3) = freq
+   External pin 3 (PB4) = width
+   External pin 4       = GND
+   External pin 5 (PB0) = freq - LFSR
+   External pin 6 (PB1) = freq + LFSR
+   External pin 7 (PB2) = Clock
+   External pin 8       = Vcc
+
+
+   V 1.0  -  First Version
+   V 1.1  -  Rewrote with own millis
+
+   Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
+   You can prob adapt pretty easy though
+
+   Rob Stave (Rob the fiddler) CCBY 2015
+*/
 
 
 //  ATTiny overview
@@ -39,100 +40,120 @@
 #define SPEED_LOW  1200
 #define SPEED_HIGH 40
 
-const int int0 = 0;  // interrupt 0
 
+volatile  unsigned int oscFreq1 = 200;
+volatile  unsigned int oscCounter1 = 0;
 
-volatile int oscFreq1 = 200;
-volatile int  oscCounter1 = 0;
+volatile  unsigned int oscFreq2 = 200;
+volatile  unsigned int oscCounter2 = 0;
 
-volatile int oscFreq2 = 200;
-volatile int  oscCounter2 = 0;
-
-unsigned long counter = 0;
-unsigned long lastCounter = 0;
-unsigned long diff = 0;
-
-
-
-int loopSpeed = 20;
-int detune_value = 20;
-
-
-
+volatile unsigned int counter = 0;
+volatile unsigned int lastCounter = 0;
+volatile unsigned int diff = 0;
 
 //Byte used as the LFSR
-unsigned int lfsr  = 1;
-
+volatile unsigned int lfsr  = 1;
 
 void setup()
 {
 
+  // Initialize ports
+
+  DDRB = B00000011; // set PORTB so that pin 0 and 1 are outputs
+
   // initialize timer1
   noInterrupts();           // disable all interrupts
 
-  TCCR1 = 0;                  //stop the timer
-  TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 99;                //set the compare value
-  OCR1C = 99;
-  TCCR1 = _BV(CTC1) | _BV(CS10); // Start timer, ctc mode, prescaler clk/1
-  TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
+
+  TCCR0A = 0;
+  TCCR0B = 0;
+
+  TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
+  OCR0A = 145; //CTC Compare value
+  TCCR0B |= (1 << CS00); // Prescaler =8 Table 11.6
+
+  // TCCR0A |=(1<<COM0A1); //Timer0 in toggle mode Table 11.2
+  TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
+
+
+
+  // start the timer, prescaler
+  TCCR1 = (1 << CTC1) | (7 << CS10); // CTC  mode, div64
+  OCR1C = 0.001 * F_CPU / 64 - 1; // 1ms, F_CPU @16MHz, div64
+  TIMSK |= (1 << OCIE1A);
+
+
+
+  //  clockInt is our interrupt, clockCounter function is called when
+  //  invoked on either clock
+  // Set it to INT0 (for ATTINY85)
+
 
   interrupts();             // enable all interrupts
 
+  attachInterrupt(0, clockCounter, CHANGE);
 
-  DDRB = B00000011; // set PORTB to outputs except PB2 for the clock
 
-  attachInterrupt(int0, clockCounter, CHANGE);
-  //  clockInt is our interrupt, clockCounter function is called when
-  //  invoked on either clock edge
+}
 
+volatile unsigned long milliseconds;
+
+ISR(TIMER1_COMPA_vect)
+{
+  milliseconds++;
+}
+
+unsigned long millisTimer1()
+{
+  return milliseconds;
 }
 
 
 /**
- * Sample the counter and store off the difference.
- * Clock LFSR as well
- */
+   Sample the counter and store off the difference.
+   Clock LFSR as well
+*/
 void clockCounter()      // called by interrupt
 {
 
-  diff =  (diff + (counter - lastCounter)) >> 1;
+  diff =  (diff + (counter - lastCounter)) / 2 ;
   lastCounter = counter;
-  clockLfsr ();
-
 }
 
 
 
-ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
+ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
 {
   //clock main counter
   counter++;
 
-
+  //OUTPUT ->
   //Count up and toggle portB bits
-  if (oscCounter1 > oscFreq1) {
-    oscCounter1 = 0;
+  if (oscCounter1 <= 0 ) {
+    oscCounter1 = oscFreq1;
+
+    //Toggle PB0
     PORTB ^= (_BV(PB0));
   }
-  oscCounter1++;
+  oscCounter1--;
 
-
+  //OUTPUT ->
   //Count up and toggle portB bits
-  if (oscCounter2 > oscFreq2) {
-    oscCounter2 = 0;
+  if (oscCounter2 <= 0 ) {
+    oscCounter2 = oscFreq2;
+
+    //Toggle PB1
     PORTB ^= (_BV(PB1));
   }
-  oscCounter2++;
+  oscCounter2--;
 
 }
 
 
 
 /**
- * Increment the LFSR for a new value
- */
+   Increment the LFSR for a new value
+*/
 void clockLfsr () {
 
   //calculate new state
@@ -143,44 +164,56 @@ void clockLfsr () {
 }
 
 /**
- * Get offset based on the detune value.
- * A high value gives more bits
- */
-byte getOffset() {
+   Get offset based on the detune value.
+   A high value gives more bits
+*/
+byte getOffset(byte v) {
+
+
 
   //3 bits  (0-7)
-  if (detune_value < 33) {
+  if (v < 33) {
     return lfsr & B00000111;
   }
 
   //4 bits (0-15)
-  if (detune_value < 66) {
+  if (v < 66) {
     return lfsr & B00001111;
   }
 
   //5 bits (0-32)
-  if (detune_value < 104) {
+  if (v < 104) {
     return lfsr & B00011111;
   }
 }
 
+ 
 void loop()
 {
 
-  //No need to always sample.
-  //If the width or speed seems less responsive, drop this number
+  int loopSpeed = 20;
+  unsigned long previousMillis = 0;        // will store last time LED was updated
 
-  int sample = analogRead(A3);
-  detune_value = map(sample, 0, 1023, 0 ,  100);
-  sample = analogRead(A2);
-  loopSpeed = map(sample, 0, 1023, SPEED_HIGH,  SPEED_LOW);
+  clockLfsr();
+  while (true) {
+
+    int sample = analogRead(A2);
+    loopSpeed = map(sample, 0, 1023, SPEED_HIGH,  SPEED_LOW);
+
+    unsigned long currentMillis = millisTimer1();
+    if (currentMillis - previousMillis >= loopSpeed) {
+      // save the last time you blinked the LED
+      previousMillis = currentMillis;
+
+      int sample2 = analogRead(A3);
+      byte detune_value = map(sample2, 0, 1023, 0 ,  100);
+      oscFreq1 = diff + getOffset(detune_value );
+      oscFreq2 = diff - getOffset(detune_value);
+
+    }
+    clockLfsr();
 
 
-
-  delay(loopSpeed);
-
-  oscFreq1 = diff + getOffset();
-  oscFreq2 = diff - getOffset();
-
+  }
 
 }
