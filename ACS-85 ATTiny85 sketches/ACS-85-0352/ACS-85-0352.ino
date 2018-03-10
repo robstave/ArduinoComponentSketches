@@ -27,16 +27,13 @@
  * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
-
 //  ATTiny overview
-//                          +-\/-+
-//                   Reset 1|    |8  VCC
-//      (pin3) tune 0  PB3 2|    |7  PB2 (pin2/int0) CLOCK
-//      (pin4) tune 1  PB4 3|    |6  PB1 (pin1) out 1
-//                     GND 4|    |5  PB0 (pin0) out 0
-//                          ------
-
-
+//                     +-\/-+
+//              Reset 1|    |8  VCC
+// (pin3) tune 0  PB3 2|    |7  PB2 (pin2/int0) CLOCK
+// (pin4) tune 1  PB4 3|    |6  PB1 (pin1) out 1
+//                GND 4|    |5  PB0 (pin0) out 0
+//                     ------
 
 #define DETUNEHIGH1 40
 
@@ -74,7 +71,7 @@ void setup()
   //GTCCR = _BV(PSR1);          //reset the prescaler
   OCR1A = 99;                //set the compare value
   OCR1C = 99;
-TCCR1 = _BV(CTC1) | _BV(CS10); // Start timer, ctc mode, prescaler clk/1
+  TCCR1 = _BV(CTC1) | _BV(CS10); // Start timer, ctc mode, prescaler clk/1
   TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
 
   
@@ -133,7 +130,6 @@ int detune_value = 20;
 void loop()
 {
  
- 
   if (loopCounter > 10 ) {
     loopCounter = 0;
     
@@ -142,8 +138,8 @@ void loop()
     sample = analogRead(A2);
     loopSpeed = map(sample, 0, 1023, SPEEDHIGH,  SPEEDLOW);
   }
+
   loopCounter++;
-  
   
   delay(loopSpeed);
   if (vibrato > detune_value) {
@@ -154,6 +150,4 @@ void loop()
   oscFreq1 = diff + vibrato;
   oscFreq2 = diff - vibrato;
   vibrato++;
-
-
 }
