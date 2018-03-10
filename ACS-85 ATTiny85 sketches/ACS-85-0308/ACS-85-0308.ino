@@ -47,11 +47,11 @@
 
 
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) select0  PB3 2|    |7  PB2 (pin2) OUT
-//      (pin4) select1  PB4 3|    |6  PB1 (pin1) IN A
-//                      GND 4|    |5  PB0 (pin0) In B
+//                      +-\/-+
+//               Reset 1|    |8  VCC
+// (pin3) select0  PB3 2|    |7  PB2 (pin2) OUT
+// (pin4) select1  PB4 3|    |6  PB1 (pin1) IN A
+//                 GND 4|    |5  PB0 (pin0) In B
 
 void setup() {
   DDRB = B00000100; // set PORTB outputs
@@ -61,6 +61,8 @@ void setup() {
 void loop() {
 
   byte inputPortB = PINB;
+
+  //TODO...can hold off on these first reads
 
   //Get selection bits from value read from port b
   boolean bit2 =bitRead(inputPortB, 3);
@@ -74,14 +76,14 @@ void loop() {
  
   if ((bit1==LOW)&&(bit2==LOW)) {
      outputValue  = a&b ;
-  }
-    if ((bit1==LOW)&&(bit2==HIGH)) {
+  } 
+  if ((bit1==LOW)&&(bit2==HIGH)) {
      outputValue  = a|b ;
   }
-    if ((bit1==HIGH)&&(bit2==LOW)) {
+  if ((bit1==HIGH)&&(bit2==LOW)) {
      outputValue  = !(a&b) ;
   }
-    if ((bit1==HIGH)&&(bit2==HIGH)) {
+  if ((bit1==HIGH)&&(bit2==HIGH)) {
      outputValue  = a^b ;
   }
   
