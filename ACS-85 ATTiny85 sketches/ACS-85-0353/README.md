@@ -1,8 +1,9 @@
 # ACS-85-0353
-Sample and modulate with LFSR
-==============
 
-## Overview:
+Sample and modulate with LFSR
+
+## Overview
+
 Takes a medium to high audio clock signal on pin 7 and outputs a squarewave with variable frequency and width.
 
 Kinda like the frequency was modulated by a square wave source.
@@ -12,9 +13,14 @@ Speed is the duration of each step.
 
 The basic strategy is the same as [ACS-85-0350](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350) 
 
-## Pinout:
-![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/acs-85-0353_notes.png)
 
+## Pinout
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/ACS-85-0353.png)
+
+## Notes
+
+![Notes](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/ACS-85-0353_notes.png)
 
 
 The offset is determined by
@@ -45,22 +51,16 @@ so the offset is taken from other bits in the LFSR or just clocking the lfsr bet
      oscFreq2 = diff - getOffset();
 ```
 
-	 
-
-
  
-## Pinout:
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353/images/ACS-85-0353.png)
+## Examples
 
-## Examples:
  https://soundcloud.com/user-692410397/85-0353-1a
 
-## Strategy:
+## Strategy
  
 The basic strategy for ACS-85-0353 is the same as [ACS-85-0350](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350) 
 
 
-## Improvements:
-   
+ 
 
 
