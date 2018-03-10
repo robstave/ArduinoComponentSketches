@@ -59,7 +59,6 @@ unsigned long lastCounter = 0;
 unsigned long diff = 0;
 
 
-
 void setup()
 {
 
@@ -98,11 +97,8 @@ void setup()
  */
 void clockCounter()      // called by interrupt
 {
-
- 
   diff =  (diff +  (counter - lastCounter))>>1;
   lastCounter = counter;
-
 }
 
 
