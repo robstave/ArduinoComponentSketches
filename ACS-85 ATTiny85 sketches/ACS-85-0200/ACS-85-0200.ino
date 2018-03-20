@@ -1,13 +1,13 @@
 /**
-   ACS-85-xxx
+   ACS-85-0200
    Simple VCA
 
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = Volume
-   External pin 3 (PB4) =
+   External pin 3 (PB4) = Output (PWM)
    External pin 4       = GND
-   External pin 5 (PB0) = output (PWM)
+   External pin 5 (PB0) = 
    External pin 6 (PB1) =
    External pin 7 (PB2) = Clock
    External pin 8       = Vcc
@@ -29,8 +29,8 @@
 //                    +-\/-+
 //             Reset 1|    |8  VCC
 // (pin3) volume PB3 2|    |7  PB2 (pin2/int0) CLOCK
-// (pin4)   none PB4 3|    |6  PB1 (pin1) none
-//               GND 4|    |5  PB0 (pin0) out
+// (pin4) output PB4 3|    |6  PB1 (pin1) none
+//               GND 4|    |5  PB0 (pin0) none
 //                    ------
 
 
@@ -65,7 +65,7 @@ void setup() {
 
 }
 
-void clockCounter()      // called by interrupt
+void clockCounter()      // called by pin interrupt
 {
 
   state = !state;
