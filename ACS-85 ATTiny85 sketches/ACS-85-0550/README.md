@@ -1,27 +1,28 @@
 # ACS-85-0550
-Melody Maker Upper 1
-==============
 
-## Overview:
+Melody Maker Upper 1
+
+## Overview
+
 One control for speed
 Notes are played on three pins with each pin updating in a round robin fashion.
 
 AND/OR/XOR them or or just sum them using resistors
 
-
-## Pinout:
+## Pinout
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550/images/ACS-85-0550.png)
 
-## Equivalent:
+## Equivalent
+
 This is not like the 4017/4051 Melody Generator
 
-## Examples:
+## Examples
+
 This is a sample of all 3 pins summed up and playing at the same time.
 
 https://soundcloud.com/user-692410397/85-0550a
 
 you could easily send each pin to its own destination or whatever.
-
 
 ![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550/images/ACS-85-0550-example.png)
 

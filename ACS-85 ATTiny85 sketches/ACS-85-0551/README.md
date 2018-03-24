@@ -1,8 +1,8 @@
 # ACS-85-0551
-Melody Maker Upper 2
-==============
 
-## Overview:
+Melody Maker Upper 2
+
+## Overview
 
 One control for speed
 
@@ -14,13 +14,16 @@ Similar to [ACS-85-0550]
 AND/OR/XOR them or or just sum them using resistors
 
 
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551/images/ACS-85-0551.png)
 
-## Equivalent:
+## Equivalent
+
 This is not like the 4017/4051 Melody Generator
 
-## Examples:
+## Examples
+
 This is a sample of all 3 pins summed up and playing at the same time.
 
 https://soundcloud.com/user-692410397/85-0551a
@@ -31,8 +34,8 @@ One way to do this is similar to [ACS-85-0550](https://github.com/robstave/Ardui
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0550/images/ACS-85-0550-example.png)
 
+## Improvement ideas
 
-## Improvement ideas.
 There is a pin left.  Either as a mode input or and output (xor ?)
 
 
