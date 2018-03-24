@@ -1,12 +1,15 @@
 # ACS-85-0050
 
-Sinewave VCO PWM with distortion
+Sinewave VCO PWM with distortion options
  
 ## Overview
 
 PWM Sinewave VCO
 Not super fast, but workable.
-Includes a pin for Rectification and a pin for clipping distortion
+
+Includes a pin for Rectification and a pin for clipping distortion.
+
+Very preliminary.  Inspired from sketches from [Technoblogy.com](http://www.technoblogy.com/show?22HF)
 
 
 ## Pinout
