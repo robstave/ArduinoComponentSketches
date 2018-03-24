@@ -1,46 +1,41 @@
 # ACS-85-0011
-Random LFO PWM out  (Psycho LFO)
-==============
 
-## Overview:
+Random LFO PWM out  (Psycho LFO)
+
+## Overview
+
 PWM LFO Output.
 
 Similar output to Psycho LFO.
 
-Output is PWM so a Low pass filter is needed.
+Output is PWM so a Low pass filter is needed to get an analog signal.
 
 The random value is determined from a LFSR (Linear Feedback Shift Register)
 https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
 
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/acs-85-0011.png)
 
-## Equivalent:
+## Equivalent
 
 Its a basic equivalent to the [Ken stone Psycho lfo](http://www.cgs.synth.net/modules/psycho_lfo.html).
 
 Kinda sorta.
 
+## Strategy
 
-## Strategy:
-
-- Use the LFSR to get a random number.
-- Use timer 0 to do fast PWM 
+- Use the LFSR to get a random number
+- Use timer 0 to do fast PWM
 - Use timer 1 to set the next value
 
-## Examples:
-
+## Examples
 
 Here is an example of the VCO being driven by the LFO (ACS-85-0011).
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-1.png)
 
-
 Here is another example of the VCO being driven by the LFO (ACS-85-0011). In this case we are
-also inverting the the PWM to give an alternate 
+also inverting the the PWM to give an alternate.
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
-
-
-
- 

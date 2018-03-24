@@ -1,23 +1,29 @@
-# ACS-85-0010 Simple LFO
+# ACS-85-0010
 
-==============
+Simple LFO
 
 ## Overview
 
-PWM lfo outputs.
-Has a triangle, ramp up, ramp down and sine.
+PWM LFO outputs.
 
-The mode is selected with an analog pot.  So there are 4 modes. 
+- triangle
+- ramp up
+- ramp down
+- sine.
+
+The 4 modes are selected with an analog pot.
+
+### Selection pin
+
 A linear pot is best, but if you have a log pot you can change the code to handle that range.
 
-Set this value to 0 for non-linear log case:
+Just set this value to 0 for non-linear log case:
 
 ```
     #define MAP_VALUES_AS_LINEAR 1
 ```
 
-A smoothing capacitor is still needed on the output.  But you can always use
-somethign like a LED and LDR too to make an variable resistor.
+A smoothing capacitor is needed on the output as it is PWM.
 
 There is an extra pin that I used for debugging...its not particularly useful.  Delete that part of the code if you want.
 
@@ -25,9 +31,6 @@ There is an extra pin that I used for debugging...its not particularly useful.  
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0010/images/acs-85-0010.png)
 
-## Equivalent
-
- Basically an LFO, but with a pot to select the waveform.
  
 ## Examples
 
