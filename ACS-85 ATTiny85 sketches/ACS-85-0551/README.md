@@ -37,6 +37,3 @@ One way to do this is similar to [ACS-85-0550](https://github.com/robstave/Ardui
 ## Improvement ideas
 
 There is a pin left.  Either as a mode input or and output (xor ?)
-
-
- 

@@ -1,8 +1,10 @@
 # ACS-85-0560
-Frequency Sampler
-==============
 
-## Overview:
+Frequency Sampler
+
+
+## Overview
+
 Similar to the Luna Mod for the Pic chip.
 Two knobs and two buttons.
 
@@ -16,19 +18,19 @@ down the whole cycle.  Using the reset pin is an option as well.
 
 
 
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0560/images/ACS-85-0560.png)
 
-## Sample:
+## Sample
 
 Here is a Sample of the sketch in action.
 https://soundcloud.com/user-692410397/85-0560-1a
  
-## Strategy:
+## Strategy
  
  The sampling takes place in the loop, so its kinda a best effort.  Counters have been added to 
  make sampling a high priority than loop length or the buttons.  Its not super smooth and has room for improvement.
 
-## Examples:
 
  

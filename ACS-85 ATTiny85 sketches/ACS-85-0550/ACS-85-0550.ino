@@ -64,13 +64,12 @@
 
 
 //counters for the frequencies
-byte oscFreq1 = 200;
-byte  oscCounter1 = 0;
-byte  oscFreq2 = 210;
-byte  oscCounter2 = 0;
-byte  oscFreq3 = 220;
-byte  oscCounter3 = 0;
-
+volatile byte oscFreq1 = 200;
+volatile byte  oscCounter1 = 0;
+volatile byte  oscFreq2 = 210;
+volatile byte  oscCounter2 = 0;
+volatile byte  oscFreq3 = 220;
+volatile byte  oscCounter3 = 0;
 
 int cycle = 0;
 int loopSpeed = 3000;
