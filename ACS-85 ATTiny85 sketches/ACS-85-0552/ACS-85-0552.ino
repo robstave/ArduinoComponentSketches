@@ -1,20 +1,24 @@
 
 /**
- * ACS-85-0551
- * ATTiny85  Tri note melody maker upper two
+ * ACS-85-0552
+ * ATTiny85  Tri note melody maker upper - two
  *
  * Plays notes randomly on pins 5, 6, 7
- * Sum them with resistors or gate em out.
+ * Outputs are squarewave so no filtering needed.
+ *
+ * Suggested Serving: Sum them with resistors or gate em out.
  *
  * Plays 3 tones at the same time with one of three pins
  * going to the next note round robin like.
  *
- * Input one controls the speed
+ * One input for speed.
  *
  * I found that using byte counters really cuts down the clock cycles
  * in the interrupt.  However, the trade off is less resolution
- * in the counter.  I suppose that 255 different notes is nothing to complain
- * about.  Anything below 32 is a pretty high note, so I shift it out if needed.
+ * in the counter.  The reason for this is that we are working on an
+ * 8 bit chip.  Using a 2 btye varible takes extra time to load up 
+ * the variable.  Make the variables you pas to your interrupts as 
+ * small as possible.
  *
  * External pin 1       = Reset (not used)
  * External pin 2 (PB3) = input 0 speed
@@ -29,44 +33,41 @@
  *
  * V 1.0  -  First Version
  *
- *
- *
  * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * Observations.
+ * but it really should not be too hard to adapt.
+
+ TODO - Clean this up...why is there a LFSR in here. ITs not used?
  *
  * Rob Stave (Rob the fiddler) ccby 2015
  */
 
 
-
-//  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
-//        (pin4) nc A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
+//  ATTiny85 overview
+//                      +-\/-+
+//               Reset 1|    |8  VCC
+// (pin3) in 0 A3  PB3 2| AT |7  PB2 (pin2) out 2
+//   (pin4) nc A2  PB4 3| 85 |6  PB1 (pin1) out 1
+//                 GND 4|    |5  PB0 (pin0) out 0
+//                      ------
 
 
 //Not used...but these are rough guides of values you should be hitting
 #define VCO1_HIGH 32
 #define VCO1_LOW 255
 
-
 //counters for the frequencies
-volatile  byte oscFreq1 = 200;
-volatile byte  oscCounter1 = 0;
-volatile byte  oscFreq2 = 210;
-volatile byte  oscCounter2 = 0;
-volatile byte  oscFreq3 = 220;
-volatile byte  oscCounter3 = 0;
+volatile byte oscFreq1 = 200;
+volatile byte oscCounter1 = 0;
+volatile byte oscFreq2 = 210;
+volatile byte oscCounter2 = 0;
+volatile byte oscFreq3 = 220;
+volatile byte oscCounter3 = 0;
 
 volatile byte oscIncr1 = 1;
 volatile byte oscIncr2 = 1;
 volatile byte oscIncr3 = 1;
  
 unsigned long prevSample1 = 0;
-
 
 unsigned int lfsr  = 1;
 
@@ -161,18 +162,18 @@ byte getNote  () {
 void loop() {
 
   if (lfsr == 0) {
+    // should not happen..but just in case.
     lfsr = 1;
   }
-  //clockCounter();
+
   //Read freq
   int osc1_t = analogRead(A3);
   int  loopSpeed = map(osc1_t, 0, 1023, 500, 20);
 
   
-
   unsigned long millsSample = millis();
 
-  //Sample every xms to get new freqs
+  //Sample every 'loopspeed' ms to get new freqs
   if ((millsSample - prevSample1) > loopSpeed ) {
     prevSample1 = millsSample;
 
