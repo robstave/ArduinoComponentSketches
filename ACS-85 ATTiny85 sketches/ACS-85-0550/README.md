@@ -5,6 +5,8 @@ Melody Maker Upper 1
 ## Overview
 
 One control for speed
+one bool for Bananas - just kinda freq climbs
+
 Notes are played on three pins with each pin updating in a round robin fashion.
 
 AND/OR/XOR them or or just sum them using resistors

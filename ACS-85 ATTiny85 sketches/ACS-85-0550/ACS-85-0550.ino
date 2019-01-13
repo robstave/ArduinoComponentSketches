@@ -1,51 +1,47 @@
 
 /**
- * ACS-85-0550
- * ATTiny85  Tri note melody maker uper
- *
- * Plays notes randomly on pins 5, 6, 7
- * Sum them with resistors or gate em out.
- * 
- * Plays 3 tones at the same time with one of three pins
- * going to the next note round robin like.
- *
- * Input one controls the speed
- * 
- * I found that using byte counters really cuts down the clock cycles
- * in the interrupt.  However, the trade off is less resolution
- * in the counter.  I suppose that 255 different notes is nothing to complain
- * about.  Anything below 32 is a pretty high note, so I shift it out if needed.
- *
- * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = input 0 speed
- * External pin 3 (PB4) = nc
- * External pin 4       = GND
- * External pin 5 (PB0) = output 0 output
- * External pin 6 (PB1) = Output 1 output
- * External pin 7 (PB2) = Output 2 output
- * External pin 8       = Vcc
- *
- *
- *
- * V 1.0  -  First Version
- *
- *
- *
- * Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
- * Observations.
- *
- * Rob Stave (Rob the fiddler) ccby 2015
- */
+   ACS-85-0550
+   ATTiny85  Tri note melody maker upper
 
+   Plays notes randomly on pins 5, 6, 7
+   Sum them with resistors or gate em out.
 
+   Plays 3 tones at the same time with one of three pins
+   going to the next note round robin like.
+
+   input controls the speed
+   bool bananas makes it go crazy
+
+   I found that using byte counters really cuts down the clock cycles
+   in the interrupt.  However, the trade off is less resolution
+   in the counter.  I suppose that 255 different notes is nothing to complain
+   about.  Anything below 32 is a pretty high note, so I shift it out if needed.
+
+   External pin 1       = Reset (not used)
+   External pin 2 (PB3) = input 0 speed
+   External pin 3 (PB4) = bananas
+   External pin 4       = GND
+   External pin 5 (PB0) = output 0 output
+   External pin 6 (PB1) = Output 1 output
+   External pin 7 (PB2) = Output 2 output
+   External pin 8       = Vcc
+
+   V 1.0  -  First Version
+   V 1.1  -  Tweeks
+
+   Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
+   Observations.
+
+   Rob Stave (Rob the fiddler) ccby 2015
+*/
 
 //  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
-//      (pin4) none A2  PB4 3|    |6  PB1 (pin1) out 1
-//                      GND 4|    |5  PB0 (pin0) out 0
-//                           ------
+//                        +-\/-+
+//                 Reset 1|    |8  VCC
+// (pin3)      in A3 PB3 2|    |7  PB2 (pin2) out 2
+// (pin4) bananas A2 PB4 3|    |6  PB1 (pin1) out 1
+//                   GND 4|    |5  PB0 (pin0) out 0
+//                        ------
 
 
 //Not used...but these are rough guides of values you should be hitting
@@ -53,34 +49,28 @@
 #define VCO1_LOW 255
 
 /**
- * the notes we play are based on how long the counters loop.
- * The above defines are not really used, just to kinda give you a feel.
- * The real range is 
- * 2^n to 255 so 
- * 5 => 32 to 255
- * Lower this number to get higher notes
- */
+   the notes we play are based on how long the counters loop.
+   The above defines are not really used, just to kinda give you a feel.
+   The real range is
+   2^n to 255 so
+   5 => 32 to 255
+   Lower this number to get higher notes
+*/
 #define HIGHEST_FACTOR 5
 
 
 //counters for the frequencies
 volatile byte oscFreq1 = 200;
-volatile byte  oscCounter1 = 0;
-volatile byte  oscFreq2 = 210;
-volatile byte  oscCounter2 = 0;
-volatile byte  oscFreq3 = 220;
-volatile byte  oscCounter3 = 0;
+volatile byte oscCounter1 = 0;
+volatile byte oscFreq2 = 210;
+volatile byte oscCounter2 = 0;
+volatile byte oscFreq3 = 220;
+volatile byte oscCounter3 = 0;
 
-int cycle = 0;
-int loopSpeed = 3000;
-int prevSample1 = 0;
 
 
 unsigned int lfsr  = 1;
 
-boolean getNewFreq1 = LOW;
-boolean getNewFreq2 = LOW;
-boolean getNewFreq3 = LOW;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -126,6 +116,10 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 }
 
+boolean checkPin4() {
+  // Check pin 0
+  return ((PINB & 0b00010000) != 0);
+}
 
 void clockLfsr () {
 
@@ -145,9 +139,10 @@ void clockCounter()      // called by interrupt
 }
 
 
+
 /**
- * Gets a counter value to use.  If its > 32, tweek it a bit.
- */
+   Gets a counter value to use.  If its less than 32, tweek it a bit.
+*/
 byte getValue () {
 
   clockCounter();
@@ -158,55 +153,64 @@ byte getValue () {
   return c1;
 }
 
-
-void loop() {
-
-  //Read freq
-  int osc1_t = analogRead(A3);
-  loopSpeed = map(osc1_t, 0, 1023, 1000, 33);
-
-
-  int millsSample = millis();
-
-  //Sample every xms to get new freqs
-  if ((millsSample - prevSample1) > loopSpeed ) {
-    prevSample1 = millsSample;
-
-    /**
-     * This is simple get a new freq every third time.  It will round robin.
-     * You can add more cycles to hold notes or get double different sounding
-     * things
-     */
+void checkGoBananas(byte cycle) {
+  if (checkPin4() == true) {
+    //go bananas
     if (cycle == 0) {
-      getNewFreq1 = HIGH;
+      oscFreq1++;
     }
     if (cycle == 1) {
-      getNewFreq2 = HIGH;
+      oscFreq2++;
     }
 
     if (cycle == 2) {
-      getNewFreq3 = HIGH;
-    }
-    cycle++;
-    if (cycle > 2) {
-      cycle = 0;
+      oscFreq3++;
     }
   }
+}
 
-  //fetch new freq if getNew flag is high
-  if (getNewFreq1 == HIGH) {
-    oscFreq1 = getValue ();
-    getNewFreq1 = LOW;
-  }
+void loop() {
+  int prevSample1 = 0;
+  byte  cycle = 0;
+  int loopSpeed = 3000;
 
-  if (getNewFreq2 == HIGH) {
-    oscFreq2 = getValue ();
-    getNewFreq2 = LOW;
-  }
 
-  if (getNewFreq3 == HIGH) {
-    oscFreq3 = getValue ();
-    getNewFreq3 = LOW;
+  while (true) {
+    clockCounter();
+    //Read freq
+    int osc1_t = analogRead(A3);
+    loopSpeed = map(osc1_t, 0, 1023, 1000, 33);
+    int millsSample = millis();
+
+    checkGoBananas(cycle);
+
+    //Sample every xms to get new freqs
+    if ((millsSample - prevSample1) > loopSpeed ) {
+      prevSample1 = millsSample;
+
+      /**
+         Each time we hit this loop, we change the value of one of
+         the frequencies.
+      */
+      if (cycle == 0) {
+        oscFreq1 = getValue ();
+      }
+      if (cycle == 1) {
+        oscFreq2 = getValue ();
+      }
+
+      if (cycle == 2) {
+        oscFreq3 = getValue ();
+      }
+      cycle++;
+      if (cycle > 2) {
+        cycle = 0;
+      }
+
+
+
+
+    }
   }
 
 }
