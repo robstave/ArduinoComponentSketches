@@ -166,9 +166,9 @@ typedef struct PinState {
   unsigned long ts;
 };
 
-// get number between 100 and 170
+// get number between 150 and 220
 int getRandomDelay() {
-  return random(0, 70) + 100;
+  return random(0, 70) + 150;
 }
 
 
@@ -189,8 +189,8 @@ void loop() {
     unsigned long millsSample = millis1();
 
     //Sample every x ms to get new data
-    // lets do it 8 times a second
-    if ((millsSample - prevSample1) > 100 ) {
+    // lets do it 12.5 times a second
+    if ((millsSample - prevSample1) > 80 ) {
 
       warble_count++;
 
