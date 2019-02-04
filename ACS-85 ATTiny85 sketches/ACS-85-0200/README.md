@@ -25,5 +25,6 @@ One Output:
 
 ## Equivalent
 
-TODO
+
+![circuit](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200/images/circuit.png)
 
