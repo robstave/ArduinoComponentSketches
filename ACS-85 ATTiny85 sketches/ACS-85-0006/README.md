@@ -2,7 +2,6 @@
 
 Square wave VCO with randomness added to period
 
-==============
 
 ## Overview
 

@@ -1,12 +1,14 @@
 # ArduinoComponentSketches
-Collection of sketches for ATTiny to replace logic blocks. These can be used in lunetta like circuits.
+
+Collection of sketches for ATTiny that can be used to replace logic blocks in your circuits. Mostly, these are squarewave sketches so they can easily be used in lunetta-like circuits.
 
 Arduino Component Sketches
- 
 
 ## Objective
 
-Create a library of Arduino sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.   Either by replacing a block of logic or creating a new type of circuit block altogether.  The intent is not to create a synth on a chip, but rather to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
+Create a library of Arduino sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.
+
+They can either replace a block of logic or create a new type of circuit altogether.  The intent is not to create a synth on a chip, but rather to have a series of building blocks to create richer devices with an actual lower device count.  Rather than write the code to tailor the circuit, these are a prewritten library of sketches that can be used to plug into your breadboard or whatever.  Kinda like if you discovered a whole new series of CMOS chips like the 4000 series.
 
 Of course, these are really 8-bit microcontroller chips with limitations such as speed, quantization and code quirks.  
 
