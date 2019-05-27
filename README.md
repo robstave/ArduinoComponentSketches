@@ -2,8 +2,10 @@
 
 Collection of sketches for ATTiny that can be used to replace logic blocks in your circuits. Mostly, these are squarewave sketches so they can easily be used in lunetta-like circuits.
 
-Arduino Component Sketches
-
+ 
+[Arduino Component Sketches](http://robstave.github.io/acs/)
+ 
+ 
 ## Objective
 
 Create a library of Arduino sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.

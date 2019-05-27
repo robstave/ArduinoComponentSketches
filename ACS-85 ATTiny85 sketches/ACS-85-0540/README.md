@@ -25,12 +25,19 @@ Listen for the interrupt happening faster than the code in the ISR can complete.
  
 
 ## Pinout:
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0540/images/ACS-85-0540.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0540/images/acs-85-0540.png)
 
 ## Equivalent:
 Similar to pinouts of a CMOS counter, ANDed to LFSR ( when warble is 0)
 
 ## Examples:
+
+No Warble
+https://soundcloud.com/user-692410397/3-audio-0002-2019-02-03-230205
+
+With Warble
+https://soundcloud.com/user-692410397/acs-85-0540-with-warble
+
 
  
 
