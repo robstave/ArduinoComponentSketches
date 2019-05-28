@@ -1,5 +1,3 @@
-
-
 /**
    ACS-85-0060 ATTiny85 - VCO - DDS Squarewave with LFO detuned.
 
