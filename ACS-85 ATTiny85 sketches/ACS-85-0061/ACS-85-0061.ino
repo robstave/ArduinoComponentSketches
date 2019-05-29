@@ -4,7 +4,7 @@
    External pin 2 = LFO width
    External pin 3 = LFO speed
    External pin 5 = vco freq  Squarewave
-   External pin 6 = LFO detuned freq Squarewave
+   External pin 6 = LFO modulated pulse width Squarewave
    External pin 7 = Freq of vco
 
     ATTiny overview
@@ -109,12 +109,12 @@ ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
   }
 
   uint8_t result2 = (Acc1 >> 8);
-  uint8_t mark = 128 - delta;
+  uint8_t mark = 128 - Delta;
 
 
 
 
-  if ((result2  > mark)
+  if (result2  > mark)
   {
     bitSet(PORTB, 1);
   }
