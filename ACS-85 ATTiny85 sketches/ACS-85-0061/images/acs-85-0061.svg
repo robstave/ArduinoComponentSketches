@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="acs-85-0060.svg"
+   sodipodi:docname="acs-85-0061.svg"
    inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0015\images\ACS-85-0015.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="54.81641"
+     inkscape:cx="130.31218"
      inkscape:cy="88.140853"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -182,7 +182,7 @@
          id="tspan4264"
          x="13.5"
          y="924.36218"
-         style="font-size:35px;line-height:1.25">ACS-85-0060</tspan></text>
+         style="font-size:35px;line-height:1.25">ACS-85-0061</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -325,7 +325,7 @@
          id="tspan4148-4-3-8-0-2"
          x="192.53354"
          y="1009.4518"
-         style="font-size:8.4375px;line-height:1.25;fill:#070000;fill-opacity:1">Detuned </tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#070000;fill-opacity:1">PWM F0 </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -394,7 +394,7 @@
          x="4.8320327"
          y="941.37195"
          style="font-size:15px;line-height:1.25"
-         id="tspan4192">DDS VCO with Triange LFO  drone</tspan></text>
+         id="tspan4192">DDS VCO with Triange LFO  PW</tspan></text>
     <g
        id="g4290-5"
        transform="translate(-204.89733,42.661101)"
