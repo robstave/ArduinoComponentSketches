@@ -74,7 +74,8 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-85-0100](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100) | Sound | Debounced Sound generator
 | **200-299 	Envelope generators, VCA, Sample and Hold** ||
 [ACS-85-0200](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200) | VCA | Simple VCA - PWM - In progress
-[ACS-85-0201](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201) | VCA + AR | Simple VCA AR Envelope - PWM - In progress4[ACS-85-0220](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0220) | Debounce gate | Debounced Gate with Repeat
+[ACS-85-0201](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201) | VCA + AR | Simple VCA AR Envelope - PWM - In progress
+[ACS-85-0220](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0220) | Debounce gate | Debounced Gate with Repeat
 | **300-499 	Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** ||
 [ACS-85-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305) | Gates | Xor Gates (2)
 [ACS-85-0306](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306) | Gates | Nand Gates (2)
