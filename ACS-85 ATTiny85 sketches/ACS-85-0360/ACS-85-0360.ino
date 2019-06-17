@@ -15,9 +15,9 @@
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = div 2 switch
-   External pin 3 (PB4) = div 4 switch
+   External pin 3 (PB4) = div 4 switch (both high for div 8)
    External pin 4       = GND
-   External pin 5 (PB0) = div 8 switch
+   External pin 5 (PB0) = Out
    External pin 6 (PB1) = gate/trigger config
    External pin 7 (PB2) = Clock
    External pin 8       = Vcc
