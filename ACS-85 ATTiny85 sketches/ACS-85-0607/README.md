@@ -14,7 +14,8 @@ Three outputs are set as triggers, but the width of the trigger can be modified 
 
 
 ## Pinout:
- 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0607/images/ACS-85-0607.png)
+
 
  
 ## Improvements:
