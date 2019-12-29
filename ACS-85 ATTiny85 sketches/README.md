@@ -60,7 +60,10 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0560](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0560) | Component | Freq sampler
 [ACS-85-0600](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0600) | LFO - Sequencer | Sequencer programmable LFO
 [ACS-85-0601](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601) | Sequencer | 1 bit 3 Pin Sequencer with analog scene select
+[ACS-85-0603](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0603) | Sequencer | 2 Channel Drum Pattern Triggers
+[ACS-85-0604](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0604) | Sequencer | 3 Channel Random Drum Triggers
 [ACS-85-0605](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0605) | Sequencer | 1 bit waveform generator
+[ACS-85-0607](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0607) | Sequencer | 4 Channel Random Drum Triggers
 | **700-899 	Interface, Control, Midi, Visualization** ||
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Two pin Tap Tempo
