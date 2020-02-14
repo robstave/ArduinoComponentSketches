@@ -68,6 +68,9 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-85-0015](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0015) | LFO | 2 LFO
 [ACS-85-0020](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0020) | LFO | Adjustable Squarewave
 [ACS-85-0030](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0030) | LFO | Four LFO with Pauses
+[ACS-85-0040](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0040) | VCO | Squarewave VCO with Chiptune and PWM
+[ACS-85-0041](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0041) | VCO | Squarewave VCO with PWM
+[ACS-85-0042](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042) | VCO | Squarewave VCO with Chiptune
 [ACS-85-0050](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0050) | VCO PWM | Sinewave VCO PWM with distortion - in progress
 [ACS-85-0060](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0060) | VCO  | Squarewave with LFO detuned frequency
 [ACS-85-0061](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0061) | VCO  | Squarewave with LFO PWM frequency

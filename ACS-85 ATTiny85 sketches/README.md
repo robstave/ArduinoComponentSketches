@@ -21,6 +21,9 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0015](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0015) | LFO | 2 LFO
 [ACS-85-0020](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0020) | LFO | Adjustable Squarewave
 [ACS-85-0030](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0030) | LFO | 4 LFO with Pauses
+[ACS-85-0040](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0040) | VCO | Squarewave VCO with Chiptune and PWM
+[ACS-85-0041](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0041) | VCO | Squarewave VCO with PWM
+[ACS-85-0042](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042) | VCO | Squarewave VCO with Chiptune
 [ACS-85-0050](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0050) | VCO PWM | Sinewave PWM and distortion - In progress
 [ACS-85-0060](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0060) | VCO  | Squarewave with LFO detuned frequency
 [ACS-85-0061](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0061) | VCO  | Squarewave with LFO PWM frequency
