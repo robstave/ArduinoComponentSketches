@@ -1,8 +1,11 @@
 # ACS-85-0605
+
 1 bit waveform selector
+
 ==============
 
-## Overview:
+## Overview
+
 Clock driven.
 
 three pins selects from one of 8 waveforms.
@@ -28,13 +31,13 @@ https://soundcloud.com/user-692410397/85-0605-1a
 This is PB2 of the ACS-85-0002 clocking the component.  There is a lot more going on in that signal.
 https://soundcloud.com/user-692410397/85-0605-0002-1a
 
+## Pinout
 
-
-## Pinout:
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0605/images/ACS-85-0605.png)
 
- 
-## Improvements:
+
+## Improvements
+
 Consider moving them around for a more audible progression. 
 
  
