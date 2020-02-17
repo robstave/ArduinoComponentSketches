@@ -84,7 +84,7 @@ void loop()
   byte counter = 0;
 
   int VCO1LOW = 200;
-  int VCO1HIGH = 2200;
+  int VCO1HIGH = 2400;
 
   while (true)
   {
@@ -95,12 +95,13 @@ void loop()
     Note = map(osc1_t, 0, 1023, VCO1LOW, VCO1HIGH);
 
     // only check this 1 out of 4 times in loop
+    // get the selection mode as a number from 0-100
     if (counter == 0) {
       SelectionMode = map(analogRead(A3), 0, 1023, 0, 100);
     }
 
     counter++;
-    if (counter >= 4) {
+    if (counter > 3) {
       counter = 0;
     }
 

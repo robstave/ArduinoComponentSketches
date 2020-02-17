@@ -58,12 +58,13 @@ void loop()
   byte counter = 0;
 
   int VCO1LOW = 200;
-  int VCO1HIGH = 2200;
-  int pwmMin = 10;
-  int pwmMax = 253;
+  int VCO1HIGH = 2400;
+  int pwmMin = 15; // feel free to drop this to 1
+  int pwmMax = 245;  // feel free to up to 255
   while (true)
   {
 
+    // not really needed, but I like to average my samples a bit
     f1Sample[counter] = analogRead(A2);
     unsigned int osc1_t = (f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
     Note = map(osc1_t, 0, 1023, VCO1LOW, VCO1HIGH);
@@ -73,7 +74,7 @@ void loop()
     Width = map(osc2_t, 0, 1023, pwmMin, pwmMax);
 
     counter++;
-    if (counter >= 4) {
+    if (counter > 3) {
       counter = 0;
     }
   }
@@ -82,9 +83,7 @@ void loop()
 ISR(TIMER0_COMPA_vect)
 {
 
-  int localNote = Note;
-
-  Acc = Acc + localNote;
+  Acc = Acc + Note;
 
   unsigned int upper8bits = (Acc >> 8);
 
