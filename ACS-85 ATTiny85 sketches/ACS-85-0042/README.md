@@ -20,4 +20,6 @@ Originally, I had ACS-85-0040, but it was a bit busy. Made this just the Chiptun
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042/images/ACS-85-0042.png) 
  
  
- 
+ ## Example
+
+ https://soundcloud.com/user-692410397/acs-85-0042-sample

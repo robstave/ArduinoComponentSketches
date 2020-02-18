@@ -31,12 +31,12 @@ When mixed, there is some phasing effects.  Consider modulating the phase a bit 
 mix no matter what.
 
 
-## Pinout:
+## Pinout
  
 
  
  
-## Examples:
- 
-![soundcload](https://soundcloud.com/user-692410397/acs-85-0210-sample)
+## Examples
+
+https://soundcloud.com/user-692410397/acs-85-0210-sample
  
