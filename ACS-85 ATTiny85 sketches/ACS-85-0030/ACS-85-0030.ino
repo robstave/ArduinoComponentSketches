@@ -68,7 +68,7 @@ ChannelState channel[] = {
 // the setup function runs once when you press reset or power the board
 void setup() {
 
-  DDRB = B11110111;  //set output bits (and input
+  DDRB = B11110111;  //set output bits (and input  pb3)
 
   // initialize timer1
   noInterrupts();           // disable all interrupts
@@ -77,11 +77,8 @@ void setup() {
   TCCR0B = 0;
 
   TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
-
   OCR0A = 29; //CTC Compare value
-
   TCCR0B |= (1 << CS01); // Prescaler =8 Table 11.6
-
   // TCCR0A |=(1<<COM0A1); //Timer0 in toggle mode Table 11.2
   TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
   interrupts();             // enable all interrupts
@@ -95,6 +92,10 @@ ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 
   oscCounter1++;
   byte output = B00000000;
+
+  // Set port b bits.
+  // TODO, make this a little more efficient
+  // PWM is manual since ATTINY really does not have 4 built in PWMs. Not a problem for an LFO.
 
   if ( oscCounter1 < values[0]) {
     bitSet(PORTB, 0);

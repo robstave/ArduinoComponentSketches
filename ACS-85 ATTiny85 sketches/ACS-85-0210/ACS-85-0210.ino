@@ -59,6 +59,8 @@ volatile unsigned int samples[128];
 
 volatile  byte Spread = 40;
 
+#define NO_NOTE_IF_ZERO true
+
 void setup()
 {
 
@@ -104,37 +106,56 @@ ISR(TIMER0_COMPA_vect)
   Acc1 = Acc1 + Note1;
 
   unsigned int upper8bits = (Acc1 >> 8);
+  
+  // adjust if no sound needed
+  if ( Note1 == 0) {
+    upper8bits = 0;
+  }
 
-  if (upper8bits > 0x7F) {
+  if (upper8bits > 0x7F ) {
     result |= B00000001;
   }
 
+
+
   // Tap1
-  byte localSample = counter -  (Spread >> 1);
-  if (localSample > 127) {
-    localSample = localSample - 128;
+  byte localSampleIndex = counter -  (Spread >> 1);
+  if (localSampleIndex > 127) {
+    localSampleIndex = localSampleIndex - 128;
   }
-  unsigned int delayNote = samples[localSample];
+  unsigned int delayNote = samples[localSampleIndex];
   Acc2 = Acc2 + delayNote;
 
-  upper8bits = (Acc2 >> 8);
+
+
+  upper8bits = (Acc2 >> 8 );
+
+    // adjust if no sound needed
+  if ( delayNote == 0) {
+    upper8bits = 0;
+  }
 
   if (upper8bits > 0x7F) {
     result |= B00000010;
   }
 
   // Tap2
-  localSample = counter -  Spread;
-  if (localSample > 127) {
-    localSample = localSample - 128;
+  localSampleIndex = counter -  Spread;
+  if (localSampleIndex > 127) {
+    localSampleIndex = localSampleIndex - 128;
   }
 
-  delayNote = samples[localSample];
+  delayNote = samples[localSampleIndex];
 
 
   Acc3 = Acc3 + delayNote;
 
   upper8bits = (Acc3 >> 8);
+
+  // adjust if no sound needed
+  if ( delayNote == 0) {
+    upper8bits = 0;
+  }
 
   if (upper8bits > 0x7F) {
     result |= B00000100;
@@ -153,7 +174,13 @@ void loop()
 
   while (true)
   {
-    Note1 = map(analogRead(A2), 0, 1023, VCO1LOW, VCO1HIGH);
+    unsigned int freqSample = analogRead(A2);
+    if ((NO_NOTE_IF_ZERO == true) && (freqSample < 3)) {
+      Note1 = 0;
+    } else {
+      Note1 = map(freqSample, 0, 1023, VCO1LOW, VCO1HIGH);
+    }
+
     Spread = map(analogRead(A3), 0, 1023, 2, 100);
   }
 }
