@@ -45,8 +45,8 @@ Hmmm, good question.
 
  https://soundcloud.com/user-692410397/85-0006a
 
- So it starts out with just the regular vco.  Sounds like it should, then the next
- pin. Sounds a bit gritty.  Finally, the third pin is heard.
+ So it starts out with just the regular squarewave vco on the first pin.  The next
+ pin sounds a bit gritty.  The third is even more so.
 
 ## Improvements
 

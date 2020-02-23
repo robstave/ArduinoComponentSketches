@@ -1,5 +1,5 @@
 /**
-   ACS-85-0210
+   ACS-85-0570
    ATTiny85 PWM Analog Shift Register
 
    External pin 1       = Reset (not used)

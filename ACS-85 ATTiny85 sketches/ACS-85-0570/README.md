@@ -1,4 +1,4 @@
-# ACS-85-0600
+# ACS-85-0570
 
 Analog Shift register.  One output.
 

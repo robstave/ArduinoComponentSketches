@@ -4,7 +4,7 @@ Two Square wave LFOs
 
 ## Overview
 
-Copy pasted from [85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004).  No frills two LFOs with different ranges.  Eliminates the need for a range pot.  Its just LFO.
+Copy pasted from [85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004).  No frills two squarewave LFOs with different ranges.  One channel for each range.  Its just LFO.
 
 These are just digital LFOs...no smoothing needed.  But if you were driving a an analog circuit you could use a capacitor for a glide.
 
