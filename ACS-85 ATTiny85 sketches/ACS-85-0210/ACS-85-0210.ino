@@ -4,7 +4,7 @@
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq
-   External pin 3 (PB4) = input 1 tap delay
+   External pin 3 (PB4) = input 1 tap delay/spread
    External pin 4       = GND
    External pin 5 (PB0) = output 0 output
    External pin 6 (PB1) = output 1 output tap 1
@@ -17,7 +17,7 @@
    a little later on.  Kinda like an atari punk console or a shark, it really only works when its in motion.
    This will lead to other drone things in the future where things are just constantly modulated.
 
-   For now though, its just two taps.
+   For now though, its just two taps (and the immediate output)
 
    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
    }434|434|455|500|500|500|522|522|533|.......|222|222|222|233|233|233|255|
@@ -26,12 +26,11 @@
                   tap           tap1                tuning  --->
 
    The Tuning word (note in dds) is stored round robin in the samples array.
-   In the code that generate
+   To determine port B, we use the tuning word and then bit 1 and bit 2 are just
+   the spread and spread/2 Mod 127.  It it not PWM, we are just flipping bits.
+   It sounds better if all bits are set at once.
 
-   then we determine port B, we use the tuning word and then bit 1 and bit 2 are just
-   the spread and spread/2 Mod 127
-
-   127 is chosen because the math is easy...but there is enough memory for 100 more
+   The size of 127 is chosen because the math is easy...but there is enough memory for 100 more
    samples.  Alas...not enough to make it a easy 256 ints.
 
    When mixed, there is some phasing effects.  Consider modulating the phase a bit to make it

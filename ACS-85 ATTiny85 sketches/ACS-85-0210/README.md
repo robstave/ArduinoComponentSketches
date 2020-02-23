@@ -19,12 +19,13 @@ For now though, its just two taps.
                   '
 ```
 
-The Tuning word (note in dds) is stored round robin in the samples array. This is done in timer 1.
+ 
+The Tuning word (note in dds) is stored round robin in the samples array.
+To determine port B, we use the tuning word and then bit 1 and bit 2 are just
+the spread and spread/2 Mod 127.  It it not PWM, we are just flipping bits.
+It sounds better if all bits are set at once.
 
-When we determine port B, we use the tuning word and then bit 1 and bit 2 are just
-the spread and spread/2 Mod 127.  Basically, we are using tuning words that were recorded in the past.
-
-127 is chosen because the math is easy...but there is enough memory for 100 more
+The size of 127 is chosen because the math is easy...but there is enough memory for 100 more
 samples.  Alas...not enough to make it a easy 256 ints.
 
 When mixed, there is some phasing effects.  Consider modulating the phase a bit to make it
