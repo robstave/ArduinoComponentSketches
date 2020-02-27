@@ -67,6 +67,7 @@ void clockCounter() // called by interrupt
   {
     counter = 0;
   }
+
   if (registerWrite > 0)
   {
     samples[counter] = sample;
@@ -88,16 +89,13 @@ void clockCounter() // called by interrupt
 
 byte getRegisterSize(byte sz)
 {
-  if (sz < 25)
-  {
+  if (sz < 25) {
     return 2;
   }
-  if (sz < 50)
-  {
+  if (sz < 50) {
     return 4;
   }
-  if (sz < 75)
-  {
+  if (sz < 75) {
     return 8;
   }
 
