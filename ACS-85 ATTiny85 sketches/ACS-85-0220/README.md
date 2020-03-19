@@ -16,6 +16,8 @@ The length of the total does not change, but the last interval could be silence.
 
 This does not produce audio, just gates.
 
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0220/images/drawing.png)
+
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0220/images/ACS-85-0220.png)
