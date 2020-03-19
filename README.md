@@ -110,7 +110,7 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-85-0551](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0551) | Component | Melody Maker Upper 2
 [ACS-85-0552](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0552) | Component | Melody Maker Upper 3
 [ACS-85-0560](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0560) | Component | Freq sampler
-[ACS-85-0570](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0570) |Analog Shift Register variable size
+[ACS-85-0570](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0570) |Shift Register | Analog Shift Register variable size
 [ACS-85-0600](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0600) | LFO - Sequencer | Sequencer programmable LFO
 [ACS-85-0601](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0601) | Sequencer | 1 bit 3 Pin Sequencer with analog scene select
 [ACS-85-0603](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0603) | Sequencer | 2 Channel Drum Pattern Triggers
@@ -136,7 +136,7 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Fixed square wave oscillator with a grand assortment of beeps. 
 | **300-499 	Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** |||
 [ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305) | Gates |  Xor Array
-[ACS-84-0570](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0570) |Analog Shift Register 4 outputs
-[ACS-84-0608](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0608) | clocked 4 Channel random triggers
+[ACS-84-0570](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0570) |Shift Register | Analog Shift Register 4 outputs
+[ACS-84-0608](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0608) | Sequncer | clocked 4 Channel random triggers
 
 
