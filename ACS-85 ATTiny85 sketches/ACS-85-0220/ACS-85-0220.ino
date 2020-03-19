@@ -1,9 +1,16 @@
 /**
    ACS-85-0220 ATTiny85 - debounced Trigger
+   
+   Basically a trigger to gate, but it can subdivide the gates.
+   The length of the total gate time remains the same, but adding ticks
+   subdivides it
 
-   External pin 2 = xxx
+   The intent was to have a trigger that was like a half note, but you could
+   trigger 1/16 notes on the fly over the same gate.
+
+   External pin 2 = Number of ticks ( analog represneting 1 to 8 ticks)
    External pin 3 = Blip Length
-   External pin 5 = Blip sound
+   External pin 5 = Gate out
    External pin 6 = none
    External pin 7 = Trigger
 
@@ -18,34 +25,38 @@
    Description:
    Debounced gate
    Length is the length of the total gate
-   Ticks is the number of ticks that alternate.
+   Ticks > 1 will subdivide the gate.
 
-   so for example...a value of 6 actually is gives and output of 
+   so for example...a value of 6 actually is gives and output of
 
    on - off - on - off - on - off  over the course of the length.
 
+   Trigger:          ---xx------------------
+   Length:           ---xxxxxxxxxxxx--------
+   Gate(ticks = 1)   ---xxxxxxxxxxxx--------
+   Gate(ticks = 2)   ---xxxxxx--------------
+   Gate(ticks = 3)   ---xxxx----xxxx--------
+   Gate(ticks = 4)   ---xxx---xxx-----------
+   Gate(ticks = 6)   ---xx--xx--xx------------
+
+   its not super accurate...but gives an interesting effect when
+   used lightly.  
 
    V 1.0  -  First Version
-
    Rob Stave (Rob the Fiddler) CCBY 2019
-
 */
-
- 
 
 // Debounce time
 # define DEBOUNCE 30
 
-
-volatile unsigned int noteCounter = 0; // tuning word
-volatile unsigned int noteLengthMaxMillis = 500;  
-volatile unsigned int ticks = 4;
+# define MAX_LENGTH 500
+# define MIN_LENGTH 40
+volatile unsigned int noteCounter = 0;
+volatile unsigned int noteLengthMillis = 500;
+ volatile unsigned int ticks = 4;
 
 volatile boolean isRunning = false;
 volatile boolean setTrigger = false;
-
-
-volatile unsigned int lfsr = 1;
 
 // the setup function runs once when you press reset or power the board
 void setup()
@@ -55,7 +66,7 @@ void setup()
 
   // initialize timer
   noInterrupts(); // disable all interrupts
- 
+
   // start the timer, prescaler
   TCCR1 = (1 << CTC1) | (7 << CS10); // CTC  mode, div64
   OCR1C = 0.001 * F_CPU / 64 - 1;    // 1ms, F_CPU @16MHz, div64
@@ -77,15 +88,15 @@ unsigned long millisTimer1()
 {
   return milliseconds;
 }
- 
- 
+
+
 void loop()
 {
 
   unsigned long previousMillis = 0;
 
 
-  // no need to check speed   all that quickly
+  // no need to check speed all that often
   // so we space that out a bit
   byte sensorCounter = 0;
   byte sensorLimit = 500;
@@ -95,9 +106,8 @@ void loop()
   int lastButtonState = LOW;   // the previous reading from the input pin
   unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
   unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
-  while (true)
-  {
-   
+  while (true) {
+
 
     // Debound stuff
     unsigned long currentMillis = millisTimer1();
@@ -142,7 +152,7 @@ void loop()
         ticks = map(sample, 0, 1023, 1, 8);
       }  else {
         int sample3 = analogRead(A2);
-        noteLengthMaxMillis = map(sample3, 0, 1023, 40, 500);
+        noteLengthMillis = map(sample3, 0, 1023, MIN_LENGTH, MAX_LENGTH);
       }
 
       sensorCounter = 0;
@@ -159,7 +169,7 @@ void loop()
 
     if (isRunning == true) {
       noteCounter = currentMillis - previousMillis;
-      if (noteCounter >= noteLengthMaxMillis)
+      if (noteCounter >= noteLengthMillis)
       {
         // Note is finished
         isRunning = false;
@@ -168,9 +178,9 @@ void loop()
       }
 
 
-      int multiplier = map( noteCounter, 0, noteLengthMaxMillis, 1, ticks);
+      int multiplier = map( noteCounter, 0, noteLengthMillis, 1, ticks);
 
-      if (isRunning == true && ( multiplier %2 == 1)) {
+      if (isRunning == true && ( multiplier % 2 == 1)) {
         bitSet(PORTB, 0);
       }  else {
         bitClear(PORTB, 0);
