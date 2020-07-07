@@ -33,9 +33,9 @@ Thats what is going on here.
 There are 3 options.
  
 
-## PWM
+## Output
 
-Technically, this is PWM.  You will need to filter the output
+Although it is DDS looking, its just a squarewave and not really PWM.  There is no "decay" or anything like that.
 
 
 ## Pinout

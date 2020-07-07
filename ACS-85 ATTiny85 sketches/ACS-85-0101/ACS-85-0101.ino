@@ -1,11 +1,11 @@
 /**
-   ACS-85-xxxx ATTiny85 - blip
+   ACS-85-0101 ATTiny85 - blip II
 
    External pin 2 = Pitch
    External pin 3 = Blip Length
    External pin 5 = Blip sound
-   External pin 6 = Noise
-   External pin 7 = Trigger
+   External pin 6 = Trigger
+   External pin 7 = select
 
     ATTiny overview
                             +-\/-+
@@ -21,7 +21,7 @@
 
    V 1.0  -  First Version
 
-   Rob Stave (Rob the Fiddler) CCBY 2019
+   Rob Stave (Rob the Fiddler) CCBY 2020
 
 */
 
@@ -313,12 +313,12 @@ void loop()
         int sample = analogRead(A1);
         StartNote = map(sample, 0, 1023, 2800, 300);
 
-        StartNote  = 1000;
+         
       }  else {
         int sample3 = analogRead(A2);
         noteLengthMaxMillis = map(sample3, 0, 1023, 40, 500);
 
-        noteLengthMaxMillis = 200;
+  
       }
 
       sensorCounter = 0;
