@@ -1,21 +1,21 @@
 /**
-   ACS-85-0608
-   ATTiny85 clocked 4 Channel random triggers
+   ACS-84-0608
+   ATTiny84 clocked 4 Channel random triggers
+   (requires an external clock)
    Simple Drum triggers that randomly trigger
 
-   The clock ticks the LFSR
+   The clock ticks the LFSR ( Linear Feedback Shift Register).
    At each tick, we check if the lower 8 bits are
    greater than the probabilty value (Randomness)
 
-   Permutations of the code could be to make some outputs
-   a little more likely than others.
+   Permutations of the code could be: 
+    - make some outputs a little more likely than others.
 
-   The Length of the Trigger is defined by the other pot.
-   For the Drum triggers, it will max out at one clock cycle.
-
+   The length of the trigger is defined by the other pot. PA1.
+   
    There is another output that is pretty much a
-   clock to trigger output.  Its intent was to drive
-   a pocket Oscillator.
+   clock to trigger output.  It's intent was to drive
+   a Pocket Oscillator.
 
   This is really like ACS-085-0607 but clocked
    External pin 1       = Vcc

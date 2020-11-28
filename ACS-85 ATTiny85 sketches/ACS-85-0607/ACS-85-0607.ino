@@ -4,7 +4,7 @@
 
    Simple Drum triggers
 
-  This is really like 603 but just the blank pattern and random triggers filling in
+   This is really like 603 but just the blank pattern and random triggers filling in
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq

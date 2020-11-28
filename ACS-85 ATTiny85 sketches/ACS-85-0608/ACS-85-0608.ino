@@ -22,7 +22,7 @@
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
-//     (pin3) output 2  PB3 2|    |7  PB2 (pin2) clock
+//     (pin3) output 2  PB3 2|    |7  PB2 (pin2) clock input
 //     (pin4) output 3  PB4 3|    |6  PB1 (pin1) output 1
 //                      GND 4|    |5  PB0 (pin0) output 0
 //                           ------
