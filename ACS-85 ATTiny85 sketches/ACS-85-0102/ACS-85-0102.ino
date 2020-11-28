@@ -1,33 +1,29 @@
 /**
-   ACS-85-xxxx ATTiny85 - blip
+   ACS-85-0102 ATTiny85 - space drum 1
 
-   External pin 2 = Pitch
-   External pin 3 = Blip Length
-   External pin 5 = Blip sound
-   External pin 6 = Noise
-   External pin 7 = Trigger
+   External pin 2 = Pitch start
+   External pin 3 = Pitch end
+   External pin 5 = Drum sound
+   External pin 6 = Trigger
+   External pin 7 = parameter
 
     ATTiny overview
                             +-\/-+
                      Reset 1|    |8  VCC
-         (pin3) pitch  PB3 2|    |7  PB2 trigger
-         (pin4) length PB4 3|    |6  PB1 (pin1)  noise
-                       GND 4|    |5  PB0 (pin0)  blip
+         (pin3) start  PB3 2|    |7  PB2 parameter
+         (pin4)    end PB4 3|    |6  PB1 (pin1)  trigger
+                       GND 4|    |5  PB0 (pin0)  sound
                             ------
 
    Description:
-   Does a blip sound on one pin and noise on the other
-   The two pins can be summed via resistors (or op amp)...or not.  Up to you
-
-   There is a FLAG that allows you to cycle through all the sounds or just pick one.
-   If you were so inclined. ( Hardcoded of course...there just is not enougn inputs 
-   to do everything)
-
-   To minimize parts, consider locking down a speed/ length as well and not using the pots.
+   Simple version of EHX space drum.  Ah...really...simple.
+   Just a start and end frequency.
+   There is a "parameter" value too that will be used for "length",
+   but feel free to change that.
 
    V 1.0  -  First Version
 
-   Rob Stave (Rob the Fiddler) CCBY 2019
+   Rob Stave (Rob the Fiddler) CCBY 2020
 
 */
 
@@ -35,26 +31,6 @@
 // Different sounds.  These are not samples, but algorithms.
 //  Its just a start, feel free to mix/match and create your own.
 
-#define BLIP 0  // arp up
-#define BLIZ 1   // arp between 2 notes
-#define BLOOP 2   // arp down
-#define BEEP 3   // just a note
-#define BLIFF 4   // sound and noise
-#define BLUMP 5   // kinda the same
-#define BLOOEEOO 6   // ARP up and down
-#define BIZEEP 7   // noise to beep
-
-#define LAST_SOUND 7   // Set to highest one so that you can rotate through
-
-
-// SET this to true to rotate through the sounds, otherwise pick one you like an set this to false
-#define SINGLE_SOUND 0    
-#define ROTATE_SOUND 1   
-#define RANDOM_SOUND 2   
-
-#define CHOOSE_SOUND SINGLE_SOUND  
-// if you want just one sound, set it here with ABOVE as SINGLE_SOUND 
-volatile  int sound = BLOOEEOO;
 
 
 
@@ -62,13 +38,16 @@ volatile  int sound = BLOOEEOO;
 # define DEBOUNCE 30
 
 volatile unsigned int Acc1; // main freq
-volatile unsigned int StartNote = 800; // tuning word
-volatile unsigned int noteCounter = 0; // tuning word
+volatile unsigned int StartNote = 800; // tuning word start
+volatile unsigned int EndNote = 800; // tuning word end
+volatile unsigned int ActualNote = 800; // tuning word end
+
+volatile unsigned int noteCounter = 0;
 volatile unsigned int noteLengthMaxMillis = 500; // tuning word
 
 volatile boolean isRunning = false;
 volatile boolean setTrigger = false;
-volatile byte multiplier = 1;
+
 
 volatile unsigned int lfsr = 1;
 
@@ -76,7 +55,7 @@ volatile unsigned int lfsr = 1;
 void setup()
 {
 
-  DDRB = B00000011; //Set port B output bits
+  DDRB = B00000001; //Set port B output bits
 
   // initialize timer
   noInterrupts(); // disable all interrupts
@@ -114,6 +93,7 @@ unsigned long millisTimer1()
 
 
 // Used for the the LFSR(noise)
+/*
 void clockLfsr () {
 
   //calculate new state
@@ -122,86 +102,19 @@ void clockLfsr () {
   lfsr = lfsr << 1;
   lfsr |= outputBit;
 }
+*/
 
 
 
 ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 {
   if (isRunning == true) {
-
     // output the noise bit first
     //  This is a freebie bit...but perhaps you can use it below
     boolean outputBit = bitRead(lfsr, 10);
-    if (outputBit == true) {
-      bitSet(PORTB, 1);
-    } else  {
-      bitClear(PORTB, 1);
-    }
-
-    if (sound == BEEP) {
-
-      //  BEEP just a note
-      Acc1 = Acc1 + StartNote ;
-
-    } else if (sound == BLIP) {
-
-      //  Blip...add more to accum as we go longer down the note.
-      //  Arp Up sound
-      Acc1 = Acc1 + StartNote + StartNote * multiplier;
-
-    } else if (sound == BLIZ) {
-
-      // Toggle between note and octave up
-      Acc1 = Acc1 + StartNote + StartNote * (multiplier % 2 );
-      
-    } else if (sound == BLOOP) {
-
-      //  Arp down
-      Acc1 = Acc1 + (StartNote >> (multiplier % 3 ));
-      
-    } else if (sound == BLIFF) {
-
-      // oct up if noise bit is true
-
-      Acc1 = Acc1 + StartNote + StartNote * outputBit;
-    } else  if (sound == BLUMP) {
-
-    // oct up if noise bit is true
-   
-      int mod = 0;
-      if (multiplier % 2 == 0) {
-        if (outputBit == true) {
-          mod = StartNote;
-        }
-
-      }
-      Acc1 = Acc1 + StartNote + mod;
-    } else if (sound == BLOOEEOO) {
-    
-      int mod = 0;
-      if (multiplier == 2) {
-        mod = StartNote << 1;
-      }
-      if (multiplier == 1 || multiplier == 3) {
-        mod = StartNote;
-      }
-      Acc1 = Acc1 + StartNote + mod;
-    } else if (sound == BIZEEP) {
-
-      // tuned noise for the first 1/3 of the note
-      int mod = 0;
-      if (multiplier < 2) {
-        if (outputBit == true) {
-          mod = StartNote;
-        }
-      }
-
-      Acc1 = Acc1 + StartNote + mod;
-    } else {
-      // do nothing
-    }
 
 
+    Acc1 = Acc1 + ActualNote;
 
     // Write bit for sound
     uint8_t result1 = (Acc1 >> 8) & 0x80;
@@ -213,29 +126,36 @@ ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 
   } else {
     bitClear(PORTB, 0);
-    bitClear(PORTB, 1);
+
   }
 }
 
-void checkIfRotate() {
-  if (CHOOSE_SOUND == SINGLE_SOUND) {
-    return;
-  }
-  if (CHOOSE_SOUND == ROTATE_SOUND) {
-    
-    sound = sound + 1;
-    if (sound > LAST_SOUND) {
-      sound = 0;
+int mapExp(int value, int timeStart, int timeEnd, int startFreq, int endFreq) {
+
+   int quarterTime=   timeEnd >> 2;
+   int middleFrequency = (startFreq + endFreq) >> 1;
+   
+    if ( value < quarterTime) {
+      return map(value, 0, quarterTime, startFreq, middleFrequency);
+    } else {
+      return  map(value, quarterTime, timeEnd,  middleFrequency, endFreq);
     }
-    return;
-  }
 
-  if (CHOOSE_SOUND == RANDOM_SOUND) {
-    // only really picks 0 - 7
-    sound = lfsr & B00000111;
-  }
-  
 }
+/*
+int mapExpOld(int value, int timeStart, int timeEnd, int endV1, int endv2) {
+
+   int quarterTime =   timeEnd >> 2;
+   
+    if ( value < quarterTime) {
+      return map(value, 0, quarterTime, endV1, endV1/2);
+    } else {
+      return  map(value, quarterTime, timeEnd,  endV1/2, endv2);
+    }
+    
+ 
+}
+*/
 
 void loop()
 {
@@ -249,6 +169,12 @@ void loop()
   byte sensorLimit = 500;
   byte checkState = 0;
 
+  // We will sample these values continuously.  Just so that we do not have to read all 3
+  // when the trigger occurs.
+  unsigned int startLive = 0;
+  unsigned int endLive = 0;
+  unsigned int lengthLive = 0;
+
   int buttonState;             // the current reading from the input pin
   int lastButtonState = LOW;   // the previous reading from the input pin
   unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
@@ -256,12 +182,12 @@ void loop()
   while (true)
   {
     // get frequency
-    clockLfsr ();
+    //clockLfsr ();
 
     // Debound stuff
     unsigned long currentMillis = millisTimer1();
 
-    int reading = digitalRead(PB2);
+    int reading = digitalRead(PB1);
 
     // check to see if you just pressed the button
     // (i.e. the input went from LOW to HIGH), and you've waited long enough
@@ -296,39 +222,48 @@ void loop()
     // If you want more responsiveness to the pots, you can decrease, at the expense of more
     // clock cycles reading pots.
     if (sensorCounter > sensorLimit) {
-      if (checkState % 2 == 0) {
-        int sample = analogRead(A3);
-        StartNote = map(sample, 0, 1023, 2800, 300);
-      }  else {
-        int sample3 = analogRead(A2);
-        noteLengthMaxMillis = map(sample3, 0, 1023, 40, 500);
-      }
 
+
+      int sample = analogRead(A3);
+      startLive = map(sample, 0, 1023, 2800, 300);
+      
+      int sample2 = analogRead(A2);
+      endLive = map(sample2, 0, 1023, 2800, 300);
+ 
+      int sample3 = analogRead(A1);
+      lengthLive = map(sample3, 0, 1023, 100, 800);
+ 
       sensorCounter = 0;
-      checkState++;
+
     }
     sensorCounter++;
 
     if  (setTrigger == true) {
 
-      checkIfRotate();  // determine if need to rotate or just use one sound
+
       // Kick off note.  Store off previous millis to track length
       isRunning = true;
       Acc1 = 0;
       setTrigger = false;
       noteCounter = 0;
       previousMillis = currentMillis;
+      StartNote = startLive;
+      EndNote = endLive;
+      ActualNote = StartNote;
+      
+      noteLengthMaxMillis = lengthLive;
+
     }
 
     if (isRunning == true) {
       noteCounter = currentMillis - previousMillis;
 
-      // The note will last as long as 
-      // noteCounter > noteLengthMaxMillis.  However, I have added below a "section" 
+      // The note will last as long as
+      // noteCounter > noteLengthMaxMillis.  However, I have added below a "section"
       // as well.  Maybe a mini ASDR ?  We are just spliting the note in 6 sections.
       // so that we can do things like bitshift the accumulator step to get arp sounds.
 
-      multiplier = map( noteCounter, 0, noteLengthMaxMillis, 0, 6);
+      ActualNote = mapExp( noteCounter, 0 , noteLengthMaxMillis, StartNote, EndNote);
 
       if (noteCounter >= noteLengthMaxMillis)
       {

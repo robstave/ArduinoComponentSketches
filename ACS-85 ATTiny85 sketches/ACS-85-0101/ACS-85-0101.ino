@@ -10,8 +10,8 @@
     ATTiny overview
                             +-\/-+
                      Reset 1|    |8  VCC
-         (pin3) pitch  PB3 2|    |7  PB2 select
-         (pin4) length PB4 3|    |6  PB1 (pin1)  trigger
+         (pin3) pitch   A3 2|    |7  A1 select
+         (pin4) length  A2 3|    |6  PB1 (pin1)  trigger
                        GND 4|    |5  PB0 (pin0)  blip
                             ------
 
@@ -310,7 +310,7 @@ void loop()
 
       
       if (checkState % 2 == 0) {
-        int sample = analogRead(A1);
+        int sample = analogRead(A3);
         StartNote = map(sample, 0, 1023, 2800, 300);
 
          
