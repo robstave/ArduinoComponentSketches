@@ -121,8 +121,7 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-85-0605](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0605) | Sequencer | 1 bit waveform generator
 [ACS-85-0607](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0607) | Sequencer | 4 Channel Random Drum Triggers
 [ACS-85-0608](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0608) | Sequencer | 4 Channel Random Drum Triggers clocked
-[ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/tree/master/
-ACS-85%20ATTiny85%20sketches/ACS-85-0612) | Random | Clocked Coin Flip trigged-latch
+[ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612) | Random | Clocked Coin Flip trigged-latch
 [ACS-85-0613](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613) | Random | Clocked Coin Flip gate
 [ACS-85-0614](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614) | Random | Clocked mulitple Coin Flip gate
 | **700-899 	Interface, Control, Midi, Visualization** ||
