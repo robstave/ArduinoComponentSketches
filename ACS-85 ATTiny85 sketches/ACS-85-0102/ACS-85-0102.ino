@@ -27,12 +27,8 @@
 
 */
 
-
 // Different sounds.  These are not samples, but algorithms.
 //  Its just a start, feel free to mix/match and create your own.
-
-
-
 
 // Debounce time
 # define DEBOUNCE 30

@@ -88,19 +88,6 @@
          x="11.238483"
          y="914.30212"
          style="font-size:20px;line-height:1.25">Clock</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="68.199814"
-       y="945.42395"
-       id="text4192"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         id="tspan2031"
-         sodipodi:role="line"
-         x="68.199814"
-         y="945.42395"
-         style="font-size:12.5px;line-height:1.25">Trigger mode is a set time</tspan></text>
     <path
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -300,88 +287,6 @@
        id="text2023"
        xml:space="preserve" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 89.196428,1088.5658 H 116.38392"
-       id="path1638-7-9-7-0-8"
-       sodipodi:nodetypes="cc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 170.75894,1088.5658 h 27.1875"
-       id="path1638-7-9-3-88-6"
-       sodipodi:nodetypes="cc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 197.94644,1088.5658 h 27.1875"
-       id="path1638-7-9-3-4-9"
-       sodipodi:nodetypes="cc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-37-4"
-       d="m 252.32144,1088.5658 h 27.18749"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-7-0-7-22"
-       d="m 144.62734,1125.6167 h 27.18749"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-3-88-9-0"
-       d="m 117.43983,1125.6167 h 27.18751"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-3-88-2-0"
-       d="M 90.252328,1125.6167 H 117.43983"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-3-88-79-8"
-       d="m 307.75235,1125.6167 h 27.1875"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="16.247568"
-       y="1089.3284"
-       id="text4262-7-5-9"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4264-0-7-4"
-         x="16.247568"
-         y="1089.3284"
-         style="font-size:20px;line-height:1.25;stroke-width:1px">A</tspan></text>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       id="text4262-7-5-3-9"
-       y="1128.2742"
-       x="15.908387"
-       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-size:20px;line-height:1.25;stroke-width:1px"
-         y="1128.2742"
-         x="15.908387"
-         id="tspan4264-0-7-1-5"
-         sodipodi:role="line">B</tspan></text>
-    <path
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        id="path2113"
@@ -391,70 +296,47 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 170.28371,1023.4985 c 0,-24.84371 0,-24.84371 0,-24.84371 l 6.70739,-0.11719 -0.23438,24.7266 20.7145,0.2343"
-       id="path2113-8" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 224.65872,1023.4985 c 0,-24.84368 0,-24.84368 0,-24.84368 l 6.70739,-0.11719 -0.23438,24.72657 20.7145,0.2343"
        id="path2113-5" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 277.97782,986.44764 c 0,-24.84375 0,-24.84375 0,-24.84375 l 6.70739,-0.11719 -0.23438,24.72657 20.7145,0.23437"
-       id="path2113-0" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       id="path2142"
-       d="m 116.38392,1088.5658 c 0.2887,-22.7988 0.2887,-22.7988 0.2887,-22.7988 0,0 55.51892,0.4971 55.02174,0.4971 -0.49719,0 -0.49719,0 -0.49719,0 l -0.43823,22.3017"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       sodipodi:nodetypes="cc"
-       id="path1638-7-9-3-4-9-3"
-       d="m 225.13394,1088.5658 h 27.1875"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 279.50893,1088.5658 c 0.2887,-22.7988 0.2887,-22.7988 0.2887,-22.7988 0,0 55.51892,0.4971 55.02174,0.4971 -0.49719,0 -0.49719,0 -0.49719,0 l -0.43823,22.3017"
-       id="path2142-8" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 280.56485,1125.6167 h 27.1875"
-       id="path1638-7-9-3-88-79-8-4"
-       sodipodi:nodetypes="cc" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       id="path2189"
-       d="m 171.81483,1125.6167 -0.33276,-18.9347 109.21875,0.4688"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       id="path2191"
-       d="m 280.56485,1125.6167 0.13597,-18.4659 v 0 0"
-       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        id="text4192-4"
-       y="1054.1342"
-       x="67.755791"
+       y="958.0119"
+       x="131.3954"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-size:12.5px;line-height:1.25;stroke-width:1px"
-         y="1054.1342"
-         x="67.755791"
+         y="958.0119"
+         x="131.3954"
          sodipodi:role="line"
-         id="tspan2031-2">Latch holds value until a change occurs</tspan></text>
+         id="tspan2031-2">Flipped A twice - 25%</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 170.28372,1023.4985 h 27.1875"
+       id="path1638-7-9-3-88-97"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path1638-7-9-3-88-7-6"
+       d="m 277.97782,986.44764 h 27.18751"
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="118.88104"
+       y="1085.2911"
+       id="text4192-4-3"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         id="tspan2031-2-1"
+         sodipodi:role="line"
+         x="118.88104"
+         y="1085.2911"
+         style="font-size:12.5px;line-height:1.25;stroke-width:1px">Flipped B twice - 25%</tspan></text>
   </g>
 </svg>

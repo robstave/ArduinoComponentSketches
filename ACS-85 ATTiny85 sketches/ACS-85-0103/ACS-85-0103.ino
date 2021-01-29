@@ -1,25 +1,27 @@
 /**
-   ACS-85-0102 ATTiny85 - space drum 1
+   ACS-85-0103 ATTiny85 - space drum 2
 
-   External pin 2 = Pitch start
-   External pin 3 = Pitch end
-   External pin 5 = Drum sound
+   External pin 2 = Drum sound out3
+   External pin 3 = Drum sound out2
+   External pin 5 = Drum sound out1
    External pin 6 = Trigger
    External pin 7 = parameter
 
     ATTiny overview
                             +-\/-+
                      Reset 1|    |8  VCC
-         (pin3) start  PB3 2|    |7  PB2 parameter
-         (pin4)    end PB4 3|    |6  PB1 (pin1)  trigger
+         (pin3) out2   PB3 2|    |7  PB2 parameter
+         (pin4) out3   PB4 3|    |6  PB1 (pin1)  trigger
                        GND 4|    |5  PB0 (pin0)  sound
                             ------
 
    Description:
    Simple version of EHX space drum.  Ah...really...simple.
-   Just a start and end frequency.
+   Start and end frequency is random
    There is a "parameter" value too that will be used for "length",
    but feel free to change that.
+
+   you can sum up for crazier sound
 
    V 1.0  -  First Version
 
