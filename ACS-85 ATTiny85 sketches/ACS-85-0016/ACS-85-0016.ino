@@ -16,12 +16,12 @@
 */
 
 //  ATTiny overview
-//                      +-\/-+
-//               Reset 1|    |8  VCC
-// (pin3) out/8    PB3 2|    |7  PB2 (pin2) out 2 freq/4
-// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1 freq/2
-//                 GND 4|    |5  PB0 (pin0) out 0
-//                      ------
+//                          +-\/-+
+//                   Reset 1|    |8  VCC
+// (pin3) out freq/8   PB3 2|    |7  PB2 (pin2) out 2 freq/4
+// (pin4) in 1 A2      PB4 3|    |6  PB1 (pin1) out 1 freq/2
+//                     GND 4|    |5  PB0 (pin0) out 0
+//                          ------
 
 
 // Configurable settings
@@ -77,7 +77,68 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     oscCounter1 = 0;
     clockCounter = clockCounter + 1;
 
-    PORTB  = B00001111 & clockCounter;
+    if (triggerEnabled == false) {
+      PORTB  = B00001111 & clockCounter;
+    } else {
+      switch (range) {
+        case 0:
+          PORTB  = B00000000;
+          break;
+        case 1:
+          PORTB  = B00000001;
+          break;
+        case 2:
+          PORTB  = B00000010;
+          break;
+        case 3:
+          PORTB  = B00000001;
+          break;
+        case 4:
+          PORTB  = B00000100;
+          break;
+        case 5:
+          PORTB  = B00000001;
+          break;
+        case 6:
+          PORTB  = B00000010;
+          break;
+        case 7:
+          PORTB  = B00000001;
+          break;
+        case 8:
+          PORTB  = B00001000;
+          break;
+        case 9:
+          PORTB  = B00000001;
+          break;
+        case 10:
+          PORTB  = B00000010;
+          break;
+        case 11:
+          PORTB  = B00000001;
+          break;
+        case 12:
+          PORTB  = B00000100;
+          break;
+        case 13:
+          PORTB  = B00000001;
+          break;
+        case 14:
+          PORTB  = B00000010;
+          break;
+        case 15:
+          PORTB  = B00000001;
+          break;
+        case 16:
+          PORTB  = B00000000;
+          break;
+
+      }
+    }
+
+    if (clockCounter == 16) {
+      clockCounter = 0;
+    }
   }
 
   // if we are doing triggers, clear the port when you hit the trigger count
