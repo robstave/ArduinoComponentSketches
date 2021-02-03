@@ -8,8 +8,8 @@
     ATTiny overview
                             +-\/-+
                      Reset 1|    |8  VCC
-         (pin3) pitch  PB3 2|    |7  PB2 channel 2 gate
-         (pin4) length PB4 3|    |6  PB1 (pin1)  out 2
+    (pin3) chan1 gate  PB3 2|    |7  PB2 channel 2 gate
+           (pin4) freq PB4 3|    |6  PB1 (pin1)  out 2
                        GND 4|    |5  PB0 (pin0)  out 1
                             ------
    Description:
@@ -19,14 +19,14 @@
 */
 
 
-#define CHANNEL1_HIGH 100
-#define CHANNEL1_LOW 220
+#define CHANNEL1_HIGH 50
+#define CHANNEL1_LOW 180
 
-#define CHANNEL2_HIGH 120
-#define CHANNEL2_LOW 300
+#define CHANNEL2_HIGH 90
+#define CHANNEL2_LOW 250
 
 volatile unsigned int lfsr1 = 1;
-volatile unsigned int lfsr2 = 1;
+volatile unsigned int lfsr2 = 3;
 volatile uint16_t oscCounter1 = 0;
 volatile uint16_t count1 = 0;
 volatile uint16_t oscCounter2 = 0;
@@ -47,8 +47,8 @@ void setup() {
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
   //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 70;                //set the compare value
-  OCR1C = 70;
+  OCR1A = 30;                //set the compare value
+  OCR1C = 30;
   TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
   TCCR1 = _BV(CTC1)  | _BV(CS11) ; // Start timer, ctc mode, prescaler clk/8
@@ -86,7 +86,6 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     } else {
       bitClear(PORTB, 0);
     }
-
   }
   oscCounter1++;
 
@@ -104,17 +103,23 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 void loop()
 {
-  byte inputPortB ;
+   
+  byte readCount = 0;
 
   while (true) {
-    int osc1_t = analogRead(A2);
-    count1 = map(osc1_t, 0, 1023, CHANNEL1_LOW,  CHANNEL1_HIGH);
-    count2 = map(osc1_t, 0, 1023, CHANNEL2_LOW,  CHANNEL2_HIGH);
 
-    inputPortB = PINB;
+    // no need to read pots every loop?
+    if ( readCount % 3 == 0 ) {
+      int osc1_t = analogRead(A2);
+      count1 = map(osc1_t, 0, 1023, CHANNEL1_LOW,  CHANNEL1_HIGH);
+      count2 = map(osc1_t, 0, 1023, CHANNEL2_LOW,  CHANNEL2_HIGH);
+    }
+    
+    byte inputPortB = PINB;
 
     outputBit1 = bitRead(inputPortB, 2);
     outputBit2 = bitRead(inputPortB, 3);
 
+    readCount++;
   }
 }

@@ -4,9 +4,8 @@
    ATTiny85 Trigger to Gate
 
    Takes a trigger ( rising edge) and outputs a gate.
-   Similar to Erika Synth PICO TG
+   Kinda similar to Erika Synth PICO TG...not as complex
 
-   This is really like 607 but clocked
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input Length
    External pin 3 (PB4) = input Prob
@@ -42,7 +41,7 @@
 #define RANDHIGH  254
 
 // if you set this, the random gate will also have random length
-const boolean doRandomLength = false;
+const boolean doRandomLength = true;
 
 
 // variables
@@ -101,18 +100,24 @@ byte getPatternValue () {
 void clockCounter()      // called by interrupt
 {
   PORTB = getPatternValue();
-  
+
   startGateTime = millis();
 
   gateATime = gateTime;
 
   if (doRandomLength) {
     byte c1 = lfsr & B11111111;
-    gateBTime = map(c1, RANDLOW, RANDHIGH, MINGATE, MAXGATE);
+
+    int p = gateTime >> 1;
+    int minTime = max(gateTime - p, MINGATE);
+    int maxTime = min(gateTime + p, MAXGATE);
+
+
+    gateBTime = map(c1, RANDLOW, RANDHIGH, minTime, maxTime);
   } else {
     gateBTime = gateTime;
   }
-  
+
 }
 
 
@@ -142,21 +147,19 @@ void loop() {
     currentMillis = millis();
 
 
-   if (gateARunning){
-    if ((currentMillis - startGateTime) >   gateATime) {
-      PORTB =  PORTB & B00000010;
-      gateARunning = false;
+    if (gateARunning) {
+      if ((currentMillis - startGateTime) >   gateATime) {
+        PORTB =  PORTB & B00000010;
+        gateARunning = false;
+      }
     }
-   }
 
-    if (gateBRunning){
-    if ((currentMillis - startGateTime) >   gateBTime) {
-      PORTB =  PORTB & B00000001;
-      gateBRunning = false;
+    if (gateBRunning) {
+      if ((currentMillis - startGateTime) >   gateBTime) {
+        PORTB =  PORTB & B00000001;
+        gateBRunning = false;
+      }
     }
-   }
-
-
 
   }
 

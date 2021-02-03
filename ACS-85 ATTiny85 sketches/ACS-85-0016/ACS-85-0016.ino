@@ -33,7 +33,7 @@ const  bool triggerEnabled = true;
 // shorter timer so low or high...whatever you want to call it.
 // So if the longest time is not long enough for ya, change 2000 to something bigger.
 
-#define CLOCK_COUNT_HIGH 170
+#define CLOCK_COUNT_HIGH 130
 #define CLOCK_COUNT_LOW 2000
 
 // Length of the trigger.  This is not in ms, just clock ticks really.  Make this smaller than
@@ -62,8 +62,8 @@ void setup() {
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
   //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 99;                //set the compare value
-  OCR1C = 99;
+  OCR1A = 89;                //set the compare value
+  OCR1C = 89;
   TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
   TCCR1 = _BV(CTC1)  | _BV(CS11) | _BV(CS12); // Start timer, ctc mode, prescaler clk/32
@@ -80,7 +80,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     if (triggerEnabled == false) {
       PORTB  = B00001111 & clockCounter;
     } else {
-      switch (range) {
+      switch (clockCounter) {
         case 0:
           PORTB  = B00000000;
           break;
@@ -151,7 +151,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 void loop() {
 
-  unsigned long currentMillis = millis();
+   
   while (true) {
     int osc1_t = analogRead(A2);
     count = map(osc1_t, 0, 1023, CLOCK_COUNT_LOW,  CLOCK_COUNT_HIGH);

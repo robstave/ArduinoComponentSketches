@@ -30,6 +30,9 @@ blocks.  Check em out.
 
 [Electric Druid](http://electricdruid.net/tap-tempo-lfo-taplfo-v2d/) has some AVRs and others as building blocks.  For example, an LFO.
 
+[Moffenzeefmodular](https://www.moffenzeefmodular.com/) has a project called MSG.  One of these sketches has made its way into that.  Neat!  If your not solder/hardware inclined, just get this and stick that that form factor.  Looks solid, if its not sold out.
+
+
 ## Background
 
 [Background](https://github.com/robstave/ArduinoComponentSketches/wiki/Background)
@@ -41,6 +44,15 @@ Ability to program ATTiny chips.  This only requires an arduino uno, a breadboar
 [Requirements](https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup)
 
 In some cases, a few extra parts might be needed like a small PWM filter or R2R ladder. These will be kept at a minimum unless the focus of the sketch IS an interface chip ( think optical encoder, Digital Pot controller and so on)
+
+## Form Factor and Design notes
+
+There are SOME common layout patterns, but alas, I tend to play more to the strengths of the GPIO as each sketch needs it.
+
+- Clock inputs are usually int0 ( pin7 ), because that is where rising/falling interrupt is.
+- Analog writes are usually on pins 5/6 because that can be set to be FAST.
+- I generally do not use delay() or millis(), prefering to write my own so i can choose timers.
+- Older sketches use more counters rather than DDS. Feel free to pick and choose the best parts.
 
 ## System
 
@@ -69,13 +81,16 @@ I have a bit of numbering system so I can halfway keep these things straight.
 [ACS-85-0016](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0016) | Clock | 4 Bit Clock/counter
 [ACS-85-0017](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0017) | Clock | Baby 4 ( CD4017)
 [ACS-85-0020](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0020) | LFO | Adjustable Squarewave
-[ACS-85-0030](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0030) | LFO | Four LFO with Pauses
+[ACS-85-0030](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0030) | LFO PWM | Four LFO with Pauses
+[ACS-85-0031](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0031) | LFO PWM | 3 Phase LFO clocked
 [ACS-85-0040](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0040) | VCO | Squarewave VCO with Chiptune and PWM
 [ACS-85-0041](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0041) | VCO | Squarewave VCO with PWM
 [ACS-85-0042](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042) | VCO | Squarewave VCO with Chiptune
 [ACS-85-0050](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0050) | VCO PWM | Sinewave VCO PWM with distortion - in progress
 [ACS-85-0060](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0060) | VCO  | Squarewave with LFO detuned frequency
 [ACS-85-0061](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0061) | VCO  | Squarewave with LFO PWM frequency
+[ACS-85-0065](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0065) | VCO  | Dual XOR Drones
+[ACS-85-0080](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080) | Noise  | Squarewave Noise Tunable 2 outputs
 [ACS-85-0100](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100) | Sqaurewave | Debounced Sound generator
 [ACS-85-0101](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101) | Sqaurewave | Algoritmic Sound.  Blips and Bleeps.
 [ACS-85-0102](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102) | Sqaurewave | Synthdrum 1
