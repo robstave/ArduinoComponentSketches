@@ -50,6 +50,7 @@ volatile unsigned int acc2a = 0;
 volatile unsigned int acc2b = 0;
 volatile unsigned int acc2c = 0;
 
+volatile boolean doGate  = false;
 
 void setup()
 {
@@ -65,6 +66,63 @@ void setup()
 
   interrupts(); // enable all interrupts
 }
+
+
+ISR(TIMER0_COMPA_vect)
+{
+
+  // First note.  I do a little of the math in the loop.
+  // if your hurting for clock cycles here, things like
+  //  note + (width >> 3); can be done in the loop as well.
+  //
+  // just replace
+  // acc1b = acc1b + note + (width >> 3);
+  // with
+  // acc1b = acc1b + noteFM1
+  // and  put
+  // noteFM1 = note + (width >> 3); in the loop
+
+  acc1a = acc1a + note;
+  bool bit1a = ((acc1a >> 8) > 0x7F);
+
+  // vibrato up
+  acc1b = acc1b + note + (width >> 3);
+  bool bit1b = ((acc1b >> 8) > 0x7F);
+
+  // vibrato down
+  acc1c = acc1c + note - (width >> 3);
+  bool bit1c = ((acc1c >> 8) > 0x7F);
+
+  // and xor the mess
+  if (((bit1a ^ bit1b ^ bit1c) == true) && (doGate == true)) {
+    bitSet(PORTB, 0);
+  } else {
+    bitClear(PORTB, 0);
+  }
+
+  // Second note
+  acc2a = acc2a + note2;
+  bool bit2a = ((acc2a >> 8) > 0x7F);
+
+  acc2b = acc2b + note2 + (width >> 4);
+  bool bit2b = ((acc2b >> 8) > 0x7F);
+
+  acc2c = acc2c + note2 - (width >> 4);
+  bool bit2c = ((acc2c >> 8) > 0x7F);
+
+
+  if (((bit2a ^ bit2b ^ bit2c) == true) && (doGate == true) ) {
+    bitSet(PORTB, 1);
+
+  } else {
+    bitClear(PORTB, 1);
+  }
+
+  // you could ditch the gate and output other combos here to pin 2
+
+
+}
+
 
 void loop()
 {
@@ -98,60 +156,9 @@ void loop()
     if (counter > 3) {
       counter = 0;
     }
+
+     
+    doGate = bitRead(PINB, 2);
   }
-}
-
-ISR(TIMER0_COMPA_vect)
-{
-
-  // First note.  I do a little of the math in the loop.
-  // if your hurting for clock cycles here, things like
-  //  note + (width >> 3); can be done in the loop as well.
-  //
-  // just replace
-  // acc1b = acc1b + note + (width >> 3);
-  // with
-  // acc1b = acc1b + noteFM1
-  // and  put
-  // noteFM1 = note + (width >> 3); in the loop
-
-  acc1a = acc1a + note;
-  bool bit1a = ((acc1a >> 8) > 0x7F);
-
-  // vibrato up
-  acc1b = acc1b + note + (width >> 3);
-  bool bit1b = ((acc1b >> 8) > 0x7F);
-
-  // vibrato down
-  acc1c = acc1c + note - (width >> 3);
-  bool bit1c = ((acc1c >> 8) > 0x7F);
-
-  // and xor the mess
-  if ((bit1a ^ bit1b ^ bit1c) == true)  {
-    bitSet(PORTB, 0);
-  } else {
-    bitClear(PORTB, 0);
-  }
-
-  // Second note
-  acc2a = acc2a + note2;
-  bool bit2a = ((acc2a >> 8) > 0x7F);
-
-  acc2b = acc2b + note2 + (width >> 4);
-  bool bit2b = ((acc2b >> 8) > 0x7F);
-
-  acc2c = acc2c + note2 - (width >> 4);
-  bool bit2c = ((acc2c >> 8) > 0x7F);
-
-
-  if ((bit2a ^ bit2b ^ bit2c) == true ) {
-    bitSet(PORTB, 1);
-
-  } else {
-    bitClear(PORTB, 1);
-  }
-
-  // you could ditch the gate and output other combos here to pin 2
-
-
+  
 }

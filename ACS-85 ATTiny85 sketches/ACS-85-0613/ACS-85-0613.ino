@@ -1,17 +1,21 @@
 
 /**
-   ACS-85-0612
+   ACS-85-0613
    ATTiny85 Random trigger clocked
    Like mutable instruments Branches 
+
+   Similar to 0612, but there is not a trigger option.  The
+   value on A/B/C is hish as long as the input is high.
+
+   
    Output is A or B as long as the clock is high
-   There is a third bit that is always 50%
+   There is a third bit that is always 50% prob 
 
    Takes an input clock and works on the rising edge.
    Outputs a trigger or latched output based on the value of the probability.
 
    Uses LFSR
    
-
    This is really like 607 but clocked
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input chance
@@ -34,16 +38,21 @@
 //                      GND 4|    |5  PB0 (pin0) output A
 //                           ------
 
-// pretty much set to min and max bit
-// but you could narrow this a bit of you were so inclined
-int RANDLOW = 0;
-int RANDHIGH = 255;
+
+// Adjustable parameters
+
+
+// max and min probability.  Really, there is no need to change this unless you want
+// the max and min to be something like 25% to 75%....then change to 64 and 192
+#define RANDLOW 1
+#define RANDHIGH 255
+
+// Pin definitions
+#define clockInt  0  // digital pin 2 is now interrupt 0
 
 volatile   byte randomness = 0;
-volatile unsigned int lfsr  = 31;
+volatile unsigned int lfsr  = 31;  // initialize to whatever, so long as its not zero
  
-const int clockInt = 0;  // digital pin 2 is now interrupt 0
-
 // the setup function runs once when you press reset or power the board
 void setup() {
   DDRB = B00010011;  //set output bits

@@ -1,9 +1,8 @@
 # ACS-85-0613
 
-coin Flip clocked output matches clock
+Coin Flip clocked output matches clock
 
-==============
-
+ 
 ## Overview
 
 Similar to Mutable instruments Branches.

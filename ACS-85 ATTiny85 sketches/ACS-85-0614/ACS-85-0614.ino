@@ -4,14 +4,16 @@
    ATTiny85 Random trigger clocked
    Like mutable instruments Branches but doulbe flip
    Output is A or B as long as the clock is high
-  
-   there is a bit to make it 3 flips a well
 
    Takes an input clock and works on the rising edge.
    Outputs a trigger or latched output based on the value of the probability.
 
-   Uses LFSR
+   there is a bit to make it 3 flips a well
 
+   Similar to ACS-85-0613, but it takes two flips to toggle A or B.
+   50% of the Time, there is no output on either pin.
+
+   Uses LFSR
 
    This is really like 607 but clocked
    External pin 1       = Reset (not used)
@@ -37,16 +39,17 @@
 
 // pretty much set to min and max bit
 // but you could narrow this a bit of you were so inclined
-int RANDLOW = 0;
-int RANDHIGH = 255;
-
-#define GATE_PIN 4
-volatile   byte randomness = 0;
-volatile unsigned int lfsr  = 31;
+#define RANDLOW  1
+#define RANDHIGH  255
 bool doThree = true;
 
-const int clockInt = 0;  // digital pin 2 is now interrupt 0
+// Pins
+#define GATE_PIN 4
+#define clockInt 0 // digital pin 2 is now interrupt 0
 
+volatile   byte randomness = 0;
+volatile unsigned int lfsr  = 31; // initialize to whatever, so long as its not zero
+ 
 // the setup function runs once when you press reset or power the board
 void setup() {
   DDRB = B00010011;  //set output bits
@@ -56,7 +59,7 @@ void setup() {
 
 /**
   Check if we need to flip a bit or two based on lfsr
-  We are checking against the LFSR.  Note, it will never be all zeros
+  We are checking against the LFSR.  Note, it will never be all zeros.  That is a dead state for LFSR.
 */
 boolean doFlip (byte p) {
 
@@ -98,7 +101,7 @@ byte getPatternValue () {
       else {
         result =   B00000010;
       }
-      
+
     }
   }
 

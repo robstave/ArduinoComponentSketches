@@ -12,7 +12,7 @@
 
    This is really like 607 but clocked
    External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input chance
+   External pin 2 (PB3) = input chance/prob
    External pin 3 (PB4) = input toggle mode
    External pin 4       = GND
    External pin 5 (PB0) = output A
@@ -24,8 +24,6 @@
    Rob Stave (Rob the fiddler) ccby 2021
 */
 
-
-
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
@@ -34,26 +32,25 @@
 //                      GND 4|    |5  PB0 (pin0) output A
 //                           ------
 
+// Adjustable parameters
 
+int maxTriggerTime = 80;   // max time of the trigger, if in that mode
+// max and min probability.  Really, there is no need to change this unless you want
+// the max and min to be something like 25% to 75%....then change to 64 and 192
+#define RANDLOW 1
+#define RANDHIGH 255
 
-
-
-
-
-unsigned long triggerTime;
-int RANDLOW = 1;
-int RANDHIGH = 254;
-
-bool doTrigger = true;
+// Pin definitions
 #define GATE_PIN 4
+#define clockInt  0  // digital pin 2 is now interrupt 0
+
+// variables 
+volatile bool doTrigger = true;
 
 volatile unsigned long startTrigger = 0;
 volatile byte randomness = 0;
-volatile unsigned int lfsr  = 31;
-int maxTriggerTime = 80;   // max time of the trigger
-
-const int clockInt = 0;  // digital pin 2 is now interrupt 0
-
+volatile unsigned int lfsr  = 31;  // initialize to whatever, so long as its not zero
+ 
 // the setup function runs once when you press reset or power the board
 void setup() {
   DDRB = B00000011;  //set output bits
@@ -108,8 +105,6 @@ void clockLfsr () {
   lfsr |= outputBit;
 }
 
-
-
 void loop() {
   randomness =  33;  // initialize to whatever
 
@@ -125,8 +120,8 @@ void loop() {
     currentMillis = millis();
 
     if (doTrigger) {
+      // To make the trigger, let it go for a little while then clear the port
       if (currentMillis - startTrigger >   maxTriggerTime) {
-
         PORTB =  B00000000;
       }
 
