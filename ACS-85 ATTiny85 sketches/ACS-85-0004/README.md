@@ -1,7 +1,6 @@
 # ACS-85-0004 Two Square wave VCOs with Selectable range (LF to HF)
 
-==============
-
+ 
 ## Overview
 
 Perhaps a bit more utilitarian than others.  

@@ -12,8 +12,11 @@ The frequencies are fixed, so if you want some control over the sound, this is n
 
 They should be in the 430-440 range.
 
-- Two High Frequency square waves
-- Two LFO and a ramping frequency
+- PB0  Sqwarewave with a ramping freq
+- PB1  347 hz roughly
+- PB2  434hz  roughly
+- PB3  LFO 1 Blink
+- PB4  LFO 2 Blink
 
 Note that the frequency here is not going to be exact. We are using the internal 8mhz clock, so you will see as much as +/- 15HZ on what the sketch says.  Its not too important here.  Again, we are just looking for a squarewave version of _Hello World_ or blinky light.  If you need more
 accuracy, you will need to tie up some pins to a crystal.

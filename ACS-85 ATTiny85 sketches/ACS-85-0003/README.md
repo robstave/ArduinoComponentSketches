@@ -1,10 +1,9 @@
 # ACS-85-0003 - Two Tone VCO with Speed Control
 
-==============
-
+ 
 ## Overview
 
-Two adjustable Alternating frequencies with an adjustable speed.
+Two adjustable alternating frequencies with an adjustable speed.
 A two tone effect with a sample and hold sounding pin as well.
 
 In addition, there was an extra pin out, so I used it to play notes put together from
