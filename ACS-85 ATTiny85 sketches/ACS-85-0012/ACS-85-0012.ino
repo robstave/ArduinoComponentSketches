@@ -4,7 +4,7 @@
    ATTiny85  Random Value LFO 2
 
    Not super amazing...but fun to play with for a bit.
-   On the random LFO, there is generally a slew/glide.
+   There is a slew/glide.
    This is done by changing the value of a LP filter and
    making the voltage work its way to the new state.  The glide
    rate is determined by the rc constant.
@@ -25,25 +25,23 @@
 //                  GND 4|    |5  PB0 (pin0) PWM LFO out
 //                       ------
 
+
+
+#define LFO_LOW 500
+#define LFO_HIGH 10
+
+
 volatile unsigned int lfsr  = 1;
-
-#define LFO_LOW 100
-#define LFO_HIGH 3
-
-
-volatile int lastValue = 0;
-volatile int newValue = 0;
-
-int glideCount = 0;
-int glide = 1;
+volatile byte glideCount = 0;
+volatile byte glide = 1;
 
 
 //Counter. Start at 255 so it resets on first loop
-int loopCount = 255;
+volatile int loopCount = 255;
 
 //speed
-int oscFreq1 = 50;
-int oscCounter1 = 0;
+volatile int oscFreq1 = 50;
+volatile int oscCounter1 = LFO_LOW + 10;  // force loop reset
 
 
 
@@ -59,7 +57,7 @@ void clockLfsr () {
 // the setup function runs once when you press reset or power the board
 void setup() {
 
-  DDRB = B00000011;  //set output bits
+  DDRB = B00000111;  //set output bits
 
 
   noInterrupts();           // disable all interrupts
@@ -71,51 +69,66 @@ void setup() {
 
   // Initial value for our pulse width is 0
   OCR0A = 0x00;
+  /*
+    // initialize timer1
+    TCCR1 = 0;                  //stop the timer
+    TCNT1 = 0;                  //zero the timer
+    //GTCCR = _BV(PSR1);          //reset the prescaler
+    OCR1A = 2;                //set the compare value
+    OCR1C = 2;
 
-  // initialize timer1
+    TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
+    //TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
+
+    TCCR1 = _BV(CTC1) |  _BV(CS10); // Start timer, ctc mode, prescaler clk/2
+  */
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 20;                //set the compare value
-  OCR1C = 20;
-
+  OCR1A = 40;                //set the compare value
+  OCR1C = 40;
+  TCCR1 = _BV(CTC1) | _BV(CS10); // Start timer, ctc mode, prescaler clk/1
   TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
-  //TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
-
-  TCCR1 = _BV(CTC1) | _BV(CS10) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
 
   interrupts();             // enable all interrupts
 
 }
 
 
+volatile byte a = 0;
+volatile byte sample[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+volatile byte sampleCounter = 0;
 
 ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 {
-
   //Count up and toggle portB bits
   if (oscCounter1 > oscFreq1) {
     oscCounter1 = 0;
 
-    clockLfsr();
 
-    loopCount++;
-    if (loopCount > 255) {
+    if (loopCount >= 255) {
       loopCount = 0;
     }
 
+
     //Squarewave output
-    if (loopCount > 127) {
-      PORTB &= B11111101;
-    } else {
-      PORTB |= B00000010;
-    }
-
     if (loopCount == 0) {
-      setRandomValue();
+      bitSet(PORTB, 1);
+      bitSet(PORTB, 2);
+    }
+    if (loopCount == 127) {
+      bitClear(PORTB, 1);
+      bitClear(PORTB, 2);
     }
 
 
+    //if (loopCount == 0 || loopCount == 127 || loopCount == 64 || loopCount == 192 ) {
+    setRandomValue();
+    //}
+    if (loopCount == 0   ) {
+      a = lfsr & B11111111;
+    }
+
+    loopCount++;
   }
   oscCounter1++;
 
@@ -124,44 +137,56 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
 
 
+
+
 void setRandomValue() {
 
-  if (glideCount > glide) {
+  if (glideCount >= glide) {
     glideCount = 0;
-    newValue = lfsr & B11111111;
+    //  a = lfsr & B11111111;
 
+    if (sampleCounter >= 8) {
+      sampleCounter = 0;
+    }
+    sample[sampleCounter] = a;
+
+    int sum = (int)sample[0] + (int)sample[1] + (int)sample[2] + (int)sample[3] +
+              (int)sample[4] + (int)sample[5] + (int)sample[6] + (int)sample[7];
+    byte x = (sum >> 3);
+    OCR0A = x;
+
+    sampleCounter++;
   }
   glideCount++;
 
-  byte x = (lastValue >> 1) + (newValue >> 1);
-  lastValue = x;
-  OCR0A = lastValue;
+
+
+
 }
+
 
 
 
 
 void loop() {
 
-  byte readCount = 1;
+  byte readCount = 10;
 
   while (true) {
 
     //Read the Speed
     int speed_read = analogRead(A3);
     oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
-
+    clockLfsr();
     //spend less time reading the glide than the speed
-    if (readCount > 20) {
+    if (readCount > 5) {
       readCount = 0;
 
       //read the glide
       int glide_read = analogRead(A2);
-      glide = map(glide_read, 0, 1023, 2,  13);
+      glide = map(glide_read, 0, 1023, 1,  20);
 
     }
     readCount++;
   }
 }
-
-

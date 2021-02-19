@@ -34,4 +34,17 @@ Kinda sorta.
 
 ## Examples:
 
+### Driving 0066
+
+https://soundcloud.com/user-692410397/acs85-0012-0066
+
+in this case, we have the LFO driving ACS 85 0066 which is a vco that puts out 
+the fundemental, a fifth and octave above.  It also has a spread variable that detunes things.
+
+![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012/images/ACS-85-circuit-0012-0066.png)
+
+
+### Driving 0210
+
+https://soundcloud.com/user-692410397/acs85-0012-0210-a
  

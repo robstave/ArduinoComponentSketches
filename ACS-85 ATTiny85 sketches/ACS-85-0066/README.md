@@ -25,3 +25,10 @@ You can just sum them together with resistors.
 
 
  
+ ## Sample
+
+Here is a sample with ACS-85-0012 driving as an LFO.
+In this case, a Low Pass filter is needed
+[[Sample](https://soundcloud.com/user-692410397/acs85-0012-0066)]
+
+ 

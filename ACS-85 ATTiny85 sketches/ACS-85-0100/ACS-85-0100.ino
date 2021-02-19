@@ -1,5 +1,5 @@
 /**
-   ACS-85-xxxx ATTiny85 - blip
+   ACS-85-0100 ATTiny85 - blip
 
    External pin 2 = Pitch
    External pin 3 = Blip Length

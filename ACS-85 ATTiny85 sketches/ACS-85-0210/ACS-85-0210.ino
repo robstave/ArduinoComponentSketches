@@ -47,6 +47,12 @@
 //                   GND 4|    |5  PB0 (pin0) output
 //                        ------
 
+
+#define  VCO1LOW 200
+#define VCO1HIGH 2200
+
+
+
 volatile unsigned int Acc1;
 volatile unsigned int Note1 = 857;
 volatile unsigned int Acc2;
@@ -79,11 +85,11 @@ void setup()
   TCCR1 |= (1 << CS13) | (1 << CS12) | (1 << CS10); //clock prescaler 40
   OCR1C = 7; // compare match value
   TIMSK |= (1 << OCIE1A); // enable compare match interrupt
-https://embeddedthoughts.com/2016/06/06/attiny85-introduction-to-pin-change-and-timer-interrupts/
 
   interrupts(); // enable all interrupts
 }
 
+// write the data round robi to buffer
 ISR(TIMER1_COMPA_vect)
 {
   samples[counter] = Note1;
@@ -105,7 +111,7 @@ ISR(TIMER0_COMPA_vect)
   Acc1 = Acc1 + Note1;
 
   unsigned int upper8bits = (Acc1 >> 8);
-  
+
   // adjust if no sound needed
   if ( Note1 == 0) {
     upper8bits = 0;
@@ -119,6 +125,8 @@ ISR(TIMER0_COMPA_vect)
 
   // Tap1
   byte localSampleIndex = counter -  (Spread >> 1);
+
+  // based on buffer size of 128...alter math if you change accordingly
   if (localSampleIndex > 127) {
     localSampleIndex = localSampleIndex - 128;
   }
@@ -129,7 +137,7 @@ ISR(TIMER0_COMPA_vect)
 
   upper8bits = (Acc2 >> 8 );
 
-    // adjust if no sound needed
+  // adjust if no sound needed
   if ( delayNote == 0) {
     upper8bits = 0;
   }
@@ -168,8 +176,6 @@ ISR(TIMER0_COMPA_vect)
 void loop()
 {
 
-  int VCO1LOW = 200;
-  int VCO1HIGH = 2200;
 
   while (true)
   {

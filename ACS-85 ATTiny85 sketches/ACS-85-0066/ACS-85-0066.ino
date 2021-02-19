@@ -23,16 +23,17 @@
 //  ATTiny overview
 //                      +-\/-+
 //                Reset 1|    |8  VCC
-// (pin3) width A3  PB3 2|    |7  PB2 (pin2) output c root - octave
-// (pin4) freq  A2  PB4 3|    |6  PB1 (pin1) output b root - octave + fifth
+// (pin3) width A3  PB3 2|    |7  PB2 (pin2) output c root - octave + fifth
+// (pin4) freq  A2  PB4 3|    |6  PB1 (pin1) output b root - octave 
 //                  GND 4|    |5  PB0 (pin0) output a root
 //                       ------
 
-
-#define VCO1LOW  200
-#define VCO1HIGH  2400
+// these are the note spacings. So the low is a delta of a small number on the
+// accumulator
+#define VCO1LOW  240
+#define VCO1HIGH  2800
 #define limitMin 0
-#define limitMax 30
+#define limitMax 35
 
 volatile unsigned int note1;
 volatile unsigned int note2;

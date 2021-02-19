@@ -23,8 +23,8 @@
 unsigned int lfsr  = 1;
 
 //Larger numbers mean larger counters and lower frequencies
-#define LFO_LOW 100
-#define LFO_HIGH 12
+#define LFO_LOW 150
+#define LFO_HIGH 15
 
 //Counter. Start at 255 so it resets on first loop
 int loopCount = 255;
@@ -67,7 +67,7 @@ void setup() {
   TIMSK |= (1 << OCIE1A); //interrupt on Compare Match A  /works with timer
   //TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
-  TCCR1 = _BV(CTC1) | _BV(CS10) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
+  TCCR1 = _BV(CTC1) |  _BV(CS11);
 
   interrupts();             // enable all interrupts
 
@@ -81,7 +81,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
 
     oscCounter1 = 0;
 
-    clockLfsr();
+   
 
     loopCount++;
     if (loopCount > 255) {
@@ -89,10 +89,11 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     }
 
     //Squarewave output
-    if (loopCount > 127) {
-      PORTB &= B11111101;
-    } else {
-      PORTB |= B00000010;
+    if (loopCount == 127) {
+        bitClear(PORTB, 1);
+    } 
+    if (loopCount == 0) {
+        bitSet(PORTB, 1);
     }
 
     if (loopCount == 0) {
@@ -112,6 +113,7 @@ void setRandomValue() {
 }
 
 void loop() {
+   clockLfsr();
   int speed_read = analogRead(A3);
   oscFreq1 = map(speed_read, 0, 1023, LFO_LOW,  LFO_HIGH);
 }
