@@ -32,6 +32,8 @@ blocks.  Check em out.
 
 [Moffenzeefmodular](https://www.moffenzeefmodular.com/) has a project called MSG.  One of these sketches has made its way into that.  Neat!  If your not solder/hardware inclined, just get this and stick that that form factor.  Looks solid, if its not sold out.
 
+https://noisio.de/de   Not sure, but there appears to be projects in the same direction
+
 
 ## Background
 
