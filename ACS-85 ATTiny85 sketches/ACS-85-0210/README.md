@@ -5,7 +5,10 @@ VCO with 2 tap delays
 ## Overview:
  
 Its a VCO like ACS-85-0041, but the tuning word is stored off and replayed
-a little later on.  Kinda like an atari punk console or a shark, it really only works when its in motion.
+a little later on.  Perhaps the closest description is a Midi delay.  
+The value of the pot is played just a little later in the other taps.
+
+Kinda like an atari punk console, the effect only really works when its in motion.
 This will lead to other drone things in the future where things are just constantly modulated.
 
 For now though, its just two taps.

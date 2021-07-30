@@ -14,7 +14,9 @@
    V 1.0  -  First Version
 
    Hard to say where this really goes.  Its a VCO like ACS-85-0041, but the tuning word is stored off and replayed
-   a little later on.  Kinda like an atari punk console or a shark, it really only works when its in motion.
+   a little later on.  Maybe like a midi deley effect? 
+   
+   Kinda like an atari punk console, it really only works when its in motion.
    This will lead to other drone things in the future where things are just constantly modulated.
 
    For now though, its just two taps (and the immediate output)
@@ -50,7 +52,6 @@
 
 #define  VCO1LOW 200
 #define VCO1HIGH 2200
-
 
 
 volatile unsigned int Acc1;
