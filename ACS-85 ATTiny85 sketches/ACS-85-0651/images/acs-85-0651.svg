@@ -20,6 +20,12 @@
   <defs
      id="defs4">
     <rect
+       x="-33.281248"
+       y="888.76847"
+       width="367.49998"
+       height="215.15624"
+       id="rect1013" />
+    <rect
        x="-21.093749"
        y="889.23722"
        width="367.03123"
@@ -608,5 +614,9 @@
        xml:space="preserve"
        id="text1005"
        style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:37.49999812px;line-height:1.25;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1007);" />
+    <text
+       xml:space="preserve"
+       id="text1011"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:37.49999812px;line-height:1.25;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1013);" />
   </g>
 </svg>

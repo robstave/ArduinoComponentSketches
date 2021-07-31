@@ -116,7 +116,6 @@ Sum them up, or R2R ladder the output.
 ## Equivalent
 
  
- 
 
 ## Examples:
  
