@@ -18,8 +18,10 @@ There is some code from Jan Ostman https://github.com/4-3is4-me/CZ1
 That is supposed to be a version of the CZ1.  Im gonna say Im not sure how that math works out.
 Again, there are a many strategies for Phase distortion, this is more like the simplest.
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614/images/drawing.png)
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120/images/drawing.png)
 
 ## Pinout
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120/images/ACS-85-0120.png)
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120/images/ACS-85-0120.png)
