@@ -19,7 +19,7 @@
    External pin 4       = GND
    External pin 5 (PB0) = output 2
    External pin 6 (PB1) = output 3
-   External pin 7 (PB2) = output 4
+   External pin 7 (PB2) = clock
    External pin 8       = Vcc
    
    V 1.0  -  First Version
@@ -30,7 +30,7 @@
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
-//      (pin3) freq A3  PB3 2|    |7  PB2 (pin2) output 4
+//      (pin3) freq A3  PB3 2|    |7  PB2 (pin2) clock
 //         (pin4) out1  PB4 3|    |6  PB1 (pin1) output 3
 //                      GND 4|    |5  PB0 (pin0) output 2
 //
@@ -49,7 +49,6 @@ void setup()
   attachInterrupt(clockInt, clockCounter, RISING);
 }
 
-volatile unsigned int lfsr = 1;
 const int clockInt = 0; // digital pin 2 is now interrupt 0
 
 void clockCounter() // called by interrupt

@@ -42,11 +42,12 @@ In that code you had the following
     }
 
 Dead simple and does a LOT for little bit of code.  If your looking for a fun little
-program to put on an ATTINY, this is it.  Demoscene by thy name.
+program to put on an ATTINY, this is it.  Demoscene be thy name.
 
 Each time it loops, it checks the pot, calculates and out byte and increments t.
 Sweet!  The only thing is that it outputs via DigitalWrite which really means that its the
-last bit as a squarewave output.  Eh...still beeps right.
+last bit as a squarewave output.  Eh...still beeps right. But its audio is more of a
+bitbeat than a bytebeat.
 
 So, in this sketch we will extend things a little and point out some improvements that
 can be made. ( Although...again..this is just fine as it is)
@@ -56,11 +57,11 @@ _Issue 1)_  Audio in the Loop:
   reading the pot in the loop.  My usually trick to save CPU is to put that in a loop so that
   you only read the pot like every 5th time.  If you do that, the pitch goes UP, because the 
   loop processing time is down.  Wacky huh.  The more processing you do in the loop, the slower
-  it will get. 
+  it will get.
   
   Ok, we now have a tuning parameter.
 
-_Issue 2)_ its a digitalWrite, so we are only using the Signigileast significant bit.  Its 
+_Issue 2)_ its a digitalWrite, so we are only using the least significant bit.  It's 
   bitbeat.  This is why you do not need to LPF the output too.  Its Squarewave out.
   No matter, it makes sound. Roll with it!
 
@@ -77,13 +78,9 @@ _ISsue 3)_ DigitalWrite is kinda slow.  you can speed things up with:
   programs and choose pins ( timers, pwm) better if you understand all the quirks that will
   make your program seem "buggy" because of all the unwritten "rules" behind those mega functions.
 
-  This is not a biggie, so long as you have the CPU to cash your checks, does it really matter
-  if you optimize digitalOut....no.  But we are playing with things to learn.
-
+  This is not a biggie, so long as you have the CPU power to cash your checks, does it really matter if you optimize digitalOut? No. But we are playing with things to learn.
 
 Anyways, using these steps, you can change the code to read another pot or swap between equations with easy because you have the tools to steal back cpu if it sounds slow.
-
-
 
 In this case, I opted for more outputs and a different equation.  "running man?"
 
@@ -115,7 +112,4 @@ Sum them up, or R2R ladder the output.
 
 ## Equivalent
 
- 
-
-## Examples:
- 
+## Examples

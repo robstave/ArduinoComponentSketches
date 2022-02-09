@@ -1,6 +1,8 @@
-# ACS-85-0651
+# ACS-85-0652
 
 Bytebeat ( Bitbeat v2)
+
+Not fully tested...close...but should work  See 650 and 651 which are better tested
 
 ## Overview
 
@@ -23,18 +25,13 @@ This is really not too different in style with ACS-0650.
 I Used another equation and found that you REALLY should listen and pick bits.
 The last bit in this case sounded awful.
 
-Also, it warbles a little.  I think that is the equation short circuiting it processing.
-For example
-
-   x = ( t> 127) & ( evaluate stuff )
-
-Will speed up and slow down as the first part of the equation is 0 half the time.  The
-compiler is smart enough to brach out at that point as there is no need to finish the
-equation  0 & stuff = zero.
+The main difference here is that the equation is clocked externally.  This make it
+kinda tunable I guess.  It also reduces the warble as its NOT the timing of the main loop 
+that is driving the speed.
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651/images/ACS-85-0651.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652/images/ACS-85-0652.png)
 
 ## Equivalent
 

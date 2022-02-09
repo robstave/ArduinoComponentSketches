@@ -5,12 +5,12 @@
    
    This is really like 607 but clocked
    External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input 0 clock
+   External pin 2 (PB3) = output 2 clock
    External pin 3 (PB4) = output 3
    External pin 4       = GND
    External pin 5 (PB0) = output 0
    External pin 6 (PB1) = output 1
-   External pin 7 (PB2) = output 2
+   External pin 7 (PB2) = clock input
    External pin 8       = Vcc
    V 1.0  -  First Version
    Any further extensions to this will be treated as a sequencer.
