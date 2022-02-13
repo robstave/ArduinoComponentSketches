@@ -10,7 +10,7 @@ https://electricdruid.net/phase-distortion-synthesis/
 In this case, it is truely the diagram that explains the phase distortion where it looks
 like they picked and x,y point and drew a line from 0,0 to x,y to 255,255.
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing2.png)
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/drawing.png)
 
 The phase transfer function is truely the waveform too.  Gonna say though, with a ramp its not super interesting.  Part of what makes the CZ-1 version neat is that the 
 way the phase change sounds like a filter sweep.  It is not, but it just turns out
