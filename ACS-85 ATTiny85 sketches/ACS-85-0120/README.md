@@ -7,7 +7,9 @@
 Simple version of phase distortion.  It is almost exactly like the first 2 steps in
 https://en.wikipedia.org/wiki/Phase_distortion_synthesis
 
-In this case, its just the ramp.  There is no envelope to the wave.  The Hard stop is there.
+In this case, the value of the waveform is just the ramp. 
+There is no envelope to the wave.  The Hard stop is there.
+
 It would be dead simple to have this point to a wave table, the but phase accumulator is basically used as a ramp with a little right shifting of the bits.
  
 

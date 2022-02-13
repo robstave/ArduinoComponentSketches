@@ -1,8 +1,7 @@
 /*
   
-   ACS-85-0120
-   Phase Distortion V1  Sawtooth
-
+   ACS-85-0121
+   Phase Distortion V1 chainsaw
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = Input freq
@@ -15,31 +14,24 @@
 
    V 1.0  -  First Version
 
-   VERY simple version of phase distortion.  There seem to be a lot of versions to this
-   seemingly broad definition.  In This case, the normal DDS/Tuning word is used for 
-   the waveform period.  The word is then used with a multiplier to achieve the phasing.
+   VERY simple version of phase distortion.  
+   In This case, the normal DDS/Tuning word is used for 
+   the waveform period.  There is no stretching of the waveform, just
+   more of a morphing of a descending ramp to an acending one.
 
-   When the normal accumulator resets to 0, the phase is restarted.
+   For this sketch, the phase map is the waveform...but you could easily map that one for one
+   to a wavetable
 
-  This is a pretty simple demo, and the frequency math can do with some work.
+  This is a pretty simple demo, and the frequency math can do with some improvement
 
-
-
-  There is some code from Jan Ostman
-  https://github.com/4-3is4-me/CZ1
-
-  that is supposed to be a version of the CZ1.  Im gonna say Im not sure how that 
-  math works out.
-  
   Rob Stave (Rob the fiddler) CCBY 2022
- 
+
 */
 
 volatile unsigned int Acc;
-volatile unsigned int PhaseAcc;
-
+ 
 volatile unsigned int Note = 857;
-volatile unsigned int PhaseNote = 857;
+volatile byte FoldingValue = 128;
 
 void setup() {
   SetupDDS ();
@@ -69,27 +61,20 @@ void SetupDDS () {
 void loop() {
 
   //Read freq
-  int osc1_t = analogRead(A3);
-  Note = map(osc1_t, 0, 1023, VCO1_LOW,  VCO1_HIGH);
-
-
-  float phaseAdj = Note * ( float(analogRead(A2)) /1100.0);
-
-  // add to the phase accumulator to increase the frequency of the repeated waveform.
-  PhaseNote = Note + int(phaseAdj);
+  Note = map(analogRead(A3), 0, 1023, VCO1_LOW,  VCO1_HIGH);
+  FoldingValue = map(analogRead(A2), 0, 1023, 0,  255);
 }
 
 ISR(TIMER0_COMPA_vect) {
 
-
-  // Detect rollover of regular accumulator
-  unsigned int last = Acc;
   Acc = Acc + Note;
-  if (last >= Acc ) {
-    // Reset phase if accumulator rolls over
-    PhaseAcc = 0;
+  
+  byte ramp = Acc >> 8;
+
+  if (ramp <= FoldingValue ) {
+    OCR1A = ramp;
+  } else {
+    OCR1A = 255 - ramp + FoldingValue;
   }
 
-  PhaseAcc = PhaseAcc + PhaseNote;
-  OCR1A = PhaseAcc >> 8;
-}
+ }
