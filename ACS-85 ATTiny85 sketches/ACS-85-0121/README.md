@@ -13,6 +13,17 @@ Maybe more like this
 
 ![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing.png)
 
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw1.gif)
+
+CV at 20%
+
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw2.gif)
+
+CV at 50%
+
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw3.gif)
+
+CV at 80%
 
 https://theproaudiofiles.com/phase-distortion-synthesis/https://theproaudiofiles.com/phase-distortion-synthesis/
 

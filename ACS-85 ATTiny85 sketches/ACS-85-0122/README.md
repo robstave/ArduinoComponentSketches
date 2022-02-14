@@ -12,14 +12,20 @@ like they picked and x,y point and drew a line from 0,0 to x,y to 255,255.
 
 ![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/drawing.png)
 
-The phase transfer function is truely the waveform too.  Gonna say though, with a ramp its not super interesting.  Part of what makes the CZ-1 version neat is that the 
-way the phase change sounds like a filter sweep.  It is not, but it just turns out
-that the math works that way.  In this case, you can see that no matter how you phase it,
-there is still that big ramp drop at the end which is going to give you those harmonics.
-It simply will not have a LPF sound with that.
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/xy1.gif)
 
-With little effort, you could add a wavetable for a sine wave and point each value to
-that super easy.
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/xy2.gif)
+
+The phase transfer function is truely the waveform too.  Gonna say though, with a ramp its not super interesting.  Part of what makes the CZ-1 version neat is the way the phase change sounds like a filter sweep.  It is not, but it just turns out that the math works that way.  
+
+In this case, you can see that no matter how you phase it, there is still that big ramp drop at the end which is going to give you those harmonics. Sweeping the cv values simply will not have a LPF sound with that.
+
+It does work better with a sine though
+
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/sinexy1.gif)
+
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/sinexy2.gif)
+
 
 ## References
 
