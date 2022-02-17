@@ -1,14 +1,12 @@
 # ACS-85-0005 - Three VCOs detuned
 
-==============
-
 ## Overview
 
-One frequency control and one detuned.  To hear the drones you still need to sum them with resistors. But thats not a whole lotta work.
+One frequency control and one for detune.  To hear the drones, you still need to sum them with a simple resistor summing network.
 
 - **PB0** is the frequency
-- **PB1** is the (frequency - detune)
-- **PB2** is the (freq - 2*detune)
+- **PB1** is the (frequency - detuned)
+- **PB2** is the (freq - 2*detuned)
 
 ## Pinout
 

@@ -7,6 +7,9 @@
 Simple version of phase distortion.  See how its described here.
 https://electricdruid.net/phase-distortion-synthesis/
 
+Thats just a part of what phase distortion synthesis is.  Im just exploring that
+little example.  See ACS-85-120 for a better discription
+
 In this case, it is truely the diagram that explains the phase distortion where it looks
 like they picked and x,y point and drew a line from 0,0 to x,y to 255,255.
 
@@ -26,8 +29,9 @@ It does work better with a sine though
 
 ![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/sinexy2.gif)
 
-
 ## References
+
+https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf
 
 https://electricdruid.net/phase-distortion-synthesis/
 

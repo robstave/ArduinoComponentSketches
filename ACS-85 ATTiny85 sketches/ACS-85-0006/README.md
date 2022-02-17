@@ -1,7 +1,6 @@
 # ACS-85-0006
 
-Square wave VCO with randomness added to period
-
+Square wave VCO with randomness added to the period.
 
 ## Overview
 
@@ -14,24 +13,19 @@ This is calculated with counters that flip the bit every x interrupts.
 
 ## PB1
 
-PB1 is calculated the same way, except that in addition to the usual next count, a random number is 
-added making the square a little longer or shorter.  The number is found using the LFSR.
-so you are getting a fixed period +/- a random number.
+PB1 is calculated the same way, except that in addition to the usual next count, a random number is added making the square a little longer or shorter.  The number is found using the LFSR. So you are getting a fixed period +/- a random number.
 
 On average, the length is what the first pin is set for, so they sound similar.
 
 ## PB2
 
 PB2 is a bit more deterministic in adding the length.  It sounds a bit more like a fast ramp on the frequency.
+
 Each cycle is the previous count + 1 up to about 30 I think.
 
-What you get is a square wave with some power in near frequencies.  This would be different sounding than if we had just
-adjusted the duty cycle.  In that case, the frequency would sound much clearer.  If you have built the atari punk console, you will hear
-in one case where you turn the knob and the frequency sounds the same, but its 'phasey'.  In this case, it sounds more fuzzy
-
+What you get is a square wave with some power in near frequencies.  This would be different sounding than if we had just adjusted the duty cycle.  In that case, the frequency would sound much clearer.  If you have built the atari punk console, you will hear in one case where you turn the knob and the frequency sounds the same, but its 'phasey'.  In this case, it sounds more fuzzy
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0006/images/ACS-85-0006-period.png)
-
 
 ## Pinout
 
