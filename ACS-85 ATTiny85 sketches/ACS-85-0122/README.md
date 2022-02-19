@@ -29,7 +29,7 @@ It does work better with a sine though
 
 ![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/sinexy2.gif)
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/cos.gif)
+![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122/images/cos.png)
 
 It does seem to work a bit better with cosine.
 
