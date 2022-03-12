@@ -1,7 +1,5 @@
 # ACS-85-0002 - Two Frequency VCO utility
 
-==============
-
 ## Overview
 
 This is meant to be something that you drop into a breadboard to test something else like a Low Pass filter or have it drive another arduino circuit.  There are plenty of times I just need an audio squarewave as the source of something else I would like to test.
@@ -9,7 +7,7 @@ This is meant to be something that you drop into a breadboard to test something 
 - Two controllable frequencies and a pin that is a two tone combination.
 - Values from 0 to 5 volts on the input pins produces audio squarewaves on the output pins.
 - The final pin alternates between the two frequencies at a fixed interval.
-- Loop averages over 4 samples so there actually is some delay in twisting the knob and the final frequecy. 
+- Loop averages over 4 samples so there actually is some delay in twisting the knob and the final frequecy.
 
   Its resolution is limited and should not be considered as a core for a circuit as the range is small and the resolution kinda sucks at high frequencies.  Some might find that charming.
 

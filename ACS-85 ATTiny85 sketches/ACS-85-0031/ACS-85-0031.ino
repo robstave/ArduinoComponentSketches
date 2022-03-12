@@ -1,6 +1,9 @@
 /**
    ACS-85-0031
    ATTiny85 Three phase LFO PWM Clocked
+   Waveform is a ramp
+
+
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = none
    External pin 3 (PB4) = OUTPUT c
@@ -15,7 +18,9 @@
    like 30khz vs 500 hz I think.   I might rewrite this because of that.
    But visually, and if your using LEDs, it looks fine
 
-   I would say not ready for prime time.  Could do better with bit flipping.
+   I would say not ready for prime time, but workable.
+
+   There is a spare pin...consider using that for a sync.
    
    Rob Stave (Rob the fiddler) ccby 2021
 */
@@ -40,7 +45,6 @@ const int clockInt = 0;  // digital pin 2 is now interrupt 0
 void setup() {
   DDRB = B00011011;  //set output bits
 
-
   noInterrupts(); // disable all interrupts
   attachInterrupt(clockInt, clockCounter, RISING);
 
@@ -50,9 +54,7 @@ void setup() {
 
   TCCR0B = TCCR0B & 0b11111000 | 0b001;
 
-
   interrupts(); // enable all interrupts
-
 }
 
 void clockCounter()      // called by interrupt

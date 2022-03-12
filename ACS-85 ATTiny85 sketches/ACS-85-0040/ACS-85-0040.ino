@@ -1,6 +1,9 @@
 /**
    ACS-85-0040
-   ATTiny85 Squarewave  VCO  with adjustable duty cycle and chip tune
+   ATTiny85 Squarewave  VCO  with adjustable duty cycle and toggle chip tune 
+
+   A basic squarewave vco with duty cycle.  The chip tune happens if you flip
+   pin 5 which basically scrambles the DDS ( arp up)
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq
@@ -60,9 +63,11 @@ void loop()
   int VCO1HIGH = 2200;
   int pwmMin = 10;
   int pwmMax = 253;
+
   while (true)
   {
 
+    // sometimes I do this.  Analog read is kinda bumpy.  This smoothes it out
     f1Sample[counter] = analogRead(A2);
     unsigned int osc1_t = (f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
     Note = map(osc1_t, 0, 1023, VCO1LOW, VCO1HIGH);
@@ -88,9 +93,12 @@ ISR(TIMER0_COMPA_vect)
 
   int localNote = Note;
 
-  // Chip tone sound
+  // Chip tone sound (arp up)
   if (mode == HIGH)
   {
+    //  arp up by adding to local note.  Note its using "effects" counter which is
+    // basically a counter in loop...so if you do less or more processing there, it 
+    // will effect the candence of the arp
     if (effects > 127)
     {
       localNote = localNote + Note;

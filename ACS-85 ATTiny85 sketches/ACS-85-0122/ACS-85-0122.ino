@@ -155,12 +155,12 @@ ISR(TIMER0_COMPA_vect) {
   // ramp is just counting up
   // samples[ramp] is the transform
 
-  OCR1A = phaseTransform[ramp];
+  //OCR1A = phaseTransform[ramp];
 
   // if you want a sine wave, comment the above one line out and uncomment the one you want
   //byte  value = pgm_read_word_near(sinetable + phaseTransform[ramp]);
-  //byte  value = pgm_read_word_near(costable + phaseTransform[ramp]);
+  byte  value = pgm_read_word_near(costable + phaseTransform[ramp]);
 
-  //OCR1A = value;
+  OCR1A = value;
 
 }

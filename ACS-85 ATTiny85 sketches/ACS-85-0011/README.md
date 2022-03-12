@@ -13,7 +13,6 @@ Output is PWM so a Low pass filter is needed to get an analog signal.
 The random value is determined from a LFSR (Linear Feedback Shift Register)
 https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
-
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/acs-85-0011.png)
@@ -37,5 +36,8 @@ Here is an example of the VCO being driven by the LFO (ACS-85-0011).
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-1.png)
 
 Here is another example of the VCO being driven by the LFO (ACS-85-0011). In this case we are
-also inverting the the PWM to give an alternate.
+also inverting the the PWM to give an alternate voltage to the other pin.
+
+The complementary PWM will be 100%-x. So if the main pin is pwm at 70%, the not of that is 30%
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
