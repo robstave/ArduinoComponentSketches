@@ -34,6 +34,8 @@ blocks.  Check em out.
 
 https://noisio.de/de   Not sure, but there appears to be projects in the same direction
 
+https://github.com/strickyak/jerboa-attiny85-mod-synth Jerboa Modular Synth blocks.  Very similar goals to this.
+
 
 ## Background
 
