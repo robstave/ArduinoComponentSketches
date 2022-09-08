@@ -41,7 +41,7 @@
 // Max and min counter values.  To allow a faster tempo, decrease HIGH
 // to allow a slower tempo, increase (longer counter ) low.
 #define VCO1_L1_HIGH 70
-#define VCO1_L1_LOW 500
+#define VCO1_L1_LOW 1400
 
 
 // pick this number to be less than HIGH.  SO like if HIGH = 200, pick 20 or so.
@@ -77,8 +77,8 @@ void setup() {
   TCCR1 = 0;                  //stop the timer
   TCNT1 = 0;                  //zero the timer
   //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 33;                //set the compare value
-  OCR1C = 33;
+  OCR1A = 80;                //set the compare value
+  OCR1C = 80;
   TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
 
   TCCR1 = _BV(CTC1)  | _BV(CS11) | _BV(CS12); // Start timer, ctc mode, prescaler clk/2
@@ -114,10 +114,12 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
   }
 
   // If you want a GATE instead of a trigger...just delete this block
+  
   if ( VCO1_TRIGGER > 0 && oscCounter1 == VCO1_TRIGGER ) {
     // unset trigger
     PORTB = B00000000;
   }
+  
 
   oscCounter1++;
   return;
@@ -131,6 +133,11 @@ void clockLfsr () {
                       ^ bitRead(lfsr, 13) ^ bitRead(lfsr, 15);
   lfsr = lfsr << 1;
   lfsr |= outputBit;
+
+  // check if in a null state
+  if (lfsr == 0){
+    lfsr = 1;
+  }
 }
 
 // clock a few times
