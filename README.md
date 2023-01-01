@@ -1,6 +1,6 @@
 # ArduinoComponentSketches
 
-Collection of sketches for ATTiny that can be used to replace logic blocks in your circuits. Mostly, these are squarewave sketches so they can easily be used in lunetta-like circuits.
+Collection of sketches for ATTiny that can be used to replace logic blocks in your circuits. Mostly, these are squarewave sketches so they can easily be used in lunetta-like circuits running 0 to 5 volts.  There are plenty of PWM/Analog sketches though too.
 
  
 [Arduino Component Sketches](http://robstave.github.io/acs/)
@@ -16,13 +16,11 @@ Of course, these are really 8-bit microcontroller chips with limitations such as
 
 I am focusing on ATTiny85, 84 and 2313 for the most part.  Again, these are components, not full blown synth on a chip things.  But you can get a lot of sound from a minimal part count.
 
-There are other plenty of projects out there with similar concepts. I draw inspiration from everything and hope that in some little way, someone can draw inspiration from my ramblings.
-
 ## Similar works
 
-[MiniMoSynth](http://minimosynth.com/) A Formfactor and open source/open hardware design to make ATTiny Blocks.  Certainly the closest to what I have here.  I do not really have a
-consistant strategy nor a consistant input like these little
-blocks.  Check em out.
+There are other plenty of projects out there with similar concepts. I draw inspiration from everything and hope that in some little way, someone can draw inspiration from my ramblings.
+
+[MiniMoSynth](http://minimosynth.com/) A Formfactor and open source/open hardware design to make ATTiny Blocks.  Certainly the closest to what I have here.  I do not really have a consistant strategy nor a consistant input like these little blocks.  Check em out.
 
 [Rad-fi System from Bleep Labs](http://bleeplabs.com/store/the-rad-fi-system/) Uses Arduinos as building blocks for Synths on a breadboard. A collection of ATTiny micros with these sketches would be completely compatible with this system.
 
@@ -43,7 +41,7 @@ https://github.com/strickyak/jerboa-attiny85-mod-synth Jerboa Modular Synth bloc
 
 ## Requirements
 
-Ability to program ATTiny chips.  This only requires an arduino uno, a breadboard and a handful of ATTiny85s to get started.
+**Ability to program ATTiny chips**.  This only requires an arduino uno, a breadboard and a handful of ATTiny85s to get started.  There are plenty of sites that walk you through those steps.  If you have only unos or nanos, these sketches might be workable, but keep in mind that in many cases, Im using chip specific timers and interrupt pins.  Translating to nano/uno is certainly a workable problem that will tech you a LOT should you want to go that route.
 
 [Requirements](https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup)
 
@@ -60,7 +58,7 @@ There are SOME common layout patterns, but alas, I tend to play more to the stre
 
 ## System
 
-I have a bit of numbering system so I can halfway keep these things straight.
+I have a numbering system so I can halfway keep these things in order.  Its more of a guideline.
 
 [Numbering System](https://github.com/robstave/ArduinoComponentSketches/wiki/Numbering-System)
 
