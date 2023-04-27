@@ -24,6 +24,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0020](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0020) | LFO | Adjustable Squarewave
 [ACS-85-0030](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0030) | LFO PWM | 4 LFO with Pauses
 [ACS-85-0031](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0031) | LFO PWM | 3 Phase LFO clocked
+[ACS-85-0034](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034) | LFO PWM | Lorenz Attractor
 [ACS-85-0040](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0040) | VCO | Squarewave VCO with Chiptune and PWM
 [ACS-85-0041](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0041) | VCO | Squarewave VCO with PWM
 [ACS-85-0042](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042) | VCO | Squarewave VCO with Chiptune
@@ -40,6 +41,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0120](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120) | VCO PWM | Phase Distortion 1
 [ACS-85-0121](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121) | VCO PWM | Phase Distortion Chainsaw
 [ACS-85-0122](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122) | VCO PWM | Phase Distortion xy
+[ACS-85-0125](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125) | VCO PWM | Phase Distortion Chainsaw - v/oct
 | **200-299 	Envelope generators, VCA, Sample and Hold** |||
 [ACS-85-0200](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200) | VCA | Simple VCA PWM - In progress
 [ACS-85-0201](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201) | VCA + AR | Simple VCA AR Envelope - PWM - In progress
