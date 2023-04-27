@@ -40,8 +40,8 @@
 
 // Max and min counter values.  To allow a faster tempo, decrease HIGH
 // to allow a slower tempo, increase (longer counter ) low.
-#define VCO1_L1_HIGH 70
-#define VCO1_L1_LOW 1400
+#define VCO1_L1_HIGH 80
+#define VCO1_L1_LOW 1600
 
 
 // pick this number to be less than HIGH.  SO like if HIGH = 200, pick 20 or so.
