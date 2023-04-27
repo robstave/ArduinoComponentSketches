@@ -95,13 +95,15 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0065](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0065) | VCO  | Dual XOR Drones
 [ACS-85-0066](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0066) | VCO  | Drones root-oct-fifth with detune
 [ACS-85-0080](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080) | Noise  | Squarewave Noise Tunable 2 outputs
-[ACS-85-0100](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100) | Sqaurewave | Debounced Sound generator
-[ACS-85-0101](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101) | Sqaurewave | Algoritmic Sound.  Blips and Bleeps.
-[ACS-85-0102](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102) | Sqaurewave | Synthdrum 1
-[ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103) | Sqaurewave | Randdrum 1
+[ACS-85-0100](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100) | Squarewave | Debounced Sound generator
+[ACS-85-0101](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101) | Squarewave | Algoritmic Sound.  Blips and Bleeps.
+[ACS-85-0102](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102) | Squarewave | Synthdrum 1
+[ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103) | Squarewave | Randdrum 1
+[ACS-85-0105](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0105) | PWM | Cowbell 1
 [ACS-85-0120](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120) | VCO PWM | Phase Distortion 1
 [ACS-85-0121](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121) | VCO PWM | Phase Distortion Chainsaw
 [ACS-85-0122](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122) | VCO PWM | Phase Distortion xy
+[ACS-85-0124](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0124) | VCO PWM | Phase Distortion Chain/sine TODO
 [ACS-85-0125](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125) | VCO PWM | Phase Distortion Chainsaw - v/oct
 | **200-299 	Envelope generators, VCA, Sample and Hold** ||
 [ACS-85-0200](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200) | VCA | Simple VCA - PWM - In progress
@@ -152,7 +154,8 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0620](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620) | Envelope Random | Trigger to Gate / Random width
 [ACS-85-0650](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650) | ByteBeat | BitBeat v1
 [ACS-85-0651](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651) | ByteBeat | BitBeat v2
-[ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat Clocked
+[ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat
+[ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | VCO PWM | BitBeat Select
 | **700-899 	Interface, Control, Midi, Visualization** ||
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Two pin Tap Tempo
