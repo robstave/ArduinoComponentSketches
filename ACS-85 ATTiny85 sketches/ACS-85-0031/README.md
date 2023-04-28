@@ -38,13 +38,13 @@ There is a spare pin...consider using that for a sync.
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/ACS-85-0034.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0031/images/ACS-85-0031.png)
 
 You Will need a low pass filter on the pwm pins.
 
 ## Notes
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/lfocat.jpg)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0031/images/lfocat.jpg)
 
 
 
