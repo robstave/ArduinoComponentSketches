@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-
 /**
  * ACS-85-0034
  * Lorenz attractor LFO
@@ -13,7 +12,6 @@
  * LFO CV signals.
  * 
  * DO play with things
-
  *
  * External pin 1       = Reset (not used)
  * External pin 2 (PB3) = Freq
@@ -32,15 +30,12 @@
 //                 GND 4|    |5  PB0 (pin0) x PWM
 //                          ------
 
-
  *
  * V 1.0  -  First Version
  * 
  *
  * Rob Stave (Rob the fiddler) ccby 2023
  */
-
-                         ------
 
 // For Timer1 millis
 #define F_CPU 8000000UL  // 8 MHz clock speed
@@ -65,8 +60,7 @@ void setup() {
   
   noInterrupts();  // disable all interrupts
   
-
-  // juice the analog out
+  // juice the analog out.  Delay could be funky though
   TCCR0B = TCCR0B & 0b11111000 | 0b001;
 
   // it messes with delay though..so use timer1
@@ -122,6 +116,10 @@ void loop() {
 
     // Scale the Lorenz Attractor values to 8-bit PWM
     pwmXValue = map(constrain(x + x / 2, -30, 30), -30, 30, 0, 255);
+
+    //part of the behavior is that x tracks y kinda close.  To make it
+    // more interesting, Im flipping that...but if you want a traditional 
+    // looking thing, use the commented line.
     //pwmYValue = map(constrain(y + y / 2, -30, 30), -30, 30, 0, 255);
     pwmYValue = map(constrain(y + y / 2, -30, 30), -30, 30, 255, 0);
 

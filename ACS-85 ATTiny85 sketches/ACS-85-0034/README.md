@@ -2,7 +2,6 @@
 
 Lorenz attractor
 
-
 ## Overview
 
 Implentation of the Lorenz Attractor.  Its not mind blowing...but it seems to be giving the right behavior.
@@ -21,6 +20,12 @@ You Will need a low pass filter on the pwm pins.
 ## Notes
 
 Im Juicing up the Analog write by messing with the timer, but that messes with Delay.  So I creating a delay-like thing from Timer 2
+
+
+
+
+
+
 
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/cat-lz.jpg)

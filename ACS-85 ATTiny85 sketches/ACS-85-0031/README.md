@@ -1,7 +1,10 @@
 # ACS-85-003
 
  ATTiny85 3 phase ramp LFO Clocked
+
 ## Overview
+
+OK...fine for drone/lunetta...but timer1 is 500hz pwm...meh
 
 One input:
 
@@ -31,3 +34,17 @@ Not a bad lauching point though for you to experiment with.  FOr example:
   have to be directly coupled to the analog out by any means.  They can also represent a state
 
 There is a spare pin...consider using that for a sync.
+
+
+## Pinout
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/ACS-85-0034.png)
+
+You Will need a low pass filter on the pwm pins.
+
+## Notes
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/lfocat.jpg)
+
+
+
