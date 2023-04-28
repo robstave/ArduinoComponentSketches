@@ -6,7 +6,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="acs-85-0121.svg"
+   sodipodi:docname="acs-85-0125.svg"
    inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0652\images\ACS-85-0652.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -40,17 +40,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="-155.91704"
-     inkscape:cy="8.1317278"
+     inkscape:cx="63.993162"
+     inkscape:cy="8.4852811"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
+     inkscape:window-width="1482"
+     inkscape:window-height="1020"
+     inkscape:window-x="64"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:document-rotation="0"
      inkscape:pagecheckerboard="0" />
   <metadata
@@ -226,7 +226,7 @@
          id="tspan4264"
          x="48.183464"
          y="921.39343"
-         style="font-size:27.5px;line-height:1.25">ACS-85-0121</tspan></text>
+         style="font-size:27.5px;line-height:1.25">ACS-85-0125</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.65607;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -417,18 +417,19 @@
          style="font-size:8.4375px;line-height:1.25">Out </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="19.861408"
-       y="940.1911"
+       style="font-style:normal;font-weight:normal;font-size:12.2226px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.01855px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="11.934227"
+       y="845.99432"
        id="text4262-6"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
-       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0121\images\g7079.png"><tspan
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0121\images\g7079.png"
+       transform="scale(0.89875054,1.1126558)"><tspan
          sodipodi:role="line"
          id="tspan4264-1"
-         x="19.861408"
-         y="940.1911"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Phase Distortion Chainsaw</tspan></text>
+         x="11.934227"
+         y="845.99432"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.8247px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.01855px">Phase Distortion Chainsaw/Sine</tspan></text>
     <g
        id="g4290-5"
        transform="translate(-190.57426,16.437172)"

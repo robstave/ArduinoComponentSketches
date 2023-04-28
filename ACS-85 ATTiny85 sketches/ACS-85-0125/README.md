@@ -1,29 +1,14 @@
 # ACS-85-0125
 
- ATTiny85 Phase Distortion chainsaw v/oct
+ ATTiny85 Phase Distortion chainsaw / Sine - 1v/oct
 
 ## Overview
 
 Simple version of phase distortion.  See how its described here.
 https://electricdruid.net/phase-distortion-synthesis/
 
-In this case, its just the ramp again, but the phase ramp is reversed at a point indicated
-by the cv. Effectively, it looks on the scope like a ramp down morphing into a ramp up.
-Maybe more like this
-
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing.png)
-
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw1.gif)
-
-CV at 20%
-
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw2.gif)
-
-CV at 50%
-
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw3.gif)
-
-CV at 80%
+ 
+ 
 
 https://theproaudiofiles.com/phase-distortion-synthesis/https://theproaudiofiles.com/phase-distortion-synthesis/
 
@@ -47,5 +32,5 @@ http://www.technoblogy.com/show?QVN
  
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/ACS-85-0121.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125/images/ACS-85-0125.png)
 

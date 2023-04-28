@@ -18,6 +18,10 @@ PWM is FAST for PB0/PB1 but much slower on PB4. Like 30khz vs 500 hz I think.
 I might rewrite this because of that, but visually, and if your using LEDs, it looks fine.
 A Good discussion is here: https://forum.arduino.cc/t/pwm-frequency-change-attiny85/170321
 
+https://forum.arduino.cc/t/attiny85-fast-pwm-on-timer-1/993958/14
+
+
+
 I would say not ready for prime time, but workable.
 
 Not a bad lauching point though for you to experiment with.  FOr example:
