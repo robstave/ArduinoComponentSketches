@@ -1,9 +1,12 @@
 /*
 
    ACS-85-0130
-   VCO/Drone  Sub super square
+   VCO/Drone  Super square
 
-   Attempt at a super saw...but really square waves with two detunes and a sub.
+   Super Saw rules..But this is not that.
+   Its really square waves with two detunes and a sub.
+
+   
    The Detune is based on the equation power(2,n/12)  so if there are 100 cents in a semitone,
    50 cents would be 440 * power(2, 0.5/12) and 440 * power(2,-0.5/12)
 
