@@ -34,3 +34,6 @@ http://www.technoblogy.com/show?QVN
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125/images/ACS-85-0125.png)
 
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125/images/cat-lfo.png)
+
