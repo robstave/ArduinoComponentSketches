@@ -56,3 +56,6 @@ Gate     Trigger
 A cmost counter
 
 ## Examples
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0016/images/cat-ct.jpg.png)
+
