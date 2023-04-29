@@ -5,8 +5,8 @@
    Like a CD4017
 
    External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input 0 freq 1
-   External pin 3 (PB4) = output 3
+   External pin 2 (PB3) = output 3
+   External pin 3 (PB4) = input A2 freq 1
    External pin 4       = GND
    External pin 5 (PB0) = output 0 output
    External pin 6 (PB1) = output 1

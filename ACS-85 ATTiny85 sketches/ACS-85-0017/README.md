@@ -38,10 +38,12 @@ However there is also a software bool that toggles between gate mode ( regular )
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0016/images/ACS-85-0017.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0017/images/ACS-85-0017.png)
 
 ## Equivalent
 
 CD4017
 
-## Examples
+
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0017/images/cat-cnt.jpg)
