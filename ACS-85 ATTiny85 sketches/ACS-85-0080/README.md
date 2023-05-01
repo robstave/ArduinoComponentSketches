@@ -38,4 +38,4 @@ you can even make one sweep in the other direction by flipping one of the sets. 
 
 ## ---
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080/images/catnoise.jpg) 
+![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080/images/catnoise.jpg)
