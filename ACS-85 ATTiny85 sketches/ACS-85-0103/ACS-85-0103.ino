@@ -277,12 +277,18 @@ void loop()
     }
 
     if (isRunning == true) {
-      noteCounter = currentMillis - previousMillis;
+     
 
       // The note will last as long as
       // noteCounter > noteLengthMaxMillis.  However, I have added below a "section"
       // as well.  Maybe a mini ASDR ?  We are just spliting the note in 6 sections.
       // so that we can do things like bitshift the accumulator step to get arp sounds.
+
+      noteCounter = currentMillis - previousMillis;
+
+      // The three notes are really determined here and some somewhat intertwined
+      // The second note is the first one with some vibrato/freq modulation
+      // the third note is a fifth  achieved by multiplying by 1.5 ( x + x>>1 is the same thing.)
 
       ActualNote = mapExp( noteCounter, 0 , noteLengthMaxMillis, StartNote, EndNote);
       ActualNote2 = ActualNote   - 64 + (noteCounter >> 6);
