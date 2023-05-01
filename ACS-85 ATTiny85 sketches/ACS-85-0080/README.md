@@ -13,7 +13,9 @@ There are two pins that are basically gates too...so you can use that for rhythm
  
 ## Notes
 
-The Pitch will effect the general sound.  All it does is loop though a counter and ticks when done.  The limits are 
+The Pitch will effect the general sound.  All it does is loop though a counter and ticks when done.  The limits are :
+
+```
 
 #define CHANNEL1_HIGH 50
 #define CHANNEL1_LOW 180
@@ -21,8 +23,9 @@ The Pitch will effect the general sound.  All it does is loop though a counter a
 #define CHANNEL2_HIGH 90
 #define CHANNEL2_LOW 250
 
+```
 
-So if you want close sounding pins pick [{50,180}, {55,200}] maybe
+So if you want close sounding pins pick [{50,180}, {55,200}] maybe?
 
 you can even make one sweep in the other direction by flipping one of the sets.  Play with the numbers!
 
