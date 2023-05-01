@@ -36,7 +36,8 @@ mix no matter what.
 
 
 ## Pinout
- 
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0210/images/ACS-85-0210.png)
 
  
  
@@ -48,3 +49,6 @@ https://soundcloud.com/user-692410397/acs-85-0210-sample
 
 https://soundcloud.com/user-692410397/acs85-0012-0210-a
  
+## cat
+
+ ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0210/images/cat-85-0210.jpg)
