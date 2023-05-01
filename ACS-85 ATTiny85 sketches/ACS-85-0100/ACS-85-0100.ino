@@ -44,7 +44,7 @@
 #define BLOOEEOO 6   // ARP up and down
 #define BIZEEP 7   // noise to beep
 
-#define LAST_SOUND 7   // Set to highest one so that you can rotate through
+#define LAST_SOUND 7   // Set to highest one
 
 
 // SET this to true to rotate through the sounds, otherwise pick one you like an set this to false

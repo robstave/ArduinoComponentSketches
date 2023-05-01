@@ -19,7 +19,8 @@ http://www.technoblogy.com/show?QVN
 
 You can make all kinds of sounds on top of that by tweaking the accumulator.
 
-Gernerally, its  
+Generally, its:
+
 ```
 accumulator = accumulator + note
 ```
@@ -41,13 +42,22 @@ Use *ROTATE_SOUND* to rotate through the different sounds round robin.
 
 Use *RANDOM_SOUND* to pick a new sound for each note.
 
-## PWM
+## PWM and Mixing
 
-Technically, this is PWM.  You will need to filter the output
+The DDS is ultimatately just flipping a bit rather that setting the OCRA.  Its not really PWM, but you might consider a filter but with a higher corner frequency.
+
+Or not.
+
+There is a noise pin too...so you can use this for a drum and mix in noise too.
 
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100/images/ACS-85-0100.png)
+
+## cat
+
+![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100/images/catbeep.jpg)
+
 
  

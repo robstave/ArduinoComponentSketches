@@ -105,9 +105,14 @@ void clockLfsr () {
 ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 {
   if (isRunning == true) {
-    // output the noise bit first
-    //  This is a freebie bit...but perhaps you can use it below
-    boolean outputBit = bitRead(lfsr, 10);
+     
+    // Here is some experiment code if you want to try to mix in noise.
+    // Uncomment the lfsr code above and figure out the output bit.
+    // Maybe And or OR the output of result with lfsr.
+    // you can even xor..or and it with a set of the lfsr bits.
+    // Totally experimental.
+    //
+    // boolean outputBit = bitRead(lfsr, 10);
 
 
     Acc1 = Acc1 + ActualNote;
@@ -122,7 +127,6 @@ ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 
   } else {
     bitClear(PORTB, 0);
-
   }
 }
 
