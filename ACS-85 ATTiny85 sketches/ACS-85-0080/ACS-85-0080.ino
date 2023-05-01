@@ -19,14 +19,23 @@
 */
 
 
+// These values make noise 1 a higher pitch that noise 2.
+// if you want to spread the frequency...change the values.
+// in this case..the 50 is the highest sound ( 50 ticks per LFSR tick) and 
+// 180 is the lower range.  
 #define CHANNEL1_HIGH 50
 #define CHANNEL1_LOW 180
 
+// This is for the second channel.
+// if your driving the analog read with a cv...you can flip the high
+// and low too so one goes up and the other goes down.
 #define CHANNEL2_HIGH 90
 #define CHANNEL2_LOW 250
 
 volatile unsigned int lfsr1 = 1;
 volatile unsigned int lfsr2 = 3;
+
+
 volatile uint16_t oscCounter1 = 0;
 volatile uint16_t count1 = 0;
 volatile uint16_t oscCounter2 = 0;

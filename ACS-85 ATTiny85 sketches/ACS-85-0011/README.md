@@ -41,3 +41,7 @@ also inverting the the PWM to give an alternate voltage to the other pin.
 The complementary PWM will be 100%-x. So if the main pin is pwm at 70%, the not of that is 30%
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
+
+## --
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/catlfo.jpg)
