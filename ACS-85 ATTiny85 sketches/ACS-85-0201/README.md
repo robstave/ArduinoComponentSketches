@@ -17,3 +17,7 @@ setting.  There is just one parameter
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201/images/ACS-85-0201.png)
  
 ## Examples
+
+## cat
+
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201/images/cat-85-0201.jpg)

@@ -1,11 +1,15 @@
 /**
    ACS-85-0201
 
-   Simple VCA and Envelope
+   Simple VCA/Envelope
 
-   Takes a squarewave input and a generated envelope.
-   There is really only one paramter.  Attack and release are the same
-   parameter, although release is twice as long.
+  Takes a squarewave input and modulates the amplitude with an attack/decay.
+
+   Its not really a VCA per se, you put in a squarewave and the trigger kicks 
+   off the VCA with a set attack/decay ratio.
+
+   There is really only one paramter.  Attack and decay are the same
+   parameter, although decay is twice as long.
 
    Envelope is triggered by the trigger pin and there is a pin to
    set the attack to instant.
@@ -57,9 +61,7 @@ volatile uint8_t state = HIGH; // State of the squarewave (we just flip a bit on
 enum ASDR_STATES {
   NONE,
   ATTACK,
-  DELAY,
-  SUSTAIN,
-  RELEASE
+  DECAY
 };
 
 volatile ASDR_STATES arState  = NONE;
@@ -67,8 +69,8 @@ volatile ASDR_STATES arState  = NONE;
 volatile uint8_t attackSteps = 100;
 volatile uint16_t attackCounter = 0;
 
-volatile uint8_t releaseSteps = 100;
-volatile uint16_t releaseCounter = 0;
+volatile uint8_t delaySteps = 100;
+volatile uint16_t delayCounter = 0;
 
 
 
@@ -111,23 +113,23 @@ ISR(TIMER0_COMPA_vect) {
     if ( attackCounter < 255) {
       volume = char(attackCounter);
     } else {
-      arState = RELEASE;
+      arState = DECAY;
       volume = 255;
-      releaseCounter = 0;
+      delayCounter = 0;
     }
 
     return;
 
-  } else if (arState == RELEASE) {
+  } else if (arState == DECAY) {
 
-    releaseCounter = releaseCounter + releaseSteps;
+    delayCounter = delayCounter + delaySteps;
 
-    if ( releaseCounter < 255) {
-      volume = 255 - char(releaseCounter);
+    if ( delayCounter < 255) {
+      volume = 255 - char(delayCounter);
     } else {
 
       arState = NONE;
-      releaseCounter = 0;
+      delayCounter = 0;
       attackCounter = 0;
       volume = 0;
     }
@@ -166,7 +168,7 @@ boolean checkAttackEnabled() {
 
 
 void startEnvelope() {
-  releaseCounter = 0;
+  delayCounter = 0;
   attackCounter = 0;
   arState = ATTACK;
 
@@ -206,11 +208,11 @@ void loop() {
 
         attackSteps = stepCount;
         //Make delay twice as long as attack
-        releaseSteps = max(attackSteps >> 1, 1);
+        delaySteps = max(attackSteps >> 1, 1);
 
       } else {
         attackSteps = 255;
-        releaseSteps = stepCount;
+        delaySteps = stepCount;
 
 
       }

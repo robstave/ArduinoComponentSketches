@@ -32,6 +32,8 @@
 // (pin4) output PB4 3|    |6  PB1 (pin1) none
 //               GND 4|    |5  PB0 (pin0) none
 //                    ------
+//
+// output pwm pin should have a lpf.
 
 
 const int int0 = 0; // interrupt 0
