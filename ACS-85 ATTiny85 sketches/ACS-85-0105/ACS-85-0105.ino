@@ -1,5 +1,30 @@
-/*
- Generating a tone using DDS
+/**
+   ACS-85-0105
+   ATTiny85 Cowbell V1
+
+   Cowbell simulator
+
+   Sketch
+
+   External pin 1       = Reset (not used)
+   External pin 2 (PB3) = input 0 decay
+   External pin 3 (PB4) = input 1 freq/tune
+   External pin 4       = GND
+   External pin 5 (PB0) = nc  ( or you can use as a switch)
+   External pin 6 (PB1) = out pwm
+   External pin 7 (PB2) = trigger
+   External pin 8       = Vcc
+
+   V 1.0  -  First Version
+ 
+   The code as is sums two squarewaves to create a cowbell sound ( roland style)
+
+   You can,  if you would like, disable the tuning and just stick with the classic
+   frequencies or add a switch to toggle that.  The code as is allows for tuning.
+   Its not going to be super.  If you want to replace the lpw with a bandpass you
+   can achieve a closer sound.  Your going to have to google that though
+
+   Rob Stave (Rob the fiddler) ccby 2023
 */
 
 //               ATTiny85 overview
@@ -22,9 +47,9 @@
 #define ClassicNote2 1890
 
 // dds
-volatile unsigned int Acc1;
+volatile unsigned int Acc1 =0;
 volatile unsigned int Note1 = ClassicNote1;  // cow freq 1
-volatile unsigned int Acc2;
+volatile unsigned int Acc2=0;
 volatile unsigned int Note2 = ClassicNote2;  // Middle C
 
 // dunno if my interrupts are messing with millis()..so this this
@@ -112,30 +137,28 @@ void loop() {
   static uint32_t oldTime = 0;
 
   boolean triggered = false;
-  byte readme = 0;
 
   while (true) {
 
-    // we are not really doing responsive cv work here, so only check
-    // the pots every now and then.
-    //if (readme % 5 == 0) {
-      len = analogRead(A3) >> 3;  // set length
-    //}
 
-    //if (readme % 10 == 0) {
-      readme = 0;
-      notes = analogRead(A2);  // set note
-    //}
+    len = analogRead(A3) >> 3;  // set length
+
+if (gateTriggered == true) {
+    notes = analogRead(A2);  // set note
+}
 
     //if (digitalRead(0) == LOW) {
-    //  Note1 = ClassicNote1;  // cow freq 1
-   //   Note2 = ClassicNote2;  // Middle C
-   // } else {
+    if (notes < 25) {
+
+
+      Note1 = ClassicNote1;  // cow freq 1
+      Note2 = ClassicNote2;  // Middle C
+    } else {
       Note1 = map(notes, 0, 1023, Note1Min, Note1Max);
       Note2 = map(notes, 0, 1023, Note2Min, Note2Max);
-   // }
+    }
 
-    readme++;
+
 
     if (gateTriggered == true) {
       gateTriggered = false;
@@ -167,11 +190,21 @@ ISR(TIMER0_COMPA_vect) {
   // so an easy envelope is just the env variable that drops linear/
   //  byte amp = env;// env is a number from 255 to 0...its a linear drop off
 
-  // instead, lets use a log decay.  Note...the table is "normal" so
-  // to map to it I need to do 255 - env
+  // instead, lets use a log decay.  Note...the table is has a exponential decay,
+  // but ny env counter is counting down.
+  // to map to the proper vaules I need to do 255 - env...no biggie
   byte amp = pgm_read_byte(&decay_tbl[255 - env]);
 
-  // sum the waveforms ( consider an xor !)
+  // sum the waveforms ( consider an xor for something else and wacky)
+
+  // you cou d do this a few ways.  But we are really just dealing with
+  // squares...so this made sense at the time.
+  // for example
+  //  byte x1 = (Acc1 >> 8) & 0x80; is pretty much going to be 0 or 128
+  //  if you shifted that by one ( div/2) and summead, then you would get
+  // 0 or 64 or 128 and you could case on those values to set OCR to 0. amp/2 or amp.
+  // Either way...there is no need for a multiplication.  This is an interrupt remember.
+
   if (x1 > 0) {
     if (x2 > 0) {
       OCR1A = amp;
@@ -186,4 +219,7 @@ ISR(TIMER0_COMPA_vect) {
       OCR1A = 0;
     }
   }
+
+  // other fun sounds can be found by doing things like Xors
+  // or sweeping the amplitude in one direction for x1 and the other for x2.
 }

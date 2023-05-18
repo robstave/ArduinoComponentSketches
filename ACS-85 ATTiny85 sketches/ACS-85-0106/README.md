@@ -1,10 +1,11 @@
-# ACS-85-0105
+# ACS-85-0106
 
 Cowbell
 
 ## Overview
 
-The code as is sums two squarewaves to create a cowbell sound ( roland style)
+The code as is sums two squarewaves to create a cowbell sound ( roland style).  Its the same as ACS-85-0105 except that the two 
+values are XOR'd.   Its pretty similar...but worth A/Bing by ear.
 
 You can,  if you would like, disable the tuning and just stick with the classic frequencies or add a switch to toggle that.  The code as is allows for tuning.
 
@@ -21,9 +22,9 @@ https://www.researchgate.net/figure/TR-808-cowbell-schematic-blocks-marked-adapt
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0105/images/ACS-85-0105.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0106/images/ACS-85-0106.png)
 
 ## Notes
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0105/images/cb.jpg)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0106/images/cb.jpg)
  
