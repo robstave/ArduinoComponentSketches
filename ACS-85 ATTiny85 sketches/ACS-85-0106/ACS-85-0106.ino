@@ -17,7 +17,6 @@
    External pin 8       = Vcc
 
    V 1.0  -  First Version
-   Any further extensions to this will be treated as a sequencer.
    The code as is sums two squarewaves to create a cowbell sound ( roland style)
 
    You can,  if you would like, disable the tuning and just stick with the classic
