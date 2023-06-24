@@ -1,6 +1,7 @@
 # ACS-85-0604
+
 3 Channel drum patterns with randomness
-==============
+ 
 
 ## Overview:
 

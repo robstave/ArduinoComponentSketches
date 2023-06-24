@@ -8,7 +8,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="acs-85-0604.svg"
+   sodipodi:docname="acs-85-0609.svg"
    inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0605\images\ACS-85-0605.png"
    inkscape:export-xdpi="89.699997"
    inkscape:export-ydpi="89.699997"
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.46875"
-     inkscape:cx="150.48951"
-     inkscape:cy="80.671329"
+     inkscape:zoom="2"
+     inkscape:cx="229.25"
+     inkscape:cy="133.25"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -162,7 +162,7 @@
          id="tspan4264"
          x="36.5"
          y="918.36218"
-         style="font-size:27.5px;line-height:1.25">ACS-85-0604</tspan></text>
+         style="font-size:27.5px;line-height:1.25">ACS-85-0609</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -341,7 +341,7 @@
          id="tspan4264-0"
          x="7.7382817"
          y="939.5282"
-         style="font-size:20px;line-height:1.25">3 Channel Drum Triggers</tspan></text>
+         style="font-size:20px;line-height:1.25">3 Channel Drum Patterns</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#040000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
