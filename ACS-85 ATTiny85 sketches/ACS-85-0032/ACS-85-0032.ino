@@ -267,8 +267,9 @@ void loop() {
 
     if (triggerDetected == true) {
 
-      digitalWrite(0, 1);  // Clock Trigger
-
+      digitalWrite(0, HIGH);  // Clock Trigger
+      triggerPinTrue = true;
+      
       triggerDetected = false;
       lastCount = thisCount;
       thisCount = counter;
@@ -292,7 +293,7 @@ void loop() {
       // The trigger is a proportion of that based
       // on the value of triggerLen
       if (triggerPinTrue && (index > triggerLen)) {
-        digitalWrite(0, 0);  // set trigger to zero
+        digitalWrite(0, LOW);  // set trigger to zero
         triggerPinTrue = false;
       }
 
