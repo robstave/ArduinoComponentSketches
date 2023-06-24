@@ -1,6 +1,6 @@
 /**
    ACS-85-0210
-   ATTiny85 Squarewave  VCO with tap delays
+   ATTiny85 Squarewave  VCO with register delays
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq
@@ -20,6 +20,8 @@
    This will lead to other drone things in the future where things are just constantly modulated.
 
    For now though, its just two taps (and the immediate output)
+   The word Tap is overloaded here.  There is a buffer with 255
+   values and we are tapping from 2 other indices.
 
    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
    }434|434|455|500|500|500|522|522|533|.......|222|222|222|233|233|233|255|
