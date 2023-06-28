@@ -100,6 +100,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0651](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651) | ByteBeat | BitBeat v2
 [ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat Clocked
 [ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | VCO PWM | BitBeat Select
+[ACS-85-0660](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0660) | VCO PWM | 3 Tones with Patterns
 | **700-899 	Interface, Control, Midi, Visualization** ||
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Two pin Tap Tempo

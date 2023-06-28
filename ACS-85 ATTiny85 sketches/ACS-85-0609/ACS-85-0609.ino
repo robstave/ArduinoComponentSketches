@@ -85,18 +85,23 @@ volatile int pattern = 0;
                                   1, 0, 4, 0};
                                   */
  
+
+ // classic master clock pattern
 #define PATTERN_0_SIZE 16
 byte pattern_0[PATTERN_0_SIZE] = {7, 0, 0, 0,
                                   1, 0, 0, 0,
                                   3, 0, 0, 0,
                                   1, 0, 0, 0};
 
-#define PATTERN_1_SIZE 16
+#define PATTERN_1_SIZE 32
 byte pattern_1[PATTERN_1_SIZE] = {1, 0, 0, 0,
                                   3, 0, 0, 0,
                                   1, 0, 0, 0,
-                                  7, 0, 0, 0};
- 
+                                  7, 0, 0, 0,
+                                  1, 0, 0, 0,
+                                  3, 0, 0, 0,
+                                  1, 0, 0, 0,
+                                  7, 0, 3, 3}; 
 
 #define PATTERN_2_SIZE 16
 byte pattern_2[PATTERN_2_SIZE] = {2, 0, 0, 0,
