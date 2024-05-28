@@ -4,9 +4,10 @@ Sequencer - Turning style
  
 ## Overview
 
-One Knob Sequencer in the style ot turning.  
-Knob determines the the length of the sequence.  If you change the size, it
-randomized things.  There is also a cv which is similar to the toggle in a
+One Knob Sequencer in the style ot turning. 
+ 
+Knob determines the the length of the sequence.  
+If you change the size, it randomizes things.  There is also a cv which is similar to the toggle in a
 random value.
 
 ## Pinout
