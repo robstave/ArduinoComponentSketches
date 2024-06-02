@@ -17,7 +17,7 @@ Clock Divider
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0618/images/ACS-85-0618.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-06370/images/ACS-85-0370.png)
 
 ## Notes
 

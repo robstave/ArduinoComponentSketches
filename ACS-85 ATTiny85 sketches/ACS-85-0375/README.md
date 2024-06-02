@@ -18,7 +18,7 @@ In this case Im clocking though size 16 and 19, but pick any one you want. There
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621/images/ACS-85-0621.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0375/images/ACS-85-0375.png)
 
 
 ![Pinout](https://lh3.googleusercontent.com/pw/AP1GczMFfihBXQoOuZG9kdHtL3dFeZ0g94_yNQ10BKqfRY7zWZv6W_QIoMp-c_RZaESudyAyT7tsHoG5J-f2gh6y5h5tLo0he5-eGEO2_k3Wj-MWpfpaQQo=w2400)
