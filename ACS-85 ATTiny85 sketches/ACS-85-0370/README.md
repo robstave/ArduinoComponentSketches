@@ -15,11 +15,18 @@ Clock Divider
 
     reset resets the divisions
 
+
+![output](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370/images/counter.png)
+
+
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-06370/images/ACS-85-0370.png)
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370/images/ACS-85-0370.png)
 
 ## Notes
+
+
+## A Cat image
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczMX9ck2uClI7HCuyN9Jcz8RneSjuXqRpJDKV3cDEAgFBuTIfJOO-5slMWRvvydJ3zs5pSxTOEEyQ7VbY54jjKh5iOVZfkgn9NmqfaX-q1xoqpz5fUM=w2400)
  

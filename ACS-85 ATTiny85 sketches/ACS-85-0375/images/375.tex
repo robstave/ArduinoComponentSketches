@@ -1,0 +1,82 @@
+% Tikz-timing example of PCI read operation.
+%
+% Author: Nathan Typanski <http://nathantypanski.com>
+% License: Creative Commons Attribution 4.0 International License
+%          <http://creativecommons.org/licenses/by/4.0/>
+
+%% run on www.overleaf.com
+
+\documentclass{article}
+\usepackage{xparse} % NewDocumentCommand, IfValueTF, IFBooleanTF
+\usepackage{tikz-timing}[2014/10/29]
+\usepackage{tikz}
+\usetikzlibrary{fit} % positioning, calc libraries may also be useful
+\usepackage{capt-of}
+\usepackage{changepage} 
+\usetikztiminglibrary[rising arrows]{clockarrows}
+% Reference a bus.
+%
+% Usage:
+%
+%     \busref[3::0]{C/BE}    ->   C/BE[3::0]
+%     \busref*{AD}           ->   AD#
+%     \busref*[3::0]{C/BE}   ->   C/BE[3::0]#
+%
+\NewDocumentCommand{\busref}{som}{\texttt{%
+#3%
+\IfValueTF{#2}{[#2]}{}%
+\IfBooleanTF{#1}{\#}{}%
+}}
+
+\begin{document}
+\begin{center}
+    \huge\textbf{ACS-85-0375}
+    
+    \large\textbf{Euclidian Counter}
+
+\end{center}
+
+\tikzstyle{icdev}=[draw, text width=9em, minimum height=8em]
+
+\begin{center}
+\begin{tikztimingtable}[%
+    timing/dslope=0.1,
+    timing/.style={x=3.5ex,y=2ex},
+    x=5ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize}
+]
+{clock  } & hlhlhlhl hlhlhlhl hlhlhlhl hlhlhlhl \\
+{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  & llll llll llll llll llll llll llll llll\\
+{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  & hlll llll llll llll llll llll llll llll\\
+{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 }  & hlll llll llll llll hlll llll llll llll \\
+{ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 }  & hlll llll llhl llll llll hlll llll llll \\
+{ 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 }  & hlll llll hlll llll hlll llll hlll llll\\
+{ 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0 }  & hlll llhl llll hlll llhl llll hlll llll \\
+{ 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0 }  & hlll llhl llhl llll hlll llhl llhl llll  \\
+{ 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0 }  & hlll llhl llhl llhl llll hlll hlll hlll \\
+{ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 }  & hlll hlll hlll hlll hlll hlll hlll hlll \\
+{ 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0 }  & hlll hlhl llhl llhl llhl hlll hlll hlll  \\
+{ 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1 }  & hlll hlhl llhl llhl hlll hlhl llhl llhl \\
+{ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1 }  & hlll hlhl llhl hlll hlhl llhl hlll hlhl\\
+{ 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1 }  & hlll hlhl hlll hlhl hlll hlhl hlll hlhl  \\
+{ 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1 }  & hlll hlhl hlhl hlll hlhl hlll hlhl hlhl \\
+{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1 }  & hlll hlhl hlhl hlhl hlll hlhl hlhl hlhl \\
+{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 }  & hlhl hlhl hlhl hlhl hlhl hlhl hlhl hlll \\
+{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }  & hlhl hlhl hlhl hlhl hlhl hlhl hlhl hlhl \\
+\extracode
+\begin{pgfonlayer}{background}
+\begin{scope}[semitransparent ,semithick]
+\vertlines[darkgray,dotted]{0.5,1.5 ,...,12.0}
+
+\end{scope}
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{center}
+
+\begin{adjustwidth}{2cm}{2cm}
+   \small\textbf{ }
+\end{adjustwidth} 
+
+\end{document}
+
