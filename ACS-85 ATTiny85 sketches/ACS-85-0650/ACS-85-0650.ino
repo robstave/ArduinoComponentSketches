@@ -2,7 +2,14 @@
    ACS-85-0650
    ATTiny85  Bytebeat  ( BitBeat)
 
-   Bytebeat  simple 1 bit
+   Bytebeat  simple 1 bit patterns
+   Where the real bytebeat takes the values and uses the 8 bit values ( 0- 255), this
+   just selectively uses single bits, evaluates if the value is > 127 or does some xor math.
+
+   Ya..I realized after the fact that x>127 is just the last bit. Derp.
+   Just play around.
+
+   There is no speed on this
 
    based on
    https://www.reddit.com/r/diydsp/comments/ksgn2s/bytebeat_synth_on_a_single_attiny85/

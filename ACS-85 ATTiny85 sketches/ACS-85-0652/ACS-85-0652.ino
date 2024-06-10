@@ -1,6 +1,6 @@
 /**
    ACS-85-0652
-   ATTiny85  Bytebeat  ( BitBeat)
+   ATTiny85  Bytebeat  ( BitBeat) clocked
 
    Bytebeat  simple 1 bit
    Clocked Externally

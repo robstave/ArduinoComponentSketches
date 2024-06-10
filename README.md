@@ -167,7 +167,7 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0650](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650) | ByteBeat | BitBeat v1
 [ACS-85-0651](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651) | ByteBeat | BitBeat v2
 [ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat clocked
-[ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | VCO PWM | BitBeat select
+[ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | ByteBeat | BitBeat select
 [ACS-85-0660](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0660) | VCO PWM | 3 Tones with Patterns
 [ACS-85-0675](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0675) | Counter | Euclidian counter
 | **700-899 	Interface, Control, Midi, Visualization** ||

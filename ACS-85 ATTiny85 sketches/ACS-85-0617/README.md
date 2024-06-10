@@ -11,7 +11,7 @@ Probability Drop gate
 
   This is not too particularly different than  ACS-85-0615
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617/images/617.png)
+![Diagram](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617/images/617.png)
 
 ## Pinout
 

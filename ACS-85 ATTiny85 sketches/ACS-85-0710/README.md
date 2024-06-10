@@ -1,8 +1,8 @@
 # ACS-85-0710
-Button Select - Single value state
-==============
 
-## Overview:
+Button Select - Single value state
+
+## Overview
 
 Controller sketch that allows you to select pins with two buttons.  One for up and one for down.
 
@@ -22,24 +22,19 @@ up    | down   | State |  notes
  0  |  1  |  0 1 0  |  press down
  0  |  0  |  0 1 0  |  release
  0  |  1  |  1 0 0  |  press down
- 
- 
- 
+
 Wrap can be configured with the following line of code
  
- ```
+```
     boolean doWrap = LOW;
-```	
-	
+```
 
 ![nowrap](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710/images/states1.png)
 
 ![wrap](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710/images/states2.png)
- 
-## Pinout:
+
+## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710/images/acs-85-0710.png)
 
-
-## Examples:
- 
+## Examples

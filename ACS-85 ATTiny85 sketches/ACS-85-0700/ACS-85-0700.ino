@@ -3,7 +3,7 @@
 /**
  * ACS-85-0700 ATTiny85  Analog to Digital Decoder.
  * 
- * Use to convert a pot to digital levels.
+ * Use to convert a pot to digital pins.
  * In Binary mode..it is really just a 3 bit AD converter.
  * The value on the analog pin is converted to 3 bits.
  * {000, 001, 010, ..., 111}

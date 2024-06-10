@@ -15,4 +15,5 @@ If you want, add a few more accumulators to make them cowbells
 
 ## Improvements
 
-A Sync would be nice, but there are only so many pins to work with.  Consider driving this with a clk rather than an analog pot/tempo if thats what you need.
+A Sync would be nice, but there are only so many pins to work with.  Consider driving this with a clk rather than an analog pot/tempo if thats what you need.  This is one that could evolve kinda nicely with an 84 or just a Nano.
+

@@ -7,8 +7,7 @@ Pick-a-Gate
 Select AND/OR/NAND/OR on a ATTINY85 chip.
 
 Either reduce your foot print or just use to play with different sounds on your breadboard.
- 
- 
+
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0308/images/acs-85-0308.png)
@@ -16,7 +15,7 @@ Either reduce your foot print or just use to play with different sounds on your 
 ## Equivalent
 
 The equivalent circuit would look something like this
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0308/images/ACS-85-0308-pick.png) 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0308/images/ACS-85-0308-pick.png)
  
 
 ## Strategy

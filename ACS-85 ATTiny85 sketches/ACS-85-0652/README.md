@@ -1,6 +1,6 @@
 # ACS-85-0652
 
-Bytebeat ( Bitbeat v2)
+Bytebeat ( Bitbeat v2) clocked
 
 Not fully tested...close...but should work  See 650 and 651 which are better tested
 
@@ -21,13 +21,10 @@ that were a part of its online explosion like viznut in the early 2010s.
 
 Based on this snippet https://pastebin.com/mfnKNWVD
 
-This is really not too different in style with ACS-0650.
-I Used another equation and found that you REALLY should listen and pick bits.
+This is really not too different in style with ACS-0650. I Used another equation and found that you REALLY should listen and pick bits.
 The last bit in this case sounded awful.
 
-The main difference here is that the equation is clocked externally.  This make it
-kinda tunable I guess.  It also reduces the warble as its NOT the timing of the main loop 
-that is driving the speed.
+The main difference here is that the equation is clocked externally.  This make itkinda tunable I guess.  It also reduces the warble as its  NOT the timing of the main loop that is driving the speed.
 
 ## Pinout
 

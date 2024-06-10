@@ -1,0 +1,70 @@
+% Tikz-timing example of PCI read operation.
+%
+% Author: Nathan Typanski <http://nathantypanski.com>
+% License: Creative Commons Attribution 4.0 International License
+%          <http://creativecommons.org/licenses/by/4.0/>
+
+%% run on www.overleaf.com
+
+\documentclass{article}
+\usepackage{xparse} % NewDocumentCommand, IfValueTF, IFBooleanTF
+\usepackage{tikz-timing}[2014/10/29]
+\usepackage{tikz}
+\usetikzlibrary{fit} % positioning, calc libraries may also be useful
+\usepackage{capt-of}
+\usepackage{changepage} 
+\usetikztiminglibrary[rising arrows]{clockarrows}
+
+% Reference a bus.
+%
+% Usage:
+%
+%     \busref[3::0]{C/BE}    ->   C/BE[3::0]
+%     \busref*{AD}           ->   AD#
+%     \busref*[3::0]{C/BE}   ->   C/BE[3::0]#
+%
+\NewDocumentCommand{\busref}{som}{\texttt{%
+#3%
+\IfValueTF{#2}{[#2]}{}%
+\IfBooleanTF{#1}{\#}{}%
+}}
+
+\begin{document}
+
+ \begin{center}
+    \huge\textbf{ACS-85-0620}
+    
+    \large\textbf{Trigger to Gate with Prob}
+
+\end{center}
+
+\begin{center}
+\begin{tikztimingtable}[%
+    timing/dslope=0.1,
+    timing/.style={x=5ex,y=2ex},
+    x=5ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize}
+]
+\busref{Trigger}         & lhllllllhlllllhlll \\
+\busref{Out}        &  lhhhllllhhhlllhhhl \\
+\busref{Out2}        &  lhhhllllllllllhhhl \\
+\extracode
+\begin{pgfonlayer}{background}
+\begin{scope}[semitransparent ,semithick]
+
+
+\end{scope}
+
+ 
+\end{pgfonlayer}
+
+
+\end{tikztimingtable}
+\end{center}
+ \begin{adjustwidth}{2cm}{2cm}
+   \small\textbf{Second output is same as first, but with a probabilty of it not happening at all}
+\end{adjustwidth} 
+
+\end{document}
+

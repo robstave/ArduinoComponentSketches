@@ -1,15 +1,20 @@
 /**
    ACS-85-0660
    ATTiny85  3 tones  with patterns
-   Simple Drum triggers
+   Simple sequenced patterns
+
    The patterns can be programmed by
    changing the values in the arrays.
    There is a tempo and a pattern select.
 
-   ITs a simple squarewave that drops in frequency.
-   You could add 3 more accumulators and make them cowbells :)
+   Its a simple squarewave that drops in frequency.
+   Uses DDS to a degree.  Basically, its DDS that drops in frequency until the note stops.
+   There are 3 notes sequenced as patterns.
 
-   
+
+   You could add 3 more accumulators, xor the results for cowbells :)
+
+
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 freq
@@ -41,8 +46,6 @@
 // to allow a slower tempo, increase (longer counter ) low.
 #define VCO1_L1_HIGH 300
 #define VCO1_L1_LOW 2000
-
-
 
 //Use this to tweek the feel of the pot.  If you are using an audio pot versus a linear, set this
 //value to 0.  Really, ya gotta play with it...or make sure you stick to LINEAR pots when doing this.

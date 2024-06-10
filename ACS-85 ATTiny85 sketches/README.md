@@ -104,7 +104,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0650](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650) | ByteBeat | BitBeat v1
 [ACS-85-0651](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651) | ByteBeat | BitBeat v2
 [ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat Clocked
-[ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | VCO PWM | BitBeat Select
+[ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | ByteBeat | BitBeat Select
 [ACS-85-0660](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0660) | VCO PWM | 3 Tones with Patterns
 [ACS-85-0675](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0675) | Counter | Euclidian counter
 | **700-899 	Interface, Control, Midi, Visualization** ||

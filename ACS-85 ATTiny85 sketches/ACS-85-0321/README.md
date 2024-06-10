@@ -1,8 +1,9 @@
 # ACS-85-0321
-Divide by 2,3,4,5
-==============
 
-## Overview:
+Divide by 2,3,4,5
+
+## Overview
+
 Basically a counter. If used with audio, div 2 is an octave lower.
  
 The div values are hard coded, but configurable in the software. Values other than 2-5 can be set with the following defines
@@ -14,11 +15,11 @@ The div values are hard coded, but configurable in the software. Values other th
     #define DIVD 5
 ```
  
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0321/images/acs-85-0321.png) 
 
-
-## Equivalent:
+## Equivalent
 
 See [Ken Stones divider](http://www.cgs.synth.net/modules/subosc.html).
 
@@ -28,12 +29,8 @@ Obviously, if your looking for super high frequencies, a dedicated cmos counter 
 
 For humble bread board experiments though, this really can't be beat.  Divide by odd numbers is a bit of circuitry to do on a breadboard.
 
-## Examples:
- 
+## Examples
 
-## Strategy:
- 
+## Strategy
 
-## Improvements:
-
-
+## Improvements
