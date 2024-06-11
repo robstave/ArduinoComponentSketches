@@ -24,10 +24,9 @@ https://en.wikipedia.org/wiki/Minor_third
  
 ### Major 3rd
 
-A major third corresponds to a pitch ratio of 5:4 
+A major third corresponds to a pitch ratio of 5:4
 
 https://en.wikipedia.org/wiki/Major_third
-
 
 ### Perfect fifth
 
@@ -42,17 +41,14 @@ A perfect fourth in just intonation corresponds to a pitch ratio of 4:3
 
 *Note in this case, the sketch is taking the note from the perfect fifth below and bumping it up an octave to be a fourth from the carrier.*
 
- 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0350/images/ACS-85-0350.png) 
-
 
 ## Examples
 
 Sound cloud example
 https://soundcloud.com/user-692410397/85-0350-1a
-
 
 ## Strategy
 
@@ -62,28 +58,19 @@ We have a timer going to output notes like most of these sketches.  Flipping a p
 
 Within that timer interrupt, we also just peg a counter.  I suppose you could use the counter value directly as well if you wished.
 
-So that part is like 0001...just an oscillator and a completely arbirary number gives a 
-frequency.  Just a number.
+So that part is like 0001...just an oscillator and a completely arbirary number gives a frequency.  Just a number.
 
 The clock signal is sent to pin 7 where it has a pin change interrupt as well.
 
-When the clock pin changes, we read the output counter and take a difference from the previous value.  
-That way we can track the counter and find a base number that makes the output
-the same as the input. (Or a ratio in our case)  
+When the clock pin changes, we read the output counter and take a difference from the previous value.  That way we can track the counter and find a base number that makes the output the same as the input. (Or a ratio in our case)  
 
-If you had it set up, you could clock out at the same speed
-as the input because you are in effect not really sampling the input frequency but
-really sampling the output loop at the speed of the input clock.  Ya..its abstract.  
+If you had it set up, you could clock out at the same speed as the input because you are in effect not really sampling the input frequency but really sampling the output loop at the speed of the input clock.  Ya..its abstract.  
 
-Its compensating too..if you added more clock cycles to the output loop, it would
-be compensated because we are just setting our frequencies as ratios of the actual
-output interrupt.
+Its compensating too..if you added more clock cycles to the output loop, it would be compensated because we are just setting our frequencies as ratios of the actual output interrupt.
 
 You get more consistency (and less of a quantization sound) if you do a rolling average, but its not needed.
- 
+
 For the harmonizer, the ratios are set.  We adjust the timer counters (frequecy)
-in the loop which is interruptable and can take its sweet time to the do the math. 
+in the loop which is interruptable and can take its sweet time to the do the math.
 
-Its probibly not the best way to do it..and not super fast. But again, we are going for 
-simple fun experimental sounds and not precision.
-
+Its probibly not the best way to do it..and not super fast. But again, we are going for simple fun experimental sounds and not precision.

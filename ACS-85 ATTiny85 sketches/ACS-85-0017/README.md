@@ -17,10 +17,7 @@ Three Outputs: like CD4017
 - counter out bit q2
 - counter out bit q3
 
- 
-
 However there is also a software bool that toggles between gate mode ( regular ) and a trigger mode.
- 
 
 ```
 0001
@@ -29,12 +26,10 @@ However there is also a software bool that toggles between gate mode ( regular )
 1000
 ```
 
-
-
 ### Software parameters
-  - Trigger mode
-  - trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary.
-    Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
+
+- Trigger mode
+- trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary. Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
 
 ## Pinout
 
@@ -43,7 +38,5 @@ However there is also a software bool that toggles between gate mode ( regular )
 ## Equivalent
 
 CD4017
-
-
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0017/images/cat-cnt.jpg)

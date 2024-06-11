@@ -16,7 +16,6 @@ Either reduce your foot print or just use to play with different sounds on your 
 
 The equivalent circuit would look something like this
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0308/images/ACS-85-0308-pick.png)
- 
 
 ## Strategy
 
@@ -25,8 +24,8 @@ So this should be used as a non-time critical modulation.  There is no guarantee
 
 ## Improvements
 
-The highest frequencies that you can handle are going to depend on how fast the loop executes.  
- - Wrap the loop code into a while loop.   That would shave a few cycles off as loop would only be called once.  
- - Accumulate the bits and just mask off the last bit rather than all this ^ business.
- - Maybe save the value of port a and break if nothing changed?
+The highest frequencies that you can handle are going to depend on how fast the loop executes.
 
+- Wrap the loop code into a while loop.   That would shave a few cycles off as loop would only be called once.  
+- Accumulate the bits and just mask off the last bit rather than all this ^ business.
+- Maybe save the value of port a and break if nothing changed?

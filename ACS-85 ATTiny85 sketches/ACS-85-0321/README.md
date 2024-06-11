@@ -8,13 +8,13 @@ Basically a counter. If used with audio, div 2 is an octave lower.
  
 The div values are hard coded, but configurable in the software. Values other than 2-5 can be set with the following defines
 
-```
+```C
     #define DIVA 2
     #define DIVB 3
     #define DIVC 4
     #define DIVD 5
 ```
- 
+
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0321/images/acs-85-0321.png) 
