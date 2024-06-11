@@ -1,8 +1,9 @@
 # ACS-85-0520
-16 Bit LFSR
-==============
 
-## Overview:
+16 Bit LFSR
+
+## Overview
+
 Linear Feedback Shift Register.
 
 16 bit shift register that is externally clocked.  The values at certain taps are xor'ed together and feed back into the shift register.
@@ -24,22 +25,20 @@ It will look similar to the squarewave with peaks at 3f, 5f and so on.  White no
 This does lead to an interesting effect though because you can tune the lfsr by changing the clock speed.  Below is an example where a frequency ramp is put into the clock.
 You still hear the ramp...its just fuzzy.  Very 8bit sounding.
  
-
 This is the same LFSR as is described in the wikipedia. https://en.wikipedia.org/wiki/Linear_feedback_shift_register
 
 See also https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
 
+## Pinout
 
-
-## Pinout:
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520/images/ACS-85-0520.png)
 
-## Equivalent:
+## Equivalent
 
 ![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520/images/ACS-85-0520_ex.png)
 
+## Examples
 
-## Examples:
 Here is an example circuit that demonstrates how it sounds when we drive the LFSR with a signal in the audio range.
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520/images/ACS-85-circuit-0002-0520.png)
 
@@ -51,9 +50,5 @@ https://soundcloud.com/user-692410397/85-0003-0520mix
 
 ## Similar Circuits
 
-
 * [ACS-85-0521](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0521) is internal clocked (variable controlled) VCO - audio frequency
 * [ACS-85-0522](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0522) is internal clocked (variable controlled) LFO - low Frequency
-
-
-

@@ -1,18 +1,13 @@
 # ACS-85-0500
-Atari Punk Console
-==============
 
-## Overview:
+Atari Punk Console
+
+## Overview
+
 Attempt to reproduce the Atari Punk Console.
 
-I have not relly documented thist too much.
- 
-## Pinout:
-ToDo
+I have not raelly documented this too much.
 
- 
-## Examples:
+## Pinout
 
- 
- 
- 
+## Examples

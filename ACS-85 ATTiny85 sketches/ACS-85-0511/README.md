@@ -2,8 +2,6 @@
 
 Shift Register - Variable position shift register
 
-==============
-
 ## Overview
 
 32 bit shift register, and an analog in to select the output bit.
