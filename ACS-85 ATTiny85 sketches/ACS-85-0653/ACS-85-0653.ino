@@ -119,7 +119,7 @@ void loop()
 {
 
   uint8_t readLoop = 0;
- 
+
   while (true)
   {
 
@@ -138,10 +138,8 @@ void loop()
       readLoop = 0;
     }
 
-    // if ( out == 0) { //sucks
     if (bitRead(out, 1) > 0)
     {
-
       bitSet(PORTB, OUT1);
     }
     else
