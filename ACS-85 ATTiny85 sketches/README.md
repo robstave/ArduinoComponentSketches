@@ -99,6 +99,9 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0617](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617) | Random | Probability Drop Gate
 [ACS-85-0620](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620) | Envelope Random | Trigger to Gate / Random width
 [ACS-85-0621](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621) | Envelope Random | Timed gate
+[ACS-85-0625](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0625) | Sequencer | Burst Generator
+[ACS-85-0626](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0626) | Sequencer | Burst Generator 2
+[ACS-85-0627](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0627) | Sequencer | Random Burst Generator
 [ACS-85-0630](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0630) | Sequencer | Turning Style sequencer
 [ACS-85-0641](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0641) | Sequencer | AfroCuban beats
 [ACS-85-0650](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650) | ByteBeat | BitBeat v1
