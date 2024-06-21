@@ -60,7 +60,7 @@ There are SOME common layout patterns, but alas, I tend to play more to the stre
 
 There are a few that I have made Modular Circuit boards from
 
-[:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) - _Sequencer FF_ This is a format used by the Turning Sketch.  It has 1 Pot, 2 Digitalish inputs ( one is usually a clock ) and 2 outputs. One is Usually PWM filterd and the other a trigger out.
+[:sparkler:  _Sequencer FF_ ](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) -  This is a format used by the Turning Sketch.  It has 1 Pot, 2 Digitalish inputs ( one is usually a clock ) and 2 outputs. One is Usually PWM filterd and the other a trigger out.
 
 :moyai: - TODO
 
