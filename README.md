@@ -56,6 +56,16 @@ There are SOME common layout patterns, but alas, I tend to play more to the stre
 - I generally do not use delay() or millis(), prefering to write my own so i can choose timers.
 - Older sketches use more counters rather than DDS. Feel free to pick and choose the best parts.
 
+### Formalized Form Factors
+
+There are a few that I have made Modular Circuit boards from
+
+[:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) - _Sequencer FF_ This is a format used by the Turning Sketch.  It has 1 Pot, 2 Digitalish inputs ( one is usually a clock ) and 2 outputs. One is Usually PWM filterd and the other a trigger out.
+
+:moyai: - TODO
+
+:rooster: - TODO
+
 ## System
 
 I have a numbering system so I can halfway keep these things in order.  Its more of a guideline.
@@ -128,8 +138,8 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0352](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0352) | Modulation | Vibrato (ramp)
 [ACS-85-0353](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353) | Modulation | Modulate LFSR
 [ACS-85-0360](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0360) | Modulation | Selectable Counter-Divider
-[ACS-85-0370](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370) | Counter | Clock Divider
-[ACS-85-0375](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0375) | Counter | Euclidian Clock Divider
+[ACS-85-0370](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370) | Counter | Clock Divider [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0375](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0375) | Counter | Euclidian Clock Divider [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 | **500-699 	Shift, Delay, Melody Makers, Atari Punk Console** ||
 |  |  |  | 
 [ACS-85-0500](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0500) | Component | Atari Punk Console
@@ -160,15 +170,15 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0613](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613) | Random | Clocked Coin Flip gate
 [ACS-85-0614](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614) | Random | Clocked mulitple Coin Flip gate
 [ACS-85-0615](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0615) | Random | Clocked Probablity Gate
-[ACS-85-0616](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0616) | Random | Delayed Probablity Gate
-[ACS-85-0617](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617) | Random | Probability Drop Gate
-[ACS-85-0620](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620) | Envelope Random | Trigger to Gate / Random width
-[ACS-85-0621](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621) | Gate | Timed gate
+[ACS-85-0616](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0616) | Random | Delayed Probablity Gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0617](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617) | Random | Probability Drop Gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0620](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620) | Envelope Random | Trigger to Gate / Random width [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0621](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621) | Gate | Timed gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) 
 [ACS-85-0625](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0625) | Sequencer | Burst Generator
 [ACS-85-0626](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0626) | Sequencer | Burst Generator 2
 [ACS-85-0627](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0627) | Sequencer | Random Burst Generator
-[ACS-85-0630](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0630) | Sequencer | Turning Style sequencer
-[ACS-85-0641](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0641) | Sequencer | AfroCuban beats
+[ACS-85-0630](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0630) | Sequencer | Turning Style sequencer [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0641](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0641) | Sequencer | AfroCuban beats [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0650](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650) | ByteBeat | BitBeat v1
 [ACS-85-0651](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651) | ByteBeat | BitBeat v2
 [ACS-85-0652](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652) | ByteBeat | BitBeat clocked
