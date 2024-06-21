@@ -10,9 +10,10 @@ Start and end frequency is random
 There is a "parameter" value too that will be used for "length", but feel free to change that.
 
 There are three outputs...but the other two are related to the first.
- - note
- - note with freq modulation
- - a fifth above the note
+
+- note
+- note with freq modulation
+- a fifth above the note
 
 You can sum up the pins with simple resistors for a crazier sound
   

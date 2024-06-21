@@ -22,9 +22,9 @@
 
    A second squarewave is created as well using an LFO to detune the first pitch.
 
-   The two pins should be summed via resistors (or op amp)
+   The two pins should be summed via resistors (or op amp).  By doing this, we are not requiring a PWM out.
 
-   Consider a Mix or at least the means to add in F1 incrementally.
+   Consider a Mixer ( pot) so that its not an equal mix, but whatever works.  Its a good drone component.
 
 
    The prescaler is set to 64  (CS00=1 and CS01=1)

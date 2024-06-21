@@ -1,4 +1,4 @@
-# ACS-85-0034  ATTiny85 
+# ACS-85-0034  ATTiny85
 
 Lorenz attractor
 

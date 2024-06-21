@@ -39,4 +39,15 @@ Will speed up and slow down as the first part of the equation is 0 half the time
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653/images/acs-85-0653.png)
 
-## Examples
+## Related Sketches
+
+![Bytebeat ( Bitbeat v1)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650)
+![Bytebeat ( Bitbeat v2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651)
+![Bytebeat ( Bitbeat v2) clocked](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652)
+![Bytebeat ( Bitbeat 2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653)
+
+## Other links
+
+<https://medium.com/@naive_sound/glitch-a-noisy-fusion-of-math-and-music-6a9b24e7f5b5>
+
+<https://noisio.de/>

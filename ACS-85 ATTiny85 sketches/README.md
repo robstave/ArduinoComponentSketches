@@ -6,7 +6,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 | Number    | Type | Description  |
 | --- | --- | --- |
 | **000-199 - Oscillators, Vco, LFO** ||
-[ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Oscillator | Fixed squarewave oscillator with High and Low Frequencies and a Ramp
+| [ACS-85-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0001) | Oscillator | Fixed squarewave oscillator with High and Low Frequencies and a Ramp
 [ACS-85-0002](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0002) | VCO | Two square wave vcos and a two tone out pin
 [ACS-85-0003](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0003) | VCO | Two Tone VCO with speed
 [ACS-85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004) | VCO | Two Freq VCO with Range (lfo to hf)
@@ -40,6 +40,8 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103) | Squarewave | Randdrum 1
 [ACS-85-0105](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0105) | PWM | Cowbell 1
 [ACS-85-0106](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0106) | PWM | Cowbell XOR
+[ACS-85-0110](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0110) | Drum PWM | Jan Ostman High Hat
+[ACS-85-0111](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0111) | Drum PWM| Jan Ostman Snare
 [ACS-85-0120](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120) | VCO PWM | Phase Distortion 1
 [ACS-85-0121](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121) | VCO PWM | Phase Distortion Chainsaw
 [ACS-85-0122](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122) | VCO PWM | Phase Distortion xy
@@ -64,7 +66,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0352](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0352) | Modulation | Vibrato (ramp)
 [ACS-85-0353](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0353) | Modulation | Modulate LFSR
 [ACS-85-0360](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0360) | Counter | Selectable Counter-Divider
-[ACS-85-0370](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370) | Counter | Clock Divider
+[ACS-85-0370](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370)  | Counter | Clock Divider ![:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0375](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0375) | Counter | Euclidian Clock Divider
 | **500-699 	Shift, Delay, Melody Makers, Atari Punk Console** ||
 [ACS-85-0500](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0500) | Component | Atari Punk Console

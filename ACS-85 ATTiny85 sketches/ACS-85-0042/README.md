@@ -4,7 +4,7 @@ Square wave VCO with Chiptune sounds
 
 ## Overview
 
-Uses a 16 bit counter in a DDS fashion like. http://www.technoblogy.com/show?QVN
+Uses a 16 bit counter in a DDS fashion like. <http://www.technoblogy.com/show?QVN>
 
 This is a vco with 2 outputs.  One is the plain sqaurewave and the other is the same
 frequency, but with lots of arping and effects to sound like a chiptune synth of some kind.
@@ -15,8 +15,8 @@ Originally, I had ACS-85-0040, but it was a bit busy. I took the just the Chiptu
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042/images/ACS-85-0042.png) 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0042/images/ACS-85-0042.png)
 
 ## Example
 
- https://soundcloud.com/user-692410397/acs-85-0042-sample
+ <https://soundcloud.com/user-692410397/acs-85-0042-sample>

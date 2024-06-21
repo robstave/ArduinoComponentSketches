@@ -4,8 +4,8 @@
    Configurable to be either a trigger or gated value similar to a CD4020
 
    External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input 0 freq 1
-   External pin 3 (PB4) = output 3 output/8
+   External pin 2 (PB3) = output 3 output/8
+   External pin 3 (PB4) = input  freq A2
    External pin 4       = GND
    External pin 5 (PB0) = output 0 output
    External pin 6 (PB1) = output 1 output/2
@@ -19,8 +19,8 @@
 //                          +-\/-+
 //                   Reset 1|    |8  VCC
 // (pin3) out freq/8   PB3 2|    |7  PB2 (pin2) out 2 freq/4
-// (pin4) in 1 A2      PB4 3|    |6  PB1 (pin1) out 1 freq/2
-//                     GND 4|    |5  PB0 (pin0) out 0
+// (pin4) in freq A2   PB4 3|    |6  PB1 (pin1) out 1 freq/2
+//                     GND 4|    |5  PB0 (pin0) out 0 freq
 //                          ------
 
 
@@ -130,7 +130,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
           PORTB  = B00000001;
           break;
         case 16:
-          PORTB  = B00000000;
+          PORTB  = B00001000;
           break;
 
       }

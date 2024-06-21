@@ -40,12 +40,10 @@ Gate     Trigger
 1111     0001
 ```
 
-
-
 ### Software parameters
-  - Trigger mode
-  - trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary.
-    Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
+
+- Trigger mode
+- trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary.  Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
 
 ## Pinout
 
@@ -53,9 +51,6 @@ Gate     Trigger
 
 ## Equivalent
 
-A cmost counter
+A cmos counter
 
 ## Examples
-
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0016/images/cat-ct.jpg.png)
-

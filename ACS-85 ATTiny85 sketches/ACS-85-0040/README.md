@@ -4,13 +4,12 @@ Square wave VCO with PWM and Chiptune sound
 
 ## Overview
 
-Uses a 16 counter in a DDS fashion like. http://www.technoblogy.com/show?QVN
+Uses a 16 counter in a DDS fashion like. <http://www.technoblogy.com/show?QVN>
 
 This is a vco with outputs.  One is the mainsqaurewave and the other is the same
 frequency, but adjustable width.
 
-There is a mode that makes a chiptune sound too which happens if you flip pin 5. 
-This basically scrambles the DDS. ( arp up)
+There is a mode that makes a chiptune sound too which happens if you flip pin 5. This basically scrambles the DDS. ( arp up)
 
 This is really a bit of a hot mess, but I put it into my hybrid-lunetta project anyways and has become a favorite of mine.
 

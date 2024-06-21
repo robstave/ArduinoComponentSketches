@@ -8,12 +8,10 @@ Simple version of EHX space drum.  Ah...really...simple.
    Just a start and end frequency.
    There is a "parameter" value too that will be used for "length",
    but feel free to change that.
- 
 
 ## Output
 
 Although it is DDS looking, its just a squarewave and not really PWM.  There is no "decay" or anything like that.
-
 
 ## Pinout
 

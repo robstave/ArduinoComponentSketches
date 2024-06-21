@@ -17,12 +17,13 @@ The wave table is somewhat virtual though as you may have a 16 bit number, but o
 In THIS case, we are only using the top bit, so there is not even the need for a table.  Its just a counter making a squarewave.
 
 See the squarewave version here.
-http://www.technoblogy.com/show?QVN
+<http://www.technoblogy.com/show?QVN>
 
 You can make all kinds of sounds on top of that by tweaking the accumulator.
 
 Gernerally, its  
-```
+
+```c
 accumulator = accumulator + note
 ```
 
@@ -31,18 +32,16 @@ If you do things like modulate 'note' by multiplying by 2 or dividing by 2 over 
 Thats what is going on here.
 
 There are 3 options.
- 
 
 ## Output
 
 Although it is DDS looking, its just a squarewave and not really PWM.  There is no "decay" or anything like that.
 
-
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101/images/ACS-85-0101.png)
 
-## Pinout
+<br>
 
 ![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101/images/cat-85-0101.jpg)
 

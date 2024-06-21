@@ -15,7 +15,7 @@ The wave table is somewhat virtual though as you may have a 16 bit number, but o
 In THIS case, we are only using the top bit, so there is not even the need for a table.  Its just a counter making a squarewave.
 
 See the squarewave version here.
-http://www.technoblogy.com/show?QVN
+<http://www.technoblogy.com/show?QVN>
 
 You can make all kinds of sounds on top of that by tweaking the accumulator.
 
