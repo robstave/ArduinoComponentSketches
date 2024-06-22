@@ -29,8 +29,4 @@ Obviously, if your looking for super high frequencies, a dedicated cmos counter 
 
 For humble bread board experiments though, this really can't be beat.  Divide by odd numbers is a bit of circuitry to do on a breadboard.
 
-## Examples
 
-## Strategy
-
-## Improvements

@@ -15,11 +15,11 @@
 
  *
  * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = Divide 5
- * External pin 3 (PB4) = Divide 4
+ * External pin 2 (PB3) = Divide By
+ * External pin 3 (PB4) = Divide N+2
  * External pin 4       = GND
- * External pin 5 (PB0) = Divide 3
- * External pin 6 (PB1) = Divide 2
+ * External pin 5 (PB0) = Divide N+1
+ * External pin 6 (PB1) = Divide N
  * External pin 7 (PB2) = Clock
  * External pin 8       = Vcc
 
@@ -36,24 +36,19 @@
  * Rob Stave (Rob the fiddler) CCBY 2015
  */
 
-
 //  ATTiny overview
 //                        +-\/-+
 //                 Reset 1|    |8  VCC
-//      (pin3) DIVC  PB3 2|    |7  PB2 (pin2/int0) CLOCK
-//      (pin4) DIVD  PB4 3|    |6  PB1 (pin1) DIVA
+//      (pin3) DivBy PB3 2|    |7  PB2 (pin2/int0) CLOCK
+//      (pin4) DIVC  PB4 3|    |6  PB1 (pin1) DIVA
 //                   GND 4|    |5  PB0 (pin0) DIVB
 //                        ------
 
+const int int0 = 0; // interrupt 0
 
-const int int0 = 0;  // interrupt 0
+ 
 
-#define DIVA 2
-#define DIVB 3
-#define DIVC 4
-#define DIVD 5
-
-//Counters for divide by n
+// Counters for divide by n
 int qACount = 0;
 int qBCount = 0;
 int qCCount = 0;
@@ -61,10 +56,10 @@ int qDCount = 0;
 
 int divideByN = 2;
 
-int prevSample1 = 0; //Sample timestamp
-#define VAR1 A3          //Analog read
+int prevSample1 = 0; // Sample timestamp
+#define VAR1 A3      // Analog read
 
-//A hysteresis of sorts is used to prevent values from switching back and forth.
+// A hysteresis of sorts is used to prevent values from switching back and forth.
 int sampleValue = 0;
 #define HYSTERESIS 3
 
@@ -77,54 +72,57 @@ void setup()
   DDRB = B00010011; // set PORTB to outputs except PB2 for the clock
 }
 
-void clockCounter()      // called by interrupt
+void clockCounter() // called by interrupt
 {
   divByA();
   divByB();
   divByC();
-  
 }
 
-void divByA() {
+void divByA()
+{
   qACount++;
-  if (qACount >= (divideByN)) {
+  if (qACount >= (divideByN))
+  {
     qACount = 0;
     PORTB ^= (_BV(PB0));
   }
 }
 
-void divByB() {
+void divByB()
+{
   qBCount++;
-  if (qBCount >= (divideByN+1)) {
+  if (qBCount >= (divideByN + 1))
+  {
     qBCount = 0;
     PORTB ^= (_BV(PB1));
   }
 }
 
-void divByC() {
+void divByC()
+{
   qCCount++;
-  if (qCCount >= (divideByN+2)) {
+  if (qCCount >= (divideByN + 2))
+  {
     qCCount = 0;
     PORTB ^= (_BV(PB4));
   }
 }
 
- 
-
 void loop()
 {
   int millsSample = millis();
 
-  //Sample every 40ms
-  if (millsSample - prevSample1 > 50 ) {
+  // Sample every 40ms
+  if (millsSample - prevSample1 > 50)
+  {
     prevSample1 = millsSample;
 
     int temp = analogRead(VAR1);
-    if ( abs(sampleValue - temp) > HYSTERESIS) {
-      sampleValue  = temp;
+    if (abs(sampleValue - temp) > HYSTERESIS)
+    {
+      sampleValue = temp;
     }
-    divideByN  = map(sampleValue, 0, 1023, 2,  12); //map the value to divisors
+    divideByN = map(sampleValue, 0, 1023, 2, 12); // map the value to divisors
   }
-
-
 }

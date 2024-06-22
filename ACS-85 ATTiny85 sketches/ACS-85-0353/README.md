@@ -38,13 +38,13 @@ The offset is determined by masking bits of the random number.
 
 The lowest three bits would be a number from 0 to 7. So for example:
  
-```
+```c
     return lfsr & B00001111;
 ```
 
 In this case, we mask off the lower 4 bits for a number from 0 to 15. Then we add that to oscillator counter or substract for a lower or higher frequncy.
 
-```
+```c
      oscFreq1 = diff + getOffset();
      oscFreq2 = diff - getOffset();
 ```

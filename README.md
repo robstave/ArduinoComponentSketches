@@ -112,8 +112,8 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103) | Squarewave | Randdrum 1
 [ACS-85-0105](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0105) | PWM | Cowbell 1
 [ACS-85-0106](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0106) | PWM | Cowbell XOR
-[ACS-85-0110](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0110) | Drum PWM | Jan Ostman High Hat
-[ACS-85-0111](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0111) | Drum PWM| Jan Ostman Snare
+[ACS-85-0110](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0110) | Drum PWM | Jan Ostman High Hat  [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
+[ACS-85-0111](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0111) | Drum PWM| Jan Ostman Snare  [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0120](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120) | VCO PWM | Phase Distortion 1
 [ACS-85-0121](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121) | VCO PWM | Phase Distortion Chainsaw
 [ACS-85-0122](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0122) | VCO PWM | Phase Distortion xy

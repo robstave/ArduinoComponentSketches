@@ -16,7 +16,7 @@
    
 
    External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input DivBy (A3)
+   External pin 2 (PB3) = input v (A3)
    External pin 3 (PB4) = input reset
    External pin 4       = GND
    External pin 5 (PB0) = output A

@@ -7,7 +7,7 @@
  *
  * External pin 1 = Reset
  * External pin 2 = Analog Read (selects bit 0 - 15)
- * External pin 3 = Q0
+ * External pin 3 = Out0
  * External pin 4 = GND
  * External pin 5 = Selected bit out
  * External pin 6 = shift in

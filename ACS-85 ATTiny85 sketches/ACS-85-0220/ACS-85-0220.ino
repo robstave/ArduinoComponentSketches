@@ -1,6 +1,6 @@
 /**
    ACS-85-0220 ATTiny85 - debounced Trigger
-   
+
    Basically a trigger to gate, but it can subdivide the gates.
    The length of the total gate time remains the same, but adding ticks
    subdivides it
@@ -28,7 +28,6 @@
    Ticks > 1 will subdivide the gate.
 
    so for example...a value of 6 actually is gives and output of
-
    on - off - on - off - on - off  over the course of the length.
 
    Trigger:          ---xx------------------
@@ -40,20 +39,22 @@
    Gate(ticks = 6)   ---xx--xx--xx------------
 
    its not super accurate...but gives an interesting effect when
-   used lightly.  
+   used lightly.
 
    V 1.0  -  First Version
+
+   improvements:  you could make that other pin just the length
    Rob Stave (Rob the Fiddler) CCBY 2019
 */
 
 // Debounce time
-# define DEBOUNCE 30
+#define DEBOUNCE 30
 
-# define MAX_LENGTH 500
-# define MIN_LENGTH 40
+#define MAX_LENGTH 500
+#define MIN_LENGTH 40
 volatile unsigned int noteCounter = 0;
 volatile unsigned int noteLengthMillis = 500;
- volatile unsigned int ticks = 4;
+volatile unsigned int ticks = 4;
 
 volatile boolean isRunning = false;
 volatile boolean setTrigger = false;
@@ -62,7 +63,7 @@ volatile boolean setTrigger = false;
 void setup()
 {
 
-  DDRB = B00000011; //Set port B output bits
+  DDRB = B00000011; // Set port B output bits
 
   // initialize timer
   noInterrupts(); // disable all interrupts
@@ -89,12 +90,10 @@ unsigned long millisTimer1()
   return milliseconds;
 }
 
-
 void loop()
 {
 
   unsigned long previousMillis = 0;
-
 
   // no need to check speed all that often
   // so we space that out a bit
@@ -102,12 +101,12 @@ void loop()
   byte sensorLimit = 500;
   byte checkState = 0;
 
-  int buttonState;             // the current reading from the input pin
-  int lastButtonState = LOW;   // the previous reading from the input pin
-  unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
-  unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
-  while (true) {
-
+  int buttonState;                    // the current reading from the input pin
+  int lastButtonState = LOW;          // the previous reading from the input pin
+  unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
+  unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+  while (true)
+  {
 
     // Debound stuff
     unsigned long currentMillis = millisTimer1();
@@ -119,21 +118,25 @@ void loop()
     // since the last press to ignore any noise:
 
     // If the switch changed, due to noise or pressing:
-    if (reading != lastButtonState) {
+    if (reading != lastButtonState)
+    {
       // reset the debouncing timer
       lastDebounceTime = currentMillis;
     }
 
-    if ((currentMillis - lastDebounceTime) > debounceDelay) {
+    if ((currentMillis - lastDebounceTime) > debounceDelay)
+    {
       // whatever the reading is at, it's been there for longer than the debounce
       // delay, so take it as the actual current state:
 
       // if the button state has changed:
-      if (reading != buttonState) {
+      if (reading != buttonState)
+      {
         buttonState = reading;
 
         // only toggle the trigger if the new button state is HIGH
-        if (buttonState == HIGH) {
+        if (buttonState == HIGH)
+        {
           isRunning = false;
           setTrigger = true;
           noteCounter = 0;
@@ -142,15 +145,18 @@ void loop()
     }
     lastButtonState = reading;
 
-
     // Check sensors too.  No need to check every loop.  Just every [sensorLimit] counts.
     // If you want more responsiveness to the pots, you can decrease, at the expense of more
     // clock cycles reading pots.
-    if (sensorCounter > sensorLimit) {
-      if (checkState % 2 == 0) {
+    if (sensorCounter > sensorLimit)
+    {
+      if (checkState % 2 == 0)
+      {
         int sample = analogRead(A3);
         ticks = map(sample, 0, 1023, 1, 8);
-      }  else {
+      }
+      else
+      {
         int sample3 = analogRead(A2);
         noteLengthMillis = map(sample3, 0, 1023, MIN_LENGTH, MAX_LENGTH);
       }
@@ -160,14 +166,16 @@ void loop()
     }
     sensorCounter++;
 
-    if  (setTrigger == true) {
+    if (setTrigger == true)
+    {
       isRunning = true;
       setTrigger = false;
       noteCounter = 0;
       previousMillis = currentMillis;
     }
 
-    if (isRunning == true) {
+    if (isRunning == true)
+    {
       noteCounter = currentMillis - previousMillis;
       if (noteCounter >= noteLengthMillis)
       {
@@ -177,20 +185,21 @@ void loop()
         previousMillis = currentMillis;
       }
 
+      int multiplier = map(noteCounter, 0, noteLengthMillis, 1, ticks);
 
-      int multiplier = map( noteCounter, 0, noteLengthMillis, 1, ticks);
-
-      if (isRunning == true && ( multiplier % 2 == 1)) {
+      if (isRunning == true && (multiplier % 2 == 1))
+      {
         bitSet(PORTB, 0);
-      }  else {
+      }
+      else
+      {
         bitClear(PORTB, 0);
       }
-
-
-    } else {
+    }
+    else
+    {
       setTrigger = false;
       noteCounter = 0;
     }
-
   }
 }

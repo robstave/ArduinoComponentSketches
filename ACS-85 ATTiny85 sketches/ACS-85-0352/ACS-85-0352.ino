@@ -8,7 +8,7 @@
  *
  * External pin 1       = Reset (not used)
  * External pin 2 (PB3) = freq
- * External pin 3 (PB4) = width
+ * External pin 3 (PB4) = width (vib )
  * External pin 4       = GND
  * External pin 5 (PB0) = out 0
  * External pin 6 (PB1) = out 1
@@ -31,7 +31,7 @@
 //                     +-\/-+
 //              Reset 1|    |8  VCC
 // (pin3) tune 0  PB3 2|    |7  PB2 (pin2/int0) CLOCK
-// (pin4) tune 1  PB4 3|    |6  PB1 (pin1) out 1
+// (pin4) vib  1  PB4 3|    |6  PB1 (pin1) out 1
 //                GND 4|    |5  PB0 (pin0) out 0
 //                     ------
 
