@@ -2,10 +2,8 @@
 
 Collection of sketches for ATTiny that can be used to replace logic blocks in your circuits. Mostly, these are squarewave sketches so they can easily be used in lunetta-like circuits running 0 to 5 volts.  There are plenty of PWM/Analog sketches though too.
 
- 
 [Arduino Component Sketches](http://robstave.github.io/acs/)
- 
- 
+
 ## Objective
 
 Create a library of Arduino sketches that can be loaded on ATTiny AVR micro controllers to use in lo-fi synth/noise circuits.
@@ -30,10 +28,9 @@ There are other plenty of projects out there with similar concepts. I draw inspi
 
 [Moffenzeefmodular](https://www.moffenzeefmodular.com/) has a project called MSG.  One of these sketches has made its way into that.  Neat!  If your not solder/hardware inclined, just get this and stick that that form factor.  Looks solid, if its not sold out.
 
-https://noisio.de/de   Not sure, but there appears to be projects in the same direction
+<https://noisio.de/de>   Not sure, but there appears to be projects in the same direction
 
-https://github.com/strickyak/jerboa-attiny85-mod-synth Jerboa Modular Synth blocks.  Very similar goals to this.
-
+<https://github.com/strickyak/jerboa-attiny85-mod-synth> Jerboa Modular Synth blocks.  Very similar goals to this.
 
 ## Background
 
@@ -60,7 +57,7 @@ There are SOME common layout patterns, but alas, I tend to play more to the stre
 
 There are a few that I have made Modular Circuit boards from
 
-[:sparkler:  _Sequencer FF_ ](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) -  This is a format used by the Turning Sketch.  It has 1 Pot, 2 Digitalish inputs ( one is usually a clock ) and 2 outputs. One is Usually PWM filterd and the other a trigger out.
+[:sparkler:  _Sequencer FF_](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) -  This is a format used by the Turning Sketch.  It has 1 Pot, 2 Digitalish inputs ( one is usually a clock ) and 2 outputs. One is Usually PWM filterd and the other a trigger out.
 
 :moyai: - TODO
 
@@ -73,7 +70,6 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [Numbering System](https://github.com/robstave/ArduinoComponentSketches/wiki/Numbering-System)
 
 ### ATTiny85 sketches
- 
 
 | Number  | Class | Description  |
 | --- | --- | --- |
@@ -120,12 +116,12 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0124](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0124) | VCO PWM | Phase Distortion Chain/sine TODO
 [ACS-85-0125](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0125) | VCO PWM | Phase Distortion Chainsaw - v/oct
 [ACS-85-0130](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0130) | VCO PWM | Super Square - v/oct
-| **200-299 	Envelope generators, VCA, Sample and Hold** ||
+| **200-299  Envelope generators, VCA, Sample and Hold** ||
 [ACS-85-0200](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200) | VCA | Simple VCA - PWM - In progress
 [ACS-85-0201](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0201) | VCA + AR | Simple VCA AR Envelope - PWM - In progress
 [ACS-85-0210](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0210) | VCO with S&H | VCO with two register delays
 [ACS-85-0220](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0220) | Debounce gate | Debounced Gate with Repeat
-| **300-499 	Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** ||
+| **300-499  Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** ||
 [ACS-85-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0305) | Gates | Xor Gates (2)
 [ACS-85-0306](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0306) | Gates | Nand Gates (2)
 [ACS-85-0307](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307) | Gates | Or/And gate
@@ -140,12 +136,13 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0360](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0360) | Modulation | Selectable Counter-Divider
 [ACS-85-0370](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0370) | Counter | Clock Divider [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0375](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0375) | Counter | Euclidian Clock Divider [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
-| **500-699 	Shift, Delay, Melody Makers, Atari Punk Console** ||
-|  |  |  | 
+| **500-699  Shift, Delay, Melody Makers, Atari Punk Console** ||
+|  |  |  |
 [ACS-85-0500](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0500) | Component | Atari Punk Console
+[ACS-85-0501](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-051) | Component | Atari Punk Console 2
 [ACS-85-0505](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505) | Component | Nand synth
-[ACS-85-0506](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506) | Component | Nand DX 
-[ACS-85-0510](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0510) | Shift Register | Simple 16 bit Shift Register 
+[ACS-85-0506](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506) | Component | Nand DX
+[ACS-85-0510](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0510) | Shift Register | Simple 16 bit Shift Register
 [ACS-85-0511](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0511) | Shift Register | Variable 32 bit Shift Register
 [ACS-85-0512](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0512) | Shift Register | Large 128 bit Shift Register
 [ACS-85-0520](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0520) | Shift Register | Clocked 16 bit LFSR
@@ -166,6 +163,7 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0607](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0607) | Sequencer | 4 Channel Random Drum Triggers
 [ACS-85-0608](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0608) | Sequencer | 4 Channel Random Drum Triggers clocked
 [ACS-85-0609](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0609) | Sequencer | 3 Channel Drum Patterns
+[ACS-85-0610](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0610) | Sequencer | clock counter quadrature/seqs
 [ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612) | Random | Clocked Coin Flip trigged-latch
 [ACS-85-0613](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613) | Random | Clocked Coin Flip gate
 [ACS-85-0614](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614) | Random | Clocked mulitple Coin Flip gate
@@ -173,7 +171,7 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0616](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0616) | Random | Delayed Probablity Gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0617](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617) | Random | Probability Drop Gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0620](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620) | Envelope Random | Trigger to Gate / Random width [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
-[ACS-85-0621](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621) | Gate | Timed gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF) 
+[ACS-85-0621](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621) | Gate | Timed gate [:sparkler:](https://github.com/robstave/ArduinoComponentSketches/wiki/ATTiny85-seq-FF)
 [ACS-85-0625](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0625) | Sequencer | Burst Generator
 [ACS-85-0626](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0626) | Sequencer | Burst Generator 2
 [ACS-85-0627](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0627) | Sequencer | Random Burst Generator
@@ -185,25 +183,21 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 [ACS-85-0653](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653) | ByteBeat | BitBeat select
 [ACS-85-0660](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0660) | VCO PWM | 3 Tones with Patterns
 [ACS-85-0675](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0675) | Counter | Euclidian counter
-| **700-899 	Interface, Control, Midi, Visualization** ||
+| **700-899  Interface, Control, Midi, Visualization** ||
 [ACS-85-0700](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700) | Controller | Analog to Digital Decoder. Translate Analog to either 3 bits or single pins
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Two pin Tap Tempo
 [ACS-85-0710](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710) | Controller | Button Select 3 pin
 [ACS-85-0711](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0711) | Controller | Button Select 3 pin binary
-| **900-999 	Other** ||
-
+| **900-999  Other** ||
 
 ### ATTiny84 sketches
-
 
 | Number    | Type   | Description  |
 | --- | --- | --- |
 | **000-199 - Oscillators, Vco, LFO** |||
 [ACS-84-0001](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0001) | Oscillator | Fixed square wave oscillator with High and Low Frequencies and a Ramp and Triangle
-[ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Fixed square wave oscillator with a grand assortment of beeps. 
-| **300-499 	Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** |||
+[ACS-84-0010](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0010) | Oscillator | Fixed square wave oscillator with a grand assortment of beeps.
+| **300-499  Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato** |||
 [ACS-84-0305](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0305) | Gates |  Xor Array
 [ACS-84-0570](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0570) |Shift Register | Analog Shift Register 4 outputs
 [ACS-84-0608](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-84%20ATTiny84%20sketches/ACS-84-0608) | Sequncer | clocked 4 Channel random triggers
-
-
