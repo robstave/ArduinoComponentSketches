@@ -24,6 +24,6 @@ making delay() not usable.  Since its not used...no biggee.
 
 ## Examples
 
-https://soundcloud.com/user-692410397/acs-85-0570
+<https://soundcloud.com/user-692410397/acs-85-0570>
 
 In this case, I have an LFO ( Ramp Down ) feeding into the register and the output is going to a squarewave out VCO

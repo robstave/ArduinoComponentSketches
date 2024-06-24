@@ -26,37 +26,26 @@
  * External pin 2 (PB3) = Osc freq
  * External pin 3 (PB4) = one shot length
  * External pin 4       = GND
- * External pin 5 (PB0) = none
- * External pin 6 (PB1) = none
- * External pin 7 (PB2) = out
+ * External pin 5 (PB0) = out
+ * External pin 6 (PB1) = out2
+ * External pin 7 (PB2) = 
  * External pin 8       = Vcc
 
 //  ATTiny overview
 //                          +-\/-+
 //                   Reset 1|    |8  VCC
-// (pin3) Osc freq     PB3 2|    |7  PB2 (pin2/int0) out
-// (pin4) One shot len PB4 3|    |6  PB1 (pin1) nc
+// (pin3) Osc freq     PB3 2|    |7  PB2 (pin2/int0) nc
+// (pin4) One shot len PB4 3|    |6  PB1 (pin1) out2
 //                     GND 4|    |5  PB0 (pin0) out
 //                          ------
 
-
  *
  * V 1.0  -  First Version
- *   needs work. Tried to limit analogReads with millis, but that did not work.
- *   maybe there is a conflict w timer 0.
-
  *
- * Rob Stave (Rob the fiddler) ccby 2015
+ * Rob Stave (Rob the fiddler) ccby 2024
  */
 
-//  ATTiny overview
-//                        +-\/-+
-//                 Reset 1|    |8  VCC
-//       (pin3) OSC  PB3 2|    |7  PB2 nc
-//  (pin4) ONE SHOT  PB4 3|    |6  PB1 nc
-//                   GND 4|    |5  PB0 out
-//                        ------
-
+ 
 // counters for the frequencies
 volatile uint16_t oscFreq = 55;
 volatile uint16_t oscCounter = 0;
@@ -69,41 +58,41 @@ volatile bool oneShotActive = false;
 
 volatile bool osc = false;
 
-
-
 // the setup function runs once when you press reset or power the board
-void setup() {
+void setup()
+{
 
-  DDRB = B00000011;  // could use this
+  DDRB = B00000011; // could use this
 
   // initialize timer0
-  noInterrupts();  // disable all interrupts
+  noInterrupts(); // disable all interrupts
 
   TCCR0A = 0;
   TCCR0B = 0;
 
-  TCCR0A |= (1 << WGM01);  // Start timer 1 in CTC mode Table 11.5
-  TIMSK |= (1 << OCIE0A);  // Enable CTC interrupt see 13.3.6
-  OCR0A = 2;               // CTC Compare value
+  TCCR0A |= (1 << WGM01); // Start timer 1 in CTC mode Table 11.5
+  TIMSK |= (1 << OCIE0A); // Enable CTC interrupt see 13.3.6
+  OCR0A = 2;              // CTC Compare value
 
-  TCCR0B |= (1 << CS00);  // Prescaler =64 Table 11.6
+  TCCR0B |= (1 << CS00); // Prescaler =64 Table 11.6
 
-  interrupts();  // enable all interrupts
+  interrupts(); // enable all interrupts
 }
 
-ISR(TIMER0_COMPA_vect)  // timer compare interrupt service routine
+ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
 {
-
 
   // HF code is the same.  Just smaller counters
   // Internally, this loop is always going.
 
-  if (oscCounter > oscFreq) {
+  if (oscCounter > oscFreq)
+  {
     oscCounter = 0;
     osc = !osc;
     // Toggle
     // If we are failling, trigger the one shot if it is armed.
-    if (oneShotArmed && (osc == false)) {
+    if (oneShotArmed && (osc == false))
+    {
       oneShotArmed = false;
       oneShotActive = true;
       oneShotCounter = 0;
@@ -111,55 +100,53 @@ ISR(TIMER0_COMPA_vect)  // timer compare interrupt service routine
   }
   oscCounter++;
 
-  if (oneShotActive == true) {
-    PORTB |= (1 << PB0);  // Set port High
+  if (oneShotActive == true)
+  {
+    PORTB |= (1 << PB0); // Set port High
 
-    if (oneShotCounter > oneShotLength) {
+    if (oneShotCounter > oneShotLength)
+    {
       oneShotCounter = 0;
-      PORTB &= ~(1 << PB0);  // Set port Low
+      PORTB &= ~(1 << PB0); // Set port Low
       oneShotArmed = true;
       oneShotActive = false;
     }
     oneShotCounter++;
 
-    if ( oneShotCounter % 2 && osc) {
- PORTB |= (1 << PB1);
-    } else {
-      PORTB &= ~(1 << PB1);  // Set port Low
-
+    if (oneShotCounter % 2 && osc)
+    {
+      PORTB |= (1 << PB1);
     }
-
-
+    else
+    {
+      PORTB &= ~(1 << PB1); // Set port Low
+    }
   }
 }
 
-void loop() {
+void loop()
+{
 
   byte counter = 0;
 
   // Used for sample averaging
-  int f1Sample[4] = { 0, 0, 0, 0 };
-  int f2Sample[4] = { 0, 0, 0, 0 };
+  int f1Sample[4] = {0, 0, 0, 0};
+  int f2Sample[4] = {0, 0, 0, 0};
 
-
-  while (true) {
-
-
-
+  while (true)
+  {
 
     f1Sample[counter] = analogRead(A2);
     unsigned int osc1_t = (f1Sample[0] + f1Sample[1] + f1Sample[2] + f1Sample[3]) >> 2;
     oscFreq = map(osc1_t, 0, 1023, 20, 420);
 
-
     f2Sample[counter] = analogRead(A3);
     unsigned int oneShotDuration_t = (f2Sample[0] + f2Sample[1] + f2Sample[2] + f2Sample[3]) >> 2;
     oneShotLength = map(oneShotDuration_t, 0, 1023, 10, 420);
 
-     
-
     counter++;
-    if (counter > 3) {
+    if (counter > 3)
+    {
       counter = 0;
     }
   }

@@ -26,7 +26,6 @@
  * Rob Stave (Rob the fiddler) ccby 2015
  */
 
-
 //  ATTiny overview
 //                           +-\/-+
 //                    Reset 1|    |8  VCC
@@ -35,102 +34,104 @@
 //                      GND 4|    |5  PB0 (pin0) out 0
 //                           ------
 
-//Ranges for the pot.  Technically a small nuumber means a
-//shorter timer so low or high...whatever you want to call it.
-
+// Ranges for the pot.  Technically a small nuumber means a
+// shorter timer so low or high...whatever you want to call it.
 
 #define VCO1_L1_HIGH 400
 #define VCO1_L1_LOW 8000
 
-//Use this to tweek the feel of the pot.  If you are using an audio pot versus a linear, set this
-//value to 0
+// Use this to tweek the feel of the pot.  If you are using an audio pot versus a linear, set this
+// value to 0
 #define MAP_VALUES_AS_LINEAR 0
 
 #if MAP_VALUES_AS_LINEAR == 1
-  #define STATE0 10
-  #define STATE1 20
-  #define STATE2 30
-  #define STATE3 40
+#define STATE0 10
+#define STATE1 20
+#define STATE2 30
+#define STATE3 40
 #else
-  #define STATE0 5
-  #define STATE1 10
-  #define STATE2 20
-  #define STATE3 40
+#define STATE0 5
+#define STATE1 10
+#define STATE2 20
+#define STATE3 40
 #endif
 
-
-//counters for the frequencies
+// counters for the frequencies
 
 volatile int oscCounter1 = 0;
 volatile int oscFreq1 = 0;
 
-
 int patternCount = 0;
 volatile int pattern = 0;
 
-
 #define PATTERN_0_SIZE 8
-boolean  pattern_0[PATTERN_0_SIZE] = {HIGH, LOW, HIGH, LOW, HIGH, LOW, HIGH, LOW};
+boolean pattern_0[PATTERN_0_SIZE] = {HIGH, LOW, HIGH, LOW, HIGH, LOW, HIGH, LOW};
 
 #define PATTERN_1_SIZE 8
-boolean  pattern_1[PATTERN_1_SIZE] = { HIGH, HIGH, LOW, LOW, HIGH, LOW, HIGH, LOW};
+boolean pattern_1[PATTERN_1_SIZE] = {HIGH, HIGH, LOW, LOW, HIGH, LOW, HIGH, LOW};
 
 #define PATTERN_2_SIZE 6
-boolean  pattern_2[PATTERN_2_SIZE] = { HIGH, HIGH, LOW, HIGH, HIGH, LOW};
+boolean pattern_2[PATTERN_2_SIZE] = {HIGH, HIGH, LOW, HIGH, HIGH, LOW};
 
 #define PATTERN_3_SIZE 5
-boolean  pattern_3[PATTERN_3_SIZE] = { HIGH, LOW, LOW, HIGH,  LOW};
-
+boolean pattern_3[PATTERN_3_SIZE] = {HIGH, LOW, LOW, HIGH, LOW};
 
 // the setup function runs once when you press reset or power the board
-void setup() {
+void setup()
+{
 
-  DDRB = B00000111;  //set output bits
+  DDRB = B00000111; // set output bits
 
   // initialize timer1
-  noInterrupts();           // disable all interrupts
+  noInterrupts(); // disable all interrupts
 
-  TCCR1 = 0;                  //stop the timer
-  TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 99;                //set the compare value
+  TCCR1 = 0; // stop the timer
+  TCNT1 = 0; // zero the timer
+  // GTCCR = _BV(PSR1);          //reset the prescaler
+  OCR1A = 99; // set the compare value
   OCR1C = 99;
-  TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
+  TIMSK = _BV(OCIE1A); // interrupt on Compare Match A
 
-  TCCR1 = _BV(CTC1)  | _BV(CS11) | _BV(CS12); // Start timer, ctc mode, prescaler clk/2
+  TCCR1 = _BV(CTC1) | _BV(CS11) | _BV(CS12); // Start timer, ctc mode, prescaler clk/2
 
-  interrupts();             // enable all interrupts
-
+  interrupts(); // enable all interrupts
 }
 
-boolean getPatternValue () {
+boolean getPatternValue()
+{
   boolean result = LOW;
 
-  if (pattern == 0) {
-    if (patternCount >= PATTERN_0_SIZE) {
+  if (pattern == 0)
+  {
+    if (patternCount >= PATTERN_0_SIZE)
+    {
       patternCount = 0;
-     }
-      result = pattern_0[patternCount];
-   
+    }
+    result = pattern_0[patternCount];
   }
 
-  
-  if (pattern == 1) {
-    if (patternCount >= PATTERN_1_SIZE) {
+  if (pattern == 1)
+  {
+    if (patternCount >= PATTERN_1_SIZE)
+    {
       patternCount = 0;
     }
     result = pattern_1[patternCount];
   }
 
-  if (pattern == 2) {
-    if (patternCount >= PATTERN_2_SIZE) {
+  if (pattern == 2)
+  {
+    if (patternCount >= PATTERN_2_SIZE)
+    {
       patternCount = 2;
     }
     result = pattern_2[patternCount];
   }
 
-  if (pattern == 3) {
-    if (patternCount >= PATTERN_3_SIZE) {
+  if (pattern == 3)
+  {
+    if (patternCount >= PATTERN_3_SIZE)
+    {
       patternCount = 0;
     }
     result = pattern_3[patternCount];
@@ -140,17 +141,21 @@ boolean getPatternValue () {
   return result;
 }
 
-ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
+ISR(TIMER1_COMPA_vect) // timer compare interrupt service routine
 {
 
-  if (oscCounter1 >= oscFreq1) {
+  if (oscCounter1 >= oscFreq1)
+  {
     oscCounter1 = 0;
 
     PORTB ^= (_BV(PB1));
     boolean v = getPatternValue();
-    if (v == HIGH) {
+    if (v == HIGH)
+    {
       PORTB |= _BV(PB0);
-    } else {
+    }
+    else
+    {
       PORTB &= ~_BV(PB0);
     }
   }
@@ -159,25 +164,34 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
   return;
 }
 
-int mapPattern (int sample) {
+int mapPattern(int sample)
+{
 
-  if (sample <= STATE0) {
+  if (sample <= STATE0)
+  {
     return 0;
-  } else if (sample <= STATE1) {
+  }
+  else if (sample <= STATE1)
+  {
     return 1;
-  } else if (sample <= STATE2) {
+  }
+  else if (sample <= STATE2)
+  {
     return 2;
-  } else if (sample <= STATE3) {
+  }
+  else if (sample <= STATE3)
+  {
     return 3;
   }
   return 0;
 }
 
-void loop() {
+void loop()
+{
 
   int osc1_t = analogRead(A3);
-  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
+  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW, VCO1_L1_HIGH);
 
   int pattern_t = analogRead(A2);
-  pattern =  mapPattern(map(pattern_t, 0, 1023, 0,  40));
+  pattern = mapPattern(map(pattern_t, 0, 1023, 0, 40));
 }

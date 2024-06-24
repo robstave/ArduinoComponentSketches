@@ -19,7 +19,7 @@ down the whole cycle.  Using the reset pin is an option as well.
 ## Sample
 
 Here is a Sample of the sketch in action.
-https://soundcloud.com/user-692410397/85-0560-1a
+<https://soundcloud.com/user-692410397/85-0560-1a>
 
 ## Strategy
 

@@ -19,7 +19,7 @@ AND/OR/XOR them or or just sum them using resistors
 
 This is a sample of all 3 pins summed up and playing at the same time.
 
-https://soundcloud.com/user-692410397/85-0550a
+<https://soundcloud.com/user-692410397/85-0550a>
 
 you could easily send each pin to its own destination or whatever.
 
@@ -30,4 +30,3 @@ you could easily send each pin to its own destination or whatever.
 There is a pin left.  Either as a mode input or and output (xor ?)
 
 perhaps put all the code together (0550, 0551 and 0552) into a single sketch for ATTINY84
-
