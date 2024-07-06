@@ -10,7 +10,7 @@ Despite the simple approach, it works pretty ok.
 Its not well debounced ( none really), so consider a LPF on that pin. ( 1kohm/100nf or whatever)
 
 Basically, I have a counter that acts like millis(), but instead of millis, I generally utilize both timer 0 and 1 and just add a counter to one of em.  Its not milliseconds, but its usually linear and workable.  
-   
+
 Each Clock trigger will reset the wavetable index and find the delta which is used to calculate the time until the next wavetable index.
 
 There are 7 waveforms

@@ -1,16 +1,17 @@
 # ACS-85-0540
-4 Channel VCO/LFO for on/off
-==============
 
-## Overview:
+4 Channel VCO/LFO for on/off
+
+## Overview
+
 The intent was to have a source of frequencies, similar to a counter where each pin is a octave below the last.  In this case, there is an analog input to set the frequency and there is a div by 3 as well to get a nice third below.
 
-Each channel has an LFSR to control its on/off state. 
+Each channel has an LFSR to control its on/off state.
 In addition, each channel can be set up to warble a bit.  There is a parameter to do this.
 
-## Configuration:
+## Configuration
 
-```
+```c
 #define WARBLE 0
 #define VCO_LO 80   //A bigger number means a longer count = lower freq
 #define VCO_HIGH 8
@@ -22,22 +23,19 @@ really do not have a clue how small you can make it, but you will know it when y
 Listen for the interrupt happening faster than the code in the ISR can complete.
 
 **WARBLE** gives it an 8-bit sound.  If you set it to 0, its just a clean tone.
- 
 
-## Pinout:
+## Pinout
+
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0540/images/acs-85-0540.png)
 
-## Equivalent:
+## Equivalent
+
 Similar to pinouts of a CMOS counter, ANDed to LFSR ( when warble is 0)
 
-## Examples:
+## Examples
 
 No Warble
-https://soundcloud.com/user-692410397/3-audio-0002-2019-02-03-230205
+<https://soundcloud.com/user-692410397/3-audio-0002-2019-02-03-230205>
 
 With Warble
-https://soundcloud.com/user-692410397/acs-85-0540-with-warble
-
-
- 
-
+<https://soundcloud.com/user-692410397/acs-85-0540-with-warble>

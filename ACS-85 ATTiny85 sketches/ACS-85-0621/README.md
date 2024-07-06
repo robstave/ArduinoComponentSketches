@@ -27,4 +27,5 @@ An Optimization would be to set the output pin to the value of the input in the 
 ![Pinout](https://lh3.googleusercontent.com/pw/AP1GczNAEJUEg95uHpI8qy54ZwSy99SEWPdFA3lOAdKmxtcaeFBIrpO396svzrKC7tRPodbwYTKuWhdHCsl4DFD08tF5fbIH6CLrLWvdvZxSS-BF9f6ibnU=w2400)
 
 ## Timing references
-https://nathantypanski.com/blog/2014-10-29-tikz-timing.html
+
+<https://nathantypanski.com/blog/2014-10-29-tikz-timing.html>

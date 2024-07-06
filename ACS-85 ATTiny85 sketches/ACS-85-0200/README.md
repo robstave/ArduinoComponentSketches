@@ -39,4 +39,4 @@ output pwm pin should have a lpf.
 
 ## Cat
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200/images/cat-85-0200.jpg)
+![Pinout](https://lh3.googleusercontent.com/pw/AP1GczP0NQJbi-gJkrsdPhIFgNqph69_gZdAIe-KV922sRCK5FOpnmK7RJh0IPUWu3RD3Z0VenWHH0M8-0JbRemT9NvNpVYGUM_jFxD1MQLIYXcoKWNlSXU=w2400)

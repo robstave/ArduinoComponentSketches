@@ -46,4 +46,4 @@ mix no matter what.
 
 ## cat
 
- ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0210/images/cat-85-0210.jpg)
+ ![cat](https://lh3.googleusercontent.com/pw/AP1GczPr8oC_y8la2EA-zTQqu4a1mIA5reTaqYLhK0J7-bXLDeNTFpuWEwP0SywIvVl-zL0Hdb9UYsb8e_0eiBEs2r_NN-5NpfGe29n7inf6-ry5yPvAPV8=w2400)

@@ -31,7 +31,3 @@ you can even make one sweep in the other direction by flipping one of the sets. 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080/images/ACS-85-0080.png)
-
-## Cat
-
-![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0080/images/catnoise.jpg)

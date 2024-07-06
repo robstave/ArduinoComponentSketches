@@ -8,8 +8,7 @@ Takes a medium to high audio range clock signal on pin 7 and outputs a detuned f
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0351/images/ACS-85-0351.png) 
-
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0351/images/ACS-85-0351.png)
 
 ## Examples
 
@@ -24,7 +23,7 @@ Within that timer interrupt, we also just peg a counter.  I suppose you could us
 
 The clock signal is sent to pin 7 where it has a pin change interrupt.  
 When the pin changes, we read the counter and take a difference from  the previous value.  
-We are in effect, sampling the output counter at the input clock speed.  That will give us 
+We are in effect, sampling the output counter at the input clock speed.  That will give us
 the timer count that we need to output a signal at the same frequency as the input.
 
 Once we know that, we can tweek that to make any relative frequency.

@@ -11,9 +11,9 @@ Two inputs:
 
 Three Outputs:
 
- - LFO as squarewave
- - !LFO as squarewave
- - LFO at 1/2 freq as squarewave
+- LFO as squarewave
+- !LFO as squarewave
+- LFO at 1/2 freq as squarewave
 
 There is another pin that is putting out the LFO at 1/2 the freq, but thats just a free pin.
 

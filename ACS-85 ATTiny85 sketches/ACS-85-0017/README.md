@@ -19,7 +19,7 @@ Three Outputs: like CD4017
 
 However there is also a software bool that toggles between gate mode ( regular ) and a trigger mode.
 
-```
+```c
 0001
 0010
 0100
@@ -39,4 +39,6 @@ However there is also a software bool that toggles between gate mode ( regular )
 
 CD4017
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0017/images/cat-cnt.jpg)
+## Cat
+
+![Pinout](https://lh3.googleusercontent.com/pw/AP1GczO08Bf2Slzg2iBTKbaGH_2BjXIy2HDOWUolclef5130hK0OrXo-b3mFdiUwAUemvSolPc7voonlrYOwCLp7HCt7M8Z8Vd2KZTkEdeK2RIq_7yXkpSY=w2400)

@@ -19,9 +19,9 @@ Note this uses fast PWM for 2 of the pins...but one of them is a bit lower in re
 PWM is FAST for PB0/PB1 but much slower on PB4. Like 30khz vs 500 hz I think.
 
 I might rewrite this because of that, but visually, and if your using LEDs, it looks fine.
-A Good discussion is here: https://forum.arduino.cc/t/pwm-frequency-change-attiny85/170321
+A Good discussion is here: <https://forum.arduino.cc/t/pwm-frequency-change-attiny85/170321>
 
-https://forum.arduino.cc/t/attiny85-fast-pwm-on-timer-1/993958/14
+<https://forum.arduino.cc/t/attiny85-fast-pwm-on-timer-1/993958/14>
 
 I would say not ready for prime time, but workable.
 
@@ -41,4 +41,6 @@ You Will need a low pass filter on the pwm pins.
 
 ## Notes
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0031/images/lfocat.jpg)
+## Cat
+
+![Pinout](https://lh3.googleusercontent.com/pw/AP1GczOC1K8SlLH3o_JWJbeBLbpNGRXPGJOU2n_DlStPM9GIqVDu2-h75HmkeozqkKQSol8QVhl8gmYhv1EUyc8cFQQXYUesFKexASVdpav7LZkyZ5N6aDQ=w2400)

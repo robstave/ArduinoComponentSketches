@@ -139,7 +139,7 @@ I have a numbering system so I can halfway keep these things in order.  Its more
 | **500-699  Shift, Delay, Melody Makers, Atari Punk Console** ||
 |  |  |  |
 [ACS-85-0500](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0500) | Component | Atari Punk Console
-[ACS-85-0501](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-051) | Component | Atari Punk Console 2
+[ACS-85-0501](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0501) | Component | Atari Punk Console 2
 [ACS-85-0505](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0505) | Component | Nand synth
 [ACS-85-0506](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0506) | Component | Nand DX
 [ACS-85-0510](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0510) | Shift Register | Simple 16 bit Shift Register

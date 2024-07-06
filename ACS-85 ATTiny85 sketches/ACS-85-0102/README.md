@@ -19,6 +19,6 @@ Although it is DDS looking, its just a squarewave and not really PWM.  There is 
 
 ## Cat
 
-![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102/images/cat-85-0102.jpg)
+![cat](https://lh3.googleusercontent.com/pw/AP1GczN4V7c3jaEn1PuVa0TQKbjTyCYEcNe_QkAw2lVm4O-vy85D3_AqJ9p4BKirR1JyaW-S3ajkoGR29aRTJnx553KPvsPc9X7VuOXEaIKhtnNYntgxl0A=w2400)
 
  

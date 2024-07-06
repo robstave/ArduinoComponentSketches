@@ -57,7 +57,7 @@ There is a noise pin too...so you can use this for a drum and mix in noise too.
 
 ## cat
 
-![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0100/images/catbeep.jpg)
+![cat](https://lh3.googleusercontent.com/pw/AP1GczN1pW-NlZ_3pmSYMmXPf63qX8avGdPsXwuX4dK2z8Bi5cntuqmGGHDtP5wUjhqXfG5jtAKURfwlCSOam8pr-t-fd_ALhN9QF2WAr3IymBvfdopFy18=w2400)
 
 
  

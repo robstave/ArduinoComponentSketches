@@ -19,4 +19,4 @@ Probability Drop gate
 
 ## Notes
 
-![cat](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0617/images/cb.jpg)
+![cat](https://lh3.googleusercontent.com/pw/AP1GczMg5SH6CCOTQXf78aSHSLzBdyGgyeB29s44bxJRpNkK0WTQRxI50tMfBt5LFiYgB2jWD66tcfIBNAOFDQ-VSoJ6LCt_1b5d0F4i6BQPRqsmYZbN6lg=w2400)

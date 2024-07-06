@@ -1,7 +1,7 @@
 # ACS-85-0630
 
 Sequencer - Turning style
- 
+
 ## Overview
 
 One Knob Sequencer in the style of turning machine sequencer.

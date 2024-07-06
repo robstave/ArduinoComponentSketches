@@ -39,8 +39,11 @@ equation  0 & stuff = zero.
 ## Related Sketches
 
 ![Bytebeat ( Bitbeat v1)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650)
+
 ![Bytebeat ( Bitbeat v2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651)
+
 ![Bytebeat ( Bitbeat v2) clocked](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652)
+
 ![Bytebeat ( Bitbeat 2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653)
 
 ## Other links

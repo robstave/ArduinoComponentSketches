@@ -11,7 +11,7 @@ It turns out that there are even ways to achieve cutoffs, resonance ( in a sense
 The nice thing is that it all can be done with just a microcontroller.  No super difficult DSP or analog filtering needed, however the ATTINY is still not exactly a good fit for this.  Still, it makes for an interesting exploration.
 
 The first sketch is just me looking at the WIKI and seeing if I can do part of that.
-This is almost exactly like the first 2 steps in https://en.wikipedia.org/wiki/Phase_distortion_synthesis without the windowing.
+This is almost exactly like the first 2 steps in <https://en.wikipedia.org/wiki/Phase_distortion_synthesis> without the windowing.
 
 An additional bool pin 0 applies a dampening to the last few values as in step 3 of above.
 Its subtle, but makes the resonance sweep a bit more evident.
@@ -24,17 +24,16 @@ It would be dead simple to have this point to a wave table,  ( See ACS-85-121 )
 
 ## References
 
-There is some code from Jan Ostman https://github.com/4-3is4-me/CZ1
+There is some code from Jan Ostman <https://github.com/4-3is4-me/CZ1>
 
 That is supposed to be a version of the CZ1.  Im gonna say Im not sure how that math works out.
 Again, there are a many strategies for Phase distortion, this is more like the simplest.
 
-https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf
+<https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf>
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120/images/wave.png)
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0120/images/attune.png)
-
 
 ## Pinout
 

@@ -5,7 +5,7 @@
 ## Overview
 
 Simple version of phase distortion.  See how its described here.
-https://electricdruid.net/phase-distortion-synthesis/
+<https://electricdruid.net/phase-distortion-synthesis/>
 
 Thats just a part of what phase distortion synthesis is.  Im just exploring that
 little example.  See ACS-85-120 for a better discription
@@ -35,11 +35,11 @@ It does seem to work a bit better with cosine.
 
 ## References
 
-https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf
+<https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf>
 
-https://electricdruid.net/phase-distortion-synthesis/
+<https://electricdruid.net/phase-distortion-synthesis/>
 
-http://www.technoblogy.com/show?QVN
+<http://www.technoblogy.com/show?QVN>
 
 ## Pinout
 
