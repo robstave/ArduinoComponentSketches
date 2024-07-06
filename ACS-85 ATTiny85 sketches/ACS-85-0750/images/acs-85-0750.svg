@@ -8,13 +8,12 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="acs-85-0501.svg"
-   inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0501\images\ACS-85-0501.png"
+   sodipodi:docname="acs-85-0750.svg"
+   inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0750\images\acs-85-0750.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -29,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="-475"
-     inkscape:cy="-347"
+     inkscape:zoom="2"
+     inkscape:cx="57.25"
+     inkscape:cy="61.25"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -163,7 +162,7 @@
          id="tspan4264"
          x="43.836723"
          y="919.79486"
-         style="font-size:27.5px;line-height:1.25">ACS-85-0501</tspan></text>
+         style="font-size:27.5px;line-height:1.25">ACS-85-0750</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -282,7 +281,7 @@
          id="tspan4148-4-3-8-0-2"
          x="194.29041"
          y="1009.3845"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">nc</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">Analog out</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -295,7 +294,7 @@
          id="tspan4148-4-3-8-0-2-5"
          x="196.18762"
          y="983.89148"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">nc</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">SCL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -308,35 +307,7 @@
          id="tspan4148-4-3-8-0-2-2"
          x="194.01483"
          y="1034.3412"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">out</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="35.214752"
-       y="1009.926"
-       id="text4146-7-22-4-9-2-7-7"
-       inkscape:transform-center-x="-162.00001"
-       inkscape:transform-center-y="26.624999"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4148-4-3-8-0-2-2-3"
-         x="35.214752"
-         y="1009.926"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">One shot</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="56.566345"
-       y="984.35596"
-       id="text4146-7-22-4-9-2-7-7-0-2"
-       inkscape:transform-center-x="-162.00001"
-       inkscape:transform-center-y="26.624969"><tspan
-         sodipodi:role="line"
-         id="tspan4148-4-3-8-0-2-2-3-8-3"
-         x="56.566345"
-         y="984.35596"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">Osc</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">SDA</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -349,9 +320,9 @@
          x="36.793747"
          y="940.83588"
          style="font-size:20px;line-height:1.25"
-         id="tspan4192">Atari Punk Console</tspan></text>
+         id="tspan4192">I2C Button Master</tspan></text>
     <g
-       transform="translate(18.24801,66.987008)"
+       transform="translate(46.84176,41.205759)"
        id="g4917-7">
       <path
          inkscape:connector-curvature="0"
@@ -363,86 +334,6 @@
          id="path4204-8-9-3"
          d="m 213.3343,970.0091 v -6.67928 l 5.30067,3.33964 z"
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.841483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <image
-       y="902.36218"
-       x="3.5"
-       id="image4207"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAI5JREFU SIlj3HTJ8T8DHYGv7j4UPhM9LccGWNAF0F24+bITVS1EN2/whQC1fUwIDHgIjDoAIw2gA/RcQSog lKYGPgQo9SGlYOBDgFIDKC03hl4IULukHPgQoHfZjw4GPgTQBWjdHkAHAx8CI74kHHUAySUhoVxC ai4afCFAar6nNBcNfAjQuudDCAx4CAAAtS4lOD5dZ1MAAAAASUVORK5CYII= "
-       preserveAspectRatio="none"
-       height="30"
-       width="32"
-       style="fill:#ff0000" />
-    <image
-       y="902.86218"
-       x="-268.5"
-       id="image4218"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAI5JREFU SIlj3HTJ8T8DHYGv7j4UPhM9LccGWNAF0F24+bITVS1EN2/whQC1fUwIDHgIjDoAIw2gA/RcQSog lKYGPgQo9SGlYOBDgFIDKC03hl4IULukHPgQoHfZjw4GPgTQBWjdHkAHAx8CI74kHHUAySUhoVxC ai4afCFAar6nNBcNfAjQuudDCAx4CAAAtS4lOD5dZ1MAAAAASUVORK5CYII= "
-       preserveAspectRatio="none"
-       height="30"
-       width="32"
-       transform="scale(-1,1)" />
-    <g
-       id="g4290-5-8"
-       transform="translate(-211.13858,16.728881)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4204-0-1-1-7"
-         d="m 233.31131,968.4131 0,-6.10178 5.36237,3.05089 z"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.80895102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="222.35355"
-         y="963.61218"
-         id="text4250-8-3"><tspan
-           sodipodi:role="line"
-           id="tspan4252-3-8"
-           x="222.35355"
-           y="963.61218"
-           style="font-size:10px;line-height:1.25">v</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 236.10355,965.36221 -12.75,-0.25"
-         id="path4276-7-7"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.63599998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path4284-0-6"
-         cx="221.22855"
-         cy="964.98718"
-         r="2.125" />
-    </g>
-    <g
-       id="g4290-5-8-8"
-       transform="translate(-211.13858,41.728881)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4204-0-1-1-7-6"
-         d="m 233.31131,968.4131 0,-6.10178 5.36237,3.05089 z"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.80895102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="222.35355"
-         y="963.61218"
-         id="text4250-8-3-0"><tspan
-           sodipodi:role="line"
-           id="tspan4252-3-8-2"
-           x="222.35355"
-           y="963.61218"
-           style="font-size:10px;line-height:1.25">v</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 236.10355,965.36221 -12.75,-0.25"
-         id="path4276-7-7-1"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.63599998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path4284-0-6-2"
-         cx="221.22855"
-         cy="964.98718"
-         r="2.125" />
     </g>
   </g>
 </svg>

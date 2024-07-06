@@ -118,4 +118,7 @@ Collection of sketches for ATTiny to replace logic blocks in lunetta like circui
 [ACS-85-0705](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0705) | Controller | Two pin Tap Tempo
 [ACS-85-0710](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710) | Controller | Button Select 3 pin
 [ACS-85-0711](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0711) | Controller | Button Select 3 pin binary
+[ACS-85-0750](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0750) | I2C | Single Byte I2c Master fetch
+[ACS-85-0751](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0751) | I2C | Button Byte I2c Client  
+[ACS-85-0752](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0752) | I2C | Rotory Byte I2c Client 
 | **900-999  Other** ||

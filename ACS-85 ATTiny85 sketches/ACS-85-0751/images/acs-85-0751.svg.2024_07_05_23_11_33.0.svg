@@ -8,13 +8,12 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="acs-85-0501.svg"
-   inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0501\images\ACS-85-0501.png"
+   sodipodi:docname="acs-85-0751.svg"
+   inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0750\images\acs-85-0750.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -29,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="-475"
-     inkscape:cy="-347"
+     inkscape:zoom="2"
+     inkscape:cx="57.25"
+     inkscape:cy="60.75"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -64,13 +63,19 @@
        width="99.526703"
        height="99.526703"
        x="82.959686"
-       y="948.03149" />
+       y="948.03149"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="86.590332"
        y="961.41992"
-       id="text4146"><tspan
+       id="text4146"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148"
          x="86.590332"
@@ -81,7 +86,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="86.678223"
        y="986.42749"
-       id="text4146-0"><tspan
+       id="text4146-0"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-1"
          x="86.678223"
@@ -92,7 +100,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="86.719421"
        y="1011.2787"
-       id="text4146-7"><tspan
+       id="text4146-7"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4"
          x="86.719421"
@@ -103,7 +114,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="86.815552"
        y="1036.2147"
-       id="text4146-9"><tspan
+       id="text4146-9"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-8"
          x="86.815552"
@@ -114,7 +128,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="168.38977"
        y="1036.3158"
-       id="text4146-1"><tspan
+       id="text4146-1"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-2"
          x="168.38977"
@@ -125,7 +142,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="168.05872"
        y="1010.704"
-       id="text4146-2"><tspan
+       id="text4146-2"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-7"
          x="168.05872"
@@ -136,7 +156,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="167.68646"
        y="985.77332"
-       id="text4146-8"><tspan
+       id="text4146-8"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-3"
          x="167.68646"
@@ -147,7 +170,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="169.20331"
        y="961.19995"
-       id="text4146-8-5"><tspan
+       id="text4146-8-5"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-3-6"
          x="169.20331"
@@ -158,74 +184,104 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="43.836723"
        y="919.79486"
-       id="text4262"><tspan
+       id="text4262"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4264"
          x="43.836723"
          y="919.79486"
-         style="font-size:27.5px;line-height:1.25">ACS-85-0501</tspan></text>
+         style="font-size:27.5px;line-height:1.25">ACS-85-0751</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
        width="7.6689301"
        height="8.4189301"
        x="75.82605"
-       y="953.46045" />
+       y="953.46045"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-4"
        width="7.6689301"
        height="8.4189301"
        x="75.82605"
-       y="1028.4606" />
+       y="1028.4606"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-45"
        width="7.6689301"
        height="8.4189301"
        x="75.82605"
-       y="1003.4604" />
+       y="1003.4604"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-5"
        width="7.6689301"
        height="8.4189301"
        x="75.82605"
-       y="978.46045" />
+       y="978.46045"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-5"
        width="7.6689301"
        height="8.4189301"
        x="182.13858"
-       y="952.71045" />
+       y="952.71045"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-4-4"
        width="7.6689301"
        height="8.4189301"
        x="182.13858"
-       y="1027.7103" />
+       y="1027.7103"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-45-1"
        width="7.6689301"
        height="8.4189301"
        x="182.13858"
-       y="1002.7104" />
+       y="1002.7104"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266-7-9-5-8"
        width="7.6689301"
        height="8.4189301"
        x="182.13858"
-       y="977.71045" />
+       y="977.71045"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="102.48627"
        y="972.63452"
-       id="text4146-7-22"><tspan
+       id="text4146-7-22"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3"
          x="102.48627"
@@ -236,7 +292,10 @@
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="46.879578"
        y="1036.7596"
-       id="text4146-7-22-4"><tspan
+       id="text4146-7-22-4"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8"
          x="46.879578"
@@ -249,7 +308,10 @@
        y="961.37903"
        id="text4146-7-22-4-9"
        inkscape:transform-center-x="-161.99999"
-       inkscape:transform-center-y="26.624999"><tspan
+       inkscape:transform-center-y="26.624999"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0"
          x="194.45831"
@@ -262,7 +324,10 @@
        y="962.13452"
        id="text4146-7-22-4-9-0"
        inkscape:transform-center-x="-162.00001"
-       inkscape:transform-center-y="26.624999"><tspan
+       inkscape:transform-center-y="26.624999"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-8"
          x="40.732727"
@@ -277,12 +342,13 @@
        inkscape:transform-center-x="-161.99999"
        inkscape:transform-center-y="26.624999"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2"
          x="194.29041"
          y="1009.3845"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">nc</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">LED</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -290,12 +356,15 @@
        y="983.89148"
        id="text4146-7-22-4-9-2-4"
        inkscape:transform-center-x="-162.00001"
-       inkscape:transform-center-y="26.624999"><tspan
+       inkscape:transform-center-y="26.624999"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-5"
          x="196.18762"
          y="983.89148"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">nc</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">SCL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -303,12 +372,15 @@
        y="1034.3412"
        id="text4146-7-22-4-9-2-7"
        inkscape:transform-center-x="-161.99999"
-       inkscape:transform-center-y="26.624969"><tspan
+       inkscape:transform-center-y="26.624969"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2"
          x="194.01483"
          y="1034.3412"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">out</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">SDA</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -318,12 +390,13 @@
        inkscape:transform-center-x="-162.00001"
        inkscape:transform-center-y="26.624999"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3"
          x="35.214752"
          y="1009.926"
-         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">One shot</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">In</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -331,7 +404,10 @@
        y="984.35596"
        id="text4146-7-22-4-9-2-7-7-0-2"
        inkscape:transform-center-x="-162.00001"
-       inkscape:transform-center-y="26.624969"><tspan
+       inkscape:transform-center-y="26.624969"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3-8-3"
          x="56.566345"
@@ -344,15 +420,19 @@
        y="940.83588"
        id="text4262-7"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"><tspan
          sodipodi:role="line"
          x="36.793747"
          y="940.83588"
          style="font-size:20px;line-height:1.25"
-         id="tspan4192">Atari Punk Console</tspan></text>
+         id="tspan4192">I2C Button Client</tspan></text>
     <g
-       transform="translate(18.24801,66.987008)"
-       id="g4917-7">
+       transform="translate(-151.43948,40.737009)"
+       id="g4917-7"
+       inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0751\images\acs-85-0751.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          inkscape:connector-curvature="0"
          id="path4202-3-3-3"
@@ -363,86 +443,6 @@
          id="path4204-8-9-3"
          d="m 213.3343,970.0091 v -6.67928 l 5.30067,3.33964 z"
          style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.841483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <image
-       y="902.36218"
-       x="3.5"
-       id="image4207"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAI5JREFU SIlj3HTJ8T8DHYGv7j4UPhM9LccGWNAF0F24+bITVS1EN2/whQC1fUwIDHgIjDoAIw2gA/RcQSog lKYGPgQo9SGlYOBDgFIDKC03hl4IULukHPgQoHfZjw4GPgTQBWjdHkAHAx8CI74kHHUAySUhoVxC ai4afCFAar6nNBcNfAjQuudDCAx4CAAAtS4lOD5dZ1MAAAAASUVORK5CYII= "
-       preserveAspectRatio="none"
-       height="30"
-       width="32"
-       style="fill:#ff0000" />
-    <image
-       y="902.86218"
-       x="-268.5"
-       id="image4218"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAI5JREFU SIlj3HTJ8T8DHYGv7j4UPhM9LccGWNAF0F24+bITVS1EN2/whQC1fUwIDHgIjDoAIw2gA/RcQSog lKYGPgQo9SGlYOBDgFIDKC03hl4IULukHPgQoHfZjw4GPgTQBWjdHkAHAx8CI74kHHUAySUhoVxC ai4afCFAar6nNBcNfAjQuudDCAx4CAAAtS4lOD5dZ1MAAAAASUVORK5CYII= "
-       preserveAspectRatio="none"
-       height="30"
-       width="32"
-       transform="scale(-1,1)" />
-    <g
-       id="g4290-5-8"
-       transform="translate(-211.13858,16.728881)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4204-0-1-1-7"
-         d="m 233.31131,968.4131 0,-6.10178 5.36237,3.05089 z"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.80895102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="222.35355"
-         y="963.61218"
-         id="text4250-8-3"><tspan
-           sodipodi:role="line"
-           id="tspan4252-3-8"
-           x="222.35355"
-           y="963.61218"
-           style="font-size:10px;line-height:1.25">v</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 236.10355,965.36221 -12.75,-0.25"
-         id="path4276-7-7"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.63599998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path4284-0-6"
-         cx="221.22855"
-         cy="964.98718"
-         r="2.125" />
-    </g>
-    <g
-       id="g4290-5-8-8"
-       transform="translate(-211.13858,41.728881)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4204-0-1-1-7-6"
-         d="m 233.31131,968.4131 0,-6.10178 5.36237,3.05089 z"
-         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.80895102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="222.35355"
-         y="963.61218"
-         id="text4250-8-3-0"><tspan
-           sodipodi:role="line"
-           id="tspan4252-3-8-2"
-           x="222.35355"
-           y="963.61218"
-           style="font-size:10px;line-height:1.25">v</tspan></text>
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 236.10355,965.36221 -12.75,-0.25"
-         id="path4276-7-7-1"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.63599998;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path4284-0-6-2"
-         cx="221.22855"
-         cy="964.98718"
-         r="2.125" />
     </g>
   </g>
 </svg>
