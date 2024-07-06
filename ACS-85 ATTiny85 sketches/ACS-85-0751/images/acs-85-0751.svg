@@ -315,7 +315,7 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#010000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="35.214752"
-       y="1009.926"
+       y="985.55103"
        id="text4146-7-22-4-9-2-7-7"
        inkscape:transform-center-x="-162.00001"
        inkscape:transform-center-y="26.624999"
@@ -324,7 +324,7 @@
          sodipodi:role="line"
          id="tspan4148-4-3-8-0-2-2-3"
          x="35.214752"
-         y="1009.926"
+         y="985.55103"
          style="font-size:8.4375px;line-height:1.25;fill:#010000;fill-opacity:1">In</tspan></text>
     <text
        xml:space="preserve"
@@ -340,7 +340,7 @@
          style="font-size:20px;line-height:1.25"
          id="tspan4192">I2C Button Client</tspan></text>
     <g
-       transform="translate(-151.43948,40.737009)"
+       transform="translate(-151.43948,16.362009)"
        id="g4917-7">
       <path
          inkscape:connector-curvature="0"
