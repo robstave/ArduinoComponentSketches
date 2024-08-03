@@ -1,15 +1,12 @@
 /**
-   ACS-85-0106
-   ATTiny85 Cowbell XOR Edition
-
-   Cowbell simulator.  Same as 105, but its a little more FM sounding
-   as there is an XOR involved.
+   ACS-85-0107
+   ATTiny85 Metal/Noise/selection
 
    Sketch
 
    External pin 1       = Reset (not used)
    External pin 2 (PB3) = input 0 decay
-   External pin 3 (PB4) = input 1 freq/tune
+   External pin 3 (PB4) = input 1 select
    External pin 4       = GND
    External pin 5 (PB0) = nc  ( or you can use as a switch)
    External pin 6 (PB1) = out pwm
@@ -17,40 +14,65 @@
    External pin 8       = Vcc
 
    V 1.0  -  First Version
-   The code as is sums two squarewaves to create a cowbell sound ( roland style)
+   The code does math on  squarewaves to create a cowbell sound ( roland style)
 
-   You can,  if you would like, disable the tuning and just stick with the classic
-   frequencies or add a switch to toggle that.  The code as is allows for tuning.
-   Its not going to be super.  If you want to replace the lpf with a bandpass you
-   can achieve a closer sound.  Your going to have to google that though
+   In this case,
 
-   Rob Stave (Rob the fiddler) ccby 2023
+   There are 6 sections
+
+   ClassicCB 0  - Cowbell Classic ( See ACS-85-0105)
+   Xor2 1 - Cowbell Xor ( See ACS-85-0106)
+   Xor3 2 - Cowbell 3Xor/other ( See ACS-85-0105)
+   Xor4 3  - 4 xors (its getting noisy)
+   Drop 4 - 2xor with a tweek/drop in freq
+   Drop2 5 - 3xor with a tweek/drop in freq
+
+   The "Drop" was an attempt to drop down the frequency.  It didnt turn out that
+   way..perhaps because of an aliasing/whatever that the xor brings to the table.
+ 
+   In not messing with tuning in this case.  But there is a pin if you want to toggle 
+   sets of frequencies or just find a way to steal code from the others.
+
+   Also, I did some optimizations in the code.  the "delay" is not really precise
+   and the processing that happens in the loops can effect the envelope.
+
+   Rob Stave (Rob the fiddler) ccby 2024
 */
 
 //               ATTiny85 overview
 //                     +-\/-+
 //                Reset 1|    |8  VCC
 // (pin3)     decay PB3 2|    |7  PB2 (pin2/int0) trigger
-// (pin4)      tune PB4 3|    |6  PB1 (pin1) out pwm
-//                  GND 4|    |5  PB0 (pin0) classic = high
+// (pin4)    select PB4 3|    |6  PB1 (pin1) out pwm
+//                  GND 4|    |5  PB0 (pin0) nc
 //
 
-// twin notes if tuning is involved.  Not a lot of research was
-// done to get these numbers...they kinda just work
-#define Note1Min 1000
-#define Note1Max 3000
-#define Note2Min 600
-#define Note2Max 2400
+ 
 
 // If mode is classic, then there is no tuning
 #define ClassicNote1 2721
 #define ClassicNote2 1890
+#define ClassicNote3 2200
+#define ClassicNote4 2900
 
 // dds
 volatile unsigned int Acc1 = 0;
-volatile unsigned int Note1 = ClassicNote1; // cow freq 1
+volatile unsigned int Note1 = ClassicNote1;
 volatile unsigned int Acc2 = 0;
-volatile unsigned int Note2 = ClassicNote2; // Middle C
+volatile unsigned int Note2 = ClassicNote2;
+volatile unsigned int Acc3 = 0;
+volatile unsigned int Note3 = ClassicNote3;
+volatile unsigned int Acc4 = 0;
+volatile unsigned int Note4 = ClassicNote4;
+
+#define ClassicCB 0
+#define Xor2 1
+#define Xor3 2
+#define Xor4 3
+#define Drop 4
+#define Drop2 5
+
+volatile byte scene = 0;
 
 // dunno if my interrupts are messing with millis()..so this this
 // counter does basically the same thing...more like 1/10 of millis
@@ -133,43 +155,39 @@ void clockCounter() // called by interrupt
 void loop()
 {
 
-  static int len;   // length of env
-  static int notes; // tune of sorts
+  static int len;    // length of env
+  static int select; // select and tune of sorts
   static uint32_t oldTime = 0;
+
+  static bool doWacky = true;
 
   boolean triggered = false;
 
+byte loop = 0;
   while (true)
   {
 
+   if (loop % 3 == 0){
     len = analogRead(A3) >> 3; // set length
+    }
+    loop++;
 
     if (gateTriggered == true)
     {
-      notes = analogRead(A2); // set note
-    }
-
-
-    // Options.  you can use PB0 as a button to just do the classic freqs
-    // or in this case, if the pot is all the way down...just use that.n
-    // if (digitalRead(0) == LOW) {
-    if (notes < 25)
-    {
-
-      Note1 = ClassicNote1; // cow freq 1
-      Note2 = ClassicNote2; // Middle C
-    }
-    else
-    {
-      Note1 = map(notes, 0, 1023, Note1Min, Note1Max);
-      Note2 = map(notes, 0, 1023, Note2Min, Note2Max);
-    }
-
-    if (gateTriggered == true)
-    {
+      select = analogRead(A2); // set note
+      scene = mapValue(select);
+   
+     
       gateTriggered = false;
       env = 255;
       triggered = true;
+
+    
+      Note1 = ClassicNote1; //
+      Note2 = ClassicNote2; //
+      Note3 = ClassicNote3; //
+      Note4 = ClassicNote4; //
+   
     }
 
     unsigned long currentMillis = notReallyMillis;
@@ -178,6 +196,12 @@ void loop()
     {
       oldTime = currentMillis;
       env--;
+
+      if (scene == Drop || scene == Drop2)
+      {
+        Note1 = Note1 - (255 - env);
+        Note3 = Note3 - (255 - env);
+      }
     }
 
     if (env == 0)
@@ -187,15 +211,39 @@ void loop()
   }
 }
 
+// I could do fancy loops and math here, but its easier these days to just ask chatgpt to redesign this if/else statement
+// based on my needs.
+byte mapValue(int input) {
+    if (input <= 170) {
+        return ClassicCB;
+    } else if (input <= 341) {
+        return Xor2;
+    } else if (input <= 512) {
+        return Xor3;
+    } else if (input <= 683) {
+        return Xor4;
+    } else if (input <= 854) {
+        return Drop;
+    } else {
+        return Drop2;
+    }
+}
+
+
 ISR(TIMER0_COMPA_vect)
 {
 
   notReallyMillis++;
   Acc1 = Acc1 + Note1;
   Acc2 = Acc2 + Note2;
-  byte x1 = (Acc1 >> 8) & 0x80;
-  byte x2 = (Acc2 >> 8) & 0x80;
-
+  Acc3 = Acc3 + Note3;
+  Acc4 = Acc4 + Note4;
+  // Like DDS..but really squarewave
+// dds-ish squarewaves
+  bool a1 = (Acc1 & 0x8000) != 0;
+  bool a2 = (Acc2 & 0x8000) != 0;
+  bool a3 = (Acc3 & 0x8000) != 0;
+  bool a4 = (Acc4 & 0x8000) != 0;
   // so an easy envelope is just the env variable that drops linear/
   //  byte amp = env;// env is a number from 255 to 0...its a linear drop off
 
@@ -204,17 +252,87 @@ ISR(TIMER0_COMPA_vect)
   // to map to the proper vaules I need to do 255 - env...no biggie
   byte amp = pgm_read_byte(&decay_tbl[255 - env]);
 
-  // sum the waveforms ( consider an xor for something else and wacky)
-
-  bool a1 = x1 > 100;
-  bool a2 = x2 > 100;
-
-  if (a1 ^ a2)
+  if (amp == 0)
   {
-    OCR1A = amp;
+    return;
   }
-  else
+
+ 
+
+  // This is the a basic add.  If both are high, use the amplitude
+  // if just one, divide by 2 ( a cheap shift)
+  // else 0
+  
+  if (scene == ClassicCB)
   {
-    OCR1A = 0;
+    if (a1 && a2)
+    {
+      OCR1A = amp;
+    }
+    else if (a1 || a2)
+    {
+      OCR1A = amp / 2;
+    }
+    else
+    {
+      OCR1A = 0;
+    }
+
+    return;
   }
+
+  // Xor.  Gonna be more ringy. Note we are only using 2 of the 4 signals here
+  // Drop and X02 are the same math, but the drop value also has a little
+  // check in the dds that drops the frequency over time.
+
+  if (scene == Xor2 || scene == Drop)
+  {
+    if (a1 ^ a2)
+    {
+      OCR1A = amp;
+    }
+    else
+    {
+      OCR1A = 0;
+    }
+    return;
+  }
+
+  // xor in another signal
+  if (scene == Xor3 || scene == Drop)
+  {
+    if (a1 ^ a2 ^ a3)
+    {
+      OCR1A = amp;
+    }
+    else
+    {
+      OCR1A = 0;
+    }
+    return;
+  }
+
+  // xor em all
+
+  if (scene == Xor4)
+  {
+    if (a1 ^ a2 ^ a3 ^ a4)
+    {
+      OCR1A = amp;
+    }
+    else
+    {
+      OCR1A = 0;
+    }
+    return;
+  }
+
+
+   if (a1 )
+    {
+      OCR1A = amp;
+    } else {
+      OCR1A = 0;
+    }
+
 }

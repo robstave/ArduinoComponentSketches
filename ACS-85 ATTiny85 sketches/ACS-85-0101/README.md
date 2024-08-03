@@ -1,27 +1,27 @@
 # ACS-85-0101
 
- ATTiny85 Blip selectable
+ATTiny85 Blip selectable
 
 ## Overview
 
-Debounced input to trigger a bleep.  If you were ever looking for a simple chip that had a button to trigger a sound. This is it.
+Debounced input to trigger a bleep. If you were ever looking for a simple chip that had a button to trigger a sound. This is it.
 
-Similar to ACS-85-0101, without the noise channel.  Just selections.
+Similar to ACS-85-0101, without the noise channel. Instead you can select the beepy bloopy sounds you want.
 
-There is a pitch and a note length.  From there, most of the configuration is internal.  The sound that is made is based on manipulating counters, although the generation is a super simple version of DDS.  DDS of a sqaure wave.
+There is a pitch and a note length. From there, most of the configuration is internal.  
+Change some code, recompile for each variation. ( See ASC-85-0101) to allow you to
+select.
 
-So, to create a sound of a certain pitch, you calculate the value of an offset (Note) which is added to an accumulator.  This indexes into a wave table.
-
-The wave table is somewhat virtual though as you may have a 16 bit number, but only use the top bits to index into the actual table of values.  
-
-In THIS case, we are only using the top bit, so there is not even the need for a table.  Its just a counter making a squarewave.
+The sound that is made is based on DDS, kinda. There is no waveform, just the counter and
+the top bit is the squarewave. Other sounds are based on this and manipulating counters.
+Feel free to add others.  
 
 See the squarewave version here.
 <http://www.technoblogy.com/show?QVN>
 
 You can make all kinds of sounds on top of that by tweaking the accumulator.
 
-Gernerally, its  
+Gernerally, its
 
 ```c
 accumulator = accumulator + note
@@ -35,11 +35,8 @@ There are 3 options.
 
 ## Output
 
-Although it is DDS looking, its just a squarewave and not really PWM.  There is no "decay" or anything like that.
+Although it is DDS looking, its just a squarewave and not really PWM. There is no "decay" or anything like that.
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0101/images/ACS-85-0101.png)
-
- 
- 

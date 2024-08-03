@@ -25,7 +25,4 @@ Im Juicing up the Analog write by messing with the timer, but that messes with D
 
 
 
-
-
-
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0034/images/cat-lz.jpg)
+ 

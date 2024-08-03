@@ -49,6 +49,7 @@
 #define SINGLE_SOUND 0
 #define ROTATE_SOUND 1
 #define RANDOM_SOUND 2
+// note if you want to SELECT a sound...See ACS-85-0101
 
 #define CHOOSE_SOUND SINGLE_SOUND
 // if you want just one sound, set it here with ABOVE as SINGLE_SOUND
@@ -144,8 +145,10 @@ ISR(TIMER0_COMPA_vect) // timer compare interrupt service routine
     else if (sound == BLIP)
     {
 
-      //  Blip...add more to accum as we go longer down the note.
-      //  Arp Up sound
+      //  Blip... Arp Up sound
+      //  The multiplier is a vaule that goes from 
+      //  0 to 6 over the course of the note.
+      //  In this case it will arp up
       Acc1 = Acc1 + StartNote + StartNote * multiplier;
     }
     else if (sound == BLIZ)

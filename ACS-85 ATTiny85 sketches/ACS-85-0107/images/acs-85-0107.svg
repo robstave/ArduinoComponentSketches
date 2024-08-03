@@ -8,8 +8,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="acs-85-0106.svg"
-   inkscape:export-filename="C:\Users\Stave\stave_acs_get\ACS-85 ATTiny85 sketches\ACS-85-0010\images\acs-85-0010.png"
+   sodipodi:docname="acs-85-0107.svg"
+   inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0107\images\acs-85-0107.png"
    inkscape:export-xdpi="89.699997"
    inkscape:export-ydpi="89.699997"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -35,9 +35,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25"
-     inkscape:cx="1166"
-     inkscape:cy="-186"
+     inkscape:zoom="2"
+     inkscape:cx="258.75"
+     inkscape:cy="110.75"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -199,7 +199,7 @@
          id="tspan4264"
          x="14.5"
          y="901.36218"
-         style="font-size:35px;line-height:1.25">ACS-85-0106</tspan></text>
+         style="font-size:35px;line-height:1.25">ACS-85-0107</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65607005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4266"
@@ -355,7 +355,7 @@
          id="tspan4148-4-3-8-0-2-5"
          x="182.46545"
          y="1036.5524"
-         style="font-size:8.4375px;line-height:1.25;fill:#000002;fill-opacity:1">none</tspan></text>
+         style="font-size:8.4375px;line-height:1.25;fill:#000002;fill-opacity:1">select</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000002;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -375,17 +375,17 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="84.894531"
-       y="931.87195"
+       x="45.988281"
+       y="931.4032"
        id="text4262-7"
        inkscape:export-filename="C:\Users\robst\myGithubs\acs\ArduinoComponentSketches\ACS-85 ATTiny85 sketches\ACS-85-0106\images\ACS-85-0106.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4264-0"
-         x="84.894531"
-         y="931.87195"
-         style="font-size:20px;line-height:1.25">Cowbell xor</tspan></text>
+         x="45.988281"
+         y="931.4032"
+         style="font-size:20px;line-height:1.25">Cowbell 3xor</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
