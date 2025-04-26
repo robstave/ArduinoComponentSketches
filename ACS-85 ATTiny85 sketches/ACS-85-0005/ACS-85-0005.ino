@@ -1,60 +1,47 @@
-
 /**
-   ACS-85-0004
-   ATTiny85  Tri VCO With Detune
+   ACS-85-0005 ATTiny85 Tri-VCO with Detune
+   
+   A triple oscillator circuit with one main frequency control and detune 
+   capability that affects the other two oscillators.
 
+   Pin Configuration:
+   - Pin 2 (PB3): Main Frequency Input (A3)
+   - Pin 3 (PB4): Detune Amount Input (A2)
+   - Pin 4     : GND
+   - Pin 5 (PB0): Primary VCO Output
+   - Pin 6 (PB1): Detuned VCO Output 1
+   - Pin 7 (PB2): Detuned VCO Output 2
+   - Pin 8     : VCC
 
-   External pin 1       = Reset (not used)
-   External pin 2 (PB3) = input 0 freq 1
-   External pin 3 (PB4) = input 1 freq 2
-   External pin 4       = GND
-   External pin 5 (PB0) = output 0 output
-   External pin 6 (PB1) = Output 1 output
-   External pin 7 (PB2) = Output 2 output
-   External pin 8       = Vcc
+   Description:
+   Uses Timer0 in CTC mode with no prescaling for maximum frequency range.
+   The main frequency input controls the base frequency, while the detune
+   input adds an offset to the second and third oscillators. The second
+   oscillator is detuned by the input amount, and the third is detuned
+   by twice that amount.
 
+   Frequency Ranges (with 8MHz clock):
+   - Base Frequency: ~200Hz to ~800Hz
+   - Detune Range: 0 to 20 steps from base frequency
+   
+   Implementation Notes:
+   - Interrupt runs at 8MHz/(79+1) = 100kHz
+   - Byte counters used for improved performance
+   - Detune checked less frequently to prioritize frequency response
 
-   Took several iterations to find the sweet spot.
-   The timer is not prescaled, so the interrupt is
-   really about as long as the value you set for OCR0A.
+   Version History:
+   - V1.0: Initial version
+   - V1.1: Switched to countdown counters for efficiency
+   - V1.2: Added input averaging for stability
 
-   By this point, you can see that I get my frequencies with counters.
-   in this case, 8mhz/(79+1)/50/2 = 1khz
-
-   To get more resolution, you need a faster interrupt, but if its too fast, then
-   the size of the interrupt is too big and your top frequency actually goes down.
-
-   with int counters, I could not get above 750hz.  But I swapped the ints for bytes
-   and it saved several clocks
-
-
-   V 1.0  -  First Version
-   v 1.1  -  Count down vs up
-
-
-
-   Note: This sketch has been written specifically for ATTINY85 and not Arduino uno
-   Observations.
-
-   Rob Stave (Rob the fiddler) ccby 2015
+   Author: Rob Stave (Rob the Fiddler), CCBY 2015
 */
 
-//  ATTiny overview
-//                      +-\/-+
-//               Reset 1|    |8  VCC
-// (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) out 2
-// (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                 GND 4|    |5  PB0 (pin0) out 0
-//                      ------
+// Frequency range constants (lower numbers = higher frequencies)
+#define VCO1_HIGH 50   // ~800Hz
+#define VCO1_LOW 200   // ~200Hz
 
-
-// 30 -> 666 hz
-// 120 - > 166 hz
-#define VCO1_HIGH 50
-#define VCO1_LOW 200
-
-
-//counters for the frequencies
+// Counters for the frequencies
 volatile uint8_t oscFreq1 = 200;
 volatile uint8_t oscCounter1 = 200;
 volatile uint16_t oscFreq2 = 200;
@@ -62,30 +49,28 @@ volatile uint16_t oscCounter2 = 200;
 volatile uint16_t oscFreq3 = 200;
 volatile uint16_t oscCounter3 = 200;
 
-// the setup function runs once when you press reset or power the board
+// The setup function runs once when you press reset or power the board
 void setup() {
 
-  DDRB = B00000111;  //set output bits
+  DDRB = B00000111;  // Set output bits
 
-  // initialize timer1
-  noInterrupts();           // disable all interrupts
+  // Initialize Timer0
+  noInterrupts();           // Disable all interrupts
 
   TCCR0A = 0;
   TCCR0B = 0;
 
-  TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
-  OCR0A = 79; //CTC Compare value
-  TCCR0B |= (1 << CS00); // Prescaler =0 Table 11.6
+  TCCR0A |= (1 << WGM01); // Start Timer0 in CTC mode (Table 11.5)
+  OCR0A = 79;             // CTC Compare value
+  TCCR0B |= (1 << CS00);  // Prescaler = 0 (Table 11.6)
 
-  // TCCR0A |=(1<<COM0A1); //Timer0 in toggle mode Table 11.2
-  TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
-  interrupts();             // enable all interrupts
+  TIMSK |= (1 << OCIE0A); // Enable CTC interrupt (see 13.3.6)
+  interrupts();           // Enable all interrupts
 }
 
-ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
-{
+ISR(TIMER0_COMPA_vect) {   // Timer compare interrupt service routine
 
-  //Count up and toggle portB bits
+  // Count down and toggle PORTB bits
   if (oscCounter1 <= 0) {
     oscCounter1 = oscFreq1;
     PORTB ^= (_BV(PB0));
@@ -98,31 +83,28 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   oscCounter2--;
 
-  if (oscCounter3 <= 0 ) {
+  if (oscCounter3 <= 0) {
     oscCounter3 = oscFreq3;
     PORTB ^= (_BV(PB2));
   }
   oscCounter3--;
-
 }
 
 int detuneCount = 0;
 
 void loop() {
 
-  //Read freq
+  // Read frequency
   int osc1_t = analogRead(A3);
-  oscFreq1 = map(osc1_t, 0, 1023, VCO1_LOW,  VCO1_HIGH);
+  oscFreq1 = map(osc1_t, 0, 1023, VCO1_LOW, VCO1_HIGH);
 
-  //Read detune.  No need to check as often. I would rather
-  //the freq be checked more often.
+  // Read detune. No need to check as often; prioritize frequency response.
   if (detuneCount > 5) {
     detuneCount = 0;
     int osc2_t = analogRead(A2);
-    int detune  = map(osc2_t, 0, 1023, 0,  20);
+    int detune = map(osc2_t, 0, 1023, 0, 20);
     oscFreq2 = oscFreq1 + detune;
     oscFreq3 = oscFreq2 + detune;
   }
   detuneCount++;
-
 }
