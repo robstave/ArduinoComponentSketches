@@ -1,143 +1,92 @@
-
-
 /**
-   ACS-85-0001 ATTiny85  Simple oscillator chip.
+   ACS-85-0001 ATTiny85 Simple Oscillator Chip.
 
-   Not exactly meant for production, mostly a workbench helper
-   to provide 40106-like signals without all the capacitors
-   and such.  Just drop it into a 5v breadboard and away you go.
-   Nothing is configurable externally, however feel free to tweek code as needed.
+   This sketch is a workbench helper to provide 40106-like signals without external capacitors.
+   Drop it into a 5V breadboard and it generates signals. Nothing is configurable externally,
+   but feel free to tweak the code as needed.
 
-   External pin 2 = high Freq 0 - about 434 hz
-   External pin 3 = high freq 1 - about 347 hz
-   External pin 5 = high freq 2 - sweep up in frequency.  Exp ramp
-   External pin 6 = LFO about 1hz
-   External pin 7 = LFO about 1.4 hz
+   Pin Outputs:
+   - Pin 2 (PB4): High Frequency 0 (~434 Hz)
+   - Pin 3 (PB3): High Frequency 1 (~347 Hz)
+   - Pin 5 (PB0): High Frequency 2 (sweeping frequency, exponential ramp)
+   - Pin 6 (PB1): Low Frequency Oscillator (~1 Hz)
+   - Pin 7 (PB2): Low Frequency Oscillator (~1.4 Hz)
 
    Description:
-   This is built around timer0 interrupts.  There are many ways to do this.
-   I find that counting up and comparing (CTC) gives me a little more flexability.
+   Built around Timer0 interrupts using CTC (Clear Timer on Compare Match) mode.
+   The prescaler is set to 64 (CS00=1 and CS01=1). Refer to the ATTiny85 datasheet for details.
 
-   The prescaler is set to 64  (CS00=1 and CS01=1)
-   see http://www.atmel.com/Images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
-   or google ATTINY85 data sheet and look for that table.
+   Prescaler Table:
+   - CS02 CS01 CS00
+     0    0    1   Clk/1
+     0    1    0   Clk/8
+     0    1    1   Clk/64
 
-   cs02 cs01 cs00
-    0    0    1   Clk/1
-    0    1    0   Clk/8
-    0    1    1   Clk/64
-
-   So if we set OCR0A = 5
-
-   8Mhz/(64*(OCR0A +1)) = 8mhz/(64*6) = 20833
-   So we are interupting at 20.8Khz
-
-   From there, you can just add a counter and tick off the number of
-   times you hit your counter.
-
-   so say every interrupt you incr your counter and flip after  you hit 10 times
-
-   that would be  20800/10 = 2080 per flip or 1040 hz.
-
-    If your numbers are off by a lot:
-      by 8 - did you burn the bootloader? By default it is 1mhz internal
-      none: again..extern clock?  Burn bootloader for 8mhz internal.
-
-    Counter values will flip the bit, so really divide that by 2 as well
-
-    23:  452
-    24:  434
-    25:  416
-
-   I have a note counter set at 24
-   toggling every 24 counts is 868 flips of the pin
-   which gives us a frequency of 434.  Close enough to an A.
-
-   a count of 30 is about 347 hz
-
-   checking with my voltmeter..its a few hz off...but again,its not a tuner.
-   If you need precision, add the xtal, but you will need more pins and thats something else.
-   or change the prescaler to just 8 to give you a better resolution.
-
-
-   V 1.0  -  First Version
-   V 1.1  -  Comments and deleting misleading cruft.  Deleting is debugging.
+   Example Calculation:
+   If OCR0A = 5:
+   8 MHz / (64 * (OCR0A + 1)) = 8 MHz / (64 * 6) = 20.833 kHz interrupt frequency.
 
    Observations:
-   Had to use TIMER0_COMPA_vect vs TIM0_COMPA_vect
-   PORTB = 00011111 did not really work.  It worked, but my signal would
-   go away like it was being sucked or drained.  Using setPin I think enables
-   pull down/up properly. DDRB might work better as well
+   - Ensure the ATTiny85 is set to 8 MHz internal clock (burn bootloader if needed).
+   - PORTB = 00011111 did not work reliably; using setPin enables pull-up/down properly.
 
-   Rob Stave (Rob the Fiddler) CCBY 2015
+   ATTiny85 Pinout:
+                   +-\/-+
+           Reset  1|    |8  VCC
+      (PB4) HF_0  2|    |7  LFO_1 (PB2)
+      (PB3) HF_1  3|    |6  LFO_2 (PB1)
+             GND  4|    |5  HF Ramp (PB0)
+                   +----+
 
+
+   Version History:
+   - V1.0: Initial version.
+   - V1.1: Improved comments and removed misleading code.
+
+   Author: Rob Stave (Rob the Fiddler), CCBY 2015
 */
 
-
-//  ATTiny overview
-//                   +-\/-+
-//           Reset  1|    |8  VCC
-// (pin3) PB4 HF_0  2|    |7  LFO_1 PB2   (pin2)
-// (pin4) PB3 HF_1  3|    |6  LFO_2 PB1   (pin1)
-//             GND  4|    |5  HF Ramp PB0 (pin0)
-
-// Counters in the interrupt to toggle pins.
-// Increasing the number reduces the frequency.
-
+// Frequency counters for toggling pins. Increasing the value reduces the frequency.
 #define HIGH_FREQ_0 30
 #define HIGH_FREQ_1 24
 
+#define LOW_FREQ_0 10416  // Lower frequency limit for LFO 0
+#define LOW_FREQ_1  7440  // Lower frequency limit for LFO 1
 
-#define LOW_FREQ_0 10416  //lower req limit for f0 - Increase for lower range 
-#define LOW_FREQ_1  7440  //lower req limit for f0
-
-
-//counters for the frequencies
+// Counters for the frequencies
 volatile unsigned int hf0Counter = 0;
 volatile unsigned int hf1Counter = 0;
-
 volatile unsigned int lfo1Counter = 0;
 volatile unsigned int lfo0Counter = 0;
 
-
-//We play with the counters a little more for the sweep pin.  Its more of an FM thing maybe
-
+// Sweep pin counters for frequency modulation
 volatile unsigned int hf2Counter = 0;
 volatile unsigned int hf2FreqCounter = 0;
-
 
 #define HIGH_FREQ_2_INCREMENT 20
 #define HF_RANGE_LO 40
 #define HF_RANGE_HI 8
 int hf2MaxCounter = HF_RANGE_LO;
 
-// the setup function runs once when you press reset or power the board
+// The setup function runs once when you press reset or power the board
 void setup() {
+  DDRB = B00011111;  // Set PORTB output bits
 
-  DDRB = B00011111;  //Set port B output bits
-
-  // initialize timer0
-  noInterrupts();           // disable all interrupts
-
+  // Initialize Timer0
+  noInterrupts();           // Disable all interrupts
   TCCR0A = 0;
   TCCR0B = 0;
 
-  TCCR0A |= (1 << WGM01); //Start timer 1 in CTC mode Table 11.5
+  TCCR0A |= (1 << WGM01);   // Start Timer0 in CTC mode (Table 11.5)
+  OCR0A = 5;                // CTC Compare value (adjustable)
 
-  OCR0A = 5; //CTC Compare value...this is fairly arbitrary and you can change, but have to adjust math.
-
-  TCCR0B |= (1 << CS00) | (1 << CS01); // Prescaler =64 Table 11.6
-
-  TIMSK |= (1 << OCIE0A); //Enable CTC interrupt see 13.3.6
-  interrupts();             // enable all interrupts
-
+  TCCR0B |= (1 << CS00) | (1 << CS01); // Prescaler = 64 (Table 11.6)
+  TIMSK |= (1 << OCIE0A);   // Enable CTC interrupt (Section 13.3.6)
+  interrupts();             // Enable all interrupts
 }
 
-ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
-{
-
-  //Each interrupt..check the counter.  If there is a match,
-  //reset and toggle the bit.
+ISR(TIMER0_COMPA_vect) {     // Timer compare interrupt service routine
+  // Check counters and toggle pins when thresholds are reached
   if (lfo0Counter > LOW_FREQ_0) {
     lfo0Counter = 0;
     PORTB ^= (_BV(PB1));
@@ -150,8 +99,6 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   lfo1Counter++;
 
-
-  //HF code is the same.  Just smaller counters
   if (hf0Counter > HIGH_FREQ_0) {
     hf0Counter = 0;
     PORTB ^= (_BV(PB4));
@@ -164,7 +111,7 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
   }
   hf1Counter++;
 
-  //Sweep is several nested loops
+  // Nested loops for frequency sweep
   if (hf2Counter > hf2MaxCounter) {
     hf2Counter = 0;
 
@@ -179,10 +126,9 @@ ISR(TIMER0_COMPA_vect)          // timer compare interrupt service routine
     PORTB ^= (_BV(PB0));
   }
   hf2Counter++;
-
 }
 
 void loop() {
-  //Do nothing
-  //  “I will beep with confidence and self-assurance.”
+  // Do nothing
+  // "I will beep with confidence and self-assurance."
 }
