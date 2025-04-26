@@ -33,6 +33,45 @@ Wrap can be configured with the following line of code
 
 ![wrap](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710/images/states2.png)
 
+## State Diagram - mermaid
+
+for funsies  
+
+```mermaid
+stateDiagram-v2
+    [*] --> State1
+    State1: "State 1 0 0"
+    State2: "State 0 1 0"
+    State3: "State 0 0 1"
+    
+    State1 --> State2: Up
+    State2 --> State3: Up
+    State3 --> State3: Up (limits)
+    
+    State3 --> State2: Down
+    State2 --> State1: Down
+    
+    note right of State1: Initial State
+    note right of State3: Terminal State (no wrap)
+```
+
+When wrap mode is enabled (`doWrap = HIGH`), the states form a circular pattern:
+
+```mermaid
+stateDiagram-v2
+    State1: "State 1 0 0"
+    State2: "State 0 1 0"
+    State3: "State 0 0 1"
+    
+    State1 --> State2: Up
+    State2 --> State3: Up
+    State3 --> State1: Up (wrap)
+    
+    State1 --> State3: Down
+    State3 --> State2: Down
+    State2 --> State1: Down
+```
+
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0710/images/acs-85-0710.png)
