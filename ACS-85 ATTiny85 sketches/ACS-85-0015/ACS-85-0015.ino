@@ -1,61 +1,48 @@
-
-/**
+/*
  * ACS-85-0015
- * ATTiny85  Dual LFO Two Ranges
+ * ATTiny85 Dual LFO Two Ranges
  *
- * Two LFO taken from 85-0004
- * Just implements LF1, LF2, one for each pin.
- * Simple, utility sketch.
- *  
+ * This sketch implements two LFOs (Low-Frequency Oscillators) taken from ACS-85-0004.
+ * Each LFO operates independently, providing two frequency ranges: LF1 and LF2.
  *
- * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = input 0 freq 1
- * External pin 3 (PB4) = input 1 freq 2
- * External pin 4       = GND
- * External pin 5 (PB0) = output 0 output
- * External pin 6 (PB1) = Output 1 output
- * External pin 7 (PB2) = none
- * External pin 8       = Vcc
+ * External Pinout:
+ * - Pin 1: Reset (not used)
+ * - Pin 2 (PB3): Input 0 (Frequency 1)
+ * - Pin 3 (PB4): Input 1 (Frequency 2)
+ * - Pin 4: GND
+ * - Pin 5 (PB0): Output 0
+ * - Pin 6 (PB1): Output 1
+ * - Pin 7 (PB2): Not used
+ * - Pin 8: VCC
  *
- * V 1.0  -  First Version
+ * Version 1.0 - Initial version
+ * Note: This sketch is designed for the ATTiny85 but can be adapted for Arduino Uno with minor tweaks.
+ * Author: Rob Stave (Rob the Fiddler), CC BY 2015
  *
- * Note: This sketch has been written specifically for ATTINY85 but it prob will
- * work on an arduino uno with a little tweek or two.
+ * TODO: Optimize by removing nested loops and scaling the counter directly.
  *
- * Its a copy/paste job..so there certainly can be improvements.
- * Rob Stave (Rob the fiddler) ccby 2015
- * 
- * TODO..ditch the nested loops and just scale the counter.
+ * ATTiny85 Overview
+ *                       +-\/+-
+ *                Reset 1|    |8  VCC
+ *  (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) none
+ *  (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
+ *                  GND 4|    |5  PB0 (pin0) out 0
+ *                       ------
  */
 
-//  ATTiny overview
-//                       +-\/-+
-//                Reset 1|    |8  VCC
-//  (pin3) in 0 A3  PB3 2|    |7  PB2 (pin2) none
-//  (pin4) in 1 A2  PB4 3|    |6  PB1 (pin1) out 1
-//                  GND 4|    |5  PB0 (pin0) out 0
-//                       ------
-
-/**
- * Note in the switch, we change it up with an extra
- * nested loop of 50
- *
- * so
- * 8mhz/2/100/50 = 800hz Interrupt freq
+/*
+ * Note: In the switch, an extra nested loop of 50 is used.
+ * Calculation:
+ * 8 MHz / 2 / 100 / 50 = 800 Hz Interrupt Frequency
  */
 
-//25 -> 800/2 = 16
-// 400  -> 1
-#define VCO1_L1_HIGH 25
-#define VCO1_L1_LOW 400
+#define VCO1_L1_HIGH 25  // (800/2)/25 = 16 Hz
+#define VCO1_L1_LOW 400  // (800/2)/400 =1 Hz
 
-//100 -> 4
-//2000 -> .2
+#define VCO2_L2_HIGH 100 // 4 Hz
+#define VCO2_L2_LOW 2000 // 0.2 Hz
 
-#define VCO2_L2_HIGH 100
-#define VCO2_L2_LOW 2000
-
-//counters for the frequencies
+// Counters for the frequencies
 volatile int16_t oscFreq1 = 0;
 volatile int16_t oscCounter1 = 0;
 volatile int16_t oscFreq2 = 0;
@@ -63,35 +50,27 @@ volatile int16_t oscCounter2 = 0;
 
 volatile int16_t lfoCounter = 0;
 
-// the setup function runs once when you press reset or power the board
 void setup() {
+  DDRB = B00000011;  // Set output bits
 
-  DDRB = B00000011;  //set output bits
+  // Initialize timer1
+  noInterrupts();           // Disable all interrupts
 
-  // initialize timer1
-  noInterrupts();           // disable all interrupts
-
-  TCCR1 = 0;                  //stop the timer
-  TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 99;                //set the compare value
+  TCCR1 = 0;                // Stop the timer
+  TCNT1 = 0;                // Zero the timer
+  OCR1A = 99;               // Set the compare value
   OCR1C = 99;
-  TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
+  TIMSK = _BV(OCIE1A);      // Interrupt on Compare Match A
 
-  TCCR1 = _BV(CTC1) | _BV(CS11); // Start timer, ctc mode, prescaler clk/2
+  TCCR1 = _BV(CTC1) | _BV(CS11); // Start timer, CTC mode, prescaler clk/2
 
-  interrupts();             // enable all interrupts
-
+  interrupts();             // Enable all interrupts
 }
 
-ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
-{
-
-  //Count up and toggle portB bits
+ISR(TIMER1_COMPA_vect) {
   if (lfoCounter > 50) {
     lfoCounter = 0;
 
-    //Count up and toggle portB bits
     if (oscCounter1 > oscFreq1) {
       oscCounter1 = 0;
       PORTB ^= (_BV(PB0));
@@ -103,16 +82,14 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
       PORTB ^= (_BV(PB1));
     }
     oscCounter2++;
-
   }
   lfoCounter++;
-
 }
 
 void loop() {
   int osc1_t = analogRead(A3);
-  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
-  
+  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW, VCO1_L1_HIGH);
+
   int osc2_t = analogRead(A2);
-  oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW,  VCO2_L2_HIGH);
+  oscFreq2 = map(osc2_t, 0, 1023, VCO2_L2_LOW, VCO2_L2_HIGH);
 }

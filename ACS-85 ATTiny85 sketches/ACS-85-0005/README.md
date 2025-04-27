@@ -1,12 +1,12 @@
-# ACS-85-0005 - Three VCOs detuned
+# ACS-85-0005 - Three VCOs Detuned
 
 ## Overview
 
-One frequency control and one for detune.  To hear the drones, you still need to sum them with a simple resistor summing network.
+This sketch creates three square wave oscillators with a single frequency control and a detune control. To hear the drones, you can sum their outputs using a simple resistor summing network.
 
-- **PB0** is the frequency
-- **PB1** is the (frequency - detuned)
-- **PB2** is the (freq - 2*detuned)
+- **PB0**: Base frequency
+- **PB1**: Frequency - detuned
+- **PB2**: Frequency - 2x detuned
 
 ## Pinout
 
@@ -23,6 +23,6 @@ The outputs for each pin is just a square wave. You need to sum with resistors t
 
 ## Examples
 
-Here is an example of the xor being driven by some drones (ACS-85-0305).
+Here’s an example of the XOR being driven by some drones (ACS-85-0305):
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0005/images/ACS-85-circuit-0005-0305.png)

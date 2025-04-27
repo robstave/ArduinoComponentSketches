@@ -1,26 +1,24 @@
-# ACS-85-0015
-
-Two Square wave LFOs
+# ACS-85-0015 - Two Square Wave LFOs
 
 ## Overview
 
-Copy pasted from [85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004).  No frills two squarewave LFOs with different ranges.  One channel for each range.  Its just LFO.
+This sketch features two simple square wave LFOs (Low-Frequency Oscillators) with different frequency ranges. Each channel operates independently, making it a no-frills, straightforward digital LFO setup.
 
-These are just digital LFOs...no smoothing needed.  But if you were driving a an analog circuit you could use a capacitor for a glide.
+These LFOs are purely digital, so no smoothing is required. However, if you’re driving an analog circuit, you can add a capacitor to create a glide effect.
 
-Range    | Low   | High 
---- | --- | ---
-LF1  |  1 Hz  | 16 Hz
-LF2  |  .2 Hz  | 4 Hz
+| Range | Low Frequency | High Frequency |
+|-------|---------------|----------------|
+| LF1   | 1 Hz          | 16 Hz          |
+| LF2   | 0.2 Hz        | 4 Hz           |
 
 ## Pinout
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0015/images/ACS-85-0015.png) 
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0015/images/ACS-85-0015.png)
 
-## Equivalent
+## Equivalent Circuit
 
-See [ACS-85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004) LFOs
+This setup is similar to the [ACS-85-0004](https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004) LFOs.
 
 ## Improvements
 
-There is a free pin.  Perhaps we need a sync.
+There’s a free pin available—perhaps it could be used for a sync feature?

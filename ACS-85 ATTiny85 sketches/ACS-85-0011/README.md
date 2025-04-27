@@ -1,47 +1,34 @@
-# ACS-85-0011
-
-Random LFO PWM out  (Psycho LFO)
+# ACS-85-0011 - Random LFO PWM Output (Psycho LFO)
 
 ## Overview
 
-PWM LFO Output.
+This sketch generates a PWM-based LFO output with a random modulation effect, inspired by the "Psycho LFO." The output is PWM, so you’ll need a low-pass filter to convert it into an analog signal.
 
-Similar output to Psycho LFO.
-
-Output is PWM so a Low pass filter is needed to get an analog signal.
-
-The random value is determined from a LFSR (Linear Feedback Shift Register)
-https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR
+The randomness is driven by an LFSR (Linear Feedback Shift Register). Learn more about LFSRs [here](https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR).
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/acs-85-0011.png)
 
-## Equivalent
+## Equivalent Circuit
 
-Its a basic equivalent to the [Ken stone Psycho lfo](http://www.cgs.synth.net/modules/psycho_lfo.html).
+This is a basic equivalent to the [Ken Stone Psycho LFO](http://www.cgs.synth.net/modules/psycho_lfo.html)
+Well, kinda sorta.
 
-Kinda sorta.
+## How It Works
 
-## Strategy
-
-- Use the LFSR to get a random number
-- Use timer 0 to do fast PWM
-- Use timer 1 to set the next value
+- The LFSR generates a random number.
+- Timer 0 handles fast PWM.
+- Timer 1 sets the next value.
 
 ## Examples
 
 Here is an example of the VCO being driven by the LFO (ACS-85-0011).
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-1.png)
+![Example Circuit](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-1.png)
 
-Here is another example of the VCO being driven by the LFO (ACS-85-0011). In this case we are
-also inverting the the PWM to give an alternate voltage to the other pin.
+Here’s another example where the PWM is inverted to provide an alternate voltage to another pin. The complementary PWM will be 100%-x. For instance, if the main pin is at 70% PWM, the inverted pin will be at 30%.
 
-The complementary PWM will be 100%-x. So if the main pin is pwm at 70%, the not of that is 30%
+![Example Circuit](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/ACS-85-circuit-0011-0002-2.png)
-
-## Cat
-
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0011/images/catlfo.jpg)
+ 
