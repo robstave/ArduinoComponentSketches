@@ -1,4 +1,4 @@
-/**
+ /**
    ACS-85-0003 ATTiny85 Alternating Frequencies VCO
    
    A dual-mode oscillator that alternates between two frequencies and generates
@@ -33,6 +33,16 @@
    - V1.3: Code cleanup and documentation
 
    Author: Rob Stave (Rob the Fiddler), CCBY 2015, 2018
+
+  ATTiny85 Pinout Overview:
+ 
+                         +--\/--+
+                  Reset 1|      |8  VCC
+   (pin3) freq A3  PB3  2|      |7  PB2 (pin2) Speed Control Input
+   (pin4) freq A2  PB4  3|      |6  PB1 (pin1) Sample & Hold Output
+                   GND  4|      |5  PB0 (pin0) Two-tone Output
+                          ------
+
 */
 
 // Frequency range constants

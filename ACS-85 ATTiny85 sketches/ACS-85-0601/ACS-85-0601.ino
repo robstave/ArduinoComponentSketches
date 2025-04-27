@@ -1,133 +1,135 @@
-
 /**
  * ACS-85-0601
- * ATTiny85  3 Channel sequencer
+ * ATTiny85 3 Channel Sequencer
  *
- * Simple Drum beats or 3 pin sequencer
- * 
- * The patterns can be programmed by
- * changing the values in the arrays.
+ * Simple drum beats or 3-pin sequencer.
  *
+ * Patterns can be programmed by changing the values in the arrays.
+ *
+ * External Pin Layout:
  *
  * External pin 1       = Reset (not used)
- * External pin 2 (PB3) = input 0 freq
- * External pin 3 (PB4) = input 1 scene select
+ * External pin 2 (PB3) = Input 0 frequency
+ * External pin 3 (PB4) = Input 1 scene select
  * External pin 4       = GND
- * External pin 5 (PB0) = output 0 
- * External pin 6 (PB1) = output 1 
- * External pin 7 (PB2) = output 2
+ * External pin 5 (PB0) = Output 0
+ * External pin 6 (PB1) = Output 1
+ * External pin 7 (PB2) = Output 2
  * External pin 8       = Vcc
  *
- * V 1.0  -  First Version
+ * Version History:
+ * V1.0 - First Version
  * Any further extensions to this will be treated as a sequencer.
  *
- * Rob Stave (Rob the fiddler) ccby 2015
+ * Author: Rob Stave (Rob the Fiddler) ccby 2015
+ *
+ *
+ * ATTiny85 Pinout Overview:
+ *
+ *                         +--\/--+
+ *                  Reset 1|      |8  VCC
+ *   (pin3) freq A3  PB3  2|      |7  PB2 (pin2) Output 2
+ *  (pin4) scene A2  PB4  3|      |6  PB1 (pin1) Output 1
+ *                   GND  4|      |5  PB0 (pin0) Output 0
+ *                          ------
  */
 
-
-
-//  ATTiny overview
-//                           +-\/-+
-//                    Reset 1|    |8  VCC
-//      (pin3) freq A3  PB3 2|    |7  PB2 (pin2) output 2
-//     (pin4) scene A2  PB4 3|    |6  PB1 (pin1) output 1
-//                      GND 4|    |5  PB0 (pin0) output 0 
-//                           ------
-
-//Ranges for the pot.  Technically a small nuumber means a
-//shorter timer so low or high...whatever you want to call it.
-
-
+// Define ranges for the potentiometer. A smaller number means a shorter timer.
 #define VCO1_L1_HIGH 200
 #define VCO1_L1_LOW 3000
 
-//Use this to tweek the feel of the pot.  If you are using an audio pot versus a linear, set this
-//value to 0
+// Use this to tweak the feel of the potentiometer. Set to 0 for an audio pot.
 #define MAP_VALUES_AS_LINEAR 0
 
 #if MAP_VALUES_AS_LINEAR == 1
-  #define STATE0 10
-  #define STATE1 20
-  #define STATE2 30
-  #define STATE3 40
+#define STATE0 10
+#define STATE1 20
+#define STATE2 30
+#define STATE3 40
 #else
-  #define STATE0 5
-  #define STATE1 10
-  #define STATE2 20
-  #define STATE3 40
+#define STATE0 5
+#define STATE1 10
+#define STATE2 20
+#define STATE3 40
 #endif
 
-
-//counters for the frequencies
-
+// Counters for the frequencies
 volatile int oscCounter1 = 0;
 volatile int oscFreq1 = 0;
-
 
 int patternCount = 0;
 volatile int pattern = 0;
 
-
+// Define patterns
 #define PATTERN_0_SIZE 16
-byte  pattern_0[PATTERN_0_SIZE] = {3, 0, 1, 0, 7, 0, 1, 0, 3, 0, 1, 0, 7, 0, 1, 0};
+byte pattern_0[PATTERN_0_SIZE] = {3, 0, 1, 0, 7, 0, 1, 0, 3, 0, 1, 0, 7, 0, 1, 0};
 
 #define PATTERN_1_SIZE 16
-byte  pattern_1[PATTERN_1_SIZE] = {2, 1, 6, 1, 2, 1, 6, 1, 2, 1, 6, 1, 2, 1, 6, 1};
+byte pattern_1[PATTERN_1_SIZE] = {2, 1, 6, 1, 2, 1, 6, 1, 2, 1, 6, 1, 2, 1, 6, 1};
 
 #define PATTERN_2_SIZE 16
-byte  pattern_2[PATTERN_2_SIZE] = {3, 0, 7, 0, 7, 0, 3, 0, 3, 0, 1, 0, 1, 0, 7, 0};
+byte pattern_2[PATTERN_2_SIZE] = {3, 0, 7, 0, 7, 0, 3, 0, 3, 0, 1, 0, 1, 0, 7, 0};
 
 #define PATTERN_3_SIZE 16
-byte  pattern_3[PATTERN_3_SIZE] = {3, 0, 1, 0, 5, 0, 1, 0, 3, 0, 3, 0, 5, 0, 1, 0};
+byte pattern_3[PATTERN_3_SIZE] = {3, 0, 1, 0, 5, 0, 1, 0, 3, 0, 3, 0, 5, 0, 1, 0};
 
+/**
+ * Setup function runs once when you press reset or power the board.
+ */
+void setup()
+{
+  DDRB = B00000111; // Set PB0, PB1, PB2 as output
 
-// the setup function runs once when you press reset or power the board
-void setup() {
+  // Initialize Timer1
+  noInterrupts(); // Disable all interrupts
 
-  DDRB = B00000111;  //set output bits
+  TCCR1 = 0; // Stop the timer
+  TCNT1 = 0; // Reset the timer counter
+  OCR1A = 99; // Set the compare value for Timer1
+  OCR1C = 99; // Set the top value for Timer1
+  TIMSK = _BV(OCIE1A); // Enable interrupt on Compare Match A
 
-  // initialize timer1
-  noInterrupts();           // disable all interrupts
+  // Configure Timer1: CTC mode, prescaler clk/2
+  TCCR1 = _BV(CTC1) | _BV(CS11) | _BV(CS12);
 
-  TCCR1 = 0;                  //stop the timer
-  TCNT1 = 0;                  //zero the timer
-  //GTCCR = _BV(PSR1);          //reset the prescaler
-  OCR1A = 99;                //set the compare value
-  OCR1C = 99;
-  TIMSK = _BV(OCIE1A);        //interrupt on Compare Match A
-
-  TCCR1 = _BV(CTC1)  | _BV(CS11) | _BV(CS12); // Start timer, ctc mode, prescaler clk/2
-
-  interrupts();             // enable all interrupts
-
+  interrupts(); // Enable all interrupts
 }
 
-byte getPatternValue () {
+/**
+ * Get the current value from the selected pattern.
+ */
+byte getPatternValue()
+{
   byte result = B00000000;
 
-  if (pattern == 0) {
-    if (patternCount >= PATTERN_0_SIZE) {
+  if (pattern == 0)
+  {
+    if (patternCount >= PATTERN_0_SIZE)
+    {
       patternCount = 0;
-     }
-      result = pattern_0[patternCount];
+    }
+    result = pattern_0[patternCount];
   }
-
-  if (pattern == 1) {
-    if (patternCount >= PATTERN_1_SIZE) {
+  else if (pattern == 1)
+  {
+    if (patternCount >= PATTERN_1_SIZE)
+    {
       patternCount = 0;
     }
     result = pattern_1[patternCount];
   }
-
-  if (pattern == 2) {
-    if (patternCount >= PATTERN_2_SIZE) {
-      patternCount = 2;
+  else if (pattern == 2)
+  {
+    if (patternCount >= PATTERN_2_SIZE)
+    {
+      patternCount = 0;
     }
     result = pattern_2[patternCount];
   }
-
-  if (pattern == 3) {
-    if (patternCount >= PATTERN_3_SIZE) {
+  else if (pattern == 3)
+  {
+    if (patternCount >= PATTERN_3_SIZE)
+    {
       patternCount = 0;
     }
     result = pattern_3[patternCount];
@@ -135,42 +137,56 @@ byte getPatternValue () {
 
   patternCount++;
 
-    
-   byte output = result & B00000111;
+  byte output = result & B00000111;
   return output;
 }
 
-ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
+/**
+ * Timer1 Compare Match A interrupt service routine.
+ */
+ISR(TIMER1_COMPA_vect)
 {
-
-  if (oscCounter1 >= oscFreq1) {
+  if (oscCounter1 >= oscFreq1)
+  {
     oscCounter1 = 0;
     PORTB = getPatternValue();
   }
 
   oscCounter1++;
-  return;
 }
 
-int mapPattern (int sample) {
-
-  if (sample <= STATE0) {
+/**
+ * Map the analog input to a pattern index.
+ */
+int mapPattern(int sample)
+{
+  if (sample <= STATE0)
+  {
     return 0;
-  } else if (sample <= STATE1) {
+  }
+  else if (sample <= STATE1)
+  {
     return 1;
-  } else if (sample <= STATE2) {
+  }
+  else if (sample <= STATE2)
+  {
     return 2;
-  } else if (sample <= STATE3) {
+  }
+  else if (sample <= STATE3)
+  {
     return 3;
   }
   return 0;
 }
 
-void loop() {
+/**
+ * Main loop function.
+ */
+void loop()
+{
+  int osc1_t = analogRead(A3); // Read LFO frequency input
+  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW, VCO1_L1_HIGH);
 
-  int osc1_t = analogRead(A3);
-  oscFreq1 = map(osc1_t, 0, 1023, VCO1_L1_LOW,  VCO1_L1_HIGH);
-
-  int pattern_t = analogRead(A2);
-  pattern =  mapPattern(map(pattern_t, 0, 1023, 0,  40));
+  int pattern_t = analogRead(A2); // Read scene select input
+  pattern = mapPattern(map(pattern_t, 0, 1023, 0, 40));
 }
