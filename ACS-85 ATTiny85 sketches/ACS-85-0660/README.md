@@ -1,13 +1,12 @@
 # ACS-85-0660
 
-3 Channel tone patterns
+3-Channel Tone Patterns
 
 ## Overview
 
-Just a tempo and scene select for pre-programmed patterns.
+This sketch provides tempo and scene selection for pre-programmed tone patterns.
 
-Three outputs are tones that start with a set freq and detune down.
-If you want, add a few more accumulators to make them cowbells
+The three outputs generate tones that start at a set frequency and detune downward. If you're feeling adventurous, you can add a few more accumulators to create cowbell-like sounds.
 
 ## Pinout
 
@@ -15,5 +14,5 @@ If you want, add a few more accumulators to make them cowbells
 
 ## Improvements
 
-A Sync would be nice, but there are only so many pins to work with.  Consider driving this with a clk rather than an analog pot/tempo if thats what you need.  This is one that could evolve kinda nicely with an 84 or just a Nano.
+Adding a sync feature would be great, but there are only so many pins available. If you need precise timing, consider driving this with a clock signal instead of relying on an analog potentiometer for tempo control. This sketch has room to evolve—perhaps with an ATtiny84 or even a Nano for more flexibility.
 

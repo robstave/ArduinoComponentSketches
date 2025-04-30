@@ -1,14 +1,10 @@
 # ACS-85-0630
 
-Sequencer - Turning style
+Sequencer - Turning Style
 
 ## Overview
 
-One Knob Sequencer in the style of turning machine sequencer.
-
-Knob determines the the length of the sequence.  
-If you change the size, it randomizes things.  There is also a cv which is similar to the toggle in a
-random value.
+This compact one-knob sequencer brings the classic "turning machine" feel to your setup. The knob adjusts the length of the sequence, and each time you change the size it randomizes the pattern for extra variation. A CV input lets you trigger randomization externally, giving you control over your sequences.
 
 ## Pinout
 
@@ -18,6 +14,4 @@ random value.
 
 Kinda sorta like the turning style sequencer
 
-## Form Factors
-
-## Examples
+ 
