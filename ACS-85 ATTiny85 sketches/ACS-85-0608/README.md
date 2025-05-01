@@ -4,9 +4,9 @@
 
 ## Overview
 
-Clock driven.
+This sketch is clock-driven and generates four random drum triggers.
 
-Basically..its the lower 4 bits of an LFSR
+At its core, it uses the lower 4 bits of a Linear Feedback Shift Register (LFSR) to produce the randomness.
 
 ## Pinout
 
@@ -14,4 +14,4 @@ Basically..its the lower 4 bits of an LFSR
 
 ## Improvements
 
-Consider moving them around for a more audible progression.
+You might consider rearranging the outputs to create a more interesting and audible progression.
