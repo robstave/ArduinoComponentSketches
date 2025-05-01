@@ -1,20 +1,19 @@
 # ACS-85-0065
 
-Xor Based Phased Drone/VCO
+XOR-Based Phased Drone/VCO
 
 ## Overview
 
-Two pins have a drone sound that is pretty phasey sounding.
+This sketch generates a phased drone sound using two pins. The result is a "phasey" sound that’s quite distinct.
 
-Based on DDS, there are 6 accumulators.
-3 are Xored for PB0 and the other 3 are xored to PB1
+The implementation is based on DDS and uses six accumulators:
+- Three accumulators are XORed for **PB0**.
+- The other three accumulators are XORed for **PB1**.
 
-The three frequencies will have a "beat" that the XOR highlights.  Does not end up sounding like a ring modulator though.
+The three frequencies create a "beat" that the XOR operation highlights. Interestingly, it doesn’t sound like a ring modulator but has its own unique character.
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0065/images/ACS-85-0065.png)
 
-## Equivalent
-
-## Examples
+ 

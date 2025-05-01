@@ -1,15 +1,16 @@
 # ACS-85-0050
 
-Sinewave VCO PWM with distortion options
+Sinewave VCO PWM with Distortion Options
 
 ## Overview
 
-PWM Sinewave VCO
-Not super fast, but workable.
+This sketch implements a PWM-based sinewave Voltage-Controlled Oscillator (VCO). It’s not super fast, but it’s workable and fun to experiment with.
 
-Includes a pin for Rectification and a pin for clipping distortion.
+It includes:
+- A pin for rectification.
+- A pin for clipping distortion.
 
-Very preliminary.  Inspired from sketches from [Technoblogy.com](http://www.technoblogy.com/show?22HF)
+This is a very preliminary implementation, inspired by sketches from [Technoblogy.com](http://www.technoblogy.com/show?22HF). Feel free to tweak and explore!
 
 ## Pinout
 

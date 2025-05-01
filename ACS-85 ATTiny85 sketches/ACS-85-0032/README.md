@@ -1,39 +1,39 @@
 # ACS-85-0032
 
- ATTiny85 Clocked LFO
+ATTiny85 Clocked LFO
 
 ## Overview
 
-LFO that uses a clock signal to set the tempo.
+This is a clocked Low-Frequency Oscillator (LFO) that uses a clock signal to set the tempo. 
 
-Despite the simple approach, it works pretty ok.
-Its not well debounced ( none really), so consider a LPF on that pin. ( 1kohm/100nf or whatever)
+Despite its simplicity, it works pretty...ok. However, it lacks proper debouncing (actually, none at all), so you might want to add a low-pass filter (LPF) on the clock pin (e.g., 1kΩ/100nF or similar).
 
-Basically, I have a counter that acts like millis(), but instead of millis, I generally utilize both timer 0 and 1 and just add a counter to one of em.  Its not milliseconds, but its usually linear and workable.  
+The sketch uses a counter that functions similarly to `millis()`. Instead of milliseconds, it leverages both Timer 0 and Timer 1, incrementing a counter to create a linear and usable timing mechanism.
 
-Each Clock trigger will reset the wavetable index and find the delta which is used to calculate the time until the next wavetable index.
+Each clock trigger resets the wavetable index and calculates the delta, which determines the time until the next wavetable index.
 
-There are 7 waveforms
+### Waveforms
 
-Ramp up
-Ramp Down
-Triangle
-Sine
-Square
-Random ( 4 notes per clock)
-Steps ( random but alt with 0's)
-  Example 0 33 0 29 0 143 0 200
+The LFO supports seven waveforms:
 
-There is also a mod that speeds things up.  Not really incrementally.  its a Goose it button that doubles or triples the frequency.
+- Ramp Up
+- Ramp Down
+- Triangle
+- Sine
+- Square
+- Random (4 notes per clock)
+- Steps (random values alternating with 0s, e.g., `0, 33, 0, 29, 0, 143, 0, 200`)
 
-Feel free to tweak!
+There’s also a "Goose it" button that doubles or triples the frequency for a quick tempo boost.
+
+Feel free to tweak and experiment!
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0032/images/ACS-85-0032.png)
 
-You Will need a low pass filter on the pwm pins.
+You’ll need a low-pass filter on the PWM pins for smoother output.
 
 ## Notes
 
-Do consider a LPF on the clock to do the debouncing for you.
+Consider adding an LPF on the clock pin to handle debouncing for you.

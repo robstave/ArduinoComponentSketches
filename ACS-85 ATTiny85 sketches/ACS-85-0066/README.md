@@ -1,19 +1,21 @@
 # ACS-85-0066
 
-Drone 3 notes - root fifth and octave with detune
+Drone: 3 Notes - Root, Fifth, and Octave with Detune
 
 ## Overview
 
-Three pins
-PB0 is the root
-PB1 is and octave lower
-PB2 is a fifth above the lower octave
+This sketch generates a drone using three pins:
+- **PB0**: Root note.
+- **PB1**: One octave lower.
+- **PB2**: A fifth above the lower octave.
 
-All plain sqaurewaves.
+All outputs are plain square waves.
 
-there is also a detune that applies to PB1 and PB2. Feel free to tweak as needed. PB1 detunes down and PB2 detunes up.
+There’s also a detune feature:
+- **PB1** detunes downward.
+- **PB2** detunes upward.
 
-You can just sum them together with resistors.
+You can sum the outputs together using resistors or a proper op-amp summer. Feel free to tweak the detune settings as needed!
 
 ## Pinout
 

@@ -1,16 +1,18 @@
 # ACS-85-0060
 
-Square wave VCO with Second frequency modulated by LFO
+Square Wave VCO with Second Frequency Modulated by LFO
 
 ## Overview
 
-Uses a 16 bit counter in a DDS fashion like. <http://www.technoblogy.com/show?QVN>
+This sketch implements a Voltage-Controlled Oscillator (VCO) using a 16-bit counter in a DDS-like fashion. For more details, check out [this article](http://www.technoblogy.com/show?QVN).
 
-The main difference is, rather than setting up the other counter for PWM, we are using it for an LFO.  The upper 8 bits would be used to point to a 256 size wave table, but since we are doing squarewaves, we can just use the uppermost bit.
+The key difference here is that instead of using the second counter for PWM, it’s used as an LFO. The upper 8 bits would typically point to a 256-size wavetable, but since we’re working with square waves, we can simply use the uppermost bit.
 
-There are two accumulators.  One is the main frequency and the other is basically an LFO controlled modulation of that frequency.
+There are two accumulators:
+- One for the main frequency.
+- One for LFO-controlled modulation of the main frequency.
 
-To mix, just sum across the pins with resistors  ( or use a real op amp / summer)
+To mix the outputs, you can sum them across the pins using resistors or a proper op-amp summer.
 
 ## Pinout
 
@@ -18,5 +20,4 @@ To mix, just sum across the pins with resistors  ( or use a real op amp / summer
 
 ## Related
 
-![ACS-85-0061](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0061)
- 
+Check out [ACS-85-0061](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0061) for a variation with pulse-width modulation.

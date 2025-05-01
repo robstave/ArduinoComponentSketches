@@ -1,15 +1,16 @@
 # ACS-85-0041
 
-Square wave VCO with PWM  
+Square Wave VCO with PWM
 
 ## Overview
 
-Uses a 16 bit counter in a DDS fashion like. <http://www.technoblogy.com/show?QVN>
+This sketch implements a Voltage-Controlled Oscillator (VCO) using a 16-bit counter in a DDS-like fashion. For more details, check out [this article](http://www.technoblogy.com/show?QVN).
 
-This is a vco with outputs.  One is the main sqaurewave and the other is the same
-frequency, but adjustable width.
+The VCO has two outputs:
+- A main square wave.
+- A secondary output with the same frequency but adjustable pulse width.
 
-Originally, I had ACS-85-0040 doing a lot of stuff including this, but it was a bit busy. This does less.
+Originally, ACS-85-0040 handled this functionality along with other features, but it became a bit too busy. This sketch focuses solely on the square wave VCO with PWM for simplicity.
 
 ## Pinout
 

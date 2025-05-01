@@ -1,17 +1,18 @@
 # ACS-85-0042
 
-Square wave VCO with Chiptune sounds
+Square Wave VCO with Chiptune Sounds
 
 ## Overview
 
-Uses a 16 bit counter in a DDS fashion like. <http://www.technoblogy.com/show?QVN>
+This sketch implements a Voltage-Controlled Oscillator (VCO) using a 16-bit counter in a DDS-like fashion. For more details, check out [this article](http://www.technoblogy.com/show?QVN).
 
-This is a vco with 2 outputs.  One is the plain sqaurewave and the other is the same
-frequency, but with lots of arping and effects to sound like a chiptune synth of some kind.
+The VCO has two outputs:
+- A plain square wave.
+- A square wave with arpeggios and effects, creating a chiptune-like sound.
 
-There are lots of algorithms and room to create some of your own.
+There’s plenty of room to experiment with algorithms or create your own effects.
 
-Originally, I had ACS-85-0040, but it was a bit busy. I took the just the Chiptune version of that sketch and reworked it into this.
+Originally, ACS-85-0040 included this functionality along with other features, but it was a bit too busy. This sketch focuses solely on the chiptune version, reworked for clarity and simplicity.
 
 ## Pinout
 
@@ -19,4 +20,4 @@ Originally, I had ACS-85-0040, but it was a bit busy. I took the just the Chiptu
 
 ## Example
 
- <https://soundcloud.com/user-692410397/acs-85-0042-sample>
+Check out this sample: [ACS-85-0042 Soundcloud Example](https://soundcloud.com/user-692410397/acs-85-0042-sample)
