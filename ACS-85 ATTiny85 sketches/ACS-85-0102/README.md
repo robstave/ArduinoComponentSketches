@@ -4,15 +4,13 @@ ATTiny85 Synth Drum
 
 ## Overview
 
-Simple version of EHX space drum. Ah...really...simple. More of an inspiration really.
+This is a simple version of the EHX Space Drum. Well, more of an inspiration, really.
 
-That drum has a start and end frequency, which is what Im trying to emulate. Poorly.
-
-There is a "parameter" value too that will be used for "length", but feel free to change that.
+The drum has a start and end frequency, which this sketch tries to emulate—poorly, but it’s fun! There’s also a "parameter" value used for "length," but feel free to change that.
 
 ## Output
 
-Although it is DDS looking, its just a squarewave and not really PWM. There is no "decay" or anything like that.
+Although it looks like DDS, it’s just a square wave and not really PWM. There’s no "decay" or anything like that.
 
 ## Pinout
 
@@ -20,20 +18,15 @@ Although it is DDS looking, its just a squarewave and not really PWM. There is n
 
 ## Improvements
 
-This is one that I think could be explored a bit more on the ATTINY84.  Perhaps with some noise mixed in...or a PWM version.  If I were to mix in noise, I would just use another  pin.
-Maybe even 4 pins...one for noise, one for the above and two for a cowbell effect and mix them all in.
+This is a sketch that could be explored further on the ATTiny84. Perhaps add some noise mixed in—or a PWM version. If I were to mix in noise, I’d just use another pin. Maybe even four pins: one for noise, one for the above, and two for a cowbell effect, then mix them all in.
 
-Also, note that contrary to my usual habit of putting the trigger on PB2, its on PB0.
-Im not sure if there is a reason for that. Its just how it turned out.  Looks like this was
-2020 before I was doing that.
-
+Also, note that contrary to my usual habit of putting the trigger on PB2, it’s on PB0. I’m not sure if there’s a reason for that—it’s just how it turned out. Looks like this was from 2020 before I started doing that.
 
 ## Related
 
-[ACS-85-0102](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102)
-
-[ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103)
+- [ACS-85-0102](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0102)
+- [ACS-85-0103](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0103)
 
 ## Cat
 
-![cat](https://lh3.googleusercontent.com/pw/AP1GczN4V7c3jaEn1PuVa0TQKbjTyCYEcNe_QkAw2lVm4O-vy85D3_AqJ9p4BKirR1JyaW-S3ajkoGR29aRTJnx553KPvsPc9X7VuOXEaIKhtnNYntgxl0A=w2400)
+![Cat](https://lh3.googleusercontent.com/pw/AP1GczN4V7c3jaEn1PuVa0TQKbjTyCYEcNe_QkAw2lVm4O-vy85D3_AqJ9p4BKirR1JyaW-S3ajkoGR29aRTJnx553KPvsPc9X7VuOXEaIKhtnNYntgxl0A=w2400)
