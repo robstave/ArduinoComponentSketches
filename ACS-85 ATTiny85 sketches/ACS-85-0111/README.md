@@ -1,34 +1,32 @@
-# ACS-85-0110
+# ACS-85-0111
 
- ATTiny85 Snares
+ATTiny85 Snares
 
 ## Overview
 
-This is a retool of Jan Ostmans ATTINY85 sample player dsp-Host Drum8..
-Its a bit different though.  There are 5 samples of various
-High Hat Sounds.  Gonna say they are kinda short. Maybe you can
-crank down the sample rate for smaller sizes
+This is a retool of Jan Ostman’s ATTiny85 sample player DSP-Host Drum8.  
+It’s a bit different though. There are five samples of various high-hat sounds.  
+They are kind of short. Maybe you can crank down the sample rate for smaller sizes.
 
-In this case, there are 5 samples.  The Sample select also tunes the
-sample.  I did not make tuning a separate CV...but go for it.
-It just did not work well in the place I was going to use it.
+In this case, there are five samples. The sample select also tunes the sample.  
+I did not make tuning a separate CV, but go for it. It just did not work well in the place I was going to use it.
 
-An Idea for the mod ( open cv pin) if you want is an accent or mute.
+An idea for the mod (open CV pin) if you want is an accent or mute.
 
-So, getting these samples are kinda a chore.
-I edited them to mono and clipped in Audacity.
-Then I used <https://www.online-convert.com/> to convert it to 8 bit 8k sampling rate.
-Somehow, audacity does this, but It never worked for me. This site does it well.
-  
-Then I used this website to create the sample code.
-  <https://synthworks.eu/attiny85-drum-creator/>
-  
-  Attiny85 has only 8k to work with.  So I have only 5 samples
+### Sample Preparation
+
+Getting these samples is kind of a chore:  
+1. Edit them to mono and clip them in Audacity.  
+2. Use <https://www.online-convert.com/> to convert them to 8-bit, 8k sampling rate.  
+   Somehow, Audacity does this, but it never worked for me. This site does it well.  
+3. Use this website to create the sample code:  
+   <https://synthworks.eu/attiny85-drum-creator/>
+
+The ATTiny85 has only 8k to work with, so I have only five samples.
 
 ## References
 
-<https://synthworks.eu/attiny85-drum-creator/>
-
+<https://synthworks.eu/attiny85-drum-creator/>  
 <https://modwiggler.com/forum/viewtopic.php?t=160118&start=150>
 
 ## Pinout

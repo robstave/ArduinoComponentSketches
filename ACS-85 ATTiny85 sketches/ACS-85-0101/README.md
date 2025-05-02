@@ -1,6 +1,6 @@
 # ACS-85-0101
 
-ATTiny85 Blip selectable
+ATTiny85 Blip Selectable
 
 ## Overview
 
