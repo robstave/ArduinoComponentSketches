@@ -1,17 +1,16 @@
 # ACS-85-0613
 
-Coin Flip clocked output matches clock
+Coin Flip Clocked - Output Matches Clock
 
 ## Overview
 
-Similar to Mutable instruments Branches.
-Triggers on rising edge of clock and outputs on either a or b pin based on probability.  
+This sketch is inspired by Mutable Instruments' Branches. It triggers on the rising edge of the clock and outputs on either the A or B pin based on probability.
 
-Output gate is the same as the input. It is not a trigger nor a latch
+The output gate matches the input clock. It is neither a trigger nor a latch.
 
-A third output pin is alway 50/50
+A third output pin always operates at a 50/50 probability.
 
-Similar to ![ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612), and ![ACS-85-0614](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614).
+This sketch is similar to [ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612) and [ACS-85-0614](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0614).
 
 ![Diagram](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613/images/diagram.png)
 

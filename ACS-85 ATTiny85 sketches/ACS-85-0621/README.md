@@ -4,17 +4,19 @@ Timed Gate
 
 ## Overview
 
-Takes a logical input and ANDS it with a timed gate When the trigger starts the gate. The output is active for a length defined by A3.
+This sketch takes a logical input and ANDs it with a timed gate. When the trigger starts, the gate activates. The output remains active for a duration defined by A3.
 
-For the length of that gate, PB0 is true and PB1 reflects the output of pin 7.
+During the gate's active period:
+- PB0 is set to true.
+- PB1 reflects the state of pin 7.
 
-If the trigger is high longer than the timer, then its just on...but the gate will diable when the trigger does.
+If the trigger remains high longer than the timer, the output stays on. However, the gate will disable as soon as the trigger goes low.
 
-Best for Logical LFO and gates.  Prob not super good for audio as the value. of the input is written to the output in a loop.
+This is ideal for logical LFOs and gates. It's not optimized for audio, as the input value is written to the output in a loop.
 
-An Optimization would be to set the output pin to the value of the input in the interrupt. (Actually I tried it and had issues so I gave up..its fine for low freqs)
+For optimization, you could set the output pin to the input value in the interrupt. (I tried this but ran into issues, so I left it as-is. It works fine for low frequencies.)
 
-![timing](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621/images/0621.png)
+![Timing Diagram](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0621/images/0621.png)
 
 ## Pinout
 
@@ -26,6 +28,7 @@ An Optimization would be to set the output pin to the value of the input in the 
 
 ![Pinout](https://lh3.googleusercontent.com/pw/AP1GczNAEJUEg95uHpI8qy54ZwSy99SEWPdFA3lOAdKmxtcaeFBIrpO396svzrKC7tRPodbwYTKuWhdHCsl4DFD08tF5fbIH6CLrLWvdvZxSS-BF9f6ibnU=w2400)
 
-## Timing references
+## Timing References
 
+For more on timing diagrams, check out this resource:  
 <https://nathantypanski.com/blog/2014-10-29-tikz-timing.html>

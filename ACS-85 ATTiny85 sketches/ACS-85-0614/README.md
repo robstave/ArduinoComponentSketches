@@ -1,29 +1,21 @@
 # ACS-85-0614
 
-Multiple coin flip clocked - output matches clock
+Multiple Coin Flip Clocked - Output Matches Clock
 
 ## Overview
 
-Similar to Mutable instruments Branches.
-Triggers on rising edge of clock and outputs on either a or b pin based on probability of
-two sucessive flips.  
-With double flips ( or triple), high values are a little more sporatic.
+This sketch is inspired by Mutable Instruments' Branches. It triggers on the rising edge of the clock and outputs on either the A or B pin based on the probability of two successive flips. Here's how it works:
 
-So if you set the prob to 50%, then
+- With a 50% probability:
+  - A = 1, B = 0 occurs 25% of the time.
+  - A = 0, B = 1 occurs 25% of the time.
+  - A = 0, B = 0 occurs 50% of the time.
 
-- A = 1, B = 0 25% of the time
-- A = 0, B = 1 25% of the time
-- A = 0, B = 0 50% of the time
+The output gate matches the input clock. It is neither a trigger nor a latch.
 
-Output gate is the same as the input. It is not a trigger nor a latch
+If the A pin is set, the sketch uses 2 or 3 flips. With 3 flips, the probabilities are reduced further, creating more "dead space." This can be great for ambient effects.
 
-A pin sets the value to be 2 or 3 flips really.
-basically, if its set for 50%  A will flip 25% and B will flip 25% of the time
-The other 50 is no value.
-
-With 3 flips set its 12.5% on either side.  A lotta dead space, but nice for ambient.
-
-Similar to ![ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612), and ![ACS-85-0613](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613).
+This sketch is similar to [ACS-85-0612](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0612) and [ACS-85-0613](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0613).
 
 ## Pinout
 

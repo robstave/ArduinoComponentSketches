@@ -1,21 +1,18 @@
 # ACS-85-0620
 
-Trigger to Gate ( With a probability output)
+Trigger to Gate (with a probability output)
 
 ## Overview
 
-Trigger to varible length gate.  Tweak values to your taste.
-Note that you really should be using a linear pot.
+This sketch converts a trigger into a variable-length gate. You can tweak the values to suit your needs. Note: it's best to use a linear potentiometer for this.
 
-There is a second pin that matches the first with a probability.
-otherwise its low
+A second pin mirrors the first but with a probability factor. If the probability condition isn't met, the second pin stays low.
 
 ![Diagram](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620/images/620.png)
 
 ## Pinout
 
 ![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0620/images/ACS-85-0620.png)
-
 
 <br>
 <br>
