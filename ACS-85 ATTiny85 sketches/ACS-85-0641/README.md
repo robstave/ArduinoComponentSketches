@@ -1,10 +1,11 @@
 # ACS-85-0641
 
-Afrocuban rhythm
+Afro-Cuban Rhythm
 
 ## Overview
 
-see <https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/afro-cuban-latin-jazz/>
+Explore Afro-Cuban rhythms with this sketch. For a deeper dive into the genre, check out this excellent resource:  
+<https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/afro-cuban-latin-jazz/>
 
 ## Pinout
 

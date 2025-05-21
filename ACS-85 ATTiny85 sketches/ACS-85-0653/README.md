@@ -1,39 +1,31 @@
 # ACS-85-0653
 
-Bytebeat ( Bitbeat v2)
+Bytebeat (Bitbeat v2)
 
 ## Overview
 
-Bytebeat is a term for a self generating sequence of bytes using a small equation.
+Bytebeat refers to a self-generating sequence of bytes using a small equation.
 
-Based on a snippet I found here:
-
-<https://www.youtube.com/watch?v=8HQUXlStqK8https://www.noizhardware.com/index.html>
-
+This sketch is based on a snippet I found here:  
+<https://www.youtube.com/watch?v=8HQUXlStqK8>  
 <https://www.noizhardware.com/index.html>
 
-I'm not going to get the history of this right, so instead, I will give you a link.
+For a great introduction to Bytebeat, check out this article:  
+<http://nightmachines.tv/the-absolute-beginners-guide-to-coding-bytebeats.html>  
+It covers the history and references key contributors like Viznut, who helped popularize Bytebeat in the early 2010s.
 
-<http://nightmachines.tv/the-absolute-beginners-guide-to-coding-bytebeats.html>
+The original snippet can be found here:  
+<https://pastebin.com/mfnKNWVD>
 
-Here is a great little article that about sums it all up and references all the folks that were a part of its online explosion like viznut in the early 2010s. (I Will try and put some info in the wiki)
-
-Based on this snippet <https://pastebin.com/mfnKNWVD>
-
-This is really not too different than ACS-85-0650.
-I Used another equation and found that you REALLY should listen and pick bits. The last bit in this case sounded awful.
-
+This sketch is similar to ACS-85-0650 but uses a different equation. It's important to listen and carefully pick bits, as the last bit in this case sounded awful.
 
 ## Issues
 
-It warbles a little.  I think that the equation is short circuiting its processing.
-
-
+The sketch warbles a little, likely due to the equation short-circuiting its processing. For example:  
 ```c
-   x = ( t> 127) & ( evaluate stuff )
+x = (t > 127) & (evaluate stuff);
 ```
-
-Will speed up and slow down as the first part of the equation is 0 half the time.  The compiler is smart enough to branch out at that point as there is no need to finish the equation  0 & stuff = zero.  Maybe the trick is to do the processing in a queue and pull from it periodically rather than letting the loop drive the processing.  Kinda academic really...does not matter.
+This will speed up and slow down as the first part of the equation is `0` half the time. The compiler is smart enough to branch out at that point since `0 & stuff = 0`. One possible improvement could be to process in a queue and pull from it periodically, rather than letting the loop drive the processing. However, this is more of an academic concern—it works well enough as is.
 
 ## Pinout
 
@@ -41,13 +33,12 @@ Will speed up and slow down as the first part of the equation is 0 half the time
 
 ## Related Sketches
 
-![Bytebeat ( Bitbeat v1)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650)
-![Bytebeat ( Bitbeat v2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651)
-![Bytebeat ( Bitbeat v2) clocked](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652)
-![Bytebeat ( Bitbeat 2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653)
+- [Bytebeat (Bitbeat v1)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0650)  
+- [Bytebeat (Bitbeat v2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0651)  
+- [Bytebeat (Bitbeat v2) Clocked](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0652)  
+- [Bytebeat (Bitbeat 2)](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0653)
 
-## Other links
+## Other Links
 
-<https://medium.com/@naive_sound/glitch-a-noisy-fusion-of-math-and-music-6a9b24e7f5b5>
-
-<https://noisio.de/>
+- <https://medium.com/@naive_sound/glitch-a-noisy-fusion-of-math-and-music-6a9b24e7f5b5>  
+- <https://noisio.de/>
