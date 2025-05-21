@@ -1,21 +1,21 @@
 # ACS-85-0751
 
- I2C Client - Button
+I2C Client - Button
 
 ## Overview
 
-I2C Client that transmits the value of a button ( 0 or 255). In this sketch, we are just Sending the value of a pin a over  I2c Bus.
+I2C Client that transmits the value of a button (0 or 255). In this sketch, we are just sending the value of a pin over the I2C Bus.
 
-It is waiting for the request really, so its not pushing data, its being polled.
+It is waiting for the request, so it's not pushing data; it's being polled.
 
-This is a POC thing, although can be a starting point to learning or building something interesting.
+This is a proof-of-concept (POC), although it can be a starting point for learning or building something interesting.
 
-Requires the ATTINYCORE library.  That is a good one that implements Wire.h.  So just go with it. Dont mess with TinyWireM/S  although Im sure it has useful things going for it.  Its mostly that I could not get it to work any other way 85 <--> 85
+Requires the ATTINYCORE library. That is a good one that implements `Wire.h`. So just go with it. Don't mess with TinyWireM/S, although I'm sure it has useful features. It's mostly that I could not get it to work any other way (85 <--> 85).
 
-Originally, the internet landed me here: <https://thewanderingengineer.com/>
-It was a good start and Ill have another sketch for rotories that use the code there.
+Originally, the internet landed me here: <https://thewanderingengineer.com/>  
+It was a good start, and I'll have another sketch for rotary encoders that uses the code there.
 
-Still my advice is stick to ATTINYCORE for Attiny85 and its included Wire.h
+Still, my advice is to stick to ATTINYCORE for ATTiny85 and its included `Wire.h`.
 
 ## Pinout
 
@@ -29,9 +29,9 @@ Still my advice is stick to ATTINYCORE for Attiny85 and its included Wire.h
 
 ![I2C Master 1 Byte](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0750)
 
-![I2c Client Button byte](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0751)
+![I2C Client Button Byte](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0751)
 
-![I2c Client Rotory byte](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0252)
+![I2C Client Rotary Byte](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0252)
 
 ## Cat
 
