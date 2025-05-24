@@ -4,20 +4,18 @@ AND / OR
 
 ## Overview
 
-An AND and an OR
+This sketch implements an AND gate and an OR gate.
 
-Can be used to hear how they modulate/filter squarewave audio.  In general, your fundamental frequencies are not going to change.
+It can be used to explore how these gates modulate or filter squarewave audio. While the fundamental frequencies won’t change, the width of some waves will.
 
-Using and/or for audio will not really change that, but it will change the width of some of the waves.
+Combining squarewaves with logic gates is a common concept in Lunettas. Many chips come with four gates, but if you want a full complement of options, you often end up wasting gates. This sketch could help reduce your circuit footprint.
 
-Combining squarewaves with logic gates is a pretty standard concept seen in Lunettas. Many chips however come with 4 gates, so if you want a full compliment of
-options, you end up wasting a lot of gates.  Perhaps this could reduce your footprint?
+To experiment with a single gate:
+- Tie one of the inputs low or high.  
+  For example, to test the OR gate, set C to high. Output 1 will then be the OR of A and B.
+- To test the AND gate, set either A or B to low. The other input will pass through to the AND gate.
 
-To play with a single gate, tie one of the gates low or high.
-For example, to experiment with just the or gate, set C to high, and output 1 is just an or of A and B.
-To play with the And, set either A or B to  Low.  The value of the other bit will just pass on through  to the AND gate.
-
-A  |  B  |  C  |  Out1  |   Out 2
+A  |  B  |  C  |  Out1  |   Out2
 --- | --- | --- | --- | ---
 0 | 0 | 0 | 0 | 0
 0 | 1 | 0 | 1 | 0
@@ -36,19 +34,16 @@ A  |  B  |  C  |  Out1  |   Out 2
 
 The equivalent circuit would look something like this:
 
-![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/ACS-85-0307-andor.png)]
-
-## Examples
+![Pinout](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0307/images/ACS-85-0307-andor.png)
 
 ## Strategy
 
-In this case, all the logic is in the loop. We are just reading the values and outputting them.  No interrupts or anything like that.
-So this should be used as a non-time critical modulation.  There is no guarantee that signals will flip within a certain time limit.
+All the logic is handled in the loop. The sketch reads values and outputs them without using interrupts. This means it’s not suitable for time-critical modulation, as there’s no guarantee signals will flip within a specific time frame.
 
 ## Improvements
 
-The highest frequencies that you can handle are going to depend on how fast the loop executes.  
+The maximum frequency you can handle depends on how fast the loop executes.
 
-- Wrap the loop code into a while loop.   That would shave a few cycles off as loop would only be called once.  
-- Accumulate the bits and just mask off the last bit rather than all this ^ business.
-- Maybe save the value of port a and break if nothing changed?
+- Wrapping the loop code into a `while` loop could save a few cycles since `loop` would only be called once.
+- Accumulating the bits and masking off the last bit could simplify the logic.
+- Saving the value of port A and breaking if nothing changes might improve efficiency.

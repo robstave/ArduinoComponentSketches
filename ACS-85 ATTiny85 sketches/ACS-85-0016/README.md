@@ -1,24 +1,28 @@
 # ACS-85-0016
 
- ATTiny85 Clock/counter 4 bit  gate or trigger
+ATTiny85 Clock/Counter 4-bit Gate or Trigger
 
 ## Overview
 
-one inputs:
+This sketch provides:
 
-- clock
+### Input:
 
-Three Outputs: like your standard 4 bit counter
+- Clock
 
-- counter out bit q0  
-- counter out bit q1
-- counter out bit q2
-- counter out bit q3
+### Outputs (like a standard 4-bit counter):
 
-Like a CD40163 I think.   Just a counter
+- Counter output bit q0  
+- Counter output bit q1
+- Counter output bit q2
+- Counter output bit q3
 
-However there is also a software bool that toggles between gate mode ( regular ) and a trigger mode.
-This is a little more interesting. It only really toggles when the bit flips, and is a trigger (Adjustable in software).  If you wanted to use this for a drum thing, it would work a little better standalone.
+It’s similar to a CD40163 counter. Just a simple counter.
+
+However, there’s a twist! A software boolean toggles between two modes:
+
+- **Gate mode**: Regular operation.
+- **Trigger mode**: Outputs a short pulse when the bit flips. This is adjustable in software and works well for standalone drum triggers.
 
 ```
 Gate     Trigger
@@ -40,10 +44,10 @@ Gate     Trigger
 1111     0001
 ```
 
-### Software parameters
+### Software Parameters
 
-- Trigger mode
-- trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary.  Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
+- **Trigger mode**
+- **Trigger length**: Not measured in milliseconds but in arbitrary clock counts. The ATTiny’s internal oscillator can be a bit imprecise, so results may vary.
 
 ## Pinout
 
@@ -51,8 +55,7 @@ Gate     Trigger
 
 ## Equivalent
 
-A cmos counter
+This is equivalent to a CMOS counter.
 
 ## Examples
 
- 

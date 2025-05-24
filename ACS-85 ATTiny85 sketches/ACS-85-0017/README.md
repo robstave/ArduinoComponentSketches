@@ -1,23 +1,26 @@
 # ACS-85-0017
 
- ATTiny85 Clock/counter 4 bit  gate or trigger Like 4017
+ATTiny85 Clock/Counter 4-bit Gate or Trigger (Like a 4017)
 
 ## Overview
 
-CD4017  Like a baby 10, but a baby 4!
+This sketch is like a mini version of the CD4017. Think of it as a "baby 10," but with only 4 outputs!
 
-one inputs:
+### Inputs:
 
-- clock
+- Clock
 
-Three Outputs: like CD4017
+### Outputs (similar to the CD4017):
 
-- counter out bit q0  
-- counter out bit q1
-- counter out bit q2
-- counter out bit q3
+- Counter output bit q0  
+- Counter output bit q1
+- Counter output bit q2
+- Counter output bit q3
 
-However there is also a software bool that toggles between gate mode ( regular ) and a trigger mode.
+Additionally, there’s a software boolean that toggles between two modes:
+
+- **Gate mode**: Regular operation.
+- **Trigger mode**: Outputs a short pulse when the bit flips.
 
 ```c
 0001
@@ -26,10 +29,10 @@ However there is also a software bool that toggles between gate mode ( regular )
 1000
 ```
 
-### Software parameters
+### Software Parameters
 
-- Trigger mode
-- trigger length  - Not really in milliseconds, just kinda clock counts which are kinda arbitrary. Considering that the ATTINY in internal osc is a bit loosy, your results will vary.
+- **Trigger mode**
+- **Trigger length**: Not measured in milliseconds but in arbitrary clock counts. Keep in mind that the ATTiny’s internal oscillator can be a bit imprecise, so your results may vary.
 
 ## Pinout
 
@@ -37,7 +40,7 @@ However there is also a software bool that toggles between gate mode ( regular )
 
 ## Equivalent
 
-CD4017
+This is equivalent to a CD4017, but with fewer outputs.
 
 ## Cat
 

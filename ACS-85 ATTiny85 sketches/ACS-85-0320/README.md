@@ -1,10 +1,10 @@
 # ACS-85-0320
 
-Divide by 3,5,7,9
+Divide by 3, 5, 7, 9
 
 ## Overview
 
-Like a counter. But counts odd divisors
+This sketch functions like a counter but focuses on odd divisors.
 
 ## Pinout
 
@@ -12,4 +12,4 @@ Like a counter. But counts odd divisors
 
 ## Equivalent
 
-See [Ken Stones pulse divider](http://www.cgs.synth.net/modules/cgs36_pulse_divider.html)
+This is similar to [Ken Stone's pulse divider](http://www.cgs.synth.net/modules/cgs36_pulse_divider.html).

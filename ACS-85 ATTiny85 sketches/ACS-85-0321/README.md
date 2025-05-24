@@ -1,12 +1,12 @@
 # ACS-85-0321
 
-Divide by 2,3,4,5
+Divide by 2, 3, 4, 5
 
 ## Overview
 
-Basically a counter. If used with audio, div 2 is an octave lower.
+This sketch is essentially a counter. When used with audio, dividing by 2 gives you an octave lower.
 
-The div values are hard coded, but configurable in the software. Values other than 2-5 can be set with the following defines
+The division values are hardcoded but can be customized in the software. You can set values other than 2-5 using the following defines:
 
 ```C
     #define DIVA 2
@@ -21,10 +21,8 @@ The div values are hard coded, but configurable in the software. Values other th
 
 ## Equivalent
 
-See [Ken Stones divider](http://www.cgs.synth.net/modules/subosc.html).
+This is similar to [Ken Stone's divider](http://www.cgs.synth.net/modules/subosc.html).
 
-However, this is one of those cases, where I think a microcontroller excels and can reduce your chip count, depending on your requirements.
+However, this is a great example of where a microcontroller shines, potentially reducing your chip count depending on your needs.
 
-Obviously, if your looking for super high frequencies, a dedicated cmos counter is the way to go.  
-
-For humble bread board experiments though, this really can't be beat.  Divide by odd numbers is a bit of circuitry to do on a breadboard.
+If you're working with very high frequencies, a dedicated CMOS counter is the better choice. But for breadboard experiments, this approach is hard to beat. Dividing by odd numbers, in particular, can be tricky to implement with discrete circuitry.

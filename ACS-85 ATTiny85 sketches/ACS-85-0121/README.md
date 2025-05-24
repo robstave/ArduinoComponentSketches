@@ -1,49 +1,41 @@
 # ACS-85-0121
 
- ATTiny85 Phase Distortion chainsaw
+ATTiny85 Phase Distortion Chainsaw
 
 ## Overview
 
-Simple version of phase distortion.  See how its described here.
+This is a simple version of phase distortion. For more details, see:  
 <https://electricdruid.net/phase-distortion-synthesis/>
 
-In this case, its just the ramp again, but the phase ramp is reversed at a point indicated
-by the cv. Effectively, it looks on the scope like a ramp down morphing into a ramp up.
-Maybe more like this
+In this case, the ramp is reversed at a point determined by the CV. On a scope, it looks like a ramp down morphing into a ramp up. Something like this:
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing.png)
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing.png)
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw1.gif)
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw1.gif)
 
 CV at 20%
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw2.gif)
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw2.gif)
 
 CV at 50%
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw3.gif)
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/saw3.gif)
 
 CV at 80%
 
-<https://theproaudiofiles.com/phase-distortion-synthesis/https://theproaudiofiles.com/phase-distortion-synthesis/>
+<https://theproaudiofiles.com/phase-distortion-synthesis/>
 
-Note again, there seems to be a lot of definitions for this, but it is not
-the one in the CZ-1 casio patent.  Part of what makes that one neat is that the
-way the phase change sounds like a filter sweep.  It is not, but it just turns out
-that the math works that way.  
+Note: There are many definitions of phase distortion, but this is not the one described in the CZ-1 Casio patent. What makes that version unique is how the phase change sounds like a filter sweep. It’s not a filter, but the math creates that effect.
 
-With little effort, you could add a wavetable for a sine wave and point each value to
-that super easy.
+With minimal effort, you could add a wavetable for a sine wave and easily point each value to it.
 
-![example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing2.png)
+![Example](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0121/images/drawing2.png)
 
 ## References
 
-<https://electricdruid.net/phase-distortion-synthesis/>
-
-<http://www.technoblogy.com/show?QVN>
-
- <https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf>
+- <https://electricdruid.net/phase-distortion-synthesis/>  
+- <http://www.technoblogy.com/show?QVN>  
+- <https://thesnowfields.com/manuals/An%20Insider%27s%20Guide%20to%20Casio%20CZ%20Synthesizers.pdf>
 
 ## Pinout
 

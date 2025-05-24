@@ -1,16 +1,14 @@
 # ACS-85-0012
 
-Random LFO PWM out with glide
+Random LFO PWM Output with Glide
 
 ## Overview
 
-PWM LFO Output with glide.
+This sketch generates a PWM LFO output with glide.  
 
-Similar output to Psycho LFO. Output is PWM so a Low pass filter is needed.
+The output is similar to the Psycho LFO, but since it’s PWM, a low-pass filter is required.
 
-The glide is achieved by averaging previous values.
-
-The random value is determined from a LFSR [Linear Feedback Shift Register](https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR)
+The random values are generated using an LFSR ([Linear Feedback Shift Register](https://github.com/robstave/ArduinoComponentSketches/wiki/LFSR)).
 
 ## Pinout
 
@@ -18,15 +16,13 @@ The random value is determined from a LFSR [Linear Feedback Shift Register](http
 
 ## Equivalent
 
-Its a basic equivalent to the [Ken Stone Psycho LFO](http://www.cgs.synth.net/modules/psycho_lfo.html).
-
-Kinda sorta.
+This is roughly equivalent to the [Ken Stone Psycho LFO](http://www.cgs.synth.net/modules/psycho_lfo.html). It’s not an exact match, but it’s close.
 
 ## Strategy
 
-- Use the LFSR to get a random number.
-- Use timer 0 to do fast PWM 
-- Use timer 1 to set the next value
+- Use the LFSR to generate random numbers.
+- Use Timer 0 for fast PWM.
+- Use Timer 1 to set the next value.
 
 ## Examples
 
@@ -34,8 +30,7 @@ Kinda sorta.
 
 https://soundcloud.com/user-692410397/acs85-0012-0066
 
-in this case, we have the LFO driving ACS 85 0066 which is a vco that puts out 
-the fundemental, a fifth and octave above.  It also has a spread variable that detunes things.
+In this example, the LFO drives ACS-85-0066, a VCO that outputs the fundamental frequency, a fifth, and an octave above. It also has a spread variable for detuning.
 
 ![Equivalent](https://github.com/robstave/ArduinoComponentSketches/blob/master/ACS-85%20ATTiny85%20sketches/ACS-85-0012/images/ACS-85-circuit-0012-0066.png)
 
